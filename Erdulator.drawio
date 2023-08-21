@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" modified="2023-08-21T11:59:59.501Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.203" etag="yNAnhPggjnxzXONDR7pF" version="21.6.8" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="794" dy="462" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="-32vy3LndMPn5ti-Iiko-0" value="Erdulator" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="240" y="10" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-32vy3LndMPn5ti-Iiko-4" value="Logo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="290" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-32vy3LndMPn5ti-Iiko-6" value="Musik" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="10" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-32vy3LndMPn5ti-Iiko-7" value="Grafik" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="617" y="180" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-32vy3LndMPn5ti-Iiko-8" value="Icons" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="740" y="290" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-32vy3LndMPn5ti-Iiko-9" value="Spiellogik" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="140" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-32vy3LndMPn5ti-Iiko-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-32vy3LndMPn5ti-Iiko-13" value="Menü" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="640" y="290" width="74" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-32vy3LndMPn5ti-Iiko-14" value="Erde" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="300" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-32vy3LndMPn5ti-Iiko-15" value="Attribute:&lt;br&gt;Wasserspiegel&lt;br&gt;Treibhausgas&lt;br&gt;Bewaldung&lt;br&gt;Weltbevölkerung&lt;br&gt;Temperatur&lt;br&gt;Ozonschicht" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="300" y="180" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="-32vy3LndMPn5ti-Iiko-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-32vy3LndMPn5ti-Iiko-14" target="-32vy3LndMPn5ti-Iiko-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="250" as="sourcePoint" />
+            <mxPoint x="420" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
