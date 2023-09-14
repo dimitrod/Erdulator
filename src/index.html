@@ -21,14 +21,14 @@
         <p id = "temperature"></p>
         <p id = "ozoneLayer"></p>
         <button></button>
-        <dialog id="event" open>
+        <dialog id="event">
             <p id="eventMessage"></p>
             <button id="reaction1" onclick="reaction(0)"></button>
             <button id="reaction2" onclick="reaction(1)"></button>
         </dialog>
         <dialog id="info">
             <p id="stats"></p>
-            <button id="close" onclick="document.getElementById('info').close()"></button>
+            <button id="close" onclick="document.getElementById('info').close(); newEvent()">Okay</button>
         </dialog>
     </main>
     
