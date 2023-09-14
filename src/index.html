@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <p id = "year"></p>
+        <p id = "budget"></p>
+        <p id = "co2e"></p>
+        <p id = "afforestation"></p>
+        <p id = "waterLevel"></p>
+        <p id = "population"></p>
+        <p id = "temperature"></p>
+        <p id = "ozoneLayer"></p>
+        <button></button>
+        <dialog id="event" open>
+            <p id="eventMessage"></p>
+            <button id="reaction1" onclick="reaction(0)"></button>
+            <button id="reaction2" onclick="reaction(1)"></button>
+        </dialog>
+        <dialog id="info">
+            <p id="stats"></p>
+            <button id="close" onclick="document.getElementById('info').close()"></button>
+        </dialog>
+    </main>
+    
+    <footer>
+        <script src="init.js"></script>
+        <script src="events.js"></script>
+        
+    </footer>
+</body>
+</html>
