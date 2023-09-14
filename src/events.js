@@ -45,27 +45,27 @@ function reaction(r) {
         switch (impact.param) {
             case "co2e":
                 co2e += impact.minValue
-                infoPopUp.innerHTML += "<p>co2e: "+ impact.minValue + "</p>"
+                infoPopUp.innerHTML += "<p>co2e gestiegen um "+ impact.minValue + " %</p>"
                 break
             case "afforestation":
                 afforestation -= impact.minValue
-                infoPopUp.innerHTML += "<p>Bewaldung: " + impact.minValue + "</p>"
+                infoPopUp.innerHTML += "<p>Bewaldung verringert um " + impact.minValue + " %</p>"
                 break
             case "waterLevel":
                 waterLevel += impact.minValue
-                infoPopUp.innerHTML += "<p>Wasserlevel: " + impact.minValue + "</p>"
+                infoPopUp.innerHTML += "<p>Wasserlevel gestiegen um " + impact.minValue + " m</p>"
                 break
             case "population":
                 population -= impact.minValue
-                infoPopUp.innerHTML += "<p>Bevölkerung: " + impact.minValue + "</p>"
+                infoPopUp.innerHTML += "<p>Bevölkerung gesunken um " + impact.minValue + " Menschen</p>"
                 break
             case "temperature":
                 temperature += impact.minValue
-                infoPopUp.innerHTML += "<p>Temperatur: " + impact.minValue + "</p>"
+                infoPopUp.innerHTML += "<p>Temperatur gestiegen um " + impact.minValue + " °C</p>"
                 break
             case "ozoneLayer":
                 ozoneLayer -= impact.minValue
-                infoPopUp.innerHTML += "<p>Ozonschicht: " + impact.minValue + "</p>"
+                infoPopUp.innerHTML += "<p>Ozonschicht verschlechtert um " + impact.minValue + " %</p>"
                 break
             default:
                 break;
