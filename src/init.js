@@ -4,6 +4,7 @@ var co2e = 0.02
 var afforestation = 100
 var waterLevel = 100
 var population = 1650000000
+var animalSpecies = 5000000
 var temperature = 13
 var ozoneLayer = 100
 
@@ -13,6 +14,7 @@ var co2eElem = document.getElementById("co2e")
 var afforestationElem = document.getElementById("afforestation")
 var waterLevelElem = document.getElementById("waterLevel")
 var populationElem = document.getElementById("population")
+var animalSpeciesElem = document.getElementById("animalSpecies")
 var temperatureElem = document.getElementById("temperature")
 var ozoneLayerElem = document.getElementById("ozoneLayer")
 
@@ -22,5 +24,6 @@ co2eElem.innerHTML = "CO2e: " + co2e + " %"
 afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
 waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
 populationElem.innerHTML = "Bevölkerung: " + population + " Menschen"
+animalSpeciesElem.innerHTML = "Tierarten: " + animalSpecies
 temperatureElem.innerHTML = "Temperatur: " + temperature + " °C"
 ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
