@@ -41,7 +41,7 @@ var vulcanicEruptionReactions = [
 var vulcanicEruption = {eventMessage: "Vulkanausbruch", reactions: vulcanicEruptionReactions}
 
 var pandemicReactions = [
-    {reaction: "Lockdown anordnen", cost: 2, impacts: [{param:"population", minValue: 1000, maxValue: 10000}, {param: "co2e", minValue: -1, maxValue: -2}]},
+    {reaction: "Lockdown anordnen", cost: 2, impacts: [{param:"population", minValue: 1000, maxValue: 10000}, {param: "co2e", minValue: -0.01, maxValue: -0.02}]},
     {reaction: "Maskenpflicht anordnen", cost: 1, impacts: [{param:"population", minValue: 1500, maxValue: 15000}]},
     {reaction: "Nichts machen", cost: 0, impacts: [{param:"population", minValue: 10000, maxValue: 100000}]}
 ]
