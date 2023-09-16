@@ -86,7 +86,7 @@ function timeIncrement() {
     gameOver()
 }
 
-function displayGameOverMessage(message) {
+function createGameOverMessage(message) {
     document.getElementById("gameOverMessage").innerHTML = message;
     document.getElementById("restart").innerHTML = "Neustart";
     document.getElementById("event").close();
@@ -95,16 +95,16 @@ function displayGameOverMessage(message) {
 
 function gameOver() {
     if (population <= 0) {
-        displayGameOverMessage("Die Bevölkerung ist auf 0 gesunken. Das Spiel endet.");
+        createGameOverMessage("Die Bevölkerung ist auf 0 gesunken. Das Spiel endet.");
     }
     else if (co2e >= 100) {
-        displayGameOverMessage("Die CO2e sind auf 100% gestiegen. Das Spiel endet.");
+        createGameOverMessage("Die CO2e sind auf 100% gestiegen. Das Spiel endet.");
     }
     else if (afforestation <= 0) {
-        displayGameOverMessage("Die Bewaldung ist auf 0% gesunken. Das Spiel endet.");
+        createGameOverMessage("Die Bewaldung ist auf 0% gesunken. Das Spiel endet.");
     }
     else if (year >= 2023) {
-        displayGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.");
+        createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.");
     }
 }
 
