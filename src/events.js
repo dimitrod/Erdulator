@@ -99,34 +99,36 @@ function reaction(r) {
     let infoPopUp = document.getElementById("stats")
     infoPopUp.innerHTML = ""
     reaction.impacts.forEach(impact => {
+        let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
+        let randomValueCo2e = Math.random() * (impact.maxValue -impact.minValue) + impact.minValue
         switch (impact.param) {
             case "co2e":
-                co2e += impact.minValue
-                infoPopUp.innerHTML += "<p>co2e gestiegen um "+ impact.minValue + " %</p>"
+                co2e += randomValueCo2e
+                infoPopUp.innerHTML += "<p>co2e gestiegen um "+ randomValueCo2e.toFixed(2) + " %</p>"
                 break
             case "afforestation":
-                afforestation -= impact.minValue
-                infoPopUp.innerHTML += "<p>Bewaldung verringert um " + impact.minValue + " %</p>"
+                afforestation -= randomValue
+                infoPopUp.innerHTML += "<p>Bewaldung verringert um " + randomValue + " %</p>"
                 break
             case "waterLevel":
-                waterLevel += impact.minValue
-                infoPopUp.innerHTML += "<p>Wasserlevel gestiegen um " + impact.minValue + " m</p>"
+                waterLevel += randomValue
+                infoPopUp.innerHTML += "<p>Wasserlevel gestiegen um " + randomValue + " m</p>"
                 break
             case "population":
-                population -= impact.minValue
-                infoPopUp.innerHTML += "<p>Bevölkerung gesunken um " + impact.minValue + " Menschen</p>"
+                population -= randomValue
+                infoPopUp.innerHTML += "<p>Bevölkerung gesunken um " + randomValue + " Menschen</p>"
                 break
             case "animalSpecies":
-                animalSpecies -= impact.minValue
-                infoPopUp.innerHTML += "<p>Es sind " + impact.minValue + " Tierarten ausgestorben </p>"
+                animalSpecies -= randomValue
+                infoPopUp.innerHTML += "<p>Es sind " + randomValue + " Tierarten ausgestorben </p>"
                 break
             case "temperature":
-                temperature += impact.minValue
-                infoPopUp.innerHTML += "<p>Temperatur gestiegen um " + impact.minValue + " °C</p>"
+                temperature += randomValue
+                infoPopUp.innerHTML += "<p>Temperatur gestiegen um " + randomValue + " °C</p>"
                 break
             case "ozoneLayer":
-                ozoneLayer -= impact.minValue
-                infoPopUp.innerHTML += "<p>Ozonschicht verschlechtert um " + impact.minValue + " %</p>"
+                ozoneLayer -= randomValue
+                infoPopUp.innerHTML += "<p>Ozonschicht verschlechtert um " + randomValue + " %</p>"
                 break
             default:
                 break;
@@ -137,12 +139,12 @@ function reaction(r) {
 
     yearElem.innerHTML = "Jahr: " + year
     budgetElem.innerHTML = "Budget: " + budget + " Mio €"
-    co2eElem.innerHTML = "CO2e: " + co2e + " %"
+    co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
     populationElem.innerHTML = "Bevölkerung: " + population + " Menschen"
     animalSpeciesElem.innerHTML = "Tierarten: " + animalSpecies
-    temperatureElem.innerHTML = "Temperatur: " + temperature + " °C"
+    temperatureElem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
     ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
 
     
