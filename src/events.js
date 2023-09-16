@@ -83,6 +83,29 @@ function timeIncrement() {
     year += eventInterval;
     newEvent()
     populationIncrement()
+    gameOver()
+}
+
+function displayGameOverMessage(message) {
+    document.getElementById("gameOverMessage").innerHTML = message;
+    document.getElementById("restart").innerHTML = "Neustart";
+    document.getElementById("event").close();
+    document.getElementById("gameOver").show();
+}
+
+function gameOver() {
+    if (population <= 0) {
+        displayGameOverMessage("Die Bevölkerung ist auf 0 gesunken. Das Spiel endet.");
+    }
+    else if (co2e >= 100) {
+        displayGameOverMessage("Die CO2e sind auf 100% gestiegen. Das Spiel endet.");
+    }
+    else if (afforestation <= 0) {
+        displayGameOverMessage("Die Bewaldung ist auf 0% gesunken. Das Spiel endet.");
+    }
+    else if (year >= 2023) {
+        displayGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.");
+    }
 }
 
 function populationGrowth(startValue, growthRate, period){
