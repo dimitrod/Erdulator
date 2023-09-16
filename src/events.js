@@ -85,11 +85,14 @@ function timeIncrement() {
     populationIncrement()
 }
 
+function populationGrowth(startValue, growthRate, period){
+    return startValue * Math.pow(1 + growthRate, period);
+}
+
 function populationIncrement() {
     populationElem.innerHTML = "Bevölkerung: " + population + " Menschen";
-    populationGrowthRate = 0.02;
-    populationIncrease = Math.floor(population * populationGrowthRate);
-    population += populationIncrease;
+    populationGrowthRate = 0.015;
+    population = Math.floor(populationGrowth(population, populationGrowthRate, eventInterval));
 }
 
 function reaction(r) {
