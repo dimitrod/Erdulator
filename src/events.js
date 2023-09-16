@@ -61,9 +61,23 @@ var tornadoReactions = [
 ]
 var tornado = {eventMessage: "Tornado", reactions: tornadoReactions}
 
+var warReactions = [
+    {reaction: "Waffenstillstand aushandeln", cost: 8, impacts: [{param: "population", minValue: 10000, maxValue: 1000000}, {param: "co2e", minValue: 0.01, maxValue: 0.02}, {param: "animalSpecies", minValue: 100, maxValue: 1000}]},
+    {reaction: "Wehrpflicht einführen", cost: 10, impacts: [{param: "population", minValue: 20000, maxValue: 2000000}, {param: "co2e", minValue: 0.01, maxValue: 0.03}, {param: "animalSpecies", minValue: 200, maxValue: 2000}]},
+    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 50000, maxValue: 5000000}, {param: "co2e", minValue: 0.01, maxValue: 0.03}, {param: "animalSpecies", minValue: 200, maxValue: 2000}]}
+]
+var war = {eventMessage: "Krieg", reactions: warReactions}
+
+var pestInfestationReactions = [
+    {reaction: "Großflächig mit Pestiziden bekämpfen", cost: 10, impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {param: "co2e", minValue: 0.01, maxValue: 0.01}, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {param: "ozoneLayer", minValue: 1, maxValue: 2}]},
+    {reaction: "nötige Waren importieren", cost: 8, impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {param: "co2e", minValue: 0.01, maxValue: 0.01}, {param: "animalSpecies", minValue: 100, maxValue: 1000}]},
+    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {param: "co2e", minValue: 0.01, maxValue: 0.01}]}
+]
+var pestInfestation = {eventMessage: "Schädlingsplage", reactions: pestInfestationReactions}
+
 var commonEvents = [earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado]
 
-var rareEvents = [vulcanicEruption, pandemic]
+var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation]
 var currentEvent = undefined
 
 function newEvent() {
