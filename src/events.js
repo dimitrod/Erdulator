@@ -77,6 +77,21 @@ function newEvent() {
     document.getElementById("event").show()
 }
 
+function timeIncrement() {
+    yearElem.innerHTML = "Jahr: " + year
+    eventInterval = 5;
+    year += eventInterval;
+    newEvent()
+    populationIncrement()
+}
+
+function populationIncrement() {
+    populationElem.innerHTML = "Bevölkerung: " + population + " Menschen";
+    populationGrowthRate = 0.02;
+    populationIncrease = Math.floor(population * populationGrowthRate);
+    population += populationIncrease;
+}
+
 function reaction(r) {
     document.getElementById("event").close()
     let reaction = currentEvent.reactions[r]
@@ -121,19 +136,13 @@ function reaction(r) {
 
     document.getElementById("info").show()
 
-    yearElem.innerHTML = "Jahr: " + year
     budgetElem.innerHTML = "Budget: " + budget + " Mio €"
     co2eElem.innerHTML = "CO2e: " + co2e + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
-    populationElem.innerHTML = "Bevölkerung: " + population + " Menschen"
     animalSpeciesElem.innerHTML = "Tierarten: " + animalSpecies
     temperatureElem.innerHTML = "Temperatur: " + temperature + " °C"
     ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
-
-    
 }
 
-
-
-newEvent()
+timeIncrement()
