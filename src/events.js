@@ -187,7 +187,7 @@ function reaction(r) {
 
     document.getElementById("info").show()
 
-    co2eElem.innerHTML = "CO2e: " + co2e + " %"
+    co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
     animalSpeciesElem.innerHTML = "Tierarten: " + animalSpecies
