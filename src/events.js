@@ -73,7 +73,8 @@ function newEvent() {
     document.getElementById("eventMessage").innerHTML = currentEvent.eventMessage
     document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + currentEvent.reactions[0].cost + " Mio €)"
     document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + currentEvent.reactions[1].cost + " Mio €)"
-    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + currentEvent.reactions[2].cost + " Mio €]"
+    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + currentEvent.reactions[2].cost + " Mio €)"
+    budgetCheck()
     document.getElementById("event").show()
 }
 
@@ -82,9 +83,8 @@ function timeIncrement() {
     eventInterval = 5;
     year += eventInterval;
     newEvent()
-    populationIncrement()
     gameOver()
-    budgetCap()
+    populationIncrement()
 }
 
 function createGameOverMessage(message) {
@@ -109,13 +109,28 @@ function gameOver() {
     }
 }
 
-function budgetCap() {
+function budgetCheck() {
+    budgetElem.innerHTML = "Budget: " + budget + " Mio €";
+    button1 = document.getElementById("reaction1");
+    button2 = document.getElementById("reaction2");
+    button3 = document.getElementById("reaction3");
+    button1.disabled = false;
+    button2.disabled = false;
+    button3.disabled = false;
+    if (currentEvent.reactions[0].cost > budget) {
+        button1.disabled = true;
+    }
+    if (currentEvent.reactions[1].cost > budget) {
+        button2.disabled = true;
+    }
+    if (currentEvent.reactions[2].cost > budget) {
+        button3.disabled = true;
+    }
     if (budget <= 0) {
         budget = 0;
-        document.getElementById("reaction1").disabled = true;
-        document.getElementById("reaction2").disabled = true;
+        button1.disabled = true;
+        button2.disabled = true;
     }
-    budgetElem.innerHTML = "Budget: " + budget + " Mio €"
 }
 
 function populationGrowth(startValue, growthRate, period){
@@ -172,7 +187,6 @@ function reaction(r) {
 
     document.getElementById("info").show()
 
-    budgetElem.innerHTML = "Budget: " + budget + " Mio €"
     co2eElem.innerHTML = "CO2e: " + co2e + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
