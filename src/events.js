@@ -55,6 +55,7 @@ var tornadoReactions = [
     createReaction("Rettungskräfte schicken", 3, [{param: "population", minValue: 3000, maxValue: 30000}, {param: "afforestation", minValue: 2, maxValue: 4},]),
     createReaction("Nichts machen", 0, [{param: "population", minValue: 8000, maxValue: 80000}, {param: "afforestation", minValue: 2, maxValue: 4},]),
 ];
+
 var earthquake = {eventMessage: "Erdbeben", reactions: earthquakeReactions}
 var tsunami = {eventMessage: "Tsunami", reactions: tsunamiReactions}
 var drought = {eventMessage: "Dürre", reactions: droughtReactions}
@@ -147,12 +148,12 @@ function populationIncrement() {
 }
 
 function reaction(r) {
-    document.getElementById("event").close()
-    let reaction = currentEvent.reactions[r]
-    budget -= reaction.cost
-    console.log(reaction)
     let infoPopUp = document.getElementById("stats")
+    let reaction = currentEvent.reactions[r]
     infoPopUp.innerHTML = ""
+    document.getElementById("event").close()
+    budget -= reaction.cost
+    
     reaction.impacts.forEach(impact => {
         switch (impact.param) {
             case "co2e":
@@ -189,7 +190,6 @@ function reaction(r) {
     });
 
     document.getElementById("info").show()
-
     co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
