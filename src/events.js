@@ -2,55 +2,55 @@ function createReaction(reaction, cost, impacts, triggers = []) {
     return {reaction, cost, impacts, triggers};
 }
 
-var earthquakeReactions = [
+const earthquakeReactions = [
     createReaction("Bergungsteam schicken", 2, [{param: "population", minValue: 5000, maxValue: 50000}, {param: "afforestation", minValue: 1, maxValue: 3}], [tsunami]),
     createReaction("Notunterkünfte errichten", 5, [{param: "population", minValue: 8000, maxValue: 80000}, {param: "afforestation", minValue: 1, maxValue: 3}], [tsunami]),
     createReaction("Nichts machen", 0, [{param: "population", minValue: 9000, maxValue: 90000}, {param: "afforestation", minValue: 1, maxValue: 3}], [tsunami])
 ];
 
-var tsunamiReactions = [
+const tsunamiReactions = [
     createReaction("Evakuieren", 4, [{param: "population", minValue: 10000, maxValue: 20000}, {param: "afforestation", minValue: 1, maxValue: 3}], [flood]),
     createReaction("Frühwarnsystem errichten", 5, [{param: "population", minValue: 5000, maxValue: 50000}, {param: "afforestation", minValue: 1, maxValue: 3}], [flood]),
     createReaction("Nichts machen", 0, [{param: "population", minValue: 5000, maxValue: 50000}, {param: "afforestation", minValue: 1, maxValue: 3}], [flood])
 ];
 
-var droughtReactions = [
+const droughtReactions = [
     createReaction("Aufforsten", 3, [{param: "population", minValue: 2000, maxValue: 10000}, {param: "afforestation", minValue: 1, maxValue: 2}], []),
     createReaction("Lebensmittel bereitstellen", 4, [{param: "population", minValue: 1000, maxValue: 10000}, {param: "afforestation", minValue: 3, maxValue: 4}], [bushFire]),
     createReaction("Nichts machen", 0, [{param: "population", minValue: 2000, maxValue: 20000}, {param: "afforestation", minValue: 3, maxValue: 4}], [bushFire])
 ];
 
-var bushFireReactions = [
+const bushFireReactions = [
     createReaction("Brand bekämpfen", 3, [{param: "population", minValue: 1500, maxValue: 15000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "animalSpecies", minValue: 100, maxValue: 1000}, {param: "afforestation", minValue: 1, maxValue: 2}, {param: "co2e", minValue: 0.01, maxValue: 0.02}], []),
     createReaction("Evakuieren", 4, [{param: "population", minValue: 1000, maxValue: 10000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {param: "afforestation", minValue: 4, maxValue: 5}, {param: "co2e", minValue: 0.03, maxValue: 0.06}], [bushFire]),
     createReaction("Nichts machen", 0, [{param: "population", minValue: 3000, maxValue: 30000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {param: "afforestation", minValue: 4, maxValue: 5}, {param: "co2e", minValue: 0.03, maxValue: 0.06}], [bushFire])
 ];
 
-var floodReactions = [
+const floodReactions = [
     createReaction("Wälle errichten", 2, [{param: "population", minValue: 1500, maxValue: 15000}, {param: "afforestation", minValue: 1, maxValue: 2}], []),
     createReaction("Evakuieren", 4, [{param: "population", minValue: 1000, maxValue: 10000}, {param: "afforestation", minValue: 2, maxValue: 3}], []),
     createReaction("Nichts machen", 0, [{param: "population", minValue: 3000, maxValue: 30000}, {param: "afforestation", minValue: 2, maxValue: 3}], [])
 ];
 
-var vulcanicEruptionReactions = [
+const vulcanicEruptionReactions = [
     createReaction("Evakuieren", 4, [{param:"population", minValue: 3000, maxValue: 30000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "afforestation", minValue: 4, maxValue: 8}], [bushFire]),
     createReaction("Rettungskräfte schicken", 3, [{param:"population", minValue: 2000, maxValue: 20000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "afforestation", minValue: 4, maxValue: 8}], [bushFire]),
     createReaction("Nichts machen", 0, [{param:"population", minValue: 6000, maxValue: 60000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "afforestation", minValue: 4, maxValue: 8}], [bushFire])
 ];
 
-var pandemicReactions = [
+const pandemicReactions = [
     createReaction("Lockdown anordnen", 2, [{param:"population", minValue: 1000, maxValue: 10000}, {param: "co2e", minValue: -0.01, maxValue: -0.02}]),
     createReaction("Maskenpflicht anordnen", 1, [{param:"population", minValue: 1500, maxValue: 15000}]),
     createReaction("Nichts machen", 0, [{param:"population", minValue: 10000, maxValue: 100000}])
 ];
 
-var oilTankerExplosionReactions = [
+const oilTankerExplosionReactions = [
     createReaction("Öl abfischen", 10, [{param:"afforestation", minValue: 1, maxValue: 2}, {param: "animalSpecies", minValue: 100, maxValue: 1000}]),
     createReaction("Tanker bergen", 7, [{param:"afforestation", minValue: 1, maxValue: 2}, {param: "animalSpecies", minValue: 200, maxValue: 2000}]),
     createReaction("Nichts machen", 0, [{param:"afforestation", minValue: 1, maxValue: 2}, {param: "animalSpecies", minValue: 1000, maxValue: 10000}])
 ];
 
-var tornadoReactions = [
+const tornadoReactions = [
     createReaction("Evakuieren", 4, [{param: "population", minValue: 1000, maxValue: 10000}, {param: "afforestation", minValue: 2, maxValue: 4},]),
     createReaction("Rettungskräfte schicken", 3, [{param: "population", minValue: 3000, maxValue: 30000}, {param: "afforestation", minValue: 2, maxValue: 4},]),
     createReaction("Nichts machen", 0, [{param: "population", minValue: 8000, maxValue: 80000}, {param: "afforestation", minValue: 2, maxValue: 4},]),
