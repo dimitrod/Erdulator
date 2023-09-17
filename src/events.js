@@ -84,6 +84,7 @@ function timeIncrement() {
     newEvent()
     populationIncrement()
     gameOver()
+    budgetCap()
 }
 
 function createGameOverMessage(message) {
@@ -106,6 +107,15 @@ function gameOver() {
     else if (year >= 2023) {
         createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.");
     }
+}
+
+function budgetCap() {
+    if (budget <= 0) {
+        budget = 0;
+        document.getElementById("reaction1").disabled = true;
+        document.getElementById("reaction2").disabled = true;
+    }
+    budgetElem.innerHTML = "Budget: " + budget + " Mio €"
 }
 
 function populationGrowth(startValue, growthRate, period){
