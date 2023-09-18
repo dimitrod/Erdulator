@@ -73,8 +73,74 @@ function newEvent() {
     document.getElementById("eventMessage").innerHTML = currentEvent.eventMessage
     document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + currentEvent.reactions[0].cost + " Mio €)"
     document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + currentEvent.reactions[1].cost + " Mio €)"
-    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + currentEvent.reactions[2].cost + " Mio €]"
+    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + currentEvent.reactions[2].cost + " Mio €)"
+    budgetCheck()
     document.getElementById("event").show()
+}
+
+function timeIncrement() {
+    yearElem.innerHTML = "Jahr: " + year
+    eventInterval = 5;
+    year += eventInterval;
+    newEvent()
+    gameOver()
+    populationIncrement()
+}
+
+function createGameOverMessage(message) {
+    document.getElementById("gameOverMessage").innerHTML = message;
+    document.getElementById("restart").innerHTML = "Neustart";
+    document.getElementById("event").close();
+    document.getElementById("gameOver").show();
+}
+
+function gameOver() {
+    if (population <= 0) {
+        createGameOverMessage("Die Bevölkerung ist auf 0 gesunken. Das Spiel endet.");
+    }
+    else if (co2e >= 100) {
+        createGameOverMessage("Die CO2e sind auf 100% gestiegen. Das Spiel endet.");
+    }
+    else if (afforestation <= 0) {
+        createGameOverMessage("Die Bewaldung ist auf 0% gesunken. Das Spiel endet.");
+    }
+    else if (year >= 2023) {
+        createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.");
+    }
+}
+
+function budgetCheck() {
+    budgetElem.innerHTML = "Budget: " + budget + " Mio €";
+    button1 = document.getElementById("reaction1");
+    button2 = document.getElementById("reaction2");
+    button3 = document.getElementById("reaction3");
+    button1.disabled = false;
+    button2.disabled = false;
+    button3.disabled = false;
+    if (currentEvent.reactions[0].cost > budget) {
+        button1.disabled = true;
+    }
+    if (currentEvent.reactions[1].cost > budget) {
+        button2.disabled = true;
+    }
+    if (currentEvent.reactions[2].cost > budget) {
+        button3.disabled = true;
+    }
+    if (budget <= 0) {
+        budget = 0;
+        button1.disabled = true;
+        button2.disabled = true;
+    }
+}
+
+function populationGrowth(startValue, growthRate, period){
+    return startValue * Math.pow(1 + growthRate, period);
+}
+
+function populationIncrement() {
+    populationElem.innerHTML = "Bevölkerung: " + population + " Menschen";
+    populationGrowthRate = 0.015;
+    population = Math.floor(populationGrowth(population, populationGrowthRate, eventInterval));
 }
 
 function reaction(r) {
@@ -121,19 +187,12 @@ function reaction(r) {
 
     document.getElementById("info").show()
 
-    yearElem.innerHTML = "Jahr: " + year
-    budgetElem.innerHTML = "Budget: " + budget + " Mio €"
-    co2eElem.innerHTML = "CO2e: " + co2e + " %"
+    co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
-    populationElem.innerHTML = "Bevölkerung: " + population + " Menschen"
     animalSpeciesElem.innerHTML = "Tierarten: " + animalSpecies
     temperatureElem.innerHTML = "Temperatur: " + temperature + " °C"
     ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
-
-    
 }
 
-
-
-newEvent()
+timeIncrement()

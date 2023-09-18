@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Erdulator</title>
 </head>
 <body>
     <header>
@@ -29,14 +29,19 @@
         </dialog>
         <dialog id="info">
             <p id="stats"></p>
-            <button id="close" onclick="document.getElementById('info').close(); newEvent()">Okay</button>
+            <button id="close" onclick="document.getElementById('info').close(); timeIncrement()">Okay</button>
+        </dialog>
+        <dialog id="gameOver">
+            <p id="gameOverMessage"></p>
+            <button id="restart" onclick="location.reload()">Restart</button>
         </dialog>
     </main>
     
     <footer>
-        <script src="init.js"></script>
-        <script src="events.js"></script>
+        
         
     </footer>
+    <script src="init.js"></script>
+    <script src="events.js"></script>
 </body>
 </html>
