@@ -1,67 +1,400 @@
 var earthquakeReactions = [
-    {reaction: "Bergungsteam schicken", cost: 2, impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {param: "afforestation", minValue: 1, maxValue: 3}], triggers: [tsunami]},
-    {reaction: "Notunterkünfte errichten", cost: 5, impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {param: "afforestation", minValue: 1, maxValue: 3}], triggers: [tsunami]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 9000, maxValue: 90000}, {param: "afforestation", minValue: 1, maxValue: 3}], triggers: [tsunami]}
+    {
+        reaction: "Bergungsteam schicken",
+        cost: 2,
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
+            param: "afforestation",
+            minValue: 1,
+            maxValue: 3
+        }],
+        triggers: [tsunami]
+    },
+    {
+        reaction: "Notunterkünfte errichten",
+        cost: 5,
+        impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {
+            param: "afforestation",
+            minValue: 1,
+            maxValue: 3
+        }],
+        triggers: [tsunami]
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "population", minValue: 9000, maxValue: 90000}, {
+            param: "afforestation",
+            minValue: 1,
+            maxValue: 3
+        }],
+        triggers: [tsunami]
+    }
 ]
 
 var tsunamiReactions = [
-    {reaction: "Evakuieren", cost: 4, impacts: [{param: "population", minValue: 10000, maxValue: 20000}, {param: "afforestation", minValue: 1, maxValue: 3}], triggers: [flood]},
-    {reaction: "Frühwarnsystem errichten", cost: 5, impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {param: "afforestation", minValue: 1, maxValue: 3}], triggers: [flood]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {param: "afforestation", minValue: 1, maxValue: 3}], triggers: [flood]}
+    {
+        reaction: "Evakuieren",
+        cost: 4,
+        impacts: [{param: "population", minValue: 10000, maxValue: 20000}, {
+            param: "afforestation",
+            minValue: 1,
+            maxValue: 3
+        }],
+        triggers: [flood]
+    },
+    {
+        reaction: "Frühwarnsystem errichten",
+        cost: 5,
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
+            param: "afforestation",
+            minValue: 1,
+            maxValue: 3
+        }],
+        triggers: [flood]
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
+            param: "afforestation",
+            minValue: 1,
+            maxValue: 3
+        }],
+        triggers: [flood]
+    }
 ]
 
 var droughtReactions = [
-    {reaction: "Aufforsten", cost: 3, impacts: [{param: "population", minValue: 2000, maxValue: 10000}, {param: "afforestation", minValue: 1, maxValue: 2}], triggers: []},
-    {reaction: "Lebensmittel bereitstellen", cost: 4, impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {param: "afforestation", minValue: 3, maxValue: 4}], triggers: [bushFire]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 2000, maxValue: 20000}, {param: "afforestation", minValue: 3, maxValue: 4}], triggers: [bushFire]}
+    {
+        reaction: "Aufforsten",
+        cost: 3,
+        impacts: [{param: "population", minValue: 2000, maxValue: 10000}, {
+            param: "afforestation",
+            minValue: 1,
+            maxValue: 2
+        }, {param: "waterLevel", minValue: -1, maxValue: -2}],
+        triggers: []
+    },
+    {
+        reaction: "Lebensmittel bereitstellen",
+        cost: 4,
+        impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
+            param: "afforestation",
+            minValue: 3,
+            maxValue: 4
+        }, {param: "waterLevel", minValue: -1, maxValue: -2}],
+        triggers: [bushFire]
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "population", minValue: 2000, maxValue: 20000}, {
+            param: "afforestation",
+            minValue: 3,
+            maxValue: 4
+        }, {param: "waterLevel", minValue: -1, maxValue: -2}],
+        triggers: [bushFire]
+    }
 ]
 
 var bushFireReactions = [
-    {reaction: "Brand bekämpfen", cost: 3, impacts: [{param: "population", minValue: 1500, maxValue: 15000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "animalSpecies", minValue: 100, maxValue: 1000}, {param: "afforestation", minValue: 1, maxValue: 2}, {param: "co2e", minValue: 0.01, maxValue: 0.02}], triggers: []},
-    {reaction: "Evakuieren", cost: 4, impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {param: "afforestation", minValue: 4, maxValue: 5}, {param: "co2e", minValue: 0.03, maxValue: 0.06}], triggers: [bushFire]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {param: "afforestation", minValue: 4, maxValue: 5}, {param: "co2e", minValue: 0.03, maxValue: 0.06}], triggers: [bushFire]}
+    {
+        reaction: "Brand bekämpfen",
+        cost: 3,
+        impacts: [{param: "population", minValue: 1500, maxValue: 15000}, {
+            param: "temperature",
+            minValue: 1,
+            maxValue: 1
+        }, {param: "animalSpecies", minValue: 100, maxValue: 1000}, {
+            param: "afforestation",
+            minValue: 1,
+            maxValue: 2
+        }, {param: "co2e", minValue: 0.01, maxValue: 0.02}],
+        triggers: []
+    },
+    {
+        reaction: "Evakuieren",
+        cost: 4,
+        impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
+            param: "temperature",
+            minValue: 1,
+            maxValue: 1
+        }, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {
+            param: "afforestation",
+            minValue: 4,
+            maxValue: 5
+        }, {param: "co2e", minValue: 0.03, maxValue: 0.06}],
+        triggers: [bushFire]
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
+            param: "temperature",
+            minValue: 1,
+            maxValue: 1
+        }, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {
+            param: "afforestation",
+            minValue: 4,
+            maxValue: 5
+        }, {param: "co2e", minValue: 0.03, maxValue: 0.06}],
+        triggers: [bushFire]
+    }
 ]
 
 var floodReactions = [
-    {reaction: "Wälle errichten", cost: 2, impacts: [{param: "population", minValue: 1500, maxValue: 15000}, {param: "afforestation", minValue: 1, maxValue: 2}], triggers: []},
-    {reaction: "Evakuieren", cost: 4, impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {param: "afforestation", minValue: 2, maxValue: 3}], triggers: []},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {param: "afforestation", minValue: 2, maxValue: 3}], triggers: []}
+    {
+        reaction: "Wälle errichten",
+        cost: 2,
+        impacts: [{param: "population", minValue: 1500, maxValue: 15000}, {
+            param: "afforestation",
+            minValue: 1,
+            maxValue: 2
+        }],
+        triggers: []
+    },
+    {
+        reaction: "Evakuieren",
+        cost: 4,
+        impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
+            param: "afforestation",
+            minValue: 2,
+            maxValue: 3
+        }],
+        triggers: []
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
+            param: "afforestation",
+            minValue: 2,
+            maxValue: 3
+        }],
+        triggers: []
+    }
 ]
 
 var vulcanicEruptionReactions = [
-    {reaction: "Evakuieren", cost: 4, impacts: [{param:"population", minValue: 3000, maxValue: 30000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "afforestation", minValue: 4, maxValue: 8}], triggers: [bushFire]},
-    {reaction: "Rettungskräfte schicken", cost: 3, impacts: [{param:"population", minValue: 2000, maxValue: 20000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "afforestation", minValue: 4, maxValue: 8}], triggers: [bushFire]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param:"population", minValue: 6000, maxValue: 60000}, {param: "temperature", minValue: 1, maxValue: 1}, {param: "afforestation", minValue: 4, maxValue: 8}], triggers: [bushFire]}
+    {
+        reaction: "Evakuieren",
+        cost: 4,
+        impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
+            param: "temperature",
+            minValue: 1,
+            maxValue: 1
+        }, {param: "afforestation", minValue: 4, maxValue: 8}],
+        triggers: [bushFire]
+    },
+    {
+        reaction: "Rettungskräfte schicken",
+        cost: 3,
+        impacts: [{param: "population", minValue: 2000, maxValue: 20000}, {
+            param: "temperature",
+            minValue: 1,
+            maxValue: 1
+        }, {param: "afforestation", minValue: 4, maxValue: 8}],
+        triggers: [bushFire]
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "population", minValue: 6000, maxValue: 60000}, {
+            param: "temperature",
+            minValue: 1,
+            maxValue: 1
+        }, {param: "afforestation", minValue: 4, maxValue: 8}],
+        triggers: [bushFire]
+    }
 ]
 
 var pandemicReactions = [
-    {reaction: "Lockdown anordnen", cost: 2, impacts: [{param:"population", minValue: 1000, maxValue: 10000}, {param: "co2e", minValue: -0.01, maxValue: -0.02}]},
-    {reaction: "Maskenpflicht anordnen", cost: 1, impacts: [{param:"population", minValue: 1500, maxValue: 15000}]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param:"population", minValue: 10000, maxValue: 100000}]}
+    {
+        reaction: "Lockdown anordnen",
+        cost: 2,
+        impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
+            param: "co2e",
+            minValue: -0.01,
+            maxValue: -0.02
+        }]
+    },
+    {reaction: "Maskenpflicht anordnen", cost: 1, impacts: [{param: "population", minValue: 1500, maxValue: 15000}]},
+    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 10000, maxValue: 100000}]}
 ]
 
 var oilTankerExplosionReactions = [
-    {reaction: "Öl abfischen", cost: 10, impacts: [{param:"afforestation", minValue: 1, maxValue: 2}, {param: "animalSpecies", minValue: 100, maxValue: 1000}]},
-    {reaction: "Tanker bergen", cost: 7, impacts: [{param:"afforestation", minValue: 1, maxValue: 2}, {param: "animalSpecies", minValue: 200, maxValue: 2000}]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param:"afforestation", minValue: 1, maxValue: 2}, {param: "animalSpecies", minValue: 1000, maxValue: 10000}]}
+    {
+        reaction: "Öl abfischen",
+        cost: 10,
+        impacts: [{param: "afforestation", minValue: 1, maxValue: 2}, {
+            param: "animalSpecies",
+            minValue: 100,
+            maxValue: 1000
+        }]
+    },
+    {
+        reaction: "Tanker bergen",
+        cost: 7,
+        impacts: [{param: "afforestation", minValue: 1, maxValue: 2}, {
+            param: "animalSpecies",
+            minValue: 200,
+            maxValue: 2000
+        }]
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "afforestation", minValue: 1, maxValue: 2}, {
+            param: "animalSpecies",
+            minValue: 1000,
+            maxValue: 10000
+        }]
+    }
 ]
 
 var tornadoReactions = [
-    {reaction: "Evakuieren", cost: 4, impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {param: "afforestation", minValue: 2, maxValue: 4},]},
-    {reaction: "Rettungskräfte schicken", cost: 3, impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {param: "afforestation", minValue: 2, maxValue: 4},]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {param: "afforestation", minValue: 2, maxValue: 4},]},
+    {
+        reaction: "Evakuieren",
+        cost: 4,
+        impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
+            param: "afforestation",
+            minValue: 2,
+            maxValue: 4
+        },]
+    },
+    {
+        reaction: "Rettungskräfte schicken",
+        cost: 3,
+        impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
+            param: "afforestation",
+            minValue: 2,
+            maxValue: 4
+        },]
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {
+            param: "afforestation",
+            minValue: 2,
+            maxValue: 4
+        },]
+    },
 ]
 
 var warReactions = [
-    {reaction: "Waffenstillstand aushandeln", cost: 8, impacts: [{param: "population", minValue: 10000, maxValue: 1000000}, {param: "co2e", minValue: 0.01, maxValue: 0.02}, {param: "animalSpecies", minValue: 100, maxValue: 1000}]},
-    {reaction: "Wehrpflicht einführen", cost: 10, impacts: [{param: "population", minValue: 20000, maxValue: 2000000}, {param: "co2e", minValue: 0.01, maxValue: 0.03}, {param: "animalSpecies", minValue: 200, maxValue: 2000}]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 50000, maxValue: 5000000}, {param: "co2e", minValue: 0.01, maxValue: 0.03}, {param: "animalSpecies", minValue: 200, maxValue: 2000}]}
+    {
+        reaction: "Waffenstillstand aushandeln",
+        cost: 8,
+        impacts: [{param: "population", minValue: 10000, maxValue: 1000000}, {
+            param: "co2e",
+            minValue: 0.01,
+            maxValue: 0.02
+        }, {param: "animalSpecies", minValue: 100, maxValue: 1000}]
+    },
+    {
+        reaction: "Wehrpflicht einführen",
+        cost: 10,
+        impacts: [{param: "population", minValue: 20000, maxValue: 2000000}, {
+            param: "co2e",
+            minValue: 0.01,
+            maxValue: 0.03
+        }, {param: "animalSpecies", minValue: 200, maxValue: 2000}]
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "population", minValue: 50000, maxValue: 5000000}, {
+            param: "co2e",
+            minValue: 0.01,
+            maxValue: 0.03
+        }, {param: "animalSpecies", minValue: 200, maxValue: 2000}]
+    }
 ]
 
 var pestInfestationReactions = [
-    {reaction: "Großflächig mit Pestiziden bekämpfen", cost: 10, impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {param: "co2e", minValue: 0.01, maxValue: 0.01}, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {param: "ozoneLayer", minValue: 1, maxValue: 2}]},
-    {reaction: "nötige Waren importieren", cost: 8, impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {param: "co2e", minValue: 0.01, maxValue: 0.01}, {param: "animalSpecies", minValue: 100, maxValue: 1000}]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {param: "co2e", minValue: 0.01, maxValue: 0.01}]}
+    {
+        reaction: "Großflächig mit Pestiziden bekämpfen",
+        cost: 10,
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
+            param: "co2e",
+            minValue: 0.01,
+            maxValue: 0.01
+        }, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {param: "ozoneLayer", minValue: 1, maxValue: 2}]
+    },
+    {
+        reaction: "nötige Waren importieren",
+        cost: 8,
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
+            param: "co2e",
+            minValue: 0.01,
+            maxValue: 0.01
+        }, {param: "animalSpecies", minValue: 100, maxValue: 1000}]
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {
+            param: "co2e",
+            minValue: 0.01,
+            maxValue: 0.01
+        }]
+    }
+]
+
+var meltingPolesReactions = [
+    {
+        reaction: "Elektroenergien fördern",
+        cost: 7,
+        impacts: [{param: "co2e", minValue: -0.02, maxValue: -0.04}, {
+            param: "animalSpecies",
+            minValue: 100,
+            maxValue: 1000
+        }, {param: "waterLevel", minValue: 1, maxValue: 5}, {param: "temperature", minValue: -1, maxValue: -2}],
+        triggers: [flood]
+    },
+    {
+        reaction: "Flugverkehr limitieren",
+        cost: 5,
+        impacts: [{param: "co2e", minValue: -0.01, maxValue: -0.01}, {
+            param: "animalSpecies",
+            minValue: 100,
+            maxValue: 1000
+        }, {param: "waterLevel", minValue: 1, maxValue: 5}, {param: "temperature", minValue: -1, maxValue: -2}],
+        triggers: [flood]
+    },
+    {
+        reaction: "Nichts machen",
+        cost: 0,
+        impacts: [{param: "animalSpecies", minValue: 100, maxValue: 1000}, {
+            param: "waterLevel",
+            minValue: 1,
+            maxValue: 5
+        }, {param: "temperature", minValue: -1, maxValue: -2}],
+        triggers: [flood]
+    },
+]
+
+var natureConservationDayReactions = [
+    {
+        reaction: "Stark unterstützen",
+        cost: 14,
+        impacts: [{param: "afforestation", minValue: -4, maxValue: -10}, {
+            param: "co2e",
+            minValue: -0.02,
+            maxValue: -0.02
+        }]
+    },
+    {
+        reaction: "Etwas unterstützen",
+        cost: 7,
+        impacts: [{param: "afforestation", minValue: -2, maxValue: -7}, {
+            param: "co2e",
+            minValue: -0.01,
+            maxValue: -0.01
+        }]
+    },
+    {reaction: "Nichts machen", cost: 0}
 ]
 
 var pestInfestation = {eventMessage: "Schädlingsplage", reactions: pestInfestationReactions}
@@ -75,15 +408,17 @@ var pandemic = {eventMessage: "Pandemie", reactions: pandemicReactions}
 var oilTankerExplosion = {eventMessage: "Öltanker explodiert", reactions: oilTankerExplosionReactions}
 var tornado = {eventMessage: "Tornado", reactions: tornadoReactions}
 var war = {eventMessage: "Krieg", reactions: warReactions}
+var meltingPoles = {eventMessage: "Polkappenschmelze", reactions: meltingPolesReactions}
+var natureConservationDay = {eventMessage: "Naturschutztag", reactions: natureConservationDayReactions}
 
-var commonEvents = [earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado]
-var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation]
+var commonEvents = [earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay]
+var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
 var currentEvent = undefined
 
 function newEvent() {
-    let eventListPossiblilityPicker = [commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, rareEvents]
-    let pickedEventList = eventListPossiblilityPicker[Math.floor(Math.random()*eventListPossiblilityPicker.length)]
-    currentEvent = pickedEventList[Math.floor(Math.random()*pickedEventList.length)];
+    let eventListPossiblilityPicker = [commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, rareEvents]
+    let pickedEventList = eventListPossiblilityPicker[Math.floor(Math.random() * eventListPossiblilityPicker.length)]
+    currentEvent = pickedEventList[Math.floor(Math.random() * pickedEventList.length)];
     document.getElementById("eventMessage").innerHTML = currentEvent.eventMessage
     document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + currentEvent.reactions[0].cost + " Mio €)"
     document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + currentEvent.reactions[1].cost + " Mio €)"
@@ -111,14 +446,11 @@ function createGameOverMessage(message) {
 function gameOver() {
     if (population <= 0) {
         createGameOverMessage("Die Bevölkerung ist auf 0 gesunken. Das Spiel endet.");
-    }
-    else if (co2e >= 100) {
+    } else if (co2e >= 100) {
         createGameOverMessage("Die CO2e sind auf 100% gestiegen. Das Spiel endet.");
-    }
-    else if (afforestation <= 0) {
+    } else if (afforestation <= 0) {
         createGameOverMessage("Die Bewaldung ist auf 0% gesunken. Das Spiel endet.");
-    }
-    else if (year >= 2023) {
+    } else if (year >= 2023) {
         createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.");
     }
 }
@@ -147,7 +479,7 @@ function budgetCheck() {
     }
 }
 
-function populationGrowth(startValue, growthRate, period){
+function populationGrowth(startValue, growthRate, period) {
     return startValue * Math.pow(1 + growthRate, period);
 }
 
@@ -164,22 +496,45 @@ function reaction(r) {
     document.getElementById("event").close()
     budget -= reaction.cost
     console.log(reaction)
-    
+
     reaction.impacts.forEach(impact => {
         let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
-        let randomValueCo2e = Math.random() * (impact.maxValue -impact.minValue) + impact.minValue
+        let randomValueCo2e = Math.random() * (impact.maxValue - impact.minValue) + impact.minValue
         switch (impact.param) {
             case "co2e":
-                co2e += randomValueCo2e
-                infoPopUp.innerHTML += "<p>co2e gestiegen um "+ randomValueCo2e.toFixed(2) + " %</p>"
+                if (randomValueCo2e > 0) {
+                    co2e += randomValueCo2e
+                    infoPopUp.innerHTML += "<p>co2e gestiegen um " + randomValueCo2e.toFixed(2) + " %</p>"
+                    break
+                }
+                if (randomValueCo2e <= 0) {
+                    co2e += randomValueCo2e
+                    infoPopUp.innerHTML += "<p>co2e gesunken um " + Math.abs(randomValueCo2e.toFixed(2)) + " %</p>"
+                }
                 break
             case "afforestation":
-                afforestation -= randomValue
-                infoPopUp.innerHTML += "<p>Bewaldung verringert um " + randomValue + " %</p>"
+                if (randomValue > 0) {
+                    afforestation -= randomValue
+                    infoPopUp.innerHTML += "<p>Bewaldung verringert um " + randomValue + " %</p>"
+                    break
+                }
+                if (randomValue <= 0) {
+                    afforestation += Math.abs(randomValue)
+                    infoPopUp.innerHTML += "<p>Bewaldung erhöht um " + Math.abs(randomValue) + " %</p>"
+                    break
+                }
                 break
             case "waterLevel":
-                waterLevel += randomValue
-                infoPopUp.innerHTML += "<p>Wasserlevel gestiegen um " + randomValue + " m</p>"
+                if (randomValue > 0) {
+                    waterLevel += randomValue
+                    infoPopUp.innerHTML += "<p>Wasserlevel gestiegen um " + randomValue + " m</p>"
+                    break
+                }
+                if (randomValue <= 0) {
+                    waterLevel += randomValue
+                    infoPopUp.innerHTML += "<p>Wasserlevel gesunken um " + Math.abs(randomValue) + " m</p>"
+                    break
+                }
                 break
             case "population":
                 population -= randomValue
@@ -190,8 +545,16 @@ function reaction(r) {
                 infoPopUp.innerHTML += "<p>Es sind " + randomValue + " Tierarten ausgestorben </p>"
                 break
             case "temperature":
-                temperature += randomValue
-                infoPopUp.innerHTML += "<p>Temperatur gestiegen um " + randomValue + " °C</p>"
+                if (randomValue > 0) {
+                    temperature += randomValue
+                    infoPopUp.innerHTML += "<p>Temperatur gestiegen um " + randomValue + " °C</p>"
+                    break
+                }
+                if (randomValue <= 0) {
+                    temperature += randomValue
+                    infoPopUp.innerHTML += "<p>Temperatur gesunken um " + Math.abs(randomValue) + " °C</p>"
+                    break
+                }
                 break
             case "ozoneLayer":
                 ozoneLayer -= randomValue
