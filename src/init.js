@@ -18,12 +18,5 @@ var animalSpeciesElem = document.getElementById("animalSpecies")
 var temperatureElem = document.getElementById("temperature")
 var ozoneLayerElem = document.getElementById("ozoneLayer")
 
-yearElem.innerHTML = "Jahr: " + year
-budgetElem.innerHTML = "Budget: " + budget + " Mio €"
-co2eElem.innerHTML = "CO2e: " + co2e + " %"
-afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
-waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
-populationElem.innerHTML = "Bevölkerung: " + population + " Menschen"
-animalSpeciesElem.innerHTML = "Tierarten: " + animalSpecies
-temperatureElem.innerHTML = "Temperatur: " + temperature + " °C"
-ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
+updateAttributes()
+timeIncrement()
