@@ -61,9 +61,23 @@ var tornadoReactions = [
 ]
 var tornado = {eventMessage: "Tornado", reactions: tornadoReactions}
 
+var warReactions = [
+    {reaction: "Waffenstillstand aushandeln", cost: 8, impacts: [{param: "population", minValue: 10000, maxValue: 1000000}, {param: "co2e", minValue: 0.01, maxValue: 0.02}, {param: "animalSpecies", minValue: 100, maxValue: 1000}]},
+    {reaction: "Wehrpflicht einführen", cost: 10, impacts: [{param: "population", minValue: 20000, maxValue: 2000000}, {param: "co2e", minValue: 0.01, maxValue: 0.03}, {param: "animalSpecies", minValue: 200, maxValue: 2000}]},
+    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 50000, maxValue: 5000000}, {param: "co2e", minValue: 0.01, maxValue: 0.03}, {param: "animalSpecies", minValue: 200, maxValue: 2000}]}
+]
+var war = {eventMessage: "Krieg", reactions: warReactions}
+
+var pestInfestationReactions = [
+    {reaction: "Großflächig mit Pestiziden bekämpfen", cost: 10, impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {param: "co2e", minValue: 0.01, maxValue: 0.01}, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {param: "ozoneLayer", minValue: 1, maxValue: 2}]},
+    {reaction: "nötige Waren importieren", cost: 8, impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {param: "co2e", minValue: 0.01, maxValue: 0.01}, {param: "animalSpecies", minValue: 100, maxValue: 1000}]},
+    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {param: "co2e", minValue: 0.01, maxValue: 0.01}]}
+]
+var pestInfestation = {eventMessage: "Schädlingsplage", reactions: pestInfestationReactions}
+
 var commonEvents = [earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado]
 
-var rareEvents = [vulcanicEruption, pandemic]
+var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation]
 var currentEvent = undefined
 
 function newEvent() {
@@ -151,34 +165,36 @@ function reaction(r) {
     let infoPopUp = document.getElementById("stats")
     infoPopUp.innerHTML = ""
     reaction.impacts.forEach(impact => {
+        let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
+        let randomValueCo2e = Math.random() * (impact.maxValue -impact.minValue) + impact.minValue
         switch (impact.param) {
             case "co2e":
-                co2e += impact.minValue
-                infoPopUp.innerHTML += "<p>co2e gestiegen um "+ impact.minValue + " %</p>"
+                co2e += randomValueCo2e
+                infoPopUp.innerHTML += "<p>co2e gestiegen um "+ randomValueCo2e.toFixed(2) + " %</p>"
                 break
             case "afforestation":
-                afforestation -= impact.minValue
-                infoPopUp.innerHTML += "<p>Bewaldung verringert um " + impact.minValue + " %</p>"
+                afforestation -= randomValue
+                infoPopUp.innerHTML += "<p>Bewaldung verringert um " + randomValue + " %</p>"
                 break
             case "waterLevel":
-                waterLevel += impact.minValue
-                infoPopUp.innerHTML += "<p>Wasserlevel gestiegen um " + impact.minValue + " m</p>"
+                waterLevel += randomValue
+                infoPopUp.innerHTML += "<p>Wasserlevel gestiegen um " + randomValue + " m</p>"
                 break
             case "population":
-                population -= impact.minValue
-                infoPopUp.innerHTML += "<p>Bevölkerung gesunken um " + impact.minValue + " Menschen</p>"
+                population -= randomValue
+                infoPopUp.innerHTML += "<p>Bevölkerung gesunken um " + randomValue + " Menschen</p>"
                 break
             case "animalSpecies":
-                animalSpecies -= impact.minValue
-                infoPopUp.innerHTML += "<p>Es sind " + impact.minValue + " Tierarten ausgestorben </p>"
+                animalSpecies -= randomValue
+                infoPopUp.innerHTML += "<p>Es sind " + randomValue + " Tierarten ausgestorben </p>"
                 break
             case "temperature":
-                temperature += impact.minValue
-                infoPopUp.innerHTML += "<p>Temperatur gestiegen um " + impact.minValue + " °C</p>"
+                temperature += randomValue
+                infoPopUp.innerHTML += "<p>Temperatur gestiegen um " + randomValue + " °C</p>"
                 break
             case "ozoneLayer":
-                ozoneLayer -= impact.minValue
-                infoPopUp.innerHTML += "<p>Ozonschicht verschlechtert um " + impact.minValue + " %</p>"
+                ozoneLayer -= randomValue
+                infoPopUp.innerHTML += "<p>Ozonschicht verschlechtert um " + randomValue + " %</p>"
                 break
             default:
                 break;
@@ -187,11 +203,14 @@ function reaction(r) {
 
     document.getElementById("info").show()
 
+
+    yearElem.innerHTML = "Jahr: " + year
+    budgetElem.innerHTML = "Budget: " + budget + " Mio €"
     co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
     animalSpeciesElem.innerHTML = "Tierarten: " + animalSpecies
-    temperatureElem.innerHTML = "Temperatur: " + temperature + " °C"
+    temperatureElem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
     ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
 }
 
