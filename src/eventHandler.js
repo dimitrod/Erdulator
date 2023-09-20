@@ -157,7 +157,7 @@ function reaction(r) {
                 break;
         }
     });
-	
+	else infoPopUp.innerHTML += "<p>Nichts passiert</p>"
     document.getElementById("info").show()
     updateAttributes()
 }
