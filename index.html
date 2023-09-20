@@ -12,6 +12,9 @@
     </header>
 
     <main>
+        <audio controls loop autoplay>
+            <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"></sourcesrc>
+        </audio>
         <p id = "year"></p>
         <p id = "budget"></p>
         <p id = "co2e"></p>
@@ -29,19 +32,32 @@
         </dialog>
         <dialog id="info">
             <p id="stats"></p>
-            <button id="close" onclick="document.getElementById('info').close(); timeIncrement()">Okay</button>
+            <button id="closeInfo" onclick="document.getElementById('info').close(); newQuestion()">Okay</button>
         </dialog>
         <dialog id="gameOver">
             <p id="gameOverMessage"></p>
             <button id="restart" onclick="location.reload()">Restart</button>
         </dialog>
+        <div id="question" class="quiz" hidden="hidden">
+            <p id="quizQuestion"> </p>
+            <button id="answer0" onclick="evaluateAnswer(0)"> </button>
+            <button id="answer1" onclick="evaluateAnswer(1)"> </button>
+            <button id="answer2" onclick="evaluateAnswer(2)"> </button>
+        </div>
+        <div id="information" class="information" hidden="hidden">
+            <p id ="answer"></p>
+            <p id ="background"></p>
+            <button id="closeInformation" onclick="timeIncrement()">Okay</button>
+        </div>
     </main>
     
     <footer>
 
     </footer>
     <script src="src/events.js"></script>
+    <script src="src/quizInit.js"></script>
     <script src="src/eventHandler.js"></script>
+    <script src="src/quizHandler.js"></script>
     <script src="src/init.js"></script>
 </body>
 </html>

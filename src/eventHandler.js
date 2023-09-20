@@ -11,6 +11,7 @@ function newEvent() {
 }
 
 function timeIncrement() {
+    document.getElementById('information').style.display = "none";
     eventInterval = 5;
     year += eventInterval;
     newEvent()
