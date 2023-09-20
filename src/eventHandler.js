@@ -88,7 +88,8 @@ function reaction(r) {
     document.getElementById("event").close()
     budget -= reaction.cost
     console.log(reaction)
-
+	
+	if(reaction.impacts != undefined)
     reaction.impacts.forEach(impact => {
         let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
         let randomValueCo2e = Math.random() * (impact.maxValue - impact.minValue) + impact.minValue
@@ -156,6 +157,7 @@ function reaction(r) {
                 break;
         }
     });
+	
     document.getElementById("info").show()
     updateAttributes()
 }
