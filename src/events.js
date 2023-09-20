@@ -1,7 +1,7 @@
 var earthquakeReactions = [
     {
         reaction: "Bergungsteam schicken",
-        cost: 2,
+        cost: 2 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
             param: "afforestation",
             minValue: 1,
@@ -11,7 +11,7 @@ var earthquakeReactions = [
     },
     {
         reaction: "Notunterkünfte errichten",
-        cost: 5,
+        cost: 5 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {
             param: "afforestation",
             minValue: 1,
@@ -21,7 +21,7 @@ var earthquakeReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 9000, maxValue: 90000}, {
             param: "afforestation",
             minValue: 1,
@@ -34,7 +34,7 @@ var earthquakeReactions = [
 var tsunamiReactions = [
     {
         reaction: "Evakuieren",
-        cost: 4,
+        cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 10000, maxValue: 20000}, {
             param: "afforestation",
             minValue: 1,
@@ -44,7 +44,7 @@ var tsunamiReactions = [
     },
     {
         reaction: "Frühwarnsystem errichten",
-        cost: 5,
+        cost: 5 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
             param: "afforestation",
             minValue: 1,
@@ -54,7 +54,7 @@ var tsunamiReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
             param: "afforestation",
             minValue: 1,
@@ -67,7 +67,7 @@ var tsunamiReactions = [
 var droughtReactions = [
     {
         reaction: "Aufforsten",
-        cost: 3,
+        cost: 3 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 2000, maxValue: 10000}, {
             param: "afforestation",
             minValue: 1,
@@ -77,7 +77,7 @@ var droughtReactions = [
     },
     {
         reaction: "Lebensmittel bereitstellen",
-        cost: 4,
+        cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
             param: "afforestation",
             minValue: 3,
@@ -87,7 +87,7 @@ var droughtReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 2000, maxValue: 20000}, {
             param: "afforestation",
             minValue: 3,
@@ -100,7 +100,7 @@ var droughtReactions = [
 var bushFireReactions = [
     {
         reaction: "Brand bekämpfen",
-        cost: 3,
+        cost: 3 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1500, maxValue: 15000}, {
             param: "temperature",
             minValue: 1,
@@ -114,7 +114,7 @@ var bushFireReactions = [
     },
     {
         reaction: "Evakuieren",
-        cost: 4,
+        cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
             param: "temperature",
             minValue: 1,
@@ -128,7 +128,7 @@ var bushFireReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
             param: "temperature",
             minValue: 1,
@@ -145,7 +145,7 @@ var bushFireReactions = [
 var floodReactions = [
     {
         reaction: "Wälle errichten",
-        cost: 2,
+        cost: 2 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1500, maxValue: 15000}, {
             param: "afforestation",
             minValue: 1,
@@ -155,7 +155,7 @@ var floodReactions = [
     },
     {
         reaction: "Evakuieren",
-        cost: 4,
+        cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
             param: "afforestation",
             minValue: 2,
@@ -165,7 +165,7 @@ var floodReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
             param: "afforestation",
             minValue: 2,
@@ -178,7 +178,7 @@ var floodReactions = [
 var vulcanicEruptionReactions = [
     {
         reaction: "Evakuieren",
-        cost: 4,
+        cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
             param: "temperature",
             minValue: 1,
@@ -188,7 +188,7 @@ var vulcanicEruptionReactions = [
     },
     {
         reaction: "Rettungskräfte schicken",
-        cost: 3,
+        cost: 3 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 2000, maxValue: 20000}, {
             param: "temperature",
             minValue: 1,
@@ -198,7 +198,7 @@ var vulcanicEruptionReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 6000, maxValue: 60000}, {
             param: "temperature",
             minValue: 1,
@@ -211,7 +211,7 @@ var vulcanicEruptionReactions = [
 var pandemicReactions = [
     {
         reaction: "Lockdown anordnen",
-        cost: 2,
+        cost: 2 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
             param: "co2e",
             minValue: -0.01,
@@ -225,7 +225,7 @@ var pandemicReactions = [
 var oilTankerExplosionReactions = [
     {
         reaction: "Öl abfischen",
-        cost: 10,
+        cost: 10 * Math.pow(10,6),
         impacts: [{param: "afforestation", minValue: 1, maxValue: 2}, {
             param: "animalSpecies",
             minValue: 100,
@@ -234,7 +234,7 @@ var oilTankerExplosionReactions = [
     },
     {
         reaction: "Tanker bergen",
-        cost: 7,
+        cost: 7 * Math.pow(10,6),
         impacts: [{param: "afforestation", minValue: 1, maxValue: 2}, {
             param: "animalSpecies",
             minValue: 200,
@@ -243,7 +243,7 @@ var oilTankerExplosionReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "afforestation", minValue: 1, maxValue: 2}, {
             param: "animalSpecies",
             minValue: 1000,
@@ -255,7 +255,7 @@ var oilTankerExplosionReactions = [
 var tornadoReactions = [
     {
         reaction: "Evakuieren",
-        cost: 4,
+        cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
             param: "afforestation",
             minValue: 2,
@@ -264,7 +264,7 @@ var tornadoReactions = [
     },
     {
         reaction: "Rettungskräfte schicken",
-        cost: 3,
+        cost: 3 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
             param: "afforestation",
             minValue: 2,
@@ -273,7 +273,7 @@ var tornadoReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {
             param: "afforestation",
             minValue: 2,
@@ -285,7 +285,7 @@ var tornadoReactions = [
 var warReactions = [
     {
         reaction: "Waffenstillstand aushandeln",
-        cost: 8,
+        cost: 8 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 10000, maxValue: 1000000}, {
             param: "co2e",
             minValue: 0.01,
@@ -294,7 +294,7 @@ var warReactions = [
     },
     {
         reaction: "Wehrpflicht einführen",
-        cost: 10,
+        cost: 10 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 20000, maxValue: 2000000}, {
             param: "co2e",
             minValue: 0.01,
@@ -303,7 +303,7 @@ var warReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 50000, maxValue: 5000000}, {
             param: "co2e",
             minValue: 0.01,
@@ -315,7 +315,7 @@ var warReactions = [
 var pestInfestationReactions = [
     {
         reaction: "Großflächig mit Pestiziden bekämpfen",
-        cost: 10,
+        cost: 10 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
             param: "co2e",
             minValue: 0.01,
@@ -324,7 +324,7 @@ var pestInfestationReactions = [
     },
     {
         reaction: "nötige Waren importieren",
-        cost: 8,
+        cost: 8 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
             param: "co2e",
             minValue: 0.01,
@@ -333,7 +333,7 @@ var pestInfestationReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {
             param: "co2e",
             minValue: 0.01,
@@ -345,7 +345,7 @@ var pestInfestationReactions = [
 var meltingPolesReactions = [
     {
         reaction: "Elektroenergien fördern",
-        cost: 7,
+        cost: 7 * Math.pow(10,6),
         impacts: [{param: "co2e", minValue: -0.02, maxValue: -0.04}, {
             param: "animalSpecies",
             minValue: 100,
@@ -355,7 +355,7 @@ var meltingPolesReactions = [
     },
     {
         reaction: "Flugverkehr limitieren",
-        cost: 5,
+        cost: 5 * Math.pow(10,6),
         impacts: [{param: "co2e", minValue: -0.01, maxValue: -0.01}, {
             param: "animalSpecies",
             minValue: 100,
@@ -365,7 +365,7 @@ var meltingPolesReactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0,
+        cost: 0 * Math.pow(10,6),
         impacts: [{param: "animalSpecies", minValue: 100, maxValue: 1000}, {
             param: "waterLevel",
             minValue: 1,
@@ -378,7 +378,7 @@ var meltingPolesReactions = [
 var natureConservationDayReactions = [
     {
         reaction: "Stark unterstützen",
-        cost: 14,
+        cost: 14 * Math.pow(10,6),
         impacts: [{param: "afforestation", minValue: -4, maxValue: -10}, {
             param: "co2e",
             minValue: -0.02,
@@ -387,7 +387,7 @@ var natureConservationDayReactions = [
     },
     {
         reaction: "Etwas unterstützen",
-        cost: 7,
+        cost: 7 * Math.pow(10,6),
         impacts: [{param: "afforestation", minValue: -2, maxValue: -7}, {
             param: "co2e",
             minValue: -0.01,

@@ -3,9 +3,9 @@ function newEvent() {
     let pickedEventList = eventListPossiblilityPicker[Math.floor(Math.random() * eventListPossiblilityPicker.length)]
     currentEvent = pickedEventList[Math.floor(Math.random() * pickedEventList.length)];
     document.getElementById("eventMessage").innerHTML = currentEvent.eventMessage
-    document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + currentEvent.reactions[0].cost + " Mio €)"
-    document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + currentEvent.reactions[1].cost + " Mio €)"
-    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + currentEvent.reactions[2].cost + " Mio €)"
+    document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost,1) + " €)"
+    document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost,0) + " €)"
+    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost,0) + " €)"
     budgetCheck()
     document.getElementById("event").show()
 }
@@ -71,12 +71,12 @@ function populationIncrement() {
 
 function updateAttributes() {
     yearElem.innerHTML = "Jahr: " + year
-    budgetElem.innerHTML = "Budget: " + budget + " Mio €"
+    budgetElem.innerHTML = "Budget: " + convertNum(budget) + " €"
     co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
-    populationElem.innerHTML = "Bevölkerung: " + population + " Menschen"
-    animalSpeciesElem.innerHTML = "Tierarten: " + animalSpecies
+    populationElem.innerHTML = "Bevölkerung: " + convertNum(population) + " Menschen"
+    animalSpeciesElem.innerHTML = "Tierarten: " + convertNum(animalSpecies)
     temperatureElem.innerHTML = "Temperatur: " + temperature + " °C"
     ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
 }
@@ -130,11 +130,11 @@ function reaction(r) {
                 break
             case "population":
                 population -= randomValue
-                infoPopUp.innerHTML += "<p>Bevölkerung gesunken um " + randomValue + " Menschen</p>"
+                infoPopUp.innerHTML += "<p>Bevölkerung gesunken um " + convertNum(randomValue) + " Menschen</p>"
                 break
             case "animalSpecies":
                 animalSpecies -= randomValue
-                infoPopUp.innerHTML += "<p>Es sind " + randomValue + " Tierarten ausgestorben </p>"
+                infoPopUp.innerHTML += "<p>Es sind " + convertNum(randomValue) + " Tierarten ausgestorben </p>"
                 break
             case "temperature":
                 if (randomValue > 0) {
