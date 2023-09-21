@@ -7,15 +7,11 @@ function makeQuiz(){
         let amountOfQuestions = Math.floor(Math.random() * 3 +1)
         console.log(amountOfQuestions)
         while (quiz.length !== 0 && amountOfQuestions !== 0){
-            console.log(quiz)
-            console.log(quiz.length)
             let randomNumber =Math.floor(Math.random()*quiz.length)
-            console.log(randomNumber)
             let question = quiz.splice(randomNumber, 1)
             currentQuestions.push(question[0]) // slice removed die Frage und gibt ein array mit den removeten Fragen zurück
             --amountOfQuestions
         }
-        console.log(currentQuestions)
         displayQuestionFromQueue()
     }
 }
