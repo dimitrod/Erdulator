@@ -2,8 +2,10 @@ let currentQuestions = []
 const answers = [document.getElementById("answer0"), document.getElementById("answer1"), document.getElementById("answer2")]
 
 function makeQuiz(){
-    if (quiz.length == 0){document.getElementById("emptyQuiz").style.display="block"}
-    else{
+    if (quiz.length == 0) {
+        document.getElementById("emptyQuiz").style.display="block"
+    }
+    else {
         let amountOfQuestions = Math.floor(Math.random() * 3 +1)
         while (quiz.length !== 0 && amountOfQuestions !== 0){
             let randomNumber =Math.floor(Math.random()*quiz.length)
@@ -24,25 +26,28 @@ function displayQuestionFromQueue(){
 }
 
 function nextCloseDecider(){
-    if (currentQuestions.length == 0){
+    if (currentQuestions.length == 0) {
         timeIncrement();
-    }else{
+    }
+    else{
         document.getElementById("information").style.display="none"
         displayQuestionFromQueue()
     }
 }
+
 function evaluateAnswer(i){
-    if (currentQuestions.length == 1)document.getElementById("NextClose").innerHTML="Close"
+    if (currentQuestions.length == 1) {
+        document.getElementById("NextClose").innerHTML="Close"
+    }
     document.getElementById("questionDisplay").style.display = "none"
     document.getElementById("information").style.display ="block"
-    if (i === currentQuestions[0].answer){
+    if (i == currentQuestions[0].answer){
         document.getElementById("answer").innerHTML= "Richtig!"
-        budget += 2
-        budgetElem.innerHTML = "Budget: " + budget + " Mio €"
-    }else{
+        budget += 2 * Math.pow(10, 6)
+        budgetElem.innerHTML = "Budget: " + convertNum(budget) + " €"
+    } else {
         document.getElementById("answer").innerHTML= "Falsch!"
     }
     document.getElementById("background").innerHTML = currentQuestions[0].information
     currentQuestions.splice(0,1)
 }
-
