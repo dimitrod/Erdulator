@@ -3,9 +3,9 @@ function newEvent() {
     let pickedEventList = eventListPossiblilityPicker[Math.floor(Math.random() * eventListPossiblilityPicker.length)]
     currentEvent = pickedEventList[Math.floor(Math.random() * pickedEventList.length)];
     document.getElementById("eventMessage").innerHTML = currentEvent.eventMessage
-    document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost,0) + " €)"
-    document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost,0) + " €)"
-    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost,0) + " €)"
+    document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost, 0) + " €)"
+    document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost, 0) + " €)"
+    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost, 0) + " €)"
     budgetCheck()
     document.getElementById("event").show()
 }
@@ -75,7 +75,7 @@ function updateAttributes() {
     co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
-    populationElem.innerHTML = "Bevölkerung: " + convertNum(population) + " Menschen"
+    populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 2) + " Menschen"
     animalSpeciesElem.innerHTML = "Tierarten: " + convertNum(animalSpecies)
     temperatureElem.innerHTML = "Temperatur: " + temperature + " °C"
     ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
