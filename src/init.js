@@ -1,5 +1,5 @@
 var year = 1900
-var budget = 100
+var budget = 100  * Math.pow(10,6)
 var co2e = 0.02
 var afforestation = 100
 var waterLevel = 100
