@@ -3,7 +3,7 @@ function newEvent() {
     let pickedEventList = eventListPossiblilityPicker[Math.floor(Math.random() * eventListPossiblilityPicker.length)]
     currentEvent = pickedEventList[Math.floor(Math.random() * pickedEventList.length)];
     document.getElementById("eventMessage").innerHTML = currentEvent.eventMessage
-    document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost,1) + " €)"
+    document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost,0) + " €)"
     document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost,0) + " €)"
     document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost,0) + " €)"
     budgetCheck()
