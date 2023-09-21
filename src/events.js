@@ -394,7 +394,7 @@ var natureConservationDayReactions = [
             maxValue: -0.01
         }]
     },
-    {reaction: "Nichts machen", cost: 0}
+    {reaction: "Nichts machen", cost: 0, impacts: [{param: "nothing", minValue: 0, maxValue: 0}]}
 ]
 
 var pestInfestation = {eventMessage: "Schädlingsplage", reactions: pestInfestationReactions}
