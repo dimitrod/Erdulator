@@ -5,7 +5,6 @@ function makeQuiz(){
     if (quiz.length == 0){document.getElementById("emptyQuiz").style.display="block"}
     else{
         let amountOfQuestions = Math.floor(Math.random() * 3 +1)
-        console.log(amountOfQuestions)
         while (quiz.length !== 0 && amountOfQuestions !== 0){
             let randomNumber =Math.floor(Math.random()*quiz.length)
             let question = quiz.splice(randomNumber, 1)
@@ -32,7 +31,7 @@ function nextCloseDecider(){
         displayQuestionFromQueue()
     }
 }
-function evaluateA(i){
+function evaluateAnswer(i){
     if (currentQuestions.length == 1)document.getElementById("NextClose").innerHTML="Close"
     document.getElementById("questionDisplay").style.display = "none"
     document.getElementById("information").style.display ="block"
@@ -46,32 +45,4 @@ function evaluateA(i){
     document.getElementById("background").innerHTML = currentQuestions[0].information
     currentQuestions.splice(0,1)
 }
-
-
-
-
-
-function newQuestion() {
-    document.getElementById("question").style.display = "block"
-    currentQuestion = quiz[Math.floor(Math.random()*quiz.length)]
-    document.getElementById("quizQuestion").innerHTML = currentQuestion.question
-    for (let i = 0; i < answers.length; i++) {
-        answers[i].innerHTML = currentQuestion.choices[i]
-    }
-}
-// gets called by pressing the answer button
-function evaluateAnswer(i){
-    document.getElementById("question").style.display = "none"
-    document.getElementById("information").style.display ="block"
-    if (i === currentQuestion.answer){
-        document.getElementById("answer").innerHTML= "Richtig!"
-        budget += 2
-        budgetElem.innerHTML = "Budget: " + budget + " Mio €"
-    }else{
-        document.getElementById("answer").innerHTML= "Falsch!"
-
-    }
-    document.getElementById("background").innerHTML = currentQuestion.information
-}
-
 
