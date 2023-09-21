@@ -187,7 +187,7 @@ function reaction(r) {
                 ozoneLayer -= randomValue
                 infoPopUp.innerHTML += "<p>Ozonschicht verschlechtert um " + randomValue + " %</p>"
                 break
-            case "nichts":
+            case "nothing":
                 infoPopUp.innerHTML = "<p>Nichts ist passiert.<p>"
             default:
                 break;
