@@ -2,3 +2,4 @@
 [Erdulator](https://erdulator.de/)
 [Paper](https://docs.google.com/document/d/14DuayEZugHJm7Pb9uWYjvRc_mbRsLiqimZuhMIm8FQQ/edit?usp=sharing)
 [Qualitätsregister](https://docs.google.com/spreadsheets/d/1IAIQCe4fyYixkU0giF4FeaiKLsid7WSDIYL1pIh_l8o/edit#gid=0)
+[Risikobehandlung](https://docs.google.com/spreadsheets/d/1PQbsbK1YgedA1Z8q94iBGQT6U9mKojifiNtaH22sCx8/edit#gid=0)
