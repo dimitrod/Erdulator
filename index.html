@@ -8,12 +8,11 @@
 </head>
 <body>
     <header>
-
     </header>
 
     <main>
         <audio controls loop autoplay>
-            <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"></sourcesrc>
+            <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"> </source>
         </audio>
         <p id = "year"></p>
         <p id = "budget"></p>
@@ -32,22 +31,26 @@
         </dialog>
         <dialog id="info">
             <p id="stats"></p>
-            <button id="closeInfo" onclick="document.getElementById('info').close(); newQuestion()">Okay</button>
+            <button id="closeInfo" onclick="document.getElementById('info').close(); makeQuiz()">Okay</button>
         </dialog>
         <dialog id="gameOver">
             <p id="gameOverMessage"></p>
             <button id="restart" onclick="location.reload()">Restart</button>
         </dialog>
-        <div id="question" class="quiz" hidden="hidden">
+        <div id="questionDisplay" class="quiz" hidden="hidden">
             <p id="quizQuestion"> </p>
-            <button id="answer0" onclick="evaluateAnswer(0)"> </button>
-            <button id="answer1" onclick="evaluateAnswer(1)"> </button>
-            <button id="answer2" onclick="evaluateAnswer(2)"> </button>
+            <button id="answer0" onclick="evaluateA(0)"> </button>
+            <button id="answer1" onclick="evaluateA(1)"> </button>
+            <button id="answer2" onclick="evaluateA(2)"> </button>
         </div>
         <div id="information" class="information" hidden="hidden">
             <p id ="answer"></p>
             <p id ="background"></p>
-            <button id="closeInformation" onclick="timeIncrement()">Okay</button>
+            <button id="NextClose" onclick="nextCloseDecider()">Next</button>
+        </div>
+        <div id="emptyQuiz" hidden="hidden">
+            <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
+            <button id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none';timeIncrement()">Close</button>
         </div>
     </main>
     
