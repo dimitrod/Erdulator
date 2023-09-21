@@ -421,6 +421,12 @@ var worldWar2Reactions = [
     { reaction: "Nichts machen", cost: 0, impacts: [{ param: "population", minValue: 57000000, maxValue: 70000000 }, { param: "afforestation", minValue: 5, maxValue: 6 }, { param: "co2e", minValue: 0.02, maxValue: 0.04 }], startingYear: [1939], endingYear: [1945] }
 ]
 
+var deforestationReactions = [
+    {reaction: "Naturschutzgebiete einrichten", cost: 8, impacts: [{param: "afforestation", minValue: -2, maxValue: -4}, {param: "co2e", minValue: -0.01, maxValue: -0.03}]},
+    {reaction: "Abholzung regulieren", cost: 4, impacts: [{param: "afforestation", minValue: 1, maxValue: 3}, {param: "co2e", minValue: -0.01, maxValue: -0.02}]},
+    {reaction: "Nichts machen", cost: 0, impacts: [{param: "afforestation", minValue: 2, maxValue: 5}]},
+]
+
 var pestInfestation = { eventMessage: "Schädlingsplage", reactions: pestInfestationReactions }
 var earthquake = { eventMessage: "Erdbeben", reactions: earthquakeReactions }
 var tsunami = { eventMessage: "Tsunami", reactions: tsunamiReactions }
@@ -436,7 +442,8 @@ var meltingPoles = { eventMessage: "Polkappenschmelze", reactions: meltingPolesR
 var natureConservationDay = { eventMessage: "Naturschutztag", reactions: natureConservationDayReactions }
 var worldWar1 = { eventStartingMessage: "Der erste Weltkrieg beginnt", eventEndingMessage: "Der erste Weltkrieg ist vorbei", reactions: worldWar1Reactions }
 var worldWar2 = { eventStartingMessage: "Der zweite Weltkrieg beginnt", eventEndingMessage: "Der zweite Weltkrieg ist vorbei", reactions: worldWar2Reactions }
+var deforestation = {eventMessage: "Abholzung", reactions: deforestationReactions}
 
-var commonEvents = [earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay]
+var commonEvents = [earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
 var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
 var currentEvent = undefined
