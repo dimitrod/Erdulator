@@ -418,7 +418,7 @@ var worldWar1Reactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0 * Math.pow(10,6),
+        cost: 0,
         impacts: [{param: "population", minValue: 16000000, maxValue: 18000000}, {
             param: "afforestation",
             minValue: 3,
@@ -452,7 +452,7 @@ var worldWar2Reactions = [
     },
     {
         reaction: "Nichts machen",
-        cost: 0 * Math.pow(10,6),
+        cost: 0,
         impacts: [{param: "population", minValue: 57000000, maxValue: 70000000}, {
             param: "afforestation",
             minValue: 5,
@@ -484,24 +484,30 @@ var deforestationReactions = [
 var hurricaneReactions = [
     {reaction: "Evakuieren", cost: 4 * Math.pow(10,6), impacts: [{param: "population", minValue: 2000, maxValue: 20000}, {param: "afforestation", minValue: 1, maxValue: 2}]},
     {reaction: "Bergungsteam schicken", cost: 3 * Math.pow(10,6), impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {param: "afforestation", minValue: 1, maxValue: 2}]},
-    {reaction: "Nichts machen", cost: 0 * Math.pow(10,6), impacts: [{param: "population", minValue: 4000, maxValue: 40000}, {param: "afforestation", minValue: 1, maxValue: 2}]}
+    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 4000, maxValue: 40000}, {param: "afforestation", minValue: 1, maxValue: 2}]}
 ]
 
+var oceans = ["Pazifischen Ozean", "Atlantischen Ozean", "Mittelmeer", "Schwarzen Meer", "Indischen Ozean", "Roten Meer", "Toten Meer", "Arktischen Ozean", "Antarktischen Ozean"]
+var countrys = ["Deutschland", " die USA", "China", "Spanien", "Brasilien", "Kanada", "Italien", "Argentinien", "Peru", "Indien", "Japan",
+    "Südkorea", "Frankreich", "Marokko", "Simbabwe", "Ghana", "Tschad", "Ungarn", "Norwegen", "Australien", "Sri Lanka", "Panama", "Zypern",
+    "Kongo", "Bulgarien", "Nordkorea", "Russland", "Taiwan", "England", "Irland", "Uzbekistan", "Rumänien", "Portugal", "Lettland", "Bolivien",
+    "Uruguay", "Kolumbien", "Polen", "Gabun", "Ägypten", "Mexiko", "Chile", "Thailand", "Indonesien", "Dänemark", "Schweiz", "Angola", "Namibia"]
+var continents = ["Asien", "Europa", "Australien", "Nordamerika", "Südamerika", "Indien"]
 
-var hurricane = {eventMessage: "Ein Hurricane verwüstet einige Regionen in " + randomCountry, reactions: hurricaneReactions}
-var pestInfestation = {eventMessage: "Eine Schädlingsplage in " + randomCountry + " führt zu Ernteausfällen und Hungersnöten", reactions: pestInfestationReactions}
-var earthquake = {eventMessage: "Ein Erdbeben in " + randomCountry + " lässt viele Gebäude einstürzen. Es werden Nachbeben erwartet", reactions: earthquakeReactions}
-var tsunami = {eventMessage: "Ein Tsunami kommt auf die Küste zu", reactions: tsunamiReactions}
-var drought = {eventMessage: "Es herrscht eine starke Dürre", reactions: droughtReactions}
-var bushFire = {eventMessage: "In vielen Regionen kommt es zu Waldbränden", reactions: bushFireReactions}
-var flood = {eventMessage: "Es kommt in einigen Regionen zu Überflutungen", reactions: floodReactions}
-var vulcanicEruption = {eventMessage: "Ein Vulkan bricht aus", reactions: vulcanicEruptionReactions}
-var pandemic = {eventMessage: "Die Inzidenzen einer neuen Krankheit steigt stark. Die Lage verschlimmert sich zu einer Pandemie", reactions: pandemicReactions}
-var oilTankerExplosion = {eventMessage: "Ein Öltanker ist auf dem Ozean explodiert. Viele Tonnen Öl verbreiten sich im Wasser", reactions: oilTankerExplosionReactions}
-var tornado = {eventMessage: "Ein Tornado verwüstet einige Regionen", reactions: tornadoReactions}
-var war = {eventMessage: "Es bricht ein Krieg aus", reactions: warReactions}
+var hurricane = {eventMessage: "Ein Hurrikan verwüstet einige Regionen in " + getRandomRegion("country") , reactions: hurricaneReactions}
+var pestInfestation = {eventMessage: "Eine Schädlingsplage in " + getRandomRegion("country") + " führt zu Ernteausfällen und Hungersnöten", reactions: pestInfestationReactions}
+var earthquake = {eventMessage: "Ein Erdbeben in " + getRandomRegion("country") + " lässt viele Gebäude einstürzen. Es werden Nachbeben erwartet", reactions: earthquakeReactions}
+var tsunami = {eventMessage: "Ein Tsunami kommt auf die Küste in " + getRandomRegion("continent") + " zu", reactions: tsunamiReactions}
+var drought = {eventMessage: "Es herrscht eine starke Dürre in " + getRandomRegion("country"), reactions: droughtReactions}
+var bushFire = {eventMessage: "In vielen Regionen von " + getRandomRegion("country") + " kommt es zu Waldbränden", reactions: bushFireReactions}
+var flood = {eventMessage: "Es kommt in zu Überflutungen in " + getRandomRegion("country"), reactions: floodReactions}
+var vulcanicEruption = {eventMessage: "Ein Vulkan bricht in " + getRandomRegion("continent") + " aus", reactions: vulcanicEruptionReactions}
+var pandemic = {eventMessage: "Die Inzidenz einer neuen Krankheit steigt stark. In ganz " + getRandomRegion("country") + " verschärft sich die Lage zu einer Pandemie", reactions: pandemicReactions}
+var oilTankerExplosion = {eventMessage: "Ein Öltanker ist im " + getRandomRegion("ocean") + " explodiert. Viele Tonnen Öl verbreiten sich im Wasser", reactions: oilTankerExplosionReactions}
+var tornado = {eventMessage: "Ein Tornado verwüstet " + getRandomRegion("country"), reactions: tornadoReactions}
+var war = {eventMessage: "Es bricht ein Krieg zwischen " + getRandomRegion("country") + " und " + getRandomRegion("country") + " aus", reactions: warReactions}
 var meltingPoles = {eventMessage: "Die Polkappen schmelzen immer schneller", reactions: meltingPolesReactions}
-var natureConservationDay = {eventMessage: "Es ist Naturschutztag", reactions: natureConservationDayReactions}
+var natureConservationDay = {eventMessage: "Es ist Naturschutztag auf der gesamten Welt", reactions: natureConservationDayReactions}
 var worldWar1 = {
     eventStartingMessage: "Der erste Weltkrieg beginnt",
     eventEndingMessage: "Der erste Weltkrieg ist vorbei",
@@ -518,24 +524,16 @@ var commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oi
 var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
 var currentEvent = undefined
 
-var oceans = ["Pazifischer Ozean", "Atlantischer Ozean", "Mittelmeer", "Ostsee", "Nordsee", "Schwarzes Meer", "Indischer Ozean", "Rotes Meer", "Totes Meer", "Arktischer Ozean", "Antarktischer Ozean"]
-var countrys = ["Deutschland", "USA", "China", "Spanien", "Brasilien", "Kanada", "Italien", "Argentinien", "Peru", "Indien", "Japan", 
-"Südkorea", "Frankreich", "Marokko", "Simbabwe", "Ghana", "Tschad", "Ungarn", "Norwegen", "Australien", "Sri Lanka", "Panama", "Zypern",
-"Kongo", "Bulgarien", "Nordkorea", "Russland", "Taiwan", "England", "Irland", "Uzbekistan", "Rumänien", "Portugal", "Lettland", "Bolivien",
-"Uruguay", "Kolumbien", "Polen", "Gabun", "Ägypten", "Mexiko", "Chile", "Thailand", "Indonesien", "Dänemark", "Schweiz", "Angola", "Namibia"]
-var continent = ["Asien", "Europa", "Australien", "Nordamerika", "Südamerika", "Indien"]
-
-
 function getRandomRegion(region){
     switch (region){
         case "country":
-            countryListSize = countrys.length
-            randomCountryNumber = Math.floor(Math.random(countryListSize))
-            randomCountry = countrys[randomCountryNumber] 
-            break
+            let randomCountryNumber = Math.floor(Math.random() * countrys.length)
+            return countrys[randomCountryNumber]
         case "ocean":
-            break
+            let randomOceanNumber = Math.floor(Math.random() * oceans.length)
+            return oceans[randomOceanNumber]
         case "continent":
-            break
+            let randomContinentNumber = Math.floor(Math.random() * continents.length)
+            return continents[randomContinentNumber]
     }
 }
