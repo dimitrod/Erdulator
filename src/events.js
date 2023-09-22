@@ -7,7 +7,7 @@ var earthquakeReactions = [
             minValue: 1,
             maxValue: 3
         }],
-        triggers: [tsunami]
+        triggers: []
     },
     {
         reaction: "Notunterkünfte errichten",
@@ -17,7 +17,7 @@ var earthquakeReactions = [
             minValue: 1,
             maxValue: 3
         }],
-        triggers: [tsunami]
+        triggers: []
     },
     {
         reaction: "Nichts machen",
@@ -27,7 +27,7 @@ var earthquakeReactions = [
             minValue: 1,
             maxValue: 3
         }],
-        triggers: [tsunami]
+        triggers: []
     }
 ]
 
@@ -40,7 +40,7 @@ var tsunamiReactions = [
             minValue: 1,
             maxValue: 3
         }],
-        triggers: [flood]
+        triggers: []
     },
     {
         reaction: "Frühwarnsystem errichten",
@@ -50,7 +50,7 @@ var tsunamiReactions = [
             minValue: 1,
             maxValue: 3
         }],
-        triggers: [flood]
+        triggers: []
     },
     {
         reaction: "Nichts machen",
@@ -60,7 +60,7 @@ var tsunamiReactions = [
             minValue: 1,
             maxValue: 3
         }],
-        triggers: [flood]
+        triggers: []
     }
 ]
 
@@ -83,7 +83,7 @@ var droughtReactions = [
             minValue: 3,
             maxValue: 4
         }, {param: "waterLevel", minValue: -1, maxValue: -2}],
-        triggers: [bushFire]
+        triggers: []
     },
     {
         reaction: "Nichts machen",
@@ -93,7 +93,7 @@ var droughtReactions = [
             minValue: 3,
             maxValue: 4
         }, {param: "waterLevel", minValue: -1, maxValue: -2}],
-        triggers: [bushFire]
+        triggers: []
     }
 ]
 
@@ -124,7 +124,7 @@ var bushFireReactions = [
             minValue: 4,
             maxValue: 5
         }, {param: "co2e", minValue: 0.03, maxValue: 0.06}],
-        triggers: [bushFire]
+        triggers: []
     },
     {
         reaction: "Nichts machen",
@@ -138,7 +138,7 @@ var bushFireReactions = [
             minValue: 4,
             maxValue: 5
         }, {param: "co2e", minValue: 0.03, maxValue: 0.06}],
-        triggers: [bushFire]
+        triggers: []
     }
 ]
 
@@ -184,7 +184,7 @@ var vulcanicEruptionReactions = [
             minValue: 1,
             maxValue: 1
         }, {param: "afforestation", minValue: 4, maxValue: 8}],
-        triggers: [bushFire]
+        triggers: []
     },
     {
         reaction: "Rettungskräfte schicken",
@@ -194,7 +194,7 @@ var vulcanicEruptionReactions = [
             minValue: 1,
             maxValue: 1
         }, {param: "afforestation", minValue: 4, maxValue: 8}],
-        triggers: [bushFire]
+        triggers: []
     },
     {
         reaction: "Nichts machen",
@@ -204,7 +204,7 @@ var vulcanicEruptionReactions = [
             minValue: 1,
             maxValue: 1
         }, {param: "afforestation", minValue: 4, maxValue: 8}],
-        triggers: [bushFire]
+        triggers: []
     }
 ]
 
@@ -351,7 +351,7 @@ var meltingPolesReactions = [
             minValue: 100,
             maxValue: 1000
         }, {param: "waterLevel", minValue: 1, maxValue: 5}, {param: "temperature", minValue: -1, maxValue: -2}],
-        triggers: [flood]
+        triggers: []
     },
     {
         reaction: "Flugverkehr limitieren",
@@ -361,7 +361,7 @@ var meltingPolesReactions = [
             minValue: 100,
             maxValue: 1000
         }, {param: "waterLevel", minValue: 1, maxValue: 5}, {param: "temperature", minValue: -1, maxValue: -2}],
-        triggers: [flood]
+        triggers: []
     },
     {
         reaction: "Nichts machen",
@@ -371,7 +371,7 @@ var meltingPolesReactions = [
             minValue: 1,
             maxValue: 5
         }, {param: "temperature", minValue: -1, maxValue: -2}],
-        triggers: [flood]
+        triggers: []
     },
 ]
 
@@ -493,37 +493,6 @@ var countrys = ["Deutschland", " die USA", "China", "Spanien", "Brasilien", "Kan
     "Kongo", "Bulgarien", "Nordkorea", "Russland", "Taiwan", "England", "Irland", "Uzbekistan", "Rumänien", "Portugal", "Lettland", "Bolivien",
     "Uruguay", "Kolumbien", "Polen", "Gabun", "Ägypten", "Mexiko", "Chile", "Thailand", "Indonesien", "Dänemark", "Schweiz", "Angola", "Namibia"]
 var continents = ["Asien", "Europa", "Australien", "Nordamerika", "Südamerika", "Indien"]
-
-var hurricane = {eventMessage: "Ein Hurrikan verwüstet einige Regionen in " + getRandomRegion("country") , reactions: hurricaneReactions}
-var pestInfestation = {eventMessage: "Eine Schädlingsplage in " + getRandomRegion("country") + " führt zu Ernteausfällen und Hungersnöten", reactions: pestInfestationReactions}
-var earthquake = {eventMessage: "Ein Erdbeben in " + getRandomRegion("country") + " lässt viele Gebäude einstürzen. Es werden Nachbeben erwartet", reactions: earthquakeReactions}
-var tsunami = {eventMessage: "Ein Tsunami kommt auf die Küste in " + getRandomRegion("continent") + " zu", reactions: tsunamiReactions}
-var drought = {eventMessage: "Es herrscht eine starke Dürre in " + getRandomRegion("country"), reactions: droughtReactions}
-var bushFire = {eventMessage: "In vielen Regionen von " + getRandomRegion("country") + " kommt es zu Waldbränden", reactions: bushFireReactions}
-var flood = {eventMessage: "Es kommt in zu Überflutungen in " + getRandomRegion("country"), reactions: floodReactions}
-var vulcanicEruption = {eventMessage: "Ein Vulkan bricht in " + getRandomRegion("continent") + " aus", reactions: vulcanicEruptionReactions}
-var pandemic = {eventMessage: "Die Inzidenz einer neuen Krankheit steigt stark. In ganz " + getRandomRegion("country") + " verschärft sich die Lage zu einer Pandemie", reactions: pandemicReactions}
-var oilTankerExplosion = {eventMessage: "Ein Öltanker ist im " + getRandomRegion("ocean") + " explodiert. Viele Tonnen Öl verbreiten sich im Wasser", reactions: oilTankerExplosionReactions}
-var tornado = {eventMessage: "Ein Tornado verwüstet " + getRandomRegion("country"), reactions: tornadoReactions}
-var war = {eventMessage: "Es bricht ein Krieg zwischen " + getRandomRegion("country") + " und " + getRandomRegion("country") + " aus", reactions: warReactions}
-var meltingPoles = {eventMessage: "Die Polkappen schmelzen immer schneller", reactions: meltingPolesReactions}
-var natureConservationDay = {eventMessage: "Es ist Naturschutztag auf der gesamten Welt", reactions: natureConservationDayReactions}
-var worldWar1 = {
-    eventStartingMessage: "Der erste Weltkrieg beginnt",
-    eventEndingMessage: "Der erste Weltkrieg ist vorbei",
-    reactions: worldWar1Reactions
-}
-var worldWar2 = {
-    eventStartingMessage: "Der zweite Weltkrieg beginnt",
-    eventEndingMessage: "Der zweite Weltkrieg ist vorbei",
-    reactions: worldWar2Reactions
-}
-var deforestation = {eventMessage: "Es kommt zu starker Abholzung der Regenwälder", reactions: deforestationReactions}
-
-var commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
-var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
-var currentEvent = undefined
-
 function getRandomRegion(region){
     switch (region){
         case "country":
