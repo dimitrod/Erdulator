@@ -166,7 +166,7 @@ function reaction(r) {
                 break
             case "population":
                 population -= randomValue
-                infoPopUp.innerHTML += "<p>Bevölkerung gesunken um " + convertNum(randomValue) + " Menschen</p>"
+                infoPopUp.innerHTML += "<p>Es sind " + convertNum(randomValue) + " Menschen gestorben</p>"
                 break
             case "animalSpecies":
                 animalSpecies -= randomValue
