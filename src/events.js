@@ -481,19 +481,27 @@ var deforestationReactions = [
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "afforestation", minValue: 2, maxValue: 5}]},
 ]
 
-var pestInfestation = {eventMessage: "Schädlingsplage", reactions: pestInfestationReactions}
-var earthquake = {eventMessage: "Erdbeben", reactions: earthquakeReactions}
-var tsunami = {eventMessage: "Tsunami", reactions: tsunamiReactions}
-var drought = {eventMessage: "Dürre", reactions: droughtReactions}
-var bushFire = {eventMessage: "Waldbrand", reactions: bushFireReactions}
-var flood = {eventMessage: "Überflutung", reactions: floodReactions}
-var vulcanicEruption = {eventMessage: "Vulkanausbruch", reactions: vulcanicEruptionReactions}
-var pandemic = {eventMessage: "Pandemie", reactions: pandemicReactions}
-var oilTankerExplosion = {eventMessage: "Öltanker explodiert", reactions: oilTankerExplosionReactions}
-var tornado = {eventMessage: "Tornado", reactions: tornadoReactions}
-var war = {eventMessage: "Krieg", reactions: warReactions}
-var meltingPoles = {eventMessage: "Polkappenschmelze", reactions: meltingPolesReactions}
-var natureConservationDay = {eventMessage: "Naturschutztag", reactions: natureConservationDayReactions}
+var hurricaneReactions = [
+    {reaction: "Evakuieren", cost: 4, impacts: [{param: "population", minValue: 2000, maxValue: 20000}, {param: "afforestation", minValue: 1, maxValue: 2}]},
+    {reaction: "Bergungsteam schicken", cost: 3, impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {param: "afforestation", minValue: 1, maxValue: 2}]},
+    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 4000, maxValue: 40000}, {param: "afforestation", minValue: 1, maxValue: 2}]}
+]
+
+
+var hurricane = {eventMessage: "Ein Hurricane verwüstet einige Regionen", reactions: hurricaneReactions}
+var pestInfestation = {eventMessage: "Eine Schädlingsplage führt zu Ernteausfällen und Hungersnöten", reactions: pestInfestationReactions}
+var earthquake = {eventMessage: "Ein Erdbeben lässt viele Gebäude einstürzen. Es werden Nachbeben erwartet", reactions: earthquakeReactions}
+var tsunami = {eventMessage: "Ein Tsunami kommt auf die Küste zu", reactions: tsunamiReactions}
+var drought = {eventMessage: "Es herrscht eine starke Dürre", reactions: droughtReactions}
+var bushFire = {eventMessage: "In vielen Regionen kommt es zu Waldbränden", reactions: bushFireReactions}
+var flood = {eventMessage: "Es kommt in einigen Regionen zu Überflutungen", reactions: floodReactions}
+var vulcanicEruption = {eventMessage: "Ein Vulkan bricht aus", reactions: vulcanicEruptionReactions}
+var pandemic = {eventMessage: "Die Inzidenzen einer neuen Krankheit steigt stark. Die Lage verschlimmert sich zu einer Pandemie", reactions: pandemicReactions}
+var oilTankerExplosion = {eventMessage: "Ein Öltanker ist auf dem Ozean explodiert. Viele Tonnen Öl verbreiten sich im Wasser", reactions: oilTankerExplosionReactions}
+var tornado = {eventMessage: "Ein Tornado verwüstet einige Regionen", reactions: tornadoReactions}
+var war = {eventMessage: "Es bricht ein Krieg aus", reactions: warReactions}
+var meltingPoles = {eventMessage: "Die Polkappen schmelzen", reactions: meltingPolesReactions}
+var natureConservationDay = {eventMessage: "Es ist Naturschutztag", reactions: natureConservationDayReactions}
 var worldWar1 = {
     eventStartingMessage: "Der erste Weltkrieg beginnt",
     eventEndingMessage: "Der erste Weltkrieg ist vorbei",
@@ -504,8 +512,8 @@ var worldWar2 = {
     eventEndingMessage: "Der zweite Weltkrieg ist vorbei",
     reactions: worldWar2Reactions
 }
-var deforestation = {eventMessage: "Abholzung", reactions: deforestationReactions}
+var deforestation = {eventMessage: "Es kommt zu starker Abholzung der Regenwälder", reactions: deforestationReactions}
 
-var commonEvents = [earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
+var commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
 var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
 var currentEvent = undefined
