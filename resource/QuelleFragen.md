@@ -1,0 +1,3 @@
+- https://www.umweltbundesamt.de/daten/energie/energieverbrauch-nach-energietraegern-sektoren#entwicklung-des-endenergieverbrauchs-nach-sektoren-und-energietragern
+- https://www.nabu.de/umwelt-und-ressourcen/klima-und-luft/23339.html
+- https://www.nabu.de/natur-und-landschaft/moore/moore-und-klimawandel/13340.html

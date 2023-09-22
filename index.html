@@ -8,7 +8,6 @@
 </head>
 <body>
     <header>
-
     </header>
 
     <main>
@@ -29,19 +28,50 @@
         </dialog>
         <dialog id="info">
             <p id="stats"></p>
-            <button id="close" onclick="document.getElementById('info').close(); timeIncrement()">Okay</button>
+            <button id="closeInfo" onclick="document.getElementById('info').close(); makeQuiz()">Okay</button>
         </dialog>
         <dialog id="gameOver">
             <p id="gameOverMessage"></p>
             <button id="restart" onclick="location.reload()">Restart</button>
         </dialog>
+
+        <style>
+            #questionDisplay, #information, #emptyQuiz {
+                flex-direction: column;
+                border: 3px solid #000;
+                padding: 20px;
+                width: 60%;
+                margin: 0 auto; 
+            }
+        </style>
+
+        <div id="questionDisplay" class="quiz" hidden="hidden">
+            <p id="quizQuestion"> </p>
+            <button id="answer0" onclick="evaluateAnswer(0)"> </button>
+            <button id="answer1" onclick="evaluateAnswer(1)"> </button>
+            <button id="answer2" onclick="evaluateAnswer(2)"> </button>
+        </div>
+        <div id="information" class="information" hidden="hidden">
+            <p id ="answer"></p>
+            <p id ="background"></p>
+            <button id="NextClose" onclick="nextCloseDecider()">Next</button>
+        </div>
+        <div id="emptyQuiz" hidden="hidden">
+            <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
+            <button id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; timeIncrement()">Close</button>
+        </div>
     </main>
     
     <footer>
-
+        <audio controls loop autoplay style="position: fixed; bottom: 0; left: 0;">
+            <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"> </source>
+        </audio>
     </footer>
+	<script src="src/basicFunctions.js"></script>
     <script src="src/events.js"></script>
+    <script src="src/quizInit.js"></script>
     <script src="src/eventHandler.js"></script>
+    <script src="src/quizHandler.js"></script>
     <script src="src/init.js"></script>
 </body>
 </html>
