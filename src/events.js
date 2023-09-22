@@ -488,9 +488,9 @@ var hurricaneReactions = [
 ]
 
 
-var hurricane = {eventMessage: "Ein Hurricane verwüstet einige Regionen", reactions: hurricaneReactions}
-var pestInfestation = {eventMessage: "Eine Schädlingsplage führt zu Ernteausfällen und Hungersnöten", reactions: pestInfestationReactions}
-var earthquake = {eventMessage: "Ein Erdbeben lässt viele Gebäude einstürzen. Es werden Nachbeben erwartet", reactions: earthquakeReactions}
+var hurricane = {eventMessage: "Ein Hurricane verwüstet einige Regionen in " + randomCountry, reactions: hurricaneReactions}
+var pestInfestation = {eventMessage: "Eine Schädlingsplage in " + randomCountry + " führt zu Ernteausfällen und Hungersnöten", reactions: pestInfestationReactions}
+var earthquake = {eventMessage: "Ein Erdbeben in " + randomCountry + " lässt viele Gebäude einstürzen. Es werden Nachbeben erwartet", reactions: earthquakeReactions}
 var tsunami = {eventMessage: "Ein Tsunami kommt auf die Küste zu", reactions: tsunamiReactions}
 var drought = {eventMessage: "Es herrscht eine starke Dürre", reactions: droughtReactions}
 var bushFire = {eventMessage: "In vielen Regionen kommt es zu Waldbränden", reactions: bushFireReactions}
@@ -517,3 +517,25 @@ var deforestation = {eventMessage: "Es kommt zu starker Abholzung der Regenwäld
 var commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
 var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
 var currentEvent = undefined
+
+var oceans = ["Pazifischer Ozean", "Atlantischer Ozean", "Mittelmeer", "Ostsee", "Nordsee", "Schwarzes Meer", "Indischer Ozean", "Rotes Meer", "Totes Meer", "Arktischer Ozean", "Antarktischer Ozean"]
+var countrys = ["Deutschland", "USA", "China", "Spanien", "Brasilien", "Kanada", "Italien", "Argentinien", "Peru", "Indien", "Japan", 
+"Südkorea", "Frankreich", "Marokko", "Simbabwe", "Ghana", "Tschad", "Ungarn", "Norwegen", "Australien", "Sri Lanka", "Panama", "Zypern",
+"Kongo", "Bulgarien", "Nordkorea", "Russland", "Taiwan", "England", "Irland", "Uzbekistan", "Rumänien", "Portugal", "Lettland", "Bolivien",
+"Uruguay", "Kolumbien", "Polen", "Gabun", "Ägypten", "Mexiko", "Chile", "Thailand", "Indonesien", "Dänemark", "Schweiz", "Angola", "Namibia"]
+var continent = ["Asien", "Europa", "Australien", "Nordamerika", "Südamerika", "Indien"]
+
+
+function getRandomRegion(region){
+    switch (region){
+        case "country":
+            countryListSize = countrys.length
+            randomCountryNumber = Math.floor(Math.random(countryListSize))
+            randomCountry = countrys[randomCountryNumber] 
+            break
+        case "ocean":
+            break
+        case "continent":
+            break
+    }
+}
