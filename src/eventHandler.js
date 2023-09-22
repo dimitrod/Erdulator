@@ -132,35 +132,35 @@ function reaction(r) {
             case "co2e":
                 if (randomValueCo2e > 0) {
                     co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<p>co2e gestiegen um " + randomValueCo2e.toFixed(2) + " %</p>"
+                    infoPopUp.innerHTML += "<p>Der co2e-Gehalt in der Lust ist um " + randomValueCo2e.toFixed(2) + " % gestiegen.</p>"
                     break
                 }
                 if (randomValueCo2e <= 0) {
                     co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<p>co2e gesunken um " + Math.abs(randomValueCo2e.toFixed(2)) + " %</p>"
+                    infoPopUp.innerHTML += "<p>Der co2e-Gehalt in der Lust ist um " + Math.abs(randomValueCo2e.toFixed(2)) + " % gesunken.</p>"
                 }
                 break
             case "afforestation":
                 if (randomValue > 0) {
                     afforestation -= randomValue
-                    infoPopUp.innerHTML += "<p>Bewaldung verringert um " + randomValue + " %</p>"
+                    infoPopUp.innerHTML += "<p>Die Bewaldung der Erde hat sich um " + randomValue + " % verringert.</p>"
                     break
                 }
                 if (randomValue <= 0) {
                     afforestation += Math.abs(randomValue)
-                    infoPopUp.innerHTML += "<p>Bewaldung erhöht um " + Math.abs(randomValue) + " %</p>"
+                    infoPopUp.innerHTML += "<p>Die Bewaldung der Erde hat sich um " + Math.abs(randomValue) + " % erhöht.</p>"
                     break
                 }
                 break
             case "waterLevel":
                 if (randomValue > 0) {
                     waterLevel += randomValue
-                    infoPopUp.innerHTML += "<p>Wasserlevel gestiegen um " + randomValue + " m</p>"
+                    infoPopUp.innerHTML += "<p>Der Wasserspiegel ist um " + randomValue + " m gestiegen.</p>"
                     break
                 }
                 if (randomValue <= 0) {
                     waterLevel += randomValue
-                    infoPopUp.innerHTML += "<p>Wasserlevel gesunken um " + Math.abs(randomValue) + " m</p>"
+                    infoPopUp.innerHTML += "<p>Der Wasserspiegel ist um " + Math.abs(randomValue) + " m gesunken.</p>"
                     break
                 }
                 break
@@ -175,18 +175,18 @@ function reaction(r) {
             case "temperature":
                 if (randomValue > 0) {
                     temperature += randomValue
-                    infoPopUp.innerHTML += "<p>Temperatur gestiegen um " + randomValue + " °C</p>"
+                    infoPopUp.innerHTML += "<p>Die Welt-Durchschnittstemperatur hat sich um " + randomValue + " °C erhöht.</p>"
                     break
                 }
                 if (randomValue <= 0) {
                     temperature += randomValue
-                    infoPopUp.innerHTML += "<p>Temperatur gesunken um " + Math.abs(randomValue) + " °C</p>"
+                    infoPopUp.innerHTML += "<p>Die Welt-Durchschnittstemperatur hat sich um " + Math.abs(randomValue) + " °C verringert.</p>"
                     break
                 }
                 break
             case "ozoneLayer":
                 ozoneLayer -= randomValue
-                infoPopUp.innerHTML += "<p>Ozonschicht verschlechtert um " + randomValue + " %</p>"
+                infoPopUp.innerHTML += "<p>Die Qualität der Ozonschicht hat sich um " + randomValue + " % verschlechtert.</p>"
                 break
             case "nothing":
                 infoPopUp.innerHTML = "<p>Nichts ist passiert.<p>"
