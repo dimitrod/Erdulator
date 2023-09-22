@@ -500,7 +500,7 @@ var pandemic = {eventMessage: "Die Inzidenzen einer neuen Krankheit steigt stark
 var oilTankerExplosion = {eventMessage: "Ein Öltanker ist auf dem Ozean explodiert. Viele Tonnen Öl verbreiten sich im Wasser", reactions: oilTankerExplosionReactions}
 var tornado = {eventMessage: "Ein Tornado verwüstet einige Regionen", reactions: tornadoReactions}
 var war = {eventMessage: "Es bricht ein Krieg aus", reactions: warReactions}
-var meltingPoles = {eventMessage: "Die Polkappen schmelzen", reactions: meltingPolesReactions}
+var meltingPoles = {eventMessage: "Die Polkappen schmelzen immer schneller", reactions: meltingPolesReactions}
 var natureConservationDay = {eventMessage: "Es ist Naturschutztag", reactions: natureConservationDayReactions}
 var worldWar1 = {
     eventStartingMessage: "Der erste Weltkrieg beginnt",
