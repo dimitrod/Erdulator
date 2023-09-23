@@ -132,12 +132,12 @@ function reaction(r) {
             case "co2e":
                 if (randomValueCo2e > 0) {
                     co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<p>Der co2e-Gehalt in der Lust ist um " + randomValueCo2e.toFixed(2) + " % gestiegen.</p>"
+                    infoPopUp.innerHTML += "<p>Der CO2e-Gehalt in der Luft ist um " + randomValueCo2e.toFixed(2) + " % gestiegen.</p>"
                     break
                 }
                 if (randomValueCo2e <= 0) {
                     co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<p>Der co2e-Gehalt in der Lust ist um " + Math.abs(randomValueCo2e.toFixed(2)) + " % gesunken.</p>"
+                    infoPopUp.innerHTML += "<p>Der CO2e-Gehalt in der Luft ist um " + Math.abs(randomValueCo2e.toFixed(2)) + " % gesunken.</p>"
                 }
                 break
             case "afforestation":
@@ -166,7 +166,7 @@ function reaction(r) {
                 break
             case "population":
                 population -= randomValue
-                infoPopUp.innerHTML += "<p>Bevölkerung gesunken um " + convertNum(randomValue) + " Menschen</p>"
+                infoPopUp.innerHTML += "<p>Es sind " + convertNum(randomValue) + " Menschen gestorben</p>"
                 break
             case "animalSpecies":
                 animalSpecies -= randomValue
