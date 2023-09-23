@@ -195,7 +195,7 @@ function populationIncrement() {
 function updateAttributes() {
     yearElem.innerHTML = "Jahr: " + year
     budgetElem.innerHTML = "Budget: " + convertNum(budget) + " €"
-    co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
+    co2eElem.innerHTML = "CO2e: " + co2e.toFixed(3) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
     populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 2) + " Menschen"
@@ -219,12 +219,12 @@ function reaction(r) {
             case "co2e":
                 if (randomValueCo2e > 0) {
                     co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<p>Der CO2e-Gehalt in der Luft ist um " + randomValueCo2e.toFixed(2) + " % gestiegen.</p>"
+                    infoPopUp.innerHTML += "<p>Der CO2e-Gehalt in der Luft ist um " + randomValueCo2e.toFixed(3) + " % gestiegen.</p>"
                     break
                 }
                 if (randomValueCo2e <= 0) {
                     co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<p>Der CO2e-Gehalt in der Luft ist um " + Math.abs(randomValueCo2e.toFixed(2)) + " % gesunken.</p>"
+                    infoPopUp.innerHTML += "<p>Der CO2e-Gehalt in der Luft ist um " + Math.abs(randomValueCo2e.toFixed(3)) + " % gesunken.</p>"
                 }
                 break
             case "afforestation":
