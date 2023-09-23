@@ -24,7 +24,7 @@ function newEvent() {
         eventEndingMessage: "Der zweite Weltkrieg ist vorbei",
         reactions: worldWar2Reactions
     }
-    var deforestation = {eventName: "deforestation",eventMessage: "Es kommt zu starker Abholzung der Regenwälder", reactions: deforestationReactions}
+    var deforestation = {eventName: "deforestation",eventMessage: "Im "+ getRandomRegion("rainforest") + " kommt es zu starker Abholzung", reactions: deforestationReactions}
 
     var commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
     var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]

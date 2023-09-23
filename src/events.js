@@ -502,6 +502,8 @@ var countrys = ["Afghanistan", "Ägypten", "Albanien", "Algerien", "Andorra", "A
     "Taiwan", "Tansania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad und Tobago", "Tschad", "Tschechien", "Tunesien", "Türkei", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "Ungarn",
     "Uruguay", "Usbekistan", "Vanuatu", "Vatikanstadt", "Venezuela", "den Vereinigten Arabischen Emiraten", "den Vereinigten Staaten von Amerika", "Vietnam", "Zentralafrikanische Republik"]
 var continents = ["Asien", "Europa", "Australien", "Nordamerika", "Südamerika", "Indien"]
+var rainforests = ["Amazonas-Regenwald", "Kongobecken-Regenwald", "Sundarbans-Regenwald", "Regenwald von Neuguinea", "Regenwald des westlichen Ghana", "Atlantic Forest",
+    "Valdivianischer Regenwald", "Regenwald von Borneo", "Regenwald von Sumatra", "Madagaskar-Regenwald"]
 function getRandomRegion(region){
     switch (region){
         case "country":
@@ -513,5 +515,8 @@ function getRandomRegion(region){
         case "continent":
             let randomContinentNumber = Math.floor(Math.random() * continents.length)
             return continents[randomContinentNumber]
+        case "rainforest":
+            let randomRainforestNumber = Math.floor(Math.random() * rainforests.length)
+            return rainforests[randomRainforestNumber]
     }
 }
