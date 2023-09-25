@@ -221,6 +221,8 @@ function populationIncrement() {
 
 function updateAttributes() {
     yearElem.innerHTML = "Jahr: " + year
+    yearElemPercent.style.width = ((year - 1900)/123)*100 + "%"
+    
     budgetElem.innerHTML = "Budget: " + convertNum(budget) + " €"
     co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
