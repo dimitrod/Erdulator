@@ -9,34 +9,33 @@
 <body>
     <header>
     </header>
-
-    <div id='title'>
-        <span>
-          ERDULATOR
-        </span>
-      </div>
-     
-
-      <div id="planetwrap">
-        <img id="planet" src="resource/0001.png" alt="Earth" class="center">
-      </div>
-
-
-
-
     <main>
-        <div id="year" class="" style="text-align:center;width:15%;"></div>
-        <div id="" class="" style="text-align:center;width:15%;background-color: lightgray;">
-            <div id="yearpercent" class="" style="width:0%;background-color: yellow;">&nbsp;</div>
+        <div id='title'>
+            <span>
+            ERDULATOR
+            </span>
         </div>
-        <p id = "budget"></p>
-        <p id = "co2e"></p>
-        <p id = "afforestation"></p>
-        <p id = "waterLevel"></p>
-        <p id = "population"></p>
-        <p id = "temperature"></p>
-        <p id = "animalSpecies"></p>
-        <p id = "ozoneLayer"></p>
+        
+
+        <div id="planetwrap">
+            <img id="planet" src="resource/0001.png" alt="Earth" class="center">
+        </div>
+
+        <div id ="barwrap">
+            <div id="year" class="" style="text-align:center;width:15%;"></div>
+            <div id="" class="" style="text-align:center;width:15%;background-color: lightgray;">
+                <div id="yearpercent" class="" style="width:0%;background-color: yellow;">&nbsp;</div>
+            </div>
+            <p id = "budget"></p>
+            <p id = "co2e"></p>
+            <p id = "afforestation"></p>
+            <p id = "waterLevel"></p>
+            <p id = "population"></p>
+            <p id = "temperature"></p>
+            <p id = "animalSpecies"></p>
+            <p id = "ozoneLayer"></p>
+        </div>
+
         <dialog id="event">
             <p id="eventMessage"></p>
             <button id="reaction1" onclick="reaction(0)"></button><br>
@@ -51,12 +50,6 @@
             <p id="gameOverMessage"></p>
             <button id="restart" onclick="location.reload()">Restart</button>
         </dialog>
-
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>
-     
-
 
         <div id="questionDisplay" class="quiz" hidden="hidden">
             <p id="quizQuestion"> </p>
@@ -73,6 +66,11 @@
             <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
             <button id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; timeIncrement()">Close</button>
         </div>
+
+
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
     </main>
     
     <footer>
