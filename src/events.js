@@ -109,7 +109,7 @@ var bushFireReactions = [
             param: "afforestation",
             minValue: 1,
             maxValue: 2
-        }, {param: "co2e", minValue: 0.01, maxValue: 0.02}],
+        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}],
         triggers: []
     },
     {
@@ -123,7 +123,7 @@ var bushFireReactions = [
             param: "afforestation",
             minValue: 4,
             maxValue: 5
-        }, {param: "co2e", minValue: 0.03, maxValue: 0.06}],
+        }, {param: "co2e", minValue: 0.003, maxValue: 0.006}],
         triggers: []
     },
     {
@@ -137,7 +137,7 @@ var bushFireReactions = [
             param: "afforestation",
             minValue: 4,
             maxValue: 5
-        }, {param: "co2e", minValue: 0.03, maxValue: 0.06}],
+        }, {param: "co2e", minValue: 0.003, maxValue: 0.006}],
         triggers: []
     }
 ]
@@ -214,11 +214,11 @@ var pandemicReactions = [
         cost: 2 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
             param: "co2e",
-            minValue: -0.01,
-            maxValue: -0.02
+            minValue: -0.001,
+            maxValue: -0.003
         }]
     },
-    {reaction: "Maskenpflicht anordnen", cost: 1, impacts: [{param: "population", minValue: 1500, maxValue: 15000}]},
+    {reaction: "Maskenpflicht anordnen", cost: Math.pow(10, 6), impacts: [{param: "population", minValue: 1500, maxValue: 15000}]},
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 10000, maxValue: 100000}]}
 ]
 
@@ -288,8 +288,8 @@ var warReactions = [
         cost: 8 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 10000, maxValue: 1000000}, {
             param: "co2e",
-            minValue: 0.01,
-            maxValue: 0.02
+            minValue: 0.001,
+            maxValue: 0.003
         }, {param: "animalSpecies", minValue: 100, maxValue: 1000}]
     },
     {
@@ -297,8 +297,8 @@ var warReactions = [
         cost: 10 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 20000, maxValue: 2000000}, {
             param: "co2e",
-            minValue: 0.01,
-            maxValue: 0.03
+            minValue: 0.001,
+            maxValue: 0.004
         }, {param: "animalSpecies", minValue: 200, maxValue: 2000}]
     },
     {
@@ -306,8 +306,8 @@ var warReactions = [
         cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 50000, maxValue: 5000000}, {
             param: "co2e",
-            minValue: 0.01,
-            maxValue: 0.03
+            minValue: 0.002,
+            maxValue: 0.005
         }, {param: "animalSpecies", minValue: 200, maxValue: 2000}]
     }
 ]
@@ -318,8 +318,8 @@ var pestInfestationReactions = [
         cost: 10 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
             param: "co2e",
-            minValue: 0.01,
-            maxValue: 0.01
+            minValue: 0.001,
+            maxValue: 0.001
         }, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {param: "ozoneLayer", minValue: 1, maxValue: 2}]
     },
     {
@@ -327,8 +327,8 @@ var pestInfestationReactions = [
         cost: 8 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
             param: "co2e",
-            minValue: 0.01,
-            maxValue: 0.01
+            minValue: 0.001,
+            maxValue: 0.001
         }, {param: "animalSpecies", minValue: 100, maxValue: 1000}]
     },
     {
@@ -336,8 +336,8 @@ var pestInfestationReactions = [
         cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {
             param: "co2e",
-            minValue: 0.01,
-            maxValue: 0.01
+            minValue: 0.001,
+            maxValue: 0.001
         }]
     }
 ]
@@ -346,7 +346,7 @@ var meltingPolesReactions = [
     {
         reaction: "Elektroenergien fördern",
         cost: 7 * Math.pow(10,6),
-        impacts: [{param: "co2e", minValue: -0.02, maxValue: -0.04}, {
+        impacts: [{param: "co2e", minValue: -0.002, maxValue: -0.004}, {
             param: "animalSpecies",
             minValue: 100,
             maxValue: 1000
@@ -356,7 +356,7 @@ var meltingPolesReactions = [
     {
         reaction: "Flugverkehr limitieren",
         cost: 5 * Math.pow(10,6),
-        impacts: [{param: "co2e", minValue: -0.01, maxValue: -0.01}, {
+        impacts: [{param: "co2e", minValue: -0.001, maxValue: -0.001}, {
             param: "animalSpecies",
             minValue: 100,
             maxValue: 1000
@@ -381,8 +381,8 @@ var natureConservationDayReactions = [
         cost: 14 * Math.pow(10,6),
         impacts: [{param: "afforestation", minValue: -4, maxValue: -10}, {
             param: "co2e",
-            minValue: -0.02,
-            maxValue: -0.02
+            minValue: -0.002,
+            maxValue: -0.002
         }]
     },
     {
@@ -390,8 +390,8 @@ var natureConservationDayReactions = [
         cost: 7 * Math.pow(10,6),
         impacts: [{param: "afforestation", minValue: -2, maxValue: -7}, {
             param: "co2e",
-            minValue: -0.01,
-            maxValue: -0.01
+            minValue: -0.001,
+            maxValue: -0.001
         }]
     },
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "nothing", minValue: 0, maxValue: 0}]}
@@ -405,7 +405,7 @@ var worldWar1Reactions = [
             param: "afforestation",
             minValue: 2,
             maxValue: 3
-        }, {param: "co2e", minValue: 0.01, maxValue: 0.03}], startingYear: [1914], endingYear: [1918]
+        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}], startingYear: [1914], endingYear: [1918]
     },
     {
         reaction: "Ärztliche Hilfe bereitstellen",
@@ -414,7 +414,7 @@ var worldWar1Reactions = [
             param: "afforestation",
             minValue: 3,
             maxValue: 4
-        }, {param: "co2e", minValue: 0.01, maxValue: 0.03}], startingYear: [1914], endingYear: [1918]
+        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}], startingYear: [1914], endingYear: [1918]
     },
     {
         reaction: "Nichts machen",
@@ -423,7 +423,7 @@ var worldWar1Reactions = [
             param: "afforestation",
             minValue: 3,
             maxValue: 4
-        }, {param: "co2e", minValue: 0.01, maxValue: 0.03}], startingYear: [1914], endingYear: [1918]
+        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}], startingYear: [1914], endingYear: [1918]
     }
 ]
 
@@ -435,7 +435,7 @@ var worldWar2Reactions = [
             param: "afforestation",
             minValue: 4,
             maxValue: 5
-        }, {param: "co2e", minValue: 0.02, maxValue: 0.04}],
+        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}],
         startingYear: [1939],
         endingYear: [1945]
     },
@@ -446,7 +446,7 @@ var worldWar2Reactions = [
             param: "afforestation",
             minValue: 5,
             maxValue: 6
-        }, {param: "co2e", minValue: 0.02, maxValue: 0.04}],
+        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}],
         startingYear: [1939],
         endingYear: [1945]
     },
@@ -457,7 +457,7 @@ var worldWar2Reactions = [
             param: "afforestation",
             minValue: 5,
             maxValue: 6
-        }, {param: "co2e", minValue: 0.02, maxValue: 0.04}],
+        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}],
         startingYear: [1939],
         endingYear: [1945]
     }
@@ -469,14 +469,14 @@ var deforestationReactions = [
         cost: 8 * Math.pow(10,6),
         impacts: [{param: "afforestation", minValue: -2, maxValue: -4}, {
             param: "co2e",
-            minValue: -0.01,
-            maxValue: -0.03
+            minValue: -0.001,
+            maxValue: -0.003
         }]
     },
     {
         reaction: "Abholzung regulieren",
         cost: 4 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: 1, maxValue: 3}, {param: "co2e", minValue: -0.01, maxValue: -0.02}]
+        impacts: [{param: "afforestation", minValue: 1, maxValue: 3}, {param: "co2e", minValue: -0.001, maxValue: -0.002}]
     },
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "afforestation", minValue: 2, maxValue: 5}]},
 ]
@@ -494,14 +494,16 @@ var countrys = ["Afghanistan", "Ägypten", "Albanien", "Algerien", "Andorra", "A
     "Eritrea", "Estland", "Eswatini", "Fidschi", "Finnland", "Frankreich", "Gabun", "Gambia", "Georgien", "Ghana", "Grenada", "Griechenland", "Großbritannien", "Guatemala", "Guinea", "Guinea-Bissau",
     "Guyana", "Haiti", "Honduras", "Indien", "Indonesien", "Irak", "Iran", "Irland", "Island", "Israel", "Italien", "Jamaika", "Japan", "Jemen", "Jordanien", "Kambodscha", "Kamerun", "Kanada",
     "Kap Verde", "Kasachstan", "Katar", "Kenia", "Kirgisistan", "Kiribati", "Kolumbien", "Komoren", "Kongo (Demokratische Republik)", "Kongo (Republik)", "Kroatien", "Kuba", "Kuwait", "Laos",
-    "Lesotho", "Lettland", "Libanon", "Liberia", "Libyen", "Liechtenstein", "Litauen", "Luxemburg", "Madagaskar", "Malawi", "Malaysia", "Malediven", "Mali", "Malta", "Marokko", "Marshallinseln",
+    "Lesotho", "Lettland", "Libanon", "Liberia", "Libyen", "Liechtenstein", "Litauen", "Luxemburg", "Madagaskar", "Malawi", "Malaysia", "den Malediven", "Mali", "Malta", "Marokko", "Marshallinseln",
     "Mauretanien", "Mauritius", "Mexiko", "Mikronesien", "Moldawien", "Monaco", "Mongolei", "Montenegro", "Mosambik", "Myanmar", "Namibia", "Nauru", "Nepal", "Neuseeland", "Nicaragua", "Niederlande",
     "Niger", "Nigeria", "Nordmazedonien", "Nordkorea", "Norwegen", "Oman", "Österreich", "Pakistan", "Palau", "Panama", "Papua-Neuguinea", "Paraguay", "Peru", "Philippinen", "Polen", "Portugal", "Ruanda",
-    "Rumänien", "Russland", "Salomonen", "Sambia", "Samoa", "San Marino", "Saudi-Arabien", "Schweden", "Schweiz", "Senegal", "Serbien", "Seychellen", "Sierra Leone", "Simbabwe", "Singapur", "Slowakei",
+    "Rumänien", "Russland", "Salomonen", "Sambia", "Samoa", "San Marino", "Saudi-Arabien", "Schweden", "Schweiz", "Senegal", "Serbien", "den Seychellen", "Sierra Leone", "Simbabwe", "Singapur", "Slowakei",
     "Slowenien", "Somalia", "Spanien", "Sri Lanka", "St. Kitts und Nevis", "St. Lucia", "St. Vincent und die Grenadinen", "Südafrika", "Sudan", "Südsudan", "Suriname", "Syrien", "Tadschikistan",
     "Taiwan", "Tansania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad und Tobago", "Tschad", "Tschechien", "Tunesien", "Türkei", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "Ungarn",
-    "Uruguay", "Usbekistan", "Vanuatu", "Vatikanstadt", "Venezuela", "den Vereinigten Arabischen Emiraten", "den Vereinigten Staaten von Amerika", "Vietnam", "Zentralafrikanische Republik"]
+    "Uruguay", "Usbekistan", "Vanuatu", "Vatikanstadt", "Venezuela", "den Vereinigten Arabischen Emiraten", "den Vereinigten Staaten von Amerika", "Vietnam", "der Zentralafrikanischen Republik"]
 var continents = ["Asien", "Europa", "Australien", "Nordamerika", "Südamerika", "Indien"]
+var rainforests = ["Amazonas-Regenwald", "Kongobecken-Regenwald", "Sundarbans-Regenwald", "Regenwald von Neuguinea", "Regenwald des westlichen Ghana", "Atlantic Forest",
+    "Valdivianischer Regenwald", "Regenwald von Borneo", "Regenwald von Sumatra", "Madagaskar-Regenwald"]
 function getRandomRegion(region){
     switch (region){
         case "country":
@@ -513,5 +515,8 @@ function getRandomRegion(region){
         case "continent":
             let randomContinentNumber = Math.floor(Math.random() * continents.length)
             return continents[randomContinentNumber]
+        case "rainforest":
+            let randomRainforestNumber = Math.floor(Math.random() * rainforests.length)
+            return rainforests[randomRainforestNumber]
     }
 }
