@@ -10,6 +10,20 @@
     <header>
     </header>
 
+    <div id='title'>
+        <span>
+          ERDULATOR
+        </span>
+      </div>
+     
+
+      <div id="planetwrap">
+        <img id="planet" src="resource/0001.png" alt="Earth" class="center">
+      </div>
+
+
+
+
     <main>
         <div id="year" class="" style="text-align:center;width:15%;"></div>
         <div id="" class="" style="text-align:center;width:15%;background-color: lightgray;">
@@ -25,8 +39,8 @@
         <p id = "ozoneLayer"></p>
         <dialog id="event">
             <p id="eventMessage"></p>
-            <button id="reaction1" onclick="reaction(0)"></button>
-            <button id="reaction2" onclick="reaction(1)"></button>
+            <button id="reaction1" onclick="reaction(0)"></button><br>
+            <button id="reaction2" onclick="reaction(1)"></button><br>
             <button id="reaction3" onclick="reaction(2)"></button>
         </dialog>
         <dialog id="info">
@@ -38,20 +52,16 @@
             <button id="restart" onclick="location.reload()">Restart</button>
         </dialog>
 
-        <style>
-            #questionDisplay, #information, #emptyQuiz {
-                flex-direction: column;
-                border: 3px solid #000;
-                padding: 20px;
-                width: 60%;
-                margin: 0 auto; 
-            }
-        </style>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+     
+
 
         <div id="questionDisplay" class="quiz" hidden="hidden">
             <p id="quizQuestion"> </p>
-            <button id="answer0" onclick="evaluateAnswer(0)"> </button>
-            <button id="answer1" onclick="evaluateAnswer(1)"> </button>
+            <button id="answer0" onclick="evaluateAnswer(0)"> </button><br>
+            <button id="answer1" onclick="evaluateAnswer(1)"> </button><br>
             <button id="answer2" onclick="evaluateAnswer(2)"> </button>
         </div>
         <div id="information" class="information" hidden="hidden">
@@ -70,6 +80,7 @@
             <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"> </source>
         </audio>
     </footer>
+    <link rel="stylesheet" href="src/css/main.css">
 	<script src="src/js/basicFunctions.js"></script>
     <script src="src/js/events.js"></script>
     <script src="src/js/quizInit.js"></script>
