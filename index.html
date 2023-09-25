@@ -10,31 +10,38 @@
     <header>
     </header>
     <main>
+        
+        
+
+        <div id="planetwrap">
+            <div id="yearwrap">
+                <div id="year" class="" style=""></div>
+                <div id="yearpercentwrap">
+                    <div id="yearpercent">&nbsp;</div>
+                </div>
+                <div style="text-align:center;">
+                    <p>Zeitleiste</p>
+                
+                </div>
+            </div>
+
+            <img id="planet" src="resource/0001.png" alt="Earth" class="center">
+            
+            
+
+
+        </div>
+
+        <div id="rightwrap">
         <div id='title'>
             <span>
             ERDULATOR
             </span>
         </div>
+        <div id="budgetwrap">
+            <span>Budget: </span><span id = "budget"></span>
+        </div>
         
-
-        <div id="planetwrap">
-            <img id="planet" src="resource/0001.png" alt="Earth" class="center">
-        </div>
-
-        <div id ="barwrap">
-            <div id="year" class="" style="text-align:center;width:15%;"></div>
-            <div id="" class="" style="text-align:center;width:15%;background-color: lightgray;">
-                <div id="yearpercent" class="" style="width:0%;background-color: yellow;">&nbsp;</div>
-            </div>
-            <p id = "budget"></p>
-            <p id = "co2e"></p>
-            <p id = "afforestation"></p>
-            <p id = "waterLevel"></p>
-            <p id = "population"></p>
-            <p id = "temperature"></p>
-            <p id = "animalSpecies"></p>
-            <p id = "ozoneLayer"></p>
-        </div>
 
         <dialog id="event">
             <p id="eventMessage"></p>
@@ -48,7 +55,7 @@
         </dialog>
         <dialog id="gameOver">
             <p id="gameOverMessage"></p>
-            <button id="restart" onclick="location.reload()">Restart</button>
+            <button id="restart" onclick="location.reload()">Neustarten</button>
         </dialog>
 
         <div id="questionDisplay" class="quiz" hidden="hidden">
@@ -60,13 +67,25 @@
         <div id="information" class="information" hidden="hidden">
             <p id ="answer"></p>
             <p id ="background"></p>
-            <button id="NextClose" onclick="nextCloseDecider()">Next</button>
+            <button id="NextClose" onclick="nextCloseDecider()">Weiter</button>
         </div>
         <div id="emptyQuiz" hidden="hidden">
             <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
-            <button id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; timeIncrement()">Close</button>
+            <button id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; timeIncrement()">Schließen</button>
         </div>
 
+        <div id ="barwrap">
+            <p id = "co2e"></p>
+            <p id = "afforestation"></p>
+            <p id = "waterLevel"></p>
+            <p id = "population"></p>
+            <p id = "temperature"></p>
+            <p id = "animalSpecies"></p>
+            <p id = "ozoneLayer"></p>
+        </div>
+
+
+    </div>
 
         <div id='stars'></div>
         <div id='stars2'></div>

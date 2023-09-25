@@ -220,10 +220,11 @@ function populationIncrement() {
 }
 
 function updateAttributes() {
-    yearElem.innerHTML = "Jahr: " + year
-    yearElemPercent.style.width = ((year - 1900)/123)*100 + "%"
+    yearElem.innerHTML = year
+    yearElem.style.left = ((year - 1900)/120)*100 + "%"
+    yearElemPercent.style.width = ((year - 1900)/120)*100 + "%"
     
-    budgetElem.innerHTML = "Budget: " + convertNum(budget) + " €"
+    budgetElem.innerHTML = convertNum(budget) + " €"
     co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"

@@ -5,12 +5,19 @@ html {
   }
 
 
-  #event, #info, #questionDisplay, #information, #emptyQuiz {
+
+  #rightwrap {
     position: absolute;
-    top: 20%;
+    top: 8%;
     width:38%;
+    height:auto;
     left: 53%;
     right: 0;
+  }
+
+  #event, #info, #questionDisplay, #information, #emptyQuiz {
+    position: relative;
+    width:100%;
     color: #FFF;
     text-align: left;
     font-family: "lato", sans-serif;
@@ -24,7 +31,8 @@ html {
     border: 3px solid rgba(41,242,151,0.5);
     border-radius: 9px;
     padding: 20px;
-    margin: 0 auto; 
+    margin-top: 25px; 
+    margin-bottom: 25px; 
 }
 
 #event button, #info button, #questionDisplay button, #information button, #emptyQuiz button {
@@ -32,28 +40,71 @@ html {
 }
 
 #barwrap {
-  position: absolute;
-    top: 60%;
-    width:38%;
-    left: 56%;
-    right: 0;
-    color: #FFF;
-    text-align: left;
-    font-family: "lato", sans-serif;
-    font-weight: 300;
-    font-size: 14px;
+  position: relative;
+  width:100%;
+  color: #FFF;
+  text-align: left;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
 
+}
+
+#year {
+  position:relative;
+  left:100%;
+  margin-left:-25px;
+}
+
+#yearwrap {
+  position: relative;
+  width:100%;
+  color: #fff;
+  text-align: left;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
 
 
 }
 
 
+#yearpercentwrap {
+  text-align:center;
+  border-radius: 25px;
+  width:100%;
+  background-color: rgba(211,211,211,0.5);
+}
+
+#yearpercent {
+  border-radius: 25px;
+  width:0%;
+  background-color:#D4AF37;
+}
+
+
+#budgetwrap {
+  position: relative;
+  width:100%;
+  color: #fff;
+  text-align: left;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-top:45px;
+  margin-bottom:25px;
+
+
+}
+
+#budget {
+  color:lightgreen;
+}
+
+
 #text {
-  position: absolute;
-  top: 28%;
-  max-width:38%;
-  left: 55.5%;
-  right: 0;
+  position: relative;
+  width:100%;
   color: #FFF;
   text-align: left;
   font-family: "lato", sans-serif;
@@ -117,18 +168,16 @@ button:hover {
 
 */
   #title {
-    position: absolute;
-    top: 17%;
-    left: 55%;
-    right: 0;
+    position: relative;
+    width:100%;
     color: #FFF;
     text-align: left;
     font-family: "lato", sans-serif;
     font-weight: 700;
     font-size: 50px;
     letter-spacing: 10px;
-    margin-top: -60px;
-    padding-left: 10px;
+    margin-top: -3%;
+
   }
 
   #title span {
@@ -137,20 +186,6 @@ button:hover {
     -webkit-text-fill-color: transparent;
   }
 
-  #text {
-    position: absolute;
-    top: 28%;
-    max-width:38%;
-    left: 55.5%;
-    right: 0;
-    color: #FFF;
-    text-align: left;
-    font-family: "lato", sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    margin-top: -60px;
-    padding-left: 10px;
-  }
 
   .center {
     display: block;
@@ -161,8 +196,8 @@ button:hover {
 
 #planetwrap {
     position:absolute;
-    top:17%;
-    left:10%;
+    top: 5%;
+    left:5%;
     max-width:40%;
     max-height:66%;
     z-index: 1000;
