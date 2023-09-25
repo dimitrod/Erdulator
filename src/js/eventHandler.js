@@ -228,7 +228,7 @@ function updateAttributes() {
     co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
-    populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 2) + " Menschen"
+    populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 2)
     animalSpeciesElem.innerHTML = "Tierarten: " + convertNum(animalSpecies)
     temperatureElem.innerHTML = "Temperatur: " + temperature + " °C"
     ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"

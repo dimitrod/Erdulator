@@ -46,9 +46,27 @@ html {
   text-align: left;
   font-family: "lato", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 20px;
 
 }
+
+#barwrap span{
+  display: inline-block;
+  margin-top:25px;
+}
+
+#barwrap_left {
+  position: relative;
+  float:left;
+  width:50%;
+}
+
+#barwrap_right {
+  position: relative;
+  float:right;
+  width:50%;
+}
+
 
 #year {
   position:relative;
