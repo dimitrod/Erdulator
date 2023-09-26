@@ -9,21 +9,44 @@
 <body>
     <header>
     </header>
-
     <main>
-        <p id = "year"></p>
-        <p id = "budget"></p>
-        <p id = "co2e"></p>
-        <p id = "afforestation"></p>
-        <p id = "waterLevel"></p>
-        <p id = "population"></p>
-        <p id = "temperature"></p>
-        <p id = "animalSpecies"></p>
-        <p id = "ozoneLayer"></p>
+        
+        
+
+        <div id="planetwrap">
+            <div id="yearwrap">
+                <div id="year" class="" style=""></div>
+                <div id="yearpercentwrap">
+                    <div id="yearpercent">&nbsp;</div>
+                </div>
+                <div style="text-align:center;">
+                    <p>Zeitleiste</p>
+                
+                </div>
+            </div>
+
+            <img id="planet" src="resource/0001.png" alt="Earth" class="center">
+            
+            
+
+
+        </div>
+
+        <div id="rightwrap">
+        <div id='title'>
+            <span>
+            ERDULATOR
+            </span>
+        </div>
+        <div id="budgetwrap">
+            <span>Budget: </span><span id = "budget"></span>
+        </div>
+        
+
         <dialog id="event">
             <p id="eventMessage"></p>
-            <button id="reaction1" onclick="reaction(0)"></button>
-            <button id="reaction2" onclick="reaction(1)"></button>
+            <button id="reaction1" onclick="reaction(0)"></button><br>
+            <button id="reaction2" onclick="reaction(1)"></button><br>
             <button id="reaction3" onclick="reaction(2)"></button>
         </dialog>
         <dialog id="info">
@@ -32,46 +55,58 @@
         </dialog>
         <dialog id="gameOver">
             <p id="gameOverMessage"></p>
-            <button id="restart" onclick="location.reload()">Restart</button>
+            <button id="restart" onclick="location.reload()">Neustarten</button>
         </dialog>
-
-        <style>
-            #questionDisplay, #information, #emptyQuiz {
-                flex-direction: column;
-                border: 3px solid #000;
-                padding: 20px;
-                width: 60%;
-                margin: 0 auto; 
-            }
-        </style>
 
         <div id="questionDisplay" class="quiz" hidden="hidden">
             <p id="quizQuestion"> </p>
-            <button id="answer0" onclick="evaluateAnswer(0)"> </button>
-            <button id="answer1" onclick="evaluateAnswer(1)"> </button>
+            <button id="answer0" onclick="evaluateAnswer(0)"> </button><br>
+            <button id="answer1" onclick="evaluateAnswer(1)"> </button><br>
             <button id="answer2" onclick="evaluateAnswer(2)"> </button>
         </div>
         <div id="information" class="information" hidden="hidden">
             <p id ="answer"></p>
             <p id ="background"></p>
-            <button id="NextClose" onclick="nextCloseDecider()">Next</button>
+            <button id="NextClose" onclick="nextCloseDecider()">Weiter</button>
         </div>
         <div id="emptyQuiz" hidden="hidden">
             <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
-            <button id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; timeIncrement()">Close</button>
+            <button id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; timeIncrement()">Schließen</button>
         </div>
+
+        <div id ="barwrap">
+            <div id="barwrap_left">
+                <span id = "co2e"></span><br>
+                <span id = "afforestation"></span><br>
+                <span id = "waterLevel"></span>
+            </div>
+            <div id="barwrap_right">
+                <span id = "population"></span><br>
+                <span id = "temperature"></span><br>
+                <span style="display:none;" id = "animalSpecies"></span>
+                <span id = "ozoneLayer"></span>
+            </div>
+        </div>
+
+
+    </div>
+
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
     </main>
     
     <footer>
-        <audio controls loop autoplay style="position: fixed; bottom: 0; left: 0;">
+        <audio controls loop style="position: fixed; bottom: 0; left: 0;">
             <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"> </source>
         </audio>
     </footer>
-	<script src="src/basicFunctions.js"></script>
-    <script src="src/events.js"></script>
-    <script src="src/quizInit.js"></script>
-    <script src="src/eventHandler.js"></script>
-    <script src="src/quizHandler.js"></script>
-    <script src="src/init.js"></script>
+    <link rel="stylesheet" href="src/css/main.css">
+	<script src="src/js/basicFunctions.js"></script>
+    <script src="src/js/events.js"></script>
+    <script src="src/js/quizInit.js"></script>
+    <script src="src/js/eventHandler.js"></script>
+    <script src="src/js/quizHandler.js"></script>
+    <script src="src/js/init.js"></script>
 </body>
 </html>

@@ -9,6 +9,8 @@ var temperature = 13
 var ozoneLayer = 100
 
 var yearElem = document.getElementById("year")
+var yearElemPercent = document.getElementById("yearpercent")
+
 var budgetElem = document.getElementById("budget")
 var co2eElem = document.getElementById("co2e")
 var afforestationElem = document.getElementById("afforestation")
