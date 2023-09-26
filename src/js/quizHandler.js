@@ -44,7 +44,7 @@ function evaluateAnswer(i){
     if (i == currentQuestions[0].answer){
         document.getElementById("answer").innerHTML= "Richtig!"
         budget += 2 * Math.pow(10, 6)
-        budgetElem.innerHTML = "Budget: " + convertNum(budget) + " €"
+        budgetElem.innerHTML = convertNum(budget) + " €"
     } else {
         document.getElementById("answer").innerHTML= "Falsch!"
     }
