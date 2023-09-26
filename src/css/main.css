@@ -11,6 +11,7 @@ html {
     top: 8%;
     width:38%;
     height:auto;
+    max-height:100%;
     left: 53%;
     right: 0;
   }
@@ -22,7 +23,7 @@ html {
     text-align: left;
     font-family: "lato", sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: -60px;
     padding-left: 10px;
     background-color: transparent;
@@ -45,8 +46,8 @@ html {
   color: #FFF;
   text-align: left;
   font-family: "lato", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 16px;
 
 }
 
@@ -108,7 +109,7 @@ html {
   text-align: left;
   font-family: "lato", sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 25px;
   margin-top:45px;
   margin-bottom:25px;
 
@@ -217,15 +218,16 @@ button:hover {
     top: 5%;
     left:5%;
     max-width:40%;
-    max-height:66%;
+    max-height:100%;
     z-index: 1000;
 
 }
 
 
 #planet {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    min-width:70%;
+    max-width: 100%;
 }
 
 
