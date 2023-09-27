@@ -128,7 +128,7 @@ function gameOver() {
         createGameOverMessage("Die Ozonschicht ist auf 0% gesunken. Das Spiel endet.");
     } else if (waterLevel <= 0) {
         createGameOverMessage("Der Meeresspiegel ist auf 0m gesunken. Das Spiel endet.");
-    } else if (year >= 2023) {
+    } else if (year >= 1910) {
         createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.");
     }
 }
