@@ -405,7 +405,7 @@ var worldWar1Reactions = [
             param: "afforestation",
             minValue: 2,
             maxValue: 3
-        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}], startingYear: [1914], endingYear: [1918]
+        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}]
     },
     {
         reaction: "Ärztliche Hilfe bereitstellen",
@@ -414,7 +414,7 @@ var worldWar1Reactions = [
             param: "afforestation",
             minValue: 3,
             maxValue: 4
-        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}], startingYear: [1914], endingYear: [1918]
+        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}]
     },
     {
         reaction: "Nichts machen",
@@ -423,7 +423,7 @@ var worldWar1Reactions = [
             param: "afforestation",
             minValue: 3,
             maxValue: 4
-        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}], startingYear: [1914], endingYear: [1918]
+        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}]
     }
 ]
 
@@ -435,10 +435,7 @@ var worldWar2Reactions = [
             param: "afforestation",
             minValue: 4,
             maxValue: 5
-        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}],
-        startingYear: [1939],
-        endingYear: [1945]
-    },
+        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}]},
     {
         reaction: "Ärztliche Hilfe bereitstellen",
         cost: 10 * Math.pow(10,6),
@@ -446,10 +443,7 @@ var worldWar2Reactions = [
             param: "afforestation",
             minValue: 5,
             maxValue: 6
-        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}],
-        startingYear: [1939],
-        endingYear: [1945]
-    },
+        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}]},
     {
         reaction: "Nichts machen",
         cost: 0,
@@ -457,10 +451,7 @@ var worldWar2Reactions = [
             param: "afforestation",
             minValue: 5,
             maxValue: 6
-        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}],
-        startingYear: [1939],
-        endingYear: [1945]
-    }
+        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}]}
 ]
 
 var deforestationReactions = [
@@ -504,7 +495,8 @@ var countrys = ["Afghanistan", "Ägypten", "Albanien", "Algerien", "Andorra", "A
 var continents = ["Asien", "Europa", "Australien", "Nordamerika", "Südamerika", "Indien"]
 var rainforests = ["Amazonas-Regenwald", "Kongobecken-Regenwald", "Sundarbans-Regenwald", "Regenwald von Neuguinea", "Regenwald des westlichen Ghana", "Atlantic Forest",
     "Valdivianischer Regenwald", "Regenwald von Borneo", "Regenwald von Sumatra", "Madagaskar-Regenwald"]
-function getRandomRegion(region){
+
+    function getRandomRegion(region){
     switch (region){
         case "country":
             let randomCountryNumber = Math.floor(Math.random() * countrys.length)
