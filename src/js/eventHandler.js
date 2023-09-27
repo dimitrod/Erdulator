@@ -198,7 +198,7 @@ function updateAttributes() {
     yearElemPercent.style.width = ((year - 1900)/120)*100 + "%"
     
     budgetElem.innerHTML = convertNum(budget) + " €"
-    co2eElem.innerHTML = "CO2e: " + co2e.toFixed(2) + " %"
+    co2eElem.innerHTML = "CO2e: " + co2e.toFixed(3) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
     populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 2)
