@@ -1,11 +1,11 @@
 var year = 1900
 var budget = 100  * Math.pow(10,6)
 var co2e = 0.02
-var afforestation = 100
-var waterLevel = 100
+var afforestation = 30
+var waterLevel = 0
 var population = 1650000000
 var animalSpecies = 5000000
-var temperature = 13
+var temperature = 0
 var ozoneLayer = 100
 
 var yearElem = document.getElementById("year")
