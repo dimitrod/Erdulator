@@ -4,4 +4,4 @@
 [Qualitätsregister](https://docs.google.com/spreadsheets/d/1IAIQCe4fyYixkU0giF4FeaiKLsid7WSDIYL1pIh_l8o/edit#gid=0)
 [Risikobehandlung](https://docs.google.com/spreadsheets/d/1PQbsbK1YgedA1Z8q94iBGQT6U9mKojifiNtaH22sCx8/edit#gid=0)
 [Zwischenvortrag](https://docs.google.com/document/d/16bHBDd5oXL7Z27XnpYW1QRjGDohDtUeTlDXO6iv-yMI/edit)
-(https://docs.google.com/presentation/d/1HEa7ZtL5ObNrtan69kzGSx386kxONel3j4F0bWJDi9A/edit?usp=sharing)
+[Zwischenprsäsentation](https://docs.google.com/presentation/d/1HEa7ZtL5ObNrtan69kzGSx386kxONel3j4F0bWJDi9A/edit?usp=sharing)
