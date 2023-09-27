@@ -1,4 +1,20 @@
 var currentEvent = undefined
+var worldWar1 = {eventName: "worldWar1",
+    eventStartingMessage: "Der erste Weltkrieg beginnt",
+    eventEndingMessage: "Der erste Weltkrieg ist vorbei",
+    reactions: worldWar1Reactions,
+    startingYear: 1914,
+    endingYear: 1918
+}
+var worldWar2 = {eventName: "worldWar2",
+    eventStartingMessage: "Der zweite Weltkrieg beginnt",
+    eventEndingMessage: "Der zweite Weltkrieg ist vorbei",
+    reactions: worldWar2Reactions,
+    startingYear: 1939,
+    endingYear: 1945
+}
+var timedEvent = [worldWar1, worldWar2];
+
 function newEvent() {
     var hurricane = {eventName: "hurricane", eventMessage: "Ein Hurrikan verwüstet einige Regionen in " + getRandomRegion("country") , reactions: hurricaneReactions}
     var pestInfestation = {eventName: "pestInfestation",eventMessage: "Eine Schädlingsplage in " + getRandomRegion("country") + " führt zu Ernteausfällen und Hungersnöten", reactions: pestInfestationReactions}
@@ -14,17 +30,7 @@ function newEvent() {
     var war = {eventName: "war",eventMessage: "Es bricht ein Krieg zwischen " + getRandomRegion("country") + " und " + getRandomRegion("country") + " aus", reactions: warReactions}
     var meltingPoles = {eventName: "meltingPoles",eventMessage: "Die Polkappen schmelzen immer schneller", reactions: meltingPolesReactions}
     var natureConservationDay = {eventName: "natureConservationDay",eventMessage: "Es ist Naturschutztag auf der gesamten Welt", reactions: natureConservationDayReactions}
-    var worldWar1 = {eventName: "worldWar1",
-        eventStartingMessage: "Der erste Weltkrieg beginnt",
-        eventEndingMessage: "Der erste Weltkrieg ist vorbei",
-        reactions: worldWar1Reactions
-    }
-    var worldWar2 = {eventName: "worldWar2",
-        eventStartingMessage: "Der zweite Weltkrieg beginnt",
-        eventEndingMessage: "Der zweite Weltkrieg ist vorbei",
-        reactions: worldWar2Reactions
-    }
-    var deforestation = {eventName: "deforestation",eventMessage: "Im "+ getRandomRegion("rainforest") + " kommt es zu starker Abholzung", reactions: deforestationReactions}
+    var deforestation = {eventName: "deforestation", eventMessage: "Im "+ getRandomRegion("rainforest") + " kommt es zu starker Abholzung", reactions: deforestationReactions}
 
     var commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
     var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
@@ -32,7 +38,6 @@ function newEvent() {
 
     let eventListPossiblilityPicker = [commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, rareEvents]
     let pickedEventList = eventListPossiblilityPicker[Math.floor(Math.random() * eventListPossiblilityPicker.length)]
-    console.log(pickedEventList)
     currentEvent = pickedEventList[Math.floor(Math.random() * pickedEventList.length)];
     switch (currentEvent.eventName) {
         case "hurricane":
@@ -97,9 +102,17 @@ function newEvent() {
     document.getElementById("event").show()
 }
 
-function timeIncrement() {
+function timedEvents() {
+    if (year >= timedEvent[0].startingYear) {
+        year = timedEvent[0].startingYear;
+    } else {
+        eventInterval = 5;
+    }
+}
+timedEvents()
+
+function timeIncrement(eventInterval) {
     document.getElementById('information').style.display = "none";
-    eventInterval = 5;
     year += eventInterval;
     newEvent()
     gameOver()
@@ -213,7 +226,6 @@ function reaction(r) {
     infoPopUp.innerHTML = ""
     document.getElementById("event").close()
     budget -= reaction.cost
-    console.log(reaction)
 
     reaction.impacts.forEach(impact => {
         let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
