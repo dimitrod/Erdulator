@@ -2,7 +2,7 @@ var currentEvent = undefined
 function newEvent() {
     var hurricane = {eventName: "hurricane", eventMessage: "Ein Hurrikan verwüstet einige Regionen in " + getRandomRegion("country") , reactions: hurricaneReactions}
     var pestInfestation = {eventName: "pestInfestation",eventMessage: "Eine Schädlingsplage in " + getRandomRegion("country") + " führt zu Ernteausfällen und Hungersnöten", reactions: pestInfestationReactions}
-    var earthquake = {eventName: "earthquake",eventMessage: "Eine Erdbeben in " + getRandomRegion("country") + " lässt viele Gebäude einstürzen. Es werden Nachbeben erwartet", reactions: earthquakeReactions}
+    var earthquake = {eventName: "earthquake",eventMessage: "Ein Erdbeben in " + getRandomRegion("country") + " lässt viele Gebäude einstürzen. Es werden Nachbeben erwartet", reactions: earthquakeReactions}
     var tsunami = {eventName: "tsunami",eventMessage: "Ein Tsunami kommt auf die Küste in " + getRandomRegion("continent") + " zu", reactions: tsunamiReactions}
     var drought = {eventName: "drought",eventMessage: "Es herrscht eine starke Dürre in " + getRandomRegion("country"), reactions: droughtReactions}
     var bushFire = {eventName: "bushFire",eventMessage: "In vielen Regionen von " + getRandomRegion("country") + " kommt es zu Waldbränden", reactions: bushFireReactions}
@@ -97,33 +97,6 @@ function newEvent() {
     document.getElementById("event").show()
 }
 
-function updateEventMessages() {
-    hurricane = {eventMessage: "Ein Hurrikan verwüstet einige Regionen in " + getRandomRegion("country") , reactions: hurricaneReactions}
-    pestInfestation = {eventMessage: "Eine Schädlingsplage in " + getRandomRegion("country") + " führt zu Ernteausfällen und Hungersnöten", reactions: pestInfestationReactions}
-    earthquake = {eventMessage: "Ein Erdbeben in " + getRandomRegion("country") + " lässt viele Gebäude einstürzen. Es werden Nachbeben erwartet", reactions: earthquakeReactions}
-    tsunami = {eventMessage: "Ein Tsunami kommt auf die Küste in " + getRandomRegion("continent") + " zu", reactions: tsunamiReactions}
-    drought = {eventMessage: "Es herrscht eine starke Dürre in " + getRandomRegion("country"), reactions: droughtReactions}
-    bushFire = {eventMessage: "In vielen Regionen von " + getRandomRegion("country") + " kommt es zu Waldbränden", reactions: bushFireReactions}
-    flood = {eventMessage: "Es kommt in zu Überflutungen in " + getRandomRegion("country"), reactions: floodReactions}
-    vulcanicEruption = {eventMessage: "Ein Vulkan bricht in " + getRandomRegion("continent") + " aus", reactions: vulcanicEruptionReactions}
-    pandemic = {eventMessage: "Die Inzidenz einer neuen Krankheit steigt stark. In ganz " + getRandomRegion("country") + " verschärft sich die Lage zu einer Pandemie", reactions: pandemicReactions}
-    oilTankerExplosion = {eventMessage: "Ein Öltanker ist im " + getRandomRegion("ocean") + " explodiert. Viele Tonnen Öl verbreiten sich im Wasser", reactions: oilTankerExplosionReactions}
-    tornado = {eventMessage: "Ein Tornado verwüstet " + getRandomRegion("country"), reactions: tornadoReactions}
-    war = {eventMessage: "Es bricht ein Krieg zwischen " + getRandomRegion("country") + " und " + getRandomRegion("country") + " aus", reactions: warReactions}
-    meltingPoles = {eventMessage: "Die Polkappen schmelzen immer schneller", reactions: meltingPolesReactions}
-    natureConservationDay = {eventMessage: "Es ist Naturschutztag auf der gesamten Welt", reactions: natureConservationDayReactions}
-    worldWar1 = {
-        eventStartingMessage: "Der erste Weltkrieg beginnt",
-        eventEndingMessage: "Der erste Weltkrieg ist vorbei",
-        reactions: worldWar1Reactions
-    }
-    worldWar2 = {
-        eventStartingMessage: "Der zweite Weltkrieg beginnt",
-        eventEndingMessage: "Der zweite Weltkrieg ist vorbei",
-        reactions: worldWar2Reactions
-    }
-    deforestation = {eventMessage: "Es kommt zu starker Abholzung der Regenwälder", reactions: deforestationReactions}
-}
 function timeIncrement() {
     document.getElementById('information').style.display = "none";
     eventInterval = 5;
