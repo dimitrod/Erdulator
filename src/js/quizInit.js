@@ -8,7 +8,7 @@ const quiz = [
     },
     {
         question:"Wie viel Tonnen C02-Äquivalente emmitierte Deutschland im Jahr 2022?",
-        choices: ["746 Millionen", "1.1045 Millionen", "67 Millionen"],
+        choices: ["746 Millionen", "1.045 Millionen", "67 Millionen"],
         answer: 0,
         reward: 1.4,
         information: "Im Jahr 2022 verursachte Deutschland rund 746 Millionen Tonnen CO2-Äquivalente, wovon 786 Millionen Tonnen reines CO2 waren."
