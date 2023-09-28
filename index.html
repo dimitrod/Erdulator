@@ -11,10 +11,7 @@
     </header>
     <main>
         
-        <dialog id="gameOver">
-            <p id="gameOverMessage"></p>
-            <button id="restart" onclick="location.reload()">Neustarten</button>
-        </dialog>
+        
 
         <div id="planetwrap">
             <div id="yearwrap">
@@ -40,7 +37,11 @@
         <div id="budgetwrap">
             <span>Budget: </span><span id = "budget"></span><div id="budgetGrowth"> </div>
         </div>
-
+        <div id="wrapper">
+        <dialog id="gameOver">
+            <p id="gameOverMessage"></p>
+            <button id="restart" onclick="location.reload()">Neustarten</button>
+        </dialog>
         <dialog id="event">
             <p id="eventMessage"></p>
             <button id="reaction1" onclick="reaction(0)"></button><br>
@@ -48,7 +49,7 @@
             <button id="reaction3" onclick="reaction(2)"></button>
         </dialog>
         <dialog id="info">
-            <p id="stats"></p>
+            <ul id="stats"></ul>
             <button id="closeInfo" onclick="document.getElementById('info').close(); makeQuiz()">Okay</button>
         </dialog>
         <div id="questionDisplay" class="quiz" hidden="hidden">
@@ -80,6 +81,7 @@
                 <span id = "ozoneLayer"></span>
             </div>
         </div>
+    </div>
     </div>
 
         <div id='stars'></div>

@@ -1,4 +1,20 @@
 var currentEvent = undefined
+var worldWar1 = {eventName: "worldWar1",
+    eventStartingMessage: "Der erste Weltkrieg beginnt",
+    eventEndingMessage: "Der erste Weltkrieg ist vorbei",
+    reactions: worldWar1Reactions,
+    startingYear: 1914,
+    endingYear: 1918
+}
+var worldWar2 = {eventName: "worldWar2",
+    eventStartingMessage: "Der zweite Weltkrieg beginnt",
+    eventEndingMessage: "Der zweite Weltkrieg ist vorbei",
+    reactions: worldWar2Reactions,
+    startingYear: 1939,
+    endingYear: 1945
+}
+var timedEvent = [worldWar1, worldWar2];
+
 function newEvent() {
     var hurricane = {eventName: "hurricane", eventMessage: "Ein Hurrikan verwüstet einige Regionen in " + getRandomRegion("country") , reactions: hurricaneReactions}
     var pestInfestation = {eventName: "pestInfestation",eventMessage: "Eine Schädlingsplage in " + getRandomRegion("country") + " führt zu Ernteausfällen und Hungersnöten", reactions: pestInfestationReactions}
@@ -14,17 +30,7 @@ function newEvent() {
     var war = {eventName: "war",eventMessage: "Es bricht ein Krieg zwischen " + getRandomRegion("country") + " und " + getRandomRegion("country") + " aus", reactions: warReactions}
     var meltingPoles = {eventName: "meltingPoles",eventMessage: "Die Polkappen schmelzen immer schneller", reactions: meltingPolesReactions}
     var natureConservationDay = {eventName: "natureConservationDay",eventMessage: "Es ist Naturschutztag auf der gesamten Welt", reactions: natureConservationDayReactions}
-    var worldWar1 = {eventName: "worldWar1",
-        eventStartingMessage: "Der erste Weltkrieg beginnt",
-        eventEndingMessage: "Der erste Weltkrieg ist vorbei",
-        reactions: worldWar1Reactions
-    }
-    var worldWar2 = {eventName: "worldWar2",
-        eventStartingMessage: "Der zweite Weltkrieg beginnt",
-        eventEndingMessage: "Der zweite Weltkrieg ist vorbei",
-        reactions: worldWar2Reactions
-    }
-    var deforestation = {eventName: "deforestation",eventMessage: "Im "+ getRandomRegion("rainforest") + " kommt es zu starker Abholzung", reactions: deforestationReactions}
+    var deforestation = {eventName: "deforestation", eventMessage: "Im "+ getRandomRegion("rainforest") + " kommt es zu starker Abholzung", reactions: deforestationReactions}
 
     var commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
     var rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
@@ -32,7 +38,6 @@ function newEvent() {
 
     let eventListPossiblilityPicker = [commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, rareEvents]
     let pickedEventList = eventListPossiblilityPicker[Math.floor(Math.random() * eventListPossiblilityPicker.length)]
-    console.log(pickedEventList)
     currentEvent = pickedEventList[Math.floor(Math.random() * pickedEventList.length)];
     switch (currentEvent.eventName) {
         case "hurricane":
@@ -54,7 +59,7 @@ function newEvent() {
             bushFire = {eventName: "bushFire",eventMessage: "In vielen Regionen von " + getRandomRegion("country") + " kommt es zu Waldbränden", reactions: bushFireReactions}
             break
         case "flood":
-            flood = {eventName: "flood",eventMessage: "Es kommt in zu Überflutungen in " + getRandomRegion("country"), reactions: floodReactions}
+            flood = {eventName: "flood",eventMessage: "Es kommt zu Überflutungen in " + getRandomRegion("country"), reactions: floodReactions}
             break
         case "vulcanicEruption":
             vulcanicEruption = {eventName: "vulcanicEruption",eventMessage: "Ein Vulkan bricht in " + getRandomRegion("continent") + " aus", reactions: vulcanicEruptionReactions}
@@ -97,11 +102,34 @@ function newEvent() {
     document.getElementById("event").show()
 }
 
+function timedEvents() {
+    var currentTimedEvent = timedEvent[0];
+    if (!currentTimedEvent) newEvent() 
+    else {
+        if (year >= currentTimedEvent.startingYear) {
+            document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventStartingMessage
+            document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 0) + " €)"
+            document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 0) + " €)"
+            document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 0) + " €)"
+            yearElem.innerHTML = currentTimedEvent.startingYear
+            document.getElementById("event").show()
+            timedEvent.splice(0, 1)
+        } 
+        //TBD create info pop on the side for timedEvents with a period
+            /*/else if (year >= currentTimedEvent.endingYear) {
+            document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventEndingMessage
+            yearElem.innerHTML = currentTimedEvent.endingYear
+            document.getElementById("event").show()
+            currentTimedEvent.splice(0)
+        } /*/else newEvent()
+    }
+}
+
 function timeIncrement() {
     document.getElementById('information').style.display = "none";
     eventInterval = 5;
     year += eventInterval;
-    newEvent()
+    timedEvents()
     gameOver()
     populationIncrement()
 }
@@ -219,6 +247,7 @@ function reaction(r) {
     rewardElem.innerHTML = "<span id='budgetChange' style='color: #fc4903;'>" + costText + "</span>"
     console.log(reaction)
 
+
     reaction.impacts.forEach(impact => {
         let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
         let randomValueCo2e = Math.random() * (impact.maxValue - impact.minValue) + impact.minValue
@@ -226,64 +255,64 @@ function reaction(r) {
             case "co2e":
                 if (randomValueCo2e > 0) {
                     co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<p>Der CO2e-Gehalt in der Luft ist um " + randomValueCo2e.toFixed(3) + " % gestiegen.</p>"
+                    infoPopUp.innerHTML += "<li>Der CO2e-Gehalt in der Luft ist um " + randomValueCo2e.toFixed(3) + " % gestiegen.</li>"
                     break
                 }
                 if (randomValueCo2e <= 0) {
                     co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<p>Der CO2e-Gehalt in der Luft ist um " + Math.abs(randomValueCo2e.toFixed(3)) + " % gesunken.</p>"
+                    infoPopUp.innerHTML += "<li>Der CO2e-Gehalt in der Luft ist um " + Math.abs(randomValueCo2e.toFixed(3)) + " % gesunken.</li>"
                 }
                 break
             case "afforestation":
                 if (randomValue > 0) {
                     afforestation -= randomValue
-                    infoPopUp.innerHTML += "<p>Die Bewaldung der Erde hat sich um " + randomValue + " % verringert.</p>"
+                    infoPopUp.innerHTML += "<li>Die Bewaldung der Erde hat sich um " + randomValue + " % verringert.</li>"
                     break
                 }
                 if (randomValue <= 0) {
                     afforestation += Math.abs(randomValue)
-                    infoPopUp.innerHTML += "<p>Die Bewaldung der Erde hat sich um " + Math.abs(randomValue) + " % erhöht.</p>"
+                    infoPopUp.innerHTML += "<li>Die Bewaldung der Erde hat sich um " + Math.abs(randomValue) + " % erhöht.</li>"
                     break
                 }
                 break
             case "waterLevel":
                 if (randomValue > 0) {
                     waterLevel += randomValue
-                    infoPopUp.innerHTML += "<p>Der Wasserspiegel ist um " + randomValue + " m gestiegen.</p>"
+                    infoPopUp.innerHTML += "<li>Der Wasserspiegel ist um " + randomValue + " m gestiegen.</li>"
                     break
                 }
                 if (randomValue <= 0) {
                     waterLevel += randomValue
-                    infoPopUp.innerHTML += "<p>Der Wasserspiegel ist um " + Math.abs(randomValue) + " m gesunken.</p>"
+                    infoPopUp.innerHTML += "<li>Der Wasserspiegel ist um " + Math.abs(randomValue) + " m gesunken.</li>"
                     break
                 }
                 break
             case "population":
                 population -= randomValue
-                infoPopUp.innerHTML += "<p>Es sind " + convertNum(randomValue) + " Menschen gestorben</p>"
+                infoPopUp.innerHTML += "<li>Es sind " + convertNum(randomValue) + " Menschen gestorben</li>"
                 break
             case "animalSpecies":
                 animalSpecies -= randomValue
-                infoPopUp.innerHTML += "<p>Es sind " + convertNum(randomValue) + " Tierarten ausgestorben </p>"
+                infoPopUp.innerHTML += "<li>Es sind " + convertNum(randomValue) + " Tierarten ausgestorben </li>"
                 break
             case "temperature":
                 if (randomValue > 0) {
                     temperature += randomValue
-                    infoPopUp.innerHTML += "<p>Die Welt-Durchschnittstemperatur hat sich um " + randomValue + " °C erhöht.</p>"
+                    infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + randomValue + " °C erhöht.</li>"
                     break
                 }
                 if (randomValue <= 0) {
                     temperature += randomValue
-                    infoPopUp.innerHTML += "<p>Die Welt-Durchschnittstemperatur hat sich um " + Math.abs(randomValue) + " °C verringert.</p>"
+                    infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + Math.abs(randomValue) + " °C verringert.</p>"
                     break
                 }
                 break
             case "ozoneLayer":
                 ozoneLayer -= randomValue
-                infoPopUp.innerHTML += "<p>Die Qualität der Ozonschicht hat sich um " + randomValue + " % verschlechtert.</p>"
+                infoPopUp.innerHTML += "<li>Die Qualität der Ozonschicht hat sich um " + randomValue + " % verschlechtert.</li>"
                 break
             case "nothing":
-                infoPopUp.innerHTML = "<p>Nichts ist passiert.<p>"
+                infoPopUp.innerHTML = "<li>Nichts ist passiert.</li>"
             default:
                 break;
         }
