@@ -59,7 +59,7 @@ function newEvent() {
             bushFire = {eventName: "bushFire",eventMessage: "In vielen Regionen von " + getRandomRegion("country") + " kommt es zu Waldbränden", reactions: bushFireReactions}
             break
         case "flood":
-            flood = {eventName: "flood",eventMessage: "Es kommt in zu Überflutungen in " + getRandomRegion("country"), reactions: floodReactions}
+            flood = {eventName: "flood",eventMessage: "Es kommt zu Überflutungen in " + getRandomRegion("country"), reactions: floodReactions}
             break
         case "vulcanicEruption":
             vulcanicEruption = {eventName: "vulcanicEruption",eventMessage: "Ein Vulkan bricht in " + getRandomRegion("continent") + " aus", reactions: vulcanicEruptionReactions}
