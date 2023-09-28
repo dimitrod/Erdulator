@@ -157,18 +157,20 @@ button:hover {
 }
 
 #gameOver {
-	position: absolute;
-	margin-top: 25%;
+	/* position: absolute; */
+	/* margin-top: 25%; */
 	color: #FFF;
-    text-align: left;
-    font-family: "lato", sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    padding-left: 10px;
-    background-color: transparent;
-    border: 3px solid rgba(41,242,151,0.5);
-    border-radius: 9px;
-    padding: 20px;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  padding-left: 10px;
+  background-color: transparent;
+  border: 3px solid rgba(41,242,151,0.5);
+  border-radius: 9px;
+  padding: 20px;
+  position: relative;
+  width:100%;
 }
 
 
