@@ -251,64 +251,64 @@ function reaction(r) {
             case "co2e":
                 if (randomValueCo2e > 0) {
                     co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<p>Der CO2e-Gehalt in der Luft ist um " + randomValueCo2e.toFixed(3) + " % gestiegen.</p>"
+                    infoPopUp.innerHTML += "<li>Der CO2e-Gehalt in der Luft ist um " + randomValueCo2e.toFixed(3) + " % gestiegen.</li>"
                     break
                 }
                 if (randomValueCo2e <= 0) {
                     co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<p>Der CO2e-Gehalt in der Luft ist um " + Math.abs(randomValueCo2e.toFixed(3)) + " % gesunken.</p>"
+                    infoPopUp.innerHTML += "<li>Der CO2e-Gehalt in der Luft ist um " + Math.abs(randomValueCo2e.toFixed(3)) + " % gesunken.</li>"
                 }
                 break
             case "afforestation":
                 if (randomValue > 0) {
                     afforestation -= randomValue
-                    infoPopUp.innerHTML += "<p>Die Bewaldung der Erde hat sich um " + randomValue + " % verringert.</p>"
+                    infoPopUp.innerHTML += "<li>Die Bewaldung der Erde hat sich um " + randomValue + " % verringert.</li>"
                     break
                 }
                 if (randomValue <= 0) {
                     afforestation += Math.abs(randomValue)
-                    infoPopUp.innerHTML += "<p>Die Bewaldung der Erde hat sich um " + Math.abs(randomValue) + " % erhöht.</p>"
+                    infoPopUp.innerHTML += "<li>Die Bewaldung der Erde hat sich um " + Math.abs(randomValue) + " % erhöht.</li>"
                     break
                 }
                 break
             case "waterLevel":
                 if (randomValue > 0) {
                     waterLevel += randomValue
-                    infoPopUp.innerHTML += "<p>Der Wasserspiegel ist um " + randomValue + " m gestiegen.</p>"
+                    infoPopUp.innerHTML += "<li>Der Wasserspiegel ist um " + randomValue + " m gestiegen.</li>"
                     break
                 }
                 if (randomValue <= 0) {
                     waterLevel += randomValue
-                    infoPopUp.innerHTML += "<p>Der Wasserspiegel ist um " + Math.abs(randomValue) + " m gesunken.</p>"
+                    infoPopUp.innerHTML += "<li>Der Wasserspiegel ist um " + Math.abs(randomValue) + " m gesunken.</li>"
                     break
                 }
                 break
             case "population":
                 population -= randomValue
-                infoPopUp.innerHTML += "<p>Es sind " + convertNum(randomValue) + " Menschen gestorben</p>"
+                infoPopUp.innerHTML += "<li>Es sind " + convertNum(randomValue) + " Menschen gestorben</li>"
                 break
             case "animalSpecies":
                 animalSpecies -= randomValue
-                infoPopUp.innerHTML += "<p>Es sind " + convertNum(randomValue) + " Tierarten ausgestorben </p>"
+                infoPopUp.innerHTML += "<li>Es sind " + convertNum(randomValue) + " Tierarten ausgestorben </li>"
                 break
             case "temperature":
                 if (randomValue > 0) {
                     temperature += randomValue
-                    infoPopUp.innerHTML += "<p>Die Welt-Durchschnittstemperatur hat sich um " + randomValue + " °C erhöht.</p>"
+                    infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + randomValue + " °C erhöht.</li>"
                     break
                 }
                 if (randomValue <= 0) {
                     temperature += randomValue
-                    infoPopUp.innerHTML += "<p>Die Welt-Durchschnittstemperatur hat sich um " + Math.abs(randomValue) + " °C verringert.</p>"
+                    infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + Math.abs(randomValue) + " °C verringert.</p>"
                     break
                 }
                 break
             case "ozoneLayer":
                 ozoneLayer -= randomValue
-                infoPopUp.innerHTML += "<p>Die Qualität der Ozonschicht hat sich um " + randomValue + " % verschlechtert.</p>"
+                infoPopUp.innerHTML += "<li>Die Qualität der Ozonschicht hat sich um " + randomValue + " % verschlechtert.</li>"
                 break
             case "nothing":
-                infoPopUp.innerHTML = "<p>Nichts ist passiert.<p>"
+                infoPopUp.innerHTML = "<li>Nichts ist passiert.</li>"
             default:
                 break;
         }
