@@ -103,18 +103,33 @@ function newEvent() {
 }
 
 function timedEvents() {
-    if (year >= timedEvent[0].startingYear) {
-        year = timedEvent[0].startingYear;
-    } else {
-        eventInterval = 5;
+    var currentTimedEvent = timedEvent[0];
+    if (!currentTimedEvent) newEvent() 
+    else {
+        if (year >= currentTimedEvent.startingYear) {
+            document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventStartingMessage
+            document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 0) + " €)"
+            document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 0) + " €)"
+            document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 0) + " €)"
+            yearElem.innerHTML = currentTimedEvent.startingYear
+            document.getElementById("event").show()
+            timedEvent.splice(0, 1)
+        } 
+        //TBD create info pop on the side for timedEvents with a period
+            /*/else if (year >= currentTimedEvent.endingYear) {
+            document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventEndingMessage
+            yearElem.innerHTML = currentTimedEvent.endingYear
+            document.getElementById("event").show()
+            currentTimedEvent.splice(0)
+        } /*/else newEvent()
     }
 }
-timedEvents()
 
-function timeIncrement(eventInterval) {
+function timeIncrement() {
     document.getElementById('information').style.display = "none";
+    eventInterval = 5;
     year += eventInterval;
-    newEvent()
+    timedEvents()
     gameOver()
     populationIncrement()
 }
