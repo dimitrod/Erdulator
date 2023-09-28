@@ -11,7 +11,10 @@
     </header>
     <main>
         
-        
+        <dialog id="gameOver">
+            <p id="gameOverMessage"></p>
+            <button id="restart" onclick="location.reload()">Neustarten</button>
+        </dialog>
 
         <div id="planetwrap">
             <div id="yearwrap">
@@ -27,11 +30,8 @@
 
             <img id="planet" src="resource/0001.png" alt="Earth" class="center">
             
-            
-
-
+       
         </div>
-
         <div id="rightwrap">
         <div id='title'>
             <span>
@@ -53,11 +53,6 @@
             <p id="stats"></p>
             <button id="closeInfo" onclick="document.getElementById('info').close(); makeQuiz()">Okay</button>
         </dialog>
-        <dialog id="gameOver">
-            <p id="gameOverMessage"></p>
-            <button id="restart" onclick="location.reload()">Neustarten</button>
-        </dialog>
-
         <div id="questionDisplay" class="quiz" hidden="hidden">
             <p id="quizQuestion"> </p>
             <button id="answer0" onclick="evaluateAnswer(0)"> </button><br>

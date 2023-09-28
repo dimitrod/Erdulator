@@ -3,7 +3,7 @@ const quiz = [
         question:"Kühlte sich das Klima durch die Eroberungszüge von Dschingis Khan ab?", 
         choices: ["Nein, das hatte keinen Einfluss!", "Ja, durch die natürliche Wiederbewaldung auf dem entvölkerten Land wurde das Klima heruntergekühlt", "Wer ist Dschingis Khan!"], 
         answer: 1, 
-        information: "Der hat schon mega geraded."
+        information: "Der hat schon mega geraided."
     },
     {
         question:"Wie viel Tonnen C02-Äquivalente emmitierte Deutschland im Jahr 2015?", 
@@ -33,17 +33,17 @@ const quiz = [
         question: "Welche wichtigen Strukturen spielen für den Wald eine große Rolle?",
         choices: ["Zusammenspiel zwischen Flora und Fauna muss beständig sein", "Landschaft rund um den Wald sollte möglichst divers sein", "Baumartenzusammensetzung, Menge an Totholz, Höhlen und Waldentwicklungsphasen"],
         answer: 2,
-        information: "Zusammenspiel zwischen Flora und Fauna muss beständig sein"
+        information: "Die Zusammensetzung der Baumarten beeinflusst die Artenvielfalt und die ökologischen Prozesse im Wald, während Totholz und Höhlen wichtige Lebensräume für verschiedene Tierarten bieten. Die verschiedenen Entwicklungsphasen eines Waldes sind ebenfalls wichtig, da sie verschiedene ökologische Bedingungen schaffen und die Biodiversität fördern können."
     },
     {
         question:"Was ist der Rebound-Effekt?",
-        choices: ["Qenn der Ball beim Basketball vom Korb zurückspringt und wieder gefangen wird", "Je mehr energieeffiziente Geräte ich nutze, umso mehr Energie spare ich", "Bei Nutzung von energieeffizienten Geräten wird das Verhalten geändert und die Geräte werden mehr genutzt"],
+        choices: ["Wenn der Ball beim Basketball vom Korb zurückspringt und wieder gefangen wird", "Je mehr energieeffiziente Geräte ich nutze, umso mehr Energie spare ich", "Bei Nutzung von energieeffizienten Geräten wird das Verhalten geändert und die Geräte werden mehr genutzt"],
         answer: 2,
         information: "Der Rebound-Effekt ist der mengenmäßige Unterschied zwischen möglichen Ressourceneinsparungen und den tatsächlichen Einsparungen. Somit führt der Rebound-Effekt dazu, dass das Einsparungspotenzial von Effizienzsteigerungen nicht oder nur teilweise realisiert wird"
     },
     {
         question:"Welche Maßnahmen schützen am besten vor Überschwemmungen?",
-        choices: ["Bau von Deichen und Spundwänden", "Schaffung von naturnahen Überschwemmungsflächen", "Schaffung von naturnahen Überschwemmungsflächen"],
+        choices: ["Bau von Deichen und Spundwänden", "Schaffung von naturnahen Überschwemmungsflächen", "Bau von höheren Gebäuden"],
         answer: 1,
         information: "Die Überschwemmungsflächen der Flussauen sind ein starker Hochwasserschutz. Zurzeit wird zwar viel auf technischen Schutz der Flüsse von ihren Auen durch Deiche gesetzt aber so gehen natürliche Rückhalteräume für Hochwasser verloren. Schutzmaßnahmen wie Spundwände sind zwar lokal notwendig, eine dauerhafte Verbesserung wird aber nur durch den Anschluss alter Rückhalteräume erreicht."
     },
