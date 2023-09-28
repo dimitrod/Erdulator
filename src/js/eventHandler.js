@@ -245,8 +245,6 @@ function reaction(r) {
     costText = "-" + convertNum(reaction.cost, 1) + " €"
     budget -= reaction.cost
     rewardElem.innerHTML = "<span id='budgetChange' style='color: #fc4903;'>" + costText + "</span>"
-    console.log(reaction)
-
 
     reaction.impacts.forEach(impact => {
         let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
