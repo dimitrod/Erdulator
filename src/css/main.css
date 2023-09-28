@@ -118,16 +118,11 @@ html {
   color:lightgreen;
 }
 #budgetGrowth {
-  margin-left: 10px;
-  color: #D4AF37;
-  text-align: left;
-  font-family: "lato", sans-serif;
-  display: inline;
+    display: inline;
 }
-#wuhu{
+#budgetChange{
   opacity: 0;
   margin-left: 10px;
-  color: #D4AF37;
   text-align: left;
   font-family: "lato", sans-serif;
   animation: rewardAnim 4s linear forwards;

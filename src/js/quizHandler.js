@@ -46,8 +46,7 @@ function evaluateAnswer(i){
         document.getElementById("answer").innerHTML= "Richtig!"
         reward = currentQuestions[0].reward * Math.pow(10, 6)
         rewardText = "+" + convertNum(reward, 1) + " €"
-        rewardElem.innerHTML = "<span id='wuhu'>" + rewardText + "</span>"
-
+        rewardElem.innerHTML = "<span id='budgetChange' style='color: #D4AF37;'>" + rewardText + "</span>"
         budget += reward
         budgetElem.innerHTML = convertNum(budget,1) + " €"
     } else {
