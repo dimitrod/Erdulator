@@ -1,4 +1,4 @@
-var earthquakeReactions = [
+let earthquakeReactions = [
     {
         reaction: "Bergungsteam schicken",
         cost: 2 * Math.pow(10,6),
@@ -31,7 +31,7 @@ var earthquakeReactions = [
     }
 ]
 
-var tsunamiReactions = [
+let tsunamiReactions = [
     {
         reaction: "Evakuieren",
         cost: 4 * Math.pow(10,6),
@@ -64,7 +64,7 @@ var tsunamiReactions = [
     }
 ]
 
-var droughtReactions = [
+let droughtReactions = [
     {
         reaction: "Aufforsten",
         cost: 3 * Math.pow(10,6),
@@ -97,7 +97,7 @@ var droughtReactions = [
     }
 ]
 
-var bushFireReactions = [
+let bushFireReactions = [
     {
         reaction: "Brand bekämpfen",
         cost: 3 * Math.pow(10,6),
@@ -142,7 +142,7 @@ var bushFireReactions = [
     }
 ]
 
-var floodReactions = [
+let floodReactions = [
     {
         reaction: "Wälle errichten",
         cost: 2 * Math.pow(10,6),
@@ -175,7 +175,7 @@ var floodReactions = [
     }
 ]
 
-var vulcanicEruptionReactions = [
+let vulcanicEruptionReactions = [
     {
         reaction: "Evakuieren",
         cost: 4 * Math.pow(10,6),
@@ -208,7 +208,7 @@ var vulcanicEruptionReactions = [
     }
 ]
 
-var pandemicReactions = [
+let pandemicReactions = [
     {
         reaction: "Lockdown anordnen",
         cost: 2 * Math.pow(10,6),
@@ -218,11 +218,17 @@ var pandemicReactions = [
             maxValue: -0.003
         }]
     },
-    {reaction: "Maskenpflicht anordnen", cost: Math.pow(10, 6), impacts: [{param: "population", minValue: 1500, maxValue: 15000}]},
-    {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 10000, maxValue: 100000}]}
+    {
+        reaction: "Maskenpflicht anordnen", 
+        cost: Math.pow(10, 6), 
+        impacts: [{param: "population", minValue: 1500, maxValue: 15000}]},
+    {
+        reaction: "Nichts machen", 
+        cost: 0, 
+        impacts: [{param: "population", minValue: 10000, maxValue: 100000}]}
 ]
 
-var oilTankerExplosionReactions = [
+let oilTankerExplosionReactions = [
     {
         reaction: "Öl abfischen",
         cost: 10 * Math.pow(10,6),
@@ -252,7 +258,7 @@ var oilTankerExplosionReactions = [
     }
 ]
 
-var tornadoReactions = [
+let tornadoReactions = [
     {
         reaction: "Evakuieren",
         cost: 4 * Math.pow(10,6),
@@ -282,7 +288,7 @@ var tornadoReactions = [
     },
 ]
 
-var warReactions = [
+let warReactions = [
     {
         reaction: "Waffenstillstand aushandeln",
         cost: 8 * Math.pow(10,6),
@@ -312,7 +318,7 @@ var warReactions = [
     }
 ]
 
-var pestInfestationReactions = [
+let pestInfestationReactions = [
     {
         reaction: "Großflächig mit Pestiziden bekämpfen",
         cost: 10 * Math.pow(10,6),
@@ -342,7 +348,7 @@ var pestInfestationReactions = [
     }
 ]
 
-var meltingPolesReactions = [
+let meltingPolesReactions = [
     {
         reaction: "Elektroenergien fördern",
         cost: 7 * Math.pow(10,6),
@@ -375,7 +381,7 @@ var meltingPolesReactions = [
     },
 ]
 
-var natureConservationDayReactions = [
+let natureConservationDayReactions = [
     {
         reaction: "Stark unterstützen",
         cost: 14 * Math.pow(10,6),
@@ -397,7 +403,7 @@ var natureConservationDayReactions = [
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "nothing", minValue: 0, maxValue: 0}]}
 ]
 
-var worldWar1Reactions = [
+let worldWar1Reactions = [
     {
         reaction: "Städte wieder aufbauen",
         cost: 15 * Math.pow(10,6),
@@ -427,7 +433,7 @@ var worldWar1Reactions = [
     }
 ]
 
-var worldWar2Reactions = [
+let worldWar2Reactions = [
     {
         reaction: "Städte wieder aufbauen",
         cost: 15 * Math.pow(10,6),
@@ -454,7 +460,7 @@ var worldWar2Reactions = [
         }, {param: "co2e", minValue: 0.002, maxValue: 0.004}]}
 ]
 
-var deforestationReactions = [
+let deforestationReactions = [
     {
         reaction: "Naturschutzgebiete einrichten",
         cost: 8 * Math.pow(10,6),
@@ -472,14 +478,14 @@ var deforestationReactions = [
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "afforestation", minValue: 2, maxValue: 5}]},
 ]
 
-var hurricaneReactions = [
+let hurricaneReactions = [
     {reaction: "Evakuieren", cost: 4 * Math.pow(10,6), impacts: [{param: "population", minValue: 2000, maxValue: 20000}, {param: "afforestation", minValue: 1, maxValue: 2}]},
     {reaction: "Bergungsteam schicken", cost: 3 * Math.pow(10,6), impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {param: "afforestation", minValue: 1, maxValue: 2}]},
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "population", minValue: 4000, maxValue: 40000}, {param: "afforestation", minValue: 1, maxValue: 2}]}
 ]
 
-var oceans = ["Pazifischen Ozean", "Atlantischen Ozean", "Mittelmeer", "Schwarzen Meer", "Indischen Ozean", "Roten Meer", "Toten Meer", "Arktischen Ozean", "Antarktischen Ozean"]
-var countrys = ["Afghanistan", "Ägypten", "Albanien", "Algerien", "Andorra", "Angola", "Antigua und Barbuda", "Äquatorialguinea", "Argentinien", "Armenien", "Aserbaidschan", "Äthiopien",
+let oceans = ["Pazifischen Ozean", "Atlantischen Ozean", "Mittelmeer", "Schwarzen Meer", "Indischen Ozean", "Roten Meer", "Toten Meer", "Arktischen Ozean", "Antarktischen Ozean"]
+let countrys = ["Afghanistan", "Ägypten", "Albanien", "Algerien", "Andorra", "Angola", "Antigua und Barbuda", "Äquatorialguinea", "Argentinien", "Armenien", "Aserbaidschan", "Äthiopien",
     "Australien", "Bahamas", "Bahrain", "Bangladesch", "Barbados", "Belarus", "Belgien", "Belize", "Benin", "Bhutan", "Bolivien", "Bosnien und Herzegowina", "Botswana", "Brasilien", "Brunei",
     "Bulgarien", "Burkina Faso", "Burundi", "Chile", "China", "Costa Rica", "Dänemark", "Deutschland", "Dominica", "Dominikanische Republik", "Dschibuti", "Ecuador", "El Salvador", "Elfenbeinküste",
     "Eritrea", "Estland", "Eswatini", "Fidschi", "Finnland", "Frankreich", "Gabun", "Gambia", "Georgien", "Ghana", "Grenada", "Griechenland", "Großbritannien", "Guatemala", "Guinea", "Guinea-Bissau",
@@ -492,23 +498,6 @@ var countrys = ["Afghanistan", "Ägypten", "Albanien", "Algerien", "Andorra", "A
     "Slowenien", "Somalia", "Spanien", "Sri Lanka", "St. Kitts und Nevis", "St. Lucia", "St. Vincent und die Grenadinen", "Südafrika", "Sudan", "Südsudan", "Suriname", "Syrien", "Tadschikistan",
     "Taiwan", "Tansania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad und Tobago", "Tschad", "Tschechien", "Tunesien", "Türkei", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "Ungarn",
     "Uruguay", "Usbekistan", "Vanuatu", "Vatikanstadt", "Venezuela", "den Vereinigten Arabischen Emiraten", "den Vereinigten Staaten von Amerika", "Vietnam", "der Zentralafrikanischen Republik"]
-var continents = ["Asien", "Europa", "Australien", "Nordamerika", "Südamerika", "Indien"]
-var rainforests = ["Amazonas-Regenwald", "Kongobecken-Regenwald", "Sundarbans-Regenwald", "Regenwald von Neuguinea", "Regenwald des westlichen Ghana", "Atlantic Forest",
+let continents = ["Asien", "Europa", "Australien", "Nordamerika", "Südamerika", "Indien"]
+let rainforests = ["Amazonas-Regenwald", "Kongobecken-Regenwald", "Sundarbans-Regenwald", "Regenwald von Neuguinea", "Regenwald des westlichen Ghana", "Atlantic Forest",
     "Valdivianischer Regenwald", "Regenwald von Borneo", "Regenwald von Sumatra", "Madagaskar-Regenwald"]
-
-    function getRandomRegion(region){
-    switch (region){
-        case "country":
-            let randomCountryNumber = Math.floor(Math.random() * countrys.length)
-            return countrys[randomCountryNumber]
-        case "ocean":
-            let randomOceanNumber = Math.floor(Math.random() * oceans.length)
-            return oceans[randomOceanNumber]
-        case "continent":
-            let randomContinentNumber = Math.floor(Math.random() * continents.length)
-            return continents[randomContinentNumber]
-        case "rainforest":
-            let randomRainforestNumber = Math.floor(Math.random() * rainforests.length)
-            return rainforests[randomRainforestNumber]
-    }
-}
