@@ -37,7 +37,7 @@ function nextCloseDecider(){
 
 function evaluateAnswer(i){
     if (currentQuestions.length == 1) {
-        document.getElementById("NextClose").innerHTML="Close"
+        document.getElementById("NextClose").innerHTML="Schließen"
     }
     document.getElementById("questionDisplay").style.display = "none"
     document.getElementById("information").style.display ="block"
