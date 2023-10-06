@@ -8,17 +8,18 @@ function populationIncrement() {
 }
 
 function afforestationIncrement() {
-    afforestationGrowthRate = -0.02;
-    afforestation = Math.floor(attributeGrowth(afforestation, afforestationGrowthRate, eventInterval));
+    afforestationGrowthRate = 1.01;
+    //afforestation = Math.floor(attributeGrowth(afforestation, afforestationGrowthRate, eventInterval));
+    afforestation = afforestation * afforestationGrowthRate
 }
 
 function temperatureIncrement() {
-    temperatureGrowthRate = 0.03;
+    temperatureGrowthRate = 0.2;
     temperature = Math.floor(attributeGrowth(temperature, temperatureGrowthRate, eventInterval));
 }
 
 function waterLevelIncrement() {
-    waterLevelGrowthRate = 0.01;
+    waterLevelGrowthRate = 0.1;
     waterLevel = Math.floor(attributeGrowth(waterLevel, waterLevelGrowthRate, eventInterval));
 }
 

@@ -110,24 +110,27 @@ function newEvent() {
 
 function timedEvents() {
     let currentTimedEvent = timedEvent[0];
-    if (!currentTimedEvent) newEvent() 
-    else {
-        if (year >= currentTimedEvent.startingYear && year != currentTimedEvent.startingYear) {
-            yearElem.innerHTML = currentTimedEvent.startingYear
-            document.getElementById("timedPopupMessage").innerHTML = currentTimedEvent.eventStartingMessage
-            document.getElementById("timedPopup").show()
-            setTimeout(() => {document.getElementById("timedPopup").close()}, 5000);  
-        }
-        if (year >= currentTimedEvent.endingYear) {
-            yearElem.innerHTML = currentTimedEvent.endingYear
-            document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventEndingMessage
-            document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 0) + " €)"
-            document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 0) + " €)"
-            document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 0) + " €)"
-            document.getElementById("event").show()
-            timedEvent.splice(0, 1)
-        } else newEvent()
-    }
+    if (!currentTimedEvent) newEvent()
+    if (year >= currentTimedEvent.startingYear && year != currentTimedEvent.startingYear) {
+        //yearElem.innerHTML = currentTimedEvent.startingYear
+        document.getElementById("timedPopupMessage").innerHTML = currentTimedEvent.eventStartingMessage
+        document.getElementById("timedPopup").show()
+        setTimeout(() => {document.getElementById("timedPopup").close()}, 5000);  
+        
+        
+        timedEvent.splice(0, 1) //TBD
+        newEvent() //TBD
+
+    /*/if (year >= currentTimedEvent.endingYear) {
+        yearElem.innerHTML = currentTimedEvent.endingYear
+        document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventEndingMessage
+        document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 0) + " €)"
+        document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 0) + " €)"
+        document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 0) + " €)"
+        document.getElementById("event").show()
+        timedEvent.splice(0, 1) 
+    } /*/
+    } else newEvent()
 }
 
 function reaction(r) {

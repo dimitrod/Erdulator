@@ -1,3 +1,5 @@
+beginOfGame = true
+
 function createGameOverMessage(message) {
     document.getElementById("gameOverMessage").innerHTML = message;
     document.getElementById("restart").innerHTML = "Neustart";
@@ -10,10 +12,8 @@ function gameOver() {
         createGameOverMessage("Die Bevölkerung ist auf 0 gesunken. Das Spiel endet.");
     } else if (co2e >= 100) {
         createGameOverMessage("Die CO2e sind auf 100% gestiegen. Das Spiel endet.");
-    } else if (afforestation <= 10) {
+    } else if (afforestation <= 10.0) {
         createGameOverMessage("Die Bewaldung ist auf 10% gesunken. Das Spiel endet.");
-    } else if (animalSpecies <= 0) {
-        createGameOverMessage("Alle Tierarten sind ausgestorben. Das Spiel endet.");
     } else if (temperature >= 5) {
         createGameOverMessage("Die Temperatur ist um 5°C gestiegen. Das Spiel endet.");
     } else if (ozoneLayer <= 0) {
@@ -29,27 +29,27 @@ function gameOver() {
 
 function updateAttributes() {
     yearElem.innerHTML = year
-    yearElem.style.left = ((year - 1900)/120)*100 + "%"
-    yearElemPercent.style.width = ((year - 1900)/120)*100 + "%"
+    yearElem.style.left = ((year - 1900) / 120) * 100 + "%"
+    yearElemPercent.style.width = ((year - 1900) / 120) * 100 + "%"
     
     budgetElem.innerHTML = convertNum(budget, 1) + " €"
     co2eElem.innerHTML = "CO2e: " + co2e.toFixed(3) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
     populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 2)
-    animalSpeciesElem.innerHTML = "Tierarten: " + animalSpecies.toFixed(1)
     temperatureElem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
-    ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer.toFixed(1) + " %"
+    ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
 }
-
-beginOfGame = true
+console.log(afforestation)
 
 function main() {
-    if (beginOfGame) newEvent()
+    if (beginOfGame) newEvent() //Check ob es das erste Event ist Mithilfe von beginOfGame flag
+    timedEvents() //
+    attributeCheck()
     attributeIncrement()
-    timedEvents()
+    gameOver()
     if (!currentEvent) makeQuiz()
 } 
 
-updateAttributes() // update attributes
+updateAttributes()
 main()
