@@ -4,8 +4,9 @@ const answers = [document.getElementById("answer0"), document.getElementById("an
 const rewardElem = document.getElementById("budgetGrowth")
 
 function quizConfig(quizAmount) {
-    amount = quizAmount
-    console.log(amount)
+    amount = parseInt(quizAmount);
+    document.getElementById('sliderValue').innerHTML = amount;
+    console.log(amount);
 }
 
 function makeQuiz(){

@@ -17,9 +17,9 @@
             <!--Nur vorübergehend hier,
                 quizConfig muss eigenen Wrapper im StartMenü bekommen -->
             <div id="quizConfig">
-                <button onclick="quizConfig(1)">1 Quizfrage</button>
-                <button onclick="quizConfig(2)">2 Quizfragen</button>
-                <button onclick="quizConfig(3)">3 Quizfragen</button>
+                <p>Quizfragen pro Runde:</p>
+                <input type="range" id="quizAmountSlider" min="1" max="3" step="1" value="1" oninput="quizConfig(this.value)">
+                <output id="sliderValue">1</output>
             </div>
             <div id="yearwrap">
                 <div id="year" class="" style=""></div>
