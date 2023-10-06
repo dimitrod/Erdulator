@@ -42,12 +42,12 @@ function updateAttributes() {
 }
 
 function main() {
-    if (beginOfGame) newEvent() //Check ob es das erste Event ist Mithilfe von beginOfGame flag
-    timedEvents() //
-    attributeCheck()
-    gameOver()
-    attributeIncrement()
-    if (!currentEvent) makeQuiz()
+    if (beginOfGame) newEvent() // Check ob es das erste Event ist Mithilfe von beginOfGame flag
+    timedEvents() // gibt es ein timedEvent? Wenn nicht newEvent()
+    attributeCheck() // Attribute erreichen keine illegalen Bereiche
+    gameOver() // Ist das Spiel vorbei?
+    attributeIncrement() // Nächste Runde wird geladen
+    if (!currentEvent) makeQuiz() // Wenn kein Event an ist, mach ein Quiz
 } 
 
 updateAttributes()
