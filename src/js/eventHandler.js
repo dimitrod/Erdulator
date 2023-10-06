@@ -38,6 +38,7 @@ function getRandomRegion(region){
 }
 
 function newEvent() {
+    beginOfGame = false
     let commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
     let rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
     let eventListPossiblilityPicker = [commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, rareEvents]
@@ -99,12 +100,12 @@ function newEvent() {
         default:
             break
     }
-    document.getElementById("eventMessage").innerHTML = currentEvent.eventMessage
-    document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost, 0) + " €)"
-    document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost, 0) + " €)"
-    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost, 0) + " €)"
-    attributeCheck()
-    document.getElementById("event").show()
+    document.getElementById("eventMessage").innerHTML = currentEvent.eventMessage;
+    document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost, 0) + " €)";
+    document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost, 0) + " €)";
+    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost, 0) + " €)";
+    yearElem.innerHTML = year;
+    document.getElementById("event").show();
 }
 
 function timedEvents() {
@@ -208,5 +209,6 @@ function reaction(r) {
                 break;
         }
     });
+    updateAttributes()
     document.getElementById("info").show()
 }
