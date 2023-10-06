@@ -47,7 +47,7 @@ beginOfGame = true
 function main() {
     if (beginOfGame) newEvent()
     attributeIncrement()
-    newEvent()
+    timedEvents()
     if (!currentEvent) makeQuiz()
 } 
 
