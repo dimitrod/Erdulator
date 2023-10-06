@@ -40,14 +40,13 @@ function updateAttributes() {
     temperatureElem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
     ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
 }
-console.log(afforestation)
 
 function main() {
     if (beginOfGame) newEvent() //Check ob es das erste Event ist Mithilfe von beginOfGame flag
     timedEvents() //
     attributeCheck()
-    attributeIncrement()
     gameOver()
+    attributeIncrement()
     if (!currentEvent) makeQuiz()
 } 
 

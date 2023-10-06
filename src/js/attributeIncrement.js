@@ -15,12 +15,12 @@ function afforestationIncrement() {
 
 function temperatureIncrement() {
     temperatureGrowthRate = 0.2;
-    temperature = Math.floor(attributeGrowth(temperature, temperatureGrowthRate, eventInterval));
+    temperature = temperature + temperatureGrowthRate
 }
 
 function waterLevelIncrement() {
     waterLevelGrowthRate = 0.1;
-    waterLevel = Math.floor(attributeGrowth(waterLevel, waterLevelGrowthRate, eventInterval));
+    waterLevel = waterLevel + waterLevelGrowthRate
 }
 
 function timeIncrement() {
