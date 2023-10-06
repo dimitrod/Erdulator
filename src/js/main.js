@@ -34,18 +34,19 @@ function updateAttributes() {
     
     budgetElem.innerHTML = convertNum(budget, 1) + " €"
     co2eElem.innerHTML = "CO2e: " + co2e.toFixed(3) + " %"
-    afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
-    waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
-    populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 2)
-    animalSpeciesElem.innerHTML = "Tierarten: " + convertNum(animalSpecies)
-    temperatureElem.innerHTML = "Temperatur: " + temperature + " °C"
-    ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
+    afforestationElem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
+    waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
+    populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 1)
+    animalSpeciesElem.innerHTML = "Tierarten: " + animalSpecies.toFixed(1)
+    temperatureElem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
+    ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer.toFixed(1) + " %"
 }
 
 function main() {
+    updateAttributes()
+    attributeIncrement()
     timedEvents() // check for timed Events, if not then newEvent()
     gameOver()
-    populationIncrement() // increment population, later attribute Increment
 } 
 
 updateAttributes() // update attributes
