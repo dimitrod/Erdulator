@@ -192,4 +192,5 @@ function reaction(r) {
     })
     updateAttributes()
     document.getElementById("info").show()
+    gameOver()
 }

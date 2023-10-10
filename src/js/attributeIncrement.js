@@ -4,8 +4,8 @@ function populationIncrement() {
 }
 
 function afforestationIncrement() {
-    afforestationGrowthRate = 0.9
-    afforestation *= afforestationGrowthRate
+    afforestationGrowthRate = -0.5
+    afforestation += afforestationGrowthRate
 }
 
 function temperatureIncrement() {

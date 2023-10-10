@@ -3,6 +3,8 @@ beginOfGame = true
 function createGameOverMessage(message) {
     document.getElementById("gameOverMessage").innerHTML = message
     document.getElementById("restart").innerHTML = "Neustart"
+    document.getElementById("questionDisplay").style.display = 'none'
+    document.getElementById("info").close()
     document.getElementById("event").close()
     document.getElementById("gameOver").show()
 }
@@ -39,7 +41,6 @@ function main() {
     if (beginOfGame) newEvent() // Check ob es das erste Event ist Mithilfe von beginOfGame flag
     timedEvents() // gibt es ein timedEvent? Wenn nicht newEvent()
     attributeCheck() // Attribute erreichen keine illegalen Bereiche
-    gameOver() // Ist das Spiel vorbei?
     attributeIncrement() // Nächste Runde wird geladen
     if (!currentEvent) makeQuiz() // Wenn kein Event an ist, mach ein Quiz
 } 
