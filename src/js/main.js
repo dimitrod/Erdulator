@@ -10,14 +10,10 @@ function createGameOverMessage(message) {
 function gameOver() {
     if (population <= 0) {
         createGameOverMessage("Die Bevölkerung ist auf 0 gesunken. Das Spiel endet.");
-    } else if (co2e >= 100) {
-        createGameOverMessage("Die CO2e sind auf 100% gestiegen. Das Spiel endet.");
     } else if (afforestation <= 10.0) {
         createGameOverMessage("Die Bewaldung ist auf 10% gesunken. Das Spiel endet.");
     } else if (temperature >= 5) {
         createGameOverMessage("Die Temperatur ist um 5°C gestiegen. Das Spiel endet.");
-    } else if (ozoneLayer <= 0) {
-        createGameOverMessage("Die Ozonschicht ist auf 0% gesunken. Das Spiel endet.");
     } else if (waterLevel <= -10) {
         createGameOverMessage("Der Meeresspiegel ist um 10m gesunken. Das Spiel endet.");
 	} else if (waterLevel >= 10) {
@@ -33,12 +29,10 @@ function updateAttributes() {
     yearElemPercent.style.width = ((year - 1900) / 120) * 100 + "%"
     
     budgetElem.innerHTML = convertNum(budget, 1) + " €"
-    co2eElem.innerHTML = "CO2e: " + co2e.toFixed(3) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
     populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 2)
     temperatureElem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
-    ozoneLayerElem.innerHTML = "Ozonschicht: " + ozoneLayer + " %"
 }
 
 function main() {

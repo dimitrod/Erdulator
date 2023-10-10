@@ -146,19 +146,7 @@ function reaction(r) {
     
     reaction.impacts.forEach(impact => {
         let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
-        let randomValueCo2e = Math.random() * (impact.maxValue - impact.minValue) + impact.minValue
         switch (impact.param) {
-            case "co2e":
-                if (randomValueCo2e > 0) {
-                    co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<li>Der CO2e-Gehalt in der Luft ist um " + randomValueCo2e.toFixed(3) + " % gestiegen.</li>"
-                    break
-                }
-                if (randomValueCo2e <= 0) {
-                    co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<li>Der CO2e-Gehalt in der Luft ist um " + Math.abs(randomValueCo2e.toFixed(3)) + " % gesunken.</li>"
-                }
-                break
             case "afforestation":
                 if (randomValue > 0) {
                     afforestation -= randomValue
@@ -187,10 +175,6 @@ function reaction(r) {
                 population -= randomValue
                 infoPopUp.innerHTML += "<li>Es sind " + convertNum(randomValue) + " Menschen gestorben</li>"
                 break
-            case "animalSpecies":
-                animalSpecies -= randomValue
-                infoPopUp.innerHTML += "<li>Es sind " + convertNum(randomValue) + " Tierarten ausgestorben </li>"
-                break
             case "temperature":
                 if (randomValue > 0) {
                     temperature += randomValue
@@ -202,10 +186,6 @@ function reaction(r) {
                     infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + Math.abs(randomValue) + " °C verringert.</p>"
                     break
                 }
-                break
-            case "ozoneLayer":
-                ozoneLayer -= randomValue
-                infoPopUp.innerHTML += "<li>Die Qualität der Ozonschicht hat sich um " + randomValue + " % verschlechtert.</li>"
                 break
             case "nothing":
                 infoPopUp.innerHTML = "<li>Nichts ist passiert.</li>"

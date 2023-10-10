@@ -21,15 +21,6 @@ function budgetCheck() {
     }
 }
 
-function ozonLayerCheck() {
-    if (ozoneLayer < 0) {
-        ozoneLayer = 0;
-    }
-    else if (ozoneLayer > 100) {
-        ozoneLayer = 100;
-    }
-}
-
 function afforestationCheck() {
     if (afforestation < 0) {
         afforestation = 0;
@@ -39,18 +30,7 @@ function afforestationCheck() {
     }
 }
 
-function co2eCheck() {
-    if (co2e < 0) {
-        co2e = 0;
-    }
-    else if (co2e > 100) {
-        co2e = 100;
-    }
-}
-
 function attributeCheck() {
-    ozonLayerCheck()
-    co2eCheck()
     afforestationCheck()
     budgetCheck()
 }
