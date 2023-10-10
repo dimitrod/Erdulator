@@ -109,7 +109,7 @@ let bushFireReactions = [
             param: "afforestation",
             minValue: 1,
             maxValue: 2
-        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}],
+        }],
         triggers: []
     },
     {
@@ -123,7 +123,7 @@ let bushFireReactions = [
             param: "afforestation",
             minValue: 4,
             maxValue: 5
-        }, {param: "co2e", minValue: 0.003, maxValue: 0.006}],
+        }],
         triggers: []
     },
     {
@@ -137,7 +137,7 @@ let bushFireReactions = [
             param: "afforestation",
             minValue: 4,
             maxValue: 5
-        }, {param: "co2e", minValue: 0.003, maxValue: 0.006}],
+        }],
         triggers: []
     }
 ]
@@ -212,11 +212,7 @@ let pandemicReactions = [
     {
         reaction: "Lockdown anordnen",
         cost: 2 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
-            param: "co2e",
-            minValue: -0.001,
-            maxValue: -0.003
-        }]
+        impacts: [{param: "population", minValue: 1000, maxValue: 10000}]
     },
     {
         reaction: "Maskenpflicht anordnen", 
@@ -292,29 +288,20 @@ let warReactions = [
     {
         reaction: "Waffenstillstand aushandeln",
         cost: 8 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 10000, maxValue: 1000000}, {
-            param: "co2e",
-            minValue: 0.001,
-            maxValue: 0.003
-        }, {param: "animalSpecies", minValue: 100, maxValue: 1000}]
+        impacts: [{param: "population", minValue: 10000, maxValue: 1000000},
+        {param: "animalSpecies", minValue: 100, maxValue: 1000}]
     },
     {
         reaction: "Wehrpflicht einführen",
         cost: 10 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 20000, maxValue: 2000000}, {
-            param: "co2e",
-            minValue: 0.001,
-            maxValue: 0.004
-        }, {param: "animalSpecies", minValue: 200, maxValue: 2000}]
+        impacts: [{param: "population", minValue: 20000, maxValue: 2000000}, 
+        {param: "animalSpecies", minValue: 200, maxValue: 2000}]
     },
     {
         reaction: "Nichts machen",
         cost: 0 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 50000, maxValue: 5000000}, {
-            param: "co2e",
-            minValue: 0.002,
-            maxValue: 0.005
-        }, {param: "animalSpecies", minValue: 200, maxValue: 2000}]
+        impacts: [{param: "population", minValue: 50000, maxValue: 5000000},
+        {param: "animalSpecies", minValue: 200, maxValue: 2000}]
     }
 ]
 
@@ -322,29 +309,19 @@ let pestInfestationReactions = [
     {
         reaction: "Großflächig mit Pestiziden bekämpfen",
         cost: 10 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
-            param: "co2e",
-            minValue: 0.001,
-            maxValue: 0.001
-        }, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {param: "ozoneLayer", minValue: 1, maxValue: 2}]
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, 
+        {param: "animalSpecies", minValue: 500, maxValue: 5000}]
     },
     {
         reaction: "nötige Waren importieren",
         cost: 8 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
-            param: "co2e",
-            minValue: 0.001,
-            maxValue: 0.001
-        }, {param: "animalSpecies", minValue: 100, maxValue: 1000}]
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, 
+        {param: "animalSpecies", minValue: 100, maxValue: 1000}]
     },
     {
         reaction: "Nichts machen",
         cost: 0 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {
-            param: "co2e",
-            minValue: 0.001,
-            maxValue: 0.001
-        }]
+        impacts: [{param: "population", minValue: 8000, maxValue: 80000}]
     }
 ]
 
@@ -352,7 +329,7 @@ let meltingPolesReactions = [
     {
         reaction: "Elektroenergien fördern",
         cost: 7 * Math.pow(10,6),
-        impacts: [{param: "co2e", minValue: -0.002, maxValue: -0.004}, {
+        impacts: [{
             param: "animalSpecies",
             minValue: 100,
             maxValue: 1000
@@ -362,7 +339,7 @@ let meltingPolesReactions = [
     {
         reaction: "Flugverkehr limitieren",
         cost: 5 * Math.pow(10,6),
-        impacts: [{param: "co2e", minValue: -0.001, maxValue: -0.001}, {
+        impacts: [{
             param: "animalSpecies",
             minValue: 100,
             maxValue: 1000
@@ -385,20 +362,12 @@ let natureConservationDayReactions = [
     {
         reaction: "Stark unterstützen",
         cost: 14 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: -4, maxValue: -10}, {
-            param: "co2e",
-            minValue: -0.002,
-            maxValue: -0.002
-        }]
+        impacts: [{param: "afforestation", minValue: -4, maxValue: -10}]
     },
     {
         reaction: "Etwas unterstützen",
         cost: 7 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: -2, maxValue: -7}, {
-            param: "co2e",
-            minValue: -0.001,
-            maxValue: -0.001
-        }]
+        impacts: [{param: "afforestation", minValue: -2, maxValue: -7}]
     },
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "nothing", minValue: 0, maxValue: 0}]}
 ]
@@ -411,7 +380,7 @@ let worldWar1Reactions = [
             param: "afforestation",
             minValue: 2,
             maxValue: 3
-        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}]
+        }]
     },
     {
         reaction: "Ärztliche Hilfe bereitstellen",
@@ -420,7 +389,7 @@ let worldWar1Reactions = [
             param: "afforestation",
             minValue: 3,
             maxValue: 4
-        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}]
+        }]
     },
     {
         reaction: "Nichts machen",
@@ -429,7 +398,7 @@ let worldWar1Reactions = [
             param: "afforestation",
             minValue: 3,
             maxValue: 4
-        }, {param: "co2e", minValue: 0.001, maxValue: 0.003}]
+        }]
     }
 ]
 
@@ -441,7 +410,7 @@ let worldWar2Reactions = [
             param: "afforestation",
             minValue: 4,
             maxValue: 5
-        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}]},
+        }]},
     {
         reaction: "Ärztliche Hilfe bereitstellen",
         cost: 10 * Math.pow(10,6),
@@ -449,7 +418,7 @@ let worldWar2Reactions = [
             param: "afforestation",
             minValue: 5,
             maxValue: 6
-        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}]},
+        }]},
     {
         reaction: "Nichts machen",
         cost: 0,
@@ -457,23 +426,19 @@ let worldWar2Reactions = [
             param: "afforestation",
             minValue: 5,
             maxValue: 6
-        }, {param: "co2e", minValue: 0.002, maxValue: 0.004}]}
+        }]}
 ]
 
 let deforestationReactions = [
     {
         reaction: "Naturschutzgebiete einrichten",
         cost: 8 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: -2, maxValue: -4}, {
-            param: "co2e",
-            minValue: -0.001,
-            maxValue: -0.003
-        }]
+        impacts: [{param: "afforestation", minValue: -2, maxValue: -4}]
     },
     {
         reaction: "Abholzung regulieren",
         cost: 4 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: 1, maxValue: 3}, {param: "co2e", minValue: -0.001, maxValue: -0.002}]
+        impacts: [{param: "afforestation", minValue: 1, maxValue: 3}]
     },
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "afforestation", minValue: 2, maxValue: 5}]},
 ]

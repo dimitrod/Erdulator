@@ -8,18 +8,18 @@ function populationIncrement() {
 }
 
 function afforestationIncrement() {
-    afforestationGrowthRate = 1.01
-    afforestation = afforestation * afforestationGrowthRate
+    afforestationGrowthRate = 0.9
+    afforestation *= afforestationGrowthRate
 }
 
 function temperatureIncrement() {
-    temperatureGrowthRate = 0.2
-    temperature = temperature + temperatureGrowthRate
+    temperatureGrowthRate = 0.1
+    temperature += temperatureGrowthRate
 }
 
 function waterLevelIncrement() {
     waterLevelGrowthRate = 0.1
-    waterLevel = waterLevel + waterLevelGrowthRate
+    waterLevel += waterLevelGrowthRate
 }
 
 function timeIncrement() {
