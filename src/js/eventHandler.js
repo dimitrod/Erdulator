@@ -17,8 +17,8 @@ let currentEvent = undefined
 let worldWar1 = {eventName: "worldWar1", eventStartingMessage: "Der erste Weltkrieg beginnt", eventEndingMessage: "Der erste Weltkrieg ist vorbei", reactions: worldWar1Reactions, startingYear: 1914, endingYear: 1918}
 let worldWar2 = {eventName: "worldWar2", eventStartingMessage: "Der zweite Weltkrieg beginnt", eventEndingMessage: "Der zweite Weltkrieg ist vorbei", reactions: worldWar2Reactions, startingYear: 1939, endingYear: 1945}
 
-let timedEvent = [worldWar1, worldWar2];
-let eventInterval = 5;
+let timedEvent = [worldWar1, worldWar2]
+let eventInterval = 5
 
 function getRandomRegion(region){
     switch (region){
@@ -43,7 +43,7 @@ function newEvent() {
     let rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
     let eventListPossiblilityPicker = [commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, rareEvents]
     let pickedEventList = eventListPossiblilityPicker[Math.floor(Math.random() * eventListPossiblilityPicker.length)]
-    currentEvent = pickedEventList[Math.floor(Math.random() * pickedEventList.length)];
+    currentEvent = pickedEventList[Math.floor(Math.random() * pickedEventList.length)]
 
     switch (currentEvent.eventName) {
         case "hurricane":
@@ -100,23 +100,23 @@ function newEvent() {
         default:
             break
     }
-    document.getElementById("eventMessage").innerHTML = currentEvent.eventMessage;
-    document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost, 0) + " €)";
-    document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost, 0) + " €)";
-    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost, 0) + " €)";
-    yearElem.innerHTML = year;
-    document.getElementById("event").show();
+    document.getElementById("eventMessage").innerHTML = currentEvent.eventMessage
+    document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost, 0) + " €)"
+    document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost, 0) + " €)"
+    document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost, 0) + " €)"
+    yearElem.innerHTML = year
+    document.getElementById("event").show()
 }
 
 function timedEvents() {
-    let currentTimedEvent = timedEvent[0];
+    let currentTimedEvent = timedEvent[0]
     if (!currentTimedEvent) newEvent()
     if (year >= currentTimedEvent.startingYear && year != currentTimedEvent.startingYear) {
         newEvent()
         /*/yearElem.innerHTML = currentTimedEvent.startingYear
         document.getElementById("timedPopupMessage").innerHTML = currentTimedEvent.eventStartingMessage
         document.getElementById("timedPopup").show()
-        setTimeout(() => {document.getElementById("timedPopup").close()}, 5000);  
+        setTimeout(() => {document.getElementById("timedPopup").close()}, 5000)
         
         timedEvent.splice(0, 1) //TBD
         newEvent() //TBD
@@ -187,9 +187,9 @@ function reaction(r) {
             case "nothing":
                 infoPopUp.innerHTML = "<li>Nichts ist passiert.</li>"
             default:
-                break;
+                break
         }
-    });
+    })
     updateAttributes()
     document.getElementById("info").show()
 }

@@ -1,25 +1,25 @@
 beginOfGame = true
 
 function createGameOverMessage(message) {
-    document.getElementById("gameOverMessage").innerHTML = message;
-    document.getElementById("restart").innerHTML = "Neustart";
-    document.getElementById("event").close();
-    document.getElementById("gameOver").show();
+    document.getElementById("gameOverMessage").innerHTML = message
+    document.getElementById("restart").innerHTML = "Neustart"
+    document.getElementById("event").close()
+    document.getElementById("gameOver").show()
 }
 
 function gameOver() {
     if (population <= 0) {
-        createGameOverMessage("Die Bevölkerung ist auf 0 gesunken. Das Spiel endet.");
+        createGameOverMessage("Die Bevölkerung ist auf 0 gesunken. Das Spiel endet.")
     } else if (afforestation <= 10.0) {
-        createGameOverMessage("Die Bewaldung ist auf 10% gesunken. Das Spiel endet.");
+        createGameOverMessage("Die Bewaldung ist auf 10% gesunken. Das Spiel endet.")
     } else if (temperature >= 5) {
-        createGameOverMessage("Die Temperatur ist um 5°C gestiegen. Das Spiel endet.");
+        createGameOverMessage("Die Temperatur ist um 5°C gestiegen. Das Spiel endet.")
     } else if (waterLevel <= -10) {
-        createGameOverMessage("Der Meeresspiegel ist um 10m gesunken. Das Spiel endet.");
+        createGameOverMessage("Der Meeresspiegel ist um 10m gesunken. Das Spiel endet.")
 	} else if (waterLevel >= 10) {
-        createGameOverMessage("Der Meeresspiegel ist um 10m gestiegen. Das Spiel endet.");
+        createGameOverMessage("Der Meeresspiegel ist um 10m gestiegen. Das Spiel endet.")
     } else if (year >= 2023) {
-        createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.");
+        createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.")
     }
 }
 
