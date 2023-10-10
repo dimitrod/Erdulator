@@ -1,10 +1,6 @@
-function attributeGrowth(startValue, growthRate, period) {
-    return startValue * Math.pow(1 + growthRate, period);
-}
-
 function populationIncrement() {
-    populationGrowthRate = 0.015
-    population = Math.floor(attributeGrowth(population, populationGrowthRate, eventInterval));
+    populationGrowthRate = 1.015
+    population *= Math.pow(populationGrowthRate, eventInterval)
 }
 
 function afforestationIncrement() {

@@ -113,16 +113,13 @@ function timedEvents() {
     if (!currentTimedEvent) newEvent()
     if (year >= currentTimedEvent.startingYear && year != currentTimedEvent.startingYear) {
         newEvent()
-        //yearElem.innerHTML = currentTimedEvent.startingYear
-        /*/
+        /*/yearElem.innerHTML = currentTimedEvent.startingYear
         document.getElementById("timedPopupMessage").innerHTML = currentTimedEvent.eventStartingMessage
         document.getElementById("timedPopup").show()
         setTimeout(() => {document.getElementById("timedPopup").close()}, 5000);  
         
-        
         timedEvent.splice(0, 1) //TBD
         newEvent() //TBD
-
     if (year >= currentTimedEvent.endingYear) {
         yearElem.innerHTML = currentTimedEvent.endingYear
         document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventEndingMessage
