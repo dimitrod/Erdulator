@@ -8,7 +8,7 @@ function makeQuiz(){
     }
     else {
         let amountOfQuestions = Math.floor(Math.random() * 3 +1)
-        while (quiz.length !== 0 && amountOfQuestions !== 0){
+        while (quiz.length !== 0 && amountOfQuestions !== 0) {
             let randomNumber =Math.floor(Math.random()*quiz.length)
             let question = quiz.splice(randomNumber, 1)
             currentQuestions.push(question[0]) // slice removed die Frage und gibt ein array mit den removeten Fragen zurück
@@ -30,7 +30,7 @@ function nextCloseDecider(){
     if (currentQuestions.length == 0) {
         main();
     }
-    else{
+    else {
         document.getElementById("information").style.display="none"
         displayQuestionFromQueue()
     }
