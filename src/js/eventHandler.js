@@ -105,7 +105,7 @@ function newEvent() {
     document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost, 0) + " €)"
     document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost, 0) + " €)"
     yearElem.innerHTML = year
-    document.getElementById("event").show()
+    document.getElementById("event").style.display ="block"
 }
 
 function timedEvents() {
@@ -115,8 +115,8 @@ function timedEvents() {
         newEvent()
         /*/yearElem.innerHTML = currentTimedEvent.startingYear
         document.getElementById("timedPopupMessage").innerHTML = currentTimedEvent.eventStartingMessage
-        document.getElementById("timedPopup").show()
-        setTimeout(() => {document.getElementById("timedPopup").close()}, 5000)
+        document.getElementById("timedPopup").style.display ="block"
+        setTimeout(() => {document.getElementById("timedPopup").style.display = 'none'}, 5000)
         
         timedEvent.splice(0, 1) //TBD
         newEvent() //TBD
@@ -126,7 +126,7 @@ function timedEvents() {
         document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 0) + " €)"
         document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 0) + " €)"
         document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 0) + " €)"
-        document.getElementById("event").show()
+        document.getElementById("event").style.display ="block"
         timedEvent.splice(0, 1) 
     } /*/
     } else newEvent()
@@ -136,7 +136,7 @@ function reaction(r) {
     let reaction = currentEvent.reactions[r]
     let infoPopUp = document.getElementById("stats")
     infoPopUp.innerHTML = ""
-    document.getElementById("event").close()
+    document.getElementById("event").style.display = 'none'
     costText = "-" + convertNum(reaction.cost, 1) + " €"
     budget -= reaction.cost
     rewardElem.innerHTML = "<span id='budgetChange' style='color: #fc4903;'>" + costText + "</span>"
@@ -191,6 +191,6 @@ function reaction(r) {
         }
     })
     updateAttributes()
-    document.getElementById("info").show()
+    document.getElementById("info").style.display ="block"
     gameOver()
 }

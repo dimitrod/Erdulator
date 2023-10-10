@@ -33,20 +33,20 @@
             <span>Budget: </span><span id = "budget"></span><div id="budgetGrowth"> </div>
         </div>
         <div id="wrapper">
-        <dialog id="gameOver">
+        <div id="gameOver" hidden="hidden">
             <p id="gameOverMessage"></p>
             <button id="restart" onclick="location.reload()">Neustarten</button>
-        </dialog>
-        <dialog id="event">
+        </div>
+        <div id="event">
             <p id="eventMessage"></p>
             <button id="reaction1" onclick="reaction(0)"></button><br>
             <button id="reaction2" onclick="reaction(1)"></button><br>
             <button id="reaction3" onclick="reaction(2)"></button>
-        </dialog>
-        <dialog id="info">
+        </div>
+        <div id="info" hidden="hidden">
             <ul id="stats"></ul>
-            <button id="closeInfo" onclick="document.getElementById('info').close(); makeQuiz()">Okay</button>
-        </dialog>
+            <button id="closeInfo" onclick="document.getElementById('info').style.display = 'none'; makeQuiz()">Okay</button>
+        </div>
         <div id="questionDisplay" class="quiz" hidden="hidden">
             <p id="quizQuestion"> </p>
             <button id="answer0" onclick="evaluateAnswer(0)"> </button><br>
@@ -77,9 +77,9 @@
         <div id='stars'></div>
         <div id='stars2'></div>
         <div id='stars3'></div>
-    <dialog id="timedPopup">
+    <div id="timedPopup">
         <span id="timedPopupMessage"></span>
-    </dialog>
+    </div>
     </div>
     </main>
     

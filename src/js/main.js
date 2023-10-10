@@ -4,9 +4,9 @@ function createGameOverMessage(message) {
     document.getElementById("gameOverMessage").innerHTML = message
     document.getElementById("restart").innerHTML = "Neustart"
     document.getElementById("questionDisplay").style.display = 'none'
-    document.getElementById("info").close()
-    document.getElementById("event").close()
-    document.getElementById("gameOver").show()
+    document.getElementById("info").style.display = 'none'
+    document.getElementById("event").style.display = 'none'
+    document.getElementById("gameOver").style.display ="block"
 }
 
 function gameOver() {
