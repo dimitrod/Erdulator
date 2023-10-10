@@ -1,4 +1,5 @@
 let currentQuestions = []
+let amount
 const answers = [document.getElementById("answer0"), document.getElementById("answer1"), document.getElementById("answer2")]
 const rewardElem = document.getElementById("budgetGrowth")
 
@@ -7,7 +8,8 @@ function makeQuiz(){
         document.getElementById("emptyQuiz").style.display="block"
     }
     else {
-        let amountOfQuestions = Math.floor(Math.random() * 3 +1)
+        if (!amount) amountOfQuestions = Math.floor(Math.random() * 3 +1)
+        else amountOfQuestions = amount
         while (quiz.length !== 0 && amountOfQuestions !== 0){
             let randomNumber =Math.floor(Math.random()*quiz.length)
             let question = quiz.splice(randomNumber, 1)
