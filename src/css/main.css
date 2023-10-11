@@ -4,8 +4,20 @@ html {
     overflow: auto;
   }
 
+  #quizConfig {
+    position: relative;
+    width:100%;
+    color: #fff;
+    text-align: left;
+    font-family: "lato", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  #quizAmountSlider {
+    accent-color: grey;
+  }
 
-  #rightwrap {
+  .rightwrap {
     position: absolute;
     top: 8%;
     width:38%;
@@ -82,10 +94,7 @@ html {
   font-family: "lato", sans-serif;
   font-weight: 700;
   font-size: 20px;
-
-
 }
-
 
 #yearpercentwrap {
   text-align:center;
@@ -224,7 +233,7 @@ button:hover {
   }
 
 */
-  #title {
+  .title {
     position: relative;
     width:100%;
     color: #FFF;
@@ -234,10 +243,9 @@ button:hover {
     font-size: 50px;
     letter-spacing: 10px;
     margin-top: -3%;
-
   }
 
-  #title span {
+  .title span {
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -251,7 +259,7 @@ button:hover {
     width: 50%;
   }
 
-#planetwrap {
+.planetwrap {
     position:absolute;
     top: 5%;
     left:5%;
