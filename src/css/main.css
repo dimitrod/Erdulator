@@ -3,6 +3,12 @@ html {
     background: radial-gradient(ellipse at bottom, #1b2735 100%, #090a0f 100%);
     overflow: auto;
   }
+/* Damit beim Öffnen des UpgradeWindows sich die gamePage nicht nach oben verschiebt. Liegt am Blur-Effekt*/
+#gamePage {
+  position:absolute;
+  width: 100%;
+  top: 2%;
+  }
 
   #quizConfig {
     position: relative;
@@ -203,12 +209,6 @@ button:hover {
   width:100%;
 }
 
-
-
-
-
-
-
 /*
   .btn {
     background: #29f297;
@@ -265,10 +265,8 @@ button:hover {
     left:5%;
     max-width:40%;
     max-height:100%;
-    z-index: 1000;
-
+    z-index: 1;
 }
-
 
 #planet {
     height: auto;

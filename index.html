@@ -27,6 +27,13 @@
             </div>
         </div>
 
+        <div id="upgradeWindow" hidden="hidden">
+            <button id="closeUW" onclick="closeUpgradeWindow()">X</button>
+            <div id="Investitionen"></div>
+            <div id="Technologien"></div>
+            <div id="InstantHeal"></div>
+        </div>
+
         <div id="gamePage" hidden="hidden">
             <div class="planetwrap">
                 <div id="yearwrap">
@@ -38,14 +45,15 @@
                         <p>Zeitleiste</p>
                     </div>
                 </div>
-
                 <img id="planet" src="resource/0001.png" alt="Earth" class="center">
             </div>
+
 
             <div class="rightwrap">
                 <div class='title'>
                     <span> ERDULATOR </span>
                 </div>
+                <button id="upgradeWindowButton" onclick="openUpgradeWindow()"></button>
                 <div id="budgetwrap">
                     <span>Budget: </span><span id = "budget"></span><div id="budgetGrowth"> </div>
                 </div>
@@ -95,10 +103,11 @@
                 </div>
             </div>
         </div>
-
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>
+        <div id="starWrapper">
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
+        </div>
 
     </main>
     
@@ -108,6 +117,7 @@
         </audio>
     </footer>
     <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/upgradeWindow.css">
 	<script src="src/js/basicFunctions.js"></script>
     <script src="src/js/events.js"></script>
     <script src="src/js/quizInit.js"></script>
@@ -117,6 +127,7 @@
     <script src="src/js/gameConfig.js"></script>
     <script src="src/js/attributeCheck.js"></script>
     <script src="src/js/attributeIncrement.js"></script>
+    <script src="src/js/upgradeWindow.js"></script>
     <script src="src/js/main.js"></script>
 
 </body>
