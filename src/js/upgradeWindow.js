@@ -17,3 +17,8 @@ function closeUpgradeWindow(){
     gamePage.style.pointerEvents = "all"
 }
 
+function buyUpgrade(index){
+    upgradeCost = "-" + convertNum(upgrades[index].cost, 1) + " €"
+    rewardElem.innerHTML = "<span id='budgetChange' style='color: #fc4903;'>" + upgradeCost + "</span>"
+}
+

@@ -3,7 +3,7 @@ maxLevel = 3
 upgrades = [
     {
         id:"renewableEnergies",
-        name: "Erneuerbare Energien",
+        name: "ErneuerbareEnergien",
         cost: 2*10**9,
         costFactor: 2,
         impacts:[
@@ -41,11 +41,12 @@ upgrades = [
 
 function loadUpgrades(){
     upgradeWindow = document.getElementById("upgradeWindow")
-    upgrades.forEach(upgrade=>{
+    upgrades.forEach((upgrade, index)=>{
         upgradeWindow.innerHTML += "<div id='" + upgrade.id + "' class='upgradeWrapper'></div>"
         upgradeWrapper = document.getElementById(upgrade.id)
         upgradeWrapper.innerHTML+= "<span>" + upgrade.name + "</span>"
-        upgradeWrapper.innerHTML+= "<button onclick='buyUpgrade(" + upgrade + ")'>" + upgrade.cost + "</bbutton>"
+        upgradeWrapper.innerHTML+= "<div class='infoContainer'>i<div class=' + upgradeInfo'>" + upgrade.info + "</div></div>"
+        upgradeWrapper.innerHTML+= "<button onclick='buyUpgrade(" + index + ")'>" + convertNum(upgrade.cost,1) + "</button>"
     })
 }
 
