@@ -7,7 +7,7 @@ html {
 #gamePage {
   position:absolute;
   width: 100%;
-  top: 2%;
+  top: 5%;
   }
 
   #quizConfig {
@@ -19,6 +19,7 @@ html {
     font-weight: 700;
     font-size: 20px;
   }
+
   #quizAmountSlider {
     accent-color: grey;
   }

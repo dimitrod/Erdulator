@@ -16,3 +16,4 @@ function closeUpgradeWindow(){
     gamePage.style.userSelect = "all"
     gamePage.style.pointerEvents = "all"
 }
+
