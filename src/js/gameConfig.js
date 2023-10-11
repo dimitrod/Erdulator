@@ -3,13 +3,11 @@ gamePage = document.getElementById("gamePage")
 slider = document.getElementById("quizAmountSlider")
 sliderValue = document.getElementById("sliderValue")
 
-function sliderInput(value){
+function sliderInput(value) {
     // gets called on every slider change
     sliderValue.innerHTML=value
-    console.log("hallo")
-    switch (value){
+    switch(value) {
         case "1":
-            console.log("green")
             slider.style.accentColor = "red"
             break
         case "2":
@@ -22,11 +20,10 @@ function sliderInput(value){
 }
 
 function quizConfig() {
-    amount = parseInt(sliderValue.innerHTML);
-    console.log(amount);
+    amount = parseInt(sliderValue.innerHTML)
 }
 
-function configure(){
+function configure() {
     //executed when start-button is clicked
     quizConfig()
     startPage.style.display="none"
