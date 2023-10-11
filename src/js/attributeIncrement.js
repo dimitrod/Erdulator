@@ -4,8 +4,8 @@ function populationIncrement() {
 }
 
 function afforestationIncrement() {
-    afforestationGrowthRate = 0.98
-    afforestation *= Math.pow(afforestationGrowthRate, eventInterval)
+    afforestationGrowthRate = 0.99
+    afforestation *= afforestationGrowthRate
 }
 
 function temperatureIncrement() {
