@@ -52,18 +52,18 @@
 .upgradeWrapper button:hover{
     background-color: #fde997;
 }
+
+/* div mouse needs to hover about to show upgradeInfo*/
 .infoContainer {
     display: inline;
-    border: 2px solid black;
-    border-radius: 50%;
-    padding-inline:10px;
     margin-left: 10px;
 }
-
+/* changes visibility of upgradeinfo*/
 .infoContainer:hover .upgradeInfo{
     visibility: visible;
 }
 
+/* Styling of infotext*/
 .infoContainer .upgradeInfo {
     visibility: hidden;
     width: 120px;
