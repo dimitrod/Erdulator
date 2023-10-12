@@ -31,17 +31,17 @@ function closeUpgradeWindow(){
 function buyUpgrade(index){
     upgrade = upgrades[index]
     cost = upgrade.cost
+    upgrade.currentLevel++
     updateBudget(-cost)
     upgradeWrapper = document.getElementById(upgrade.id)
-    upgrade.currentLevel++
     Array.from(upgradeWrapper.getElementsByClassName("level" + upgrade.currentLevel))[0].style.backgroundColor = "green"
-    if (upgrade.currentLevel == maxLevel)document.getElementById(upgrade.id).getElementsByTagName("button")[0].disabled=true
+    /*if (upgrade.currentLevel == maxLevel)document.getElementById(upgrade.id).getElementsByTagName("button")[0].disabled=true*/
 }
 
 function checkBudgetForUpgrade(){
     upgrades.forEach(upgrade =>{
         upgradeButton = document.getElementById(upgrade.id).getElementsByTagName("button")[0]
-        upgradeButton.disabled = upgrade.cost > budget;
+        upgradeButton.disabled = upgrade.cost > budget || upgrade.currentLevel == maxLevel;
         console.log(upgradeButton)
     })
 }
