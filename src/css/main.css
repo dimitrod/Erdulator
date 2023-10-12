@@ -117,7 +117,7 @@ html {
 }
 
 
-#budgetwrap {
+.budgetwrap {
   position: relative;
   width:auto;
   color: #fff;
@@ -129,13 +129,13 @@ html {
   margin-bottom:25px;
 }
 
-#budget {
+.budget {
   color:lightgreen;
 }
-#budgetGrowth {
+.budgetChangeWrapper {
     display: inline;
 }
-#budgetChange{
+.budgetChange{
   opacity: 0;
   margin-left: 10px;
   text-align: left;

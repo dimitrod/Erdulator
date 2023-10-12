@@ -135,9 +135,7 @@ function reaction(r) {
     let infoPopUp = document.getElementById("stats")
     infoPopUp.innerHTML = ""
     document.getElementById("event").close()
-    costText = "-" + convertNum(reaction.cost, 1) + " €"
-    budget -= reaction.cost
-    rewardElem.innerHTML = "<span id='budgetChange' style='color: #fc4903;'>" + costText + "</span>"
+    updateBudget(-reaction.cost)
     
     reaction.impacts.forEach(impact => {
         let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)

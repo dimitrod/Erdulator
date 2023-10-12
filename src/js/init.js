@@ -11,7 +11,6 @@ let ozoneLayer = 100
 let yearElem = document.getElementById("year")
 let yearElemPercent = document.getElementById("yearpercent")
 
-let budgetElem = document.getElementById("budget")
 let co2eElem = document.getElementById("co2e")
 let afforestationElem = document.getElementById("afforestation")
 let waterLevelElem = document.getElementById("waterLevel")

@@ -1,10 +1,10 @@
-maxLevel = 3
+maxLevel = 5
 
 upgrades = [
     {
         id:"renewableEnergies",
         name: "ErneuerbareEnergien",
-        cost: 2*10**9,
+        cost: 2*10**6,
         costFactor: 2,
         impacts:[
             {
@@ -38,7 +38,12 @@ upgrades = [
         info: "weniger Tierhaltung = weniger Abholzung"
     }
 ]
-
+function checkBudgetForUpgrade(){
+    upgrades.forEach(upgrade =>{
+        button = document.getElementById(upgrade.id).getElementsByTagName("button")
+        button.disabled = upgrade.cost <= budget;
+    })
+}
 function loadUpgrades(){
     upgradeWindow = document.getElementById("upgradeWindow")
     upgrades.forEach((upgrade, index)=>{
@@ -47,7 +52,16 @@ function loadUpgrades(){
         upgradeWrapper.innerHTML+= "<span>" + upgrade.name + "</span>"
         upgradeWrapper.innerHTML+= "<div class='infoContainer'>&#x1F6C8<div class=' + upgradeInfo'>" + upgrade.info + "</div></div>"
         upgradeWrapper.innerHTML+= "<button onclick='buyUpgrade(" + index + ")'>" + convertNum(upgrade.cost,1) + "</button>"
+        loadLevels(upgrade)
     })
+    checkBudgetForUpgrade()
 }
 
-loadUpgrades()
+function loadLevels(upgrade){
+    width = 1/maxLevel * 100 + "%"
+    upgradeWrapper.innerHTML += "<div class='levelWrapper'></div>"
+    levelWrapper = Array.from(upgradeWrapper.getElementsByClassName("levelWrapper"))[0]
+    for (let i = 1; i < maxLevel+1; i++) {
+        levelWrapper.innerHTML += "<div class='level" + i + "' style='width: " + width + "'></div>"
+    }
+}

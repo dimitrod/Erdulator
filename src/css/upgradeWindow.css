@@ -12,6 +12,10 @@
 #upgradeWindowButton:hover {
     background-color: #ffdf6c;
 }
+#upgradeWindow .budgetwrap{
+    display: inline;
+}
+
 
 #upgradeWindow {
     z-index: 2;
@@ -20,7 +24,7 @@
     padding: 10px;
     left: 10%;
     top: 10%;
-    background-color: #ffdf6c;
+    background-color: rgba(255, 223, 108, 0.50);
     width: 80%;
     height: 80%;
     border: 4px solid #af8f2c;
@@ -28,6 +32,7 @@
 }
 
 #closeUW {
+    display: inline;
     width: auto;
     position: absolute;
     background-color: #ffdf6c;
@@ -51,8 +56,22 @@
     background-color: #ffdf6c;
     border: 2px solid #af8f2c;
 }
-.upgradeWrapper button:hover{
+.upgradeWrapper button:enabled:hover{
     background-color: #fde997;
+}
+.upgradeWrapper button:disabled{
+    color: grey;
+}
+.levelWrapper{
+    display: flex;
+    width: 30%;
+    height: 10px;
+}
+.levelWrapper div{
+    display: block;
+    border: 2px solid black;
+    background-color: white;
+    height: 100%;
 }
 
 /* div mouse needs to hover about to show upgradeInfo*/

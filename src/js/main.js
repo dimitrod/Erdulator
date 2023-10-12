@@ -31,8 +31,6 @@ function updateAttributes() {
     yearElem.innerHTML = year
     yearElem.style.left = ((year - 1900)/120)*100 + "%"
     yearElemPercent.style.width = ((year - 1900)/120)*100 + "%"
-    
-    budgetElem.innerHTML = convertNum(budget, 1) + " €"
     co2eElem.innerHTML = "CO2e: " + co2e.toFixed(3) + " %"
     afforestationElem.innerHTML = "Bewaldung: " + afforestation + " %"
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel + " m"
@@ -46,7 +44,14 @@ function main() {
     timedEvents() // check for timed Events, if not then newEvent()
     gameOver()
     populationIncrement() // increment population, later attribute Increment
-} 
+}
 
+
+loadUpgrades()
+let budgetElems = Array.from(document.getElementsByClassName("budget"))
+// Erste Darstellung der Budgets
+budgetElems.forEach(budgetElem => {
+    budgetElem.innerHTML = convertNum(budget, 1) + "€"
+})
 updateAttributes() // update attributes
 main()

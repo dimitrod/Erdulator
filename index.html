@@ -28,6 +28,9 @@
         </div>
 
         <div id="upgradeWindow" hidden="hidden">
+            <div class="budgetwrap">
+                <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
+            </div>
             <button id="closeUW" onclick="closeUpgradeWindow()">&#x2716</button>
             <div id="Upgrades"></div>
             <div id="Technologien"></div>
@@ -53,9 +56,9 @@
                 <div class='title'>
                     <span> ERDULATOR </span>
                 </div>
-                <div id="budgetwrap">
-                    <span>Budget: </span><span id = "budget"></span><div id="budgetGrowth"> </div>
+                <div class="budgetwrap">
                     <button id="upgradeWindowButton" onclick="openUpgradeWindow()"></button>
+                    <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
                 </div>
                 <div id="wrapper">
                     <dialog id="gameOver">
@@ -118,13 +121,13 @@
     </footer>
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/upgradeWindow.css">
+    <script src="src/js/init.js"></script>
 	<script src="src/js/basicFunctions.js"></script>
     <script src="src/js/events.js"></script>
     <script src="src/js/quizInit.js"></script>
     <script src="src/js/initUpgrades.js"></script>
     <script src="src/js/eventHandler.js"></script>
     <script src="src/js/quizHandler.js"></script>
-    <script src="src/js/init.js"></script>
     <script src="src/js/gameConfig.js"></script>
     <script src="src/js/attributeCheck.js"></script>
     <script src="src/js/attributeIncrement.js"></script>
