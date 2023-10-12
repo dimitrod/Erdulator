@@ -31,7 +31,7 @@
     width: auto;
     position: absolute;
     background-color: #ffdf6c;
-    border: 2px solid #af8f2c;
+    border: 0px solid #af8f2c; /* or 2px */
     right: 10px;
 
 }#closeUW:hover {
