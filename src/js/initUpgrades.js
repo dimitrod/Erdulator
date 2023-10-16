@@ -22,7 +22,7 @@ upgrades = [
     {
         id:"veganProducts",
         name: "Vegane Produkte entwickeln",
-        cost: 10**9,
+        cost: 10**6,
         costFactor: 1,
         impacts:[
             {

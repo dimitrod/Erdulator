@@ -34,17 +34,12 @@ function buyUpgrade(index){
     upgrade.currentLevel++
     updateBudget(-cost)
 
-    
+    upgrade.impacts.forEach(impact => {
+        updateGrowthRate(impact.name, impact.influence)
+    })
 
     upgradeWrapper = document.getElementById(upgrade.id)
     Array.from(upgradeWrapper.getElementsByClassName("level" + upgrade.currentLevel))[0].style.backgroundColor = "green"
     /*if (upgrade.currentLevel == maxLevel)document.getElementById(upgrade.id).getElementsByTagName("button")[0].disabled=true*/
 }
 
-function checkBudgetForUpgrade(){
-    upgrades.forEach(upgrade =>{
-        upgradeButton = document.getElementById(upgrade.id).getElementsByTagName("button")[0]
-        upgradeButton.disabled = upgrade.cost > budget || upgrade.currentLevel == maxLevel;
-        console.log(upgradeButton)
-    })
-}

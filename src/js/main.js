@@ -10,15 +10,15 @@ function createGameOverMessage(message) {
 }
 
 function gameOver() {
-    if (population <= 0) {
+    if (population <= populationGameOver) {
         createGameOverMessage("Die Bevölkerung ist auf 0 gesunken. Das Spiel endet.")
-    } else if (afforestation <= 10.0) {
+    } else if (afforestation <= afforestationGameOver) {
         createGameOverMessage("Die Bewaldung ist auf 10% gesunken. Das Spiel endet.")
-    } else if (temperature >= 5) {
+    } else if (temperature >= temperatureGameOver) {
         createGameOverMessage("Die Temperatur ist um 5°C gestiegen. Das Spiel endet.")
-    } else if (waterLevel <= -10) {
+    } else if (waterLevel <= -waterLevelGameOver) {
         createGameOverMessage("Der Meeresspiegel ist um 10m gesunken. Das Spiel endet.")
-	} else if (waterLevel >= 10) {
+	} else if (waterLevel >= waterLevelGameOver) {
         createGameOverMessage("Der Meeresspiegel ist um 10m gestiegen. Das Spiel endet.")
     } else if (year >= 2023) {
         createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.")

@@ -4,18 +4,15 @@ function populationIncrement() {
 }
 
 function afforestationIncrement() {
-    afforestationGrowthRate = 0.99
-    afforestation *= afforestationGrowthRate
+    afforestation += afforestationGrowthRate * eventInterval
 }
 
 function temperatureIncrement() {
-    temperatureGrowthRate = 1.01
-    temperature *= Math.pow(temperatureGrowthRate, eventInterval)
+    temperature += temperatureGrowthRate * eventInterval
 }
 
 function waterLevelIncrement() {
-    waterLevelGrowthRate = 1.01
-    waterLevel *= Math.pow(waterLevelGrowthRate, eventInterval)
+    waterLevel += waterLevelGrowthRate * eventInterval
 }
 
 function timeIncrement() {
