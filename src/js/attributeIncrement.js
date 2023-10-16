@@ -1,15 +1,32 @@
-function attributeGrowth(startValue, growthRate, period) {
-    return startValue * Math.pow(1 + growthRate, period);
+function populationIncrement() {
+    populationGrowthRate = 1.015
+    population *= Math.pow(populationGrowthRate, eventInterval)
 }
 
-function populationIncrement() {
-    populationGrowthRate = 0.015;
-    population = Math.floor(attributeGrowth(population, populationGrowthRate, eventInterval));
+function afforestationIncrement() {
+    afforestationGrowthRate = 0.99
+    afforestation *= afforestationGrowthRate
+}
+
+function temperatureIncrement() {
+    temperatureGrowthRate = 1.01
+    temperature *= Math.pow(temperatureGrowthRate, eventInterval)
+}
+
+function waterLevelIncrement() {
+    waterLevelGrowthRate = 1.01
+    waterLevel *= Math.pow(waterLevelGrowthRate, eventInterval)
 }
 
 function timeIncrement() {
-    document.getElementById('information').style.display = "none";
-    year += eventInterval;
-    updateAttributes()
-    main()
+    document.getElementById('information').style.display = "none"
+    year += eventInterval
+}
+
+function attributeIncrement() {
+    populationIncrement()
+    afforestationIncrement()
+    temperatureIncrement()
+    waterLevelIncrement()
+    timeIncrement()
 }

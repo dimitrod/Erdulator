@@ -30,9 +30,9 @@ function displayQuestionFromQueue(){
 
 function nextCloseDecider(){
     if (currentQuestions.length == 0) {
-        timeIncrement();
+        main()
     }
-    else{
+    else {
         document.getElementById("information").style.display="none"
         displayQuestionFromQueue()
     }

@@ -33,6 +33,9 @@ function buyUpgrade(index){
     cost = upgrade.cost
     upgrade.currentLevel++
     updateBudget(-cost)
+
+    
+
     upgradeWrapper = document.getElementById(upgrade.id)
     Array.from(upgradeWrapper.getElementsByClassName("level" + upgrade.currentLevel))[0].style.backgroundColor = "green"
     /*if (upgrade.currentLevel == maxLevel)document.getElementById(upgrade.id).getElementsByTagName("button")[0].disabled=true*/
