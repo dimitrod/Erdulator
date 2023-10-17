@@ -3,6 +3,12 @@ html {
     background: radial-gradient(ellipse at bottom, #1b2735 100%, #090a0f 100%);
     overflow: auto;
   }
+/* Damit beim Öffnen des UpgradeWindows sich die gamePage nicht nach oben verschiebt. Liegt am Blur-Effekt*/
+#gamePage {
+  position:absolute;
+  width: 100%;
+  top: 5%;
+  }
 
   #quizConfig {
     position: relative;
@@ -13,6 +19,7 @@ html {
     font-weight: 700;
     font-size: 20px;
   }
+
   #quizAmountSlider {
     accent-color: grey;
   }
@@ -110,7 +117,7 @@ html {
 }
 
 
-#budgetwrap {
+.budgetwrap {
   position: relative;
   width:auto;
   color: #fff;
@@ -122,13 +129,13 @@ html {
   margin-bottom:25px;
 }
 
-#budget {
+.budget {
   color:lightgreen;
 }
-#budgetGrowth {
+.budgetChangeWrapper {
     display: inline;
 }
-#budgetChange{
+.budgetChange{
   opacity: 0;
   margin-left: 10px;
   text-align: left;
@@ -203,12 +210,6 @@ button:hover {
   width:100%;
 }
 
-
-
-
-
-
-
 /*
   .btn {
     background: #29f297;
@@ -265,10 +266,8 @@ button:hover {
     left:5%;
     max-width:40%;
     max-height:100%;
-    z-index: 1000;
-
+    z-index: 1;
 }
-
 
 #planet {
     height: auto;

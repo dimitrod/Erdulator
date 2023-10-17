@@ -1,7 +1,7 @@
 let currentQuestions = []
 let amount
 const answers = [document.getElementById("answer0"), document.getElementById("answer1"), document.getElementById("answer2")]
-const rewardElem = document.getElementById("budgetGrowth")
+const rewardElem = document.getElementsByClassName("budgetGrowthWrapper")
 
 function makeQuiz(){
     if (quiz.length == 0) {
@@ -47,10 +47,7 @@ function evaluateAnswer(i){
     if (i == currentQuestions[0].answer){
         document.getElementById("answer").innerHTML= "Richtig!"
         reward = currentQuestions[0].reward * Math.pow(10, 6)
-        rewardText = "+" + convertNum(reward, 1) + " €"
-        rewardElem.innerHTML = "<span id='budgetChange' style='color: #D4AF37;'>" + rewardText + "</span>"
-        budget += reward
-        budgetElem.innerHTML = convertNum(budget,1) + " €"
+        updateBudget(reward)
     } else {
         document.getElementById("answer").innerHTML= "Falsch!"
     }

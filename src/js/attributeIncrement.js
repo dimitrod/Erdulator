@@ -1,21 +1,19 @@
 function populationIncrement() {
+    console.log("pinc")
     populationGrowthRate = 1.015
     population *= Math.pow(populationGrowthRate, eventInterval)
 }
 
 function afforestationIncrement() {
-    afforestationGrowthRate = 0.99
-    afforestation *= afforestationGrowthRate
+    afforestation += afforestationGrowthRate * eventInterval
 }
 
 function temperatureIncrement() {
-    temperatureGrowthRate = 1.01
-    temperature *= Math.pow(temperatureGrowthRate, eventInterval)
+    temperature += temperatureGrowthRate * eventInterval
 }
 
 function waterLevelIncrement() {
-    waterLevelGrowthRate = 1.01
-    waterLevel *= Math.pow(waterLevelGrowthRate, eventInterval)
+    waterLevel += waterLevelGrowthRate * eventInterval
 }
 
 function timeIncrement() {

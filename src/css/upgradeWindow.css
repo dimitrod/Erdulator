@@ -1,0 +1,99 @@
+#upgradeWindowButton {
+    background-image: url("../../resource/upgrade.png");
+    background-size: cover;
+    background-color: #D4AF37;
+    border: 2px solid #af8f2c;
+    width: 50px;
+    aspect-ratio: 1;
+    position: absolute;
+    right: 0;
+}
+
+#upgradeWindowButton:hover {
+    background-color: #ffdf6c;
+}
+#upgradeWindow .budgetwrap{
+    display: inline;
+}
+
+
+#upgradeWindow {
+    z-index: 2;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    left: 10%;
+    top: 10%;
+    background-color: rgba(255, 223, 108, 0.50);
+    width: 80%;
+    height: 80%;
+    border: 4px solid #af8f2c;
+    border-radius: 10px;
+}
+
+#closeUW {
+    display: inline;
+    width: auto;
+    position: absolute;
+    background-color: #ffdf6c;
+    border: 0px solid #af8f2c; /* or 2px */
+    right: 10px;
+
+}#closeUW:hover {
+     background-color: #fde997;
+}
+
+.upgradeWrapper {
+    width: 50%;
+    color: #fff;
+    text-align: left;
+    font-family: "lato", sans-serif;
+}
+
+.upgradeWrapper button{
+    position: relative;
+    background-size: cover;
+    background-color: #ffdf6c;
+    border: 2px solid #af8f2c;
+}
+.upgradeWrapper button:enabled:hover{
+    background-color: #fde997;
+}
+.upgradeWrapper button:disabled{
+    color: grey;
+}
+.levelWrapper{
+    display: flex;
+    width: 30%;
+    height: 10px;
+}
+.levelWrapper div{
+    display: block;
+    border: 2px solid black;
+    background-color: white;
+    height: 100%;
+}
+
+/* div mouse needs to hover about to show upgradeInfo*/
+.infoContainer {
+    display: inline;
+    margin-left: 10px;
+}
+/* changes visibility of upgradeinfo*/
+.infoContainer:hover .upgradeInfo{
+    visibility: visible;
+}
+
+/* Styling of infotext*/
+.infoContainer .upgradeInfo {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /*cursor: pointer;*/
+    position: absolute;
+    z-index: 10;
+}
