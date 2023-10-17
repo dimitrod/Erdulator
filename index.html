@@ -50,20 +50,20 @@
                     <span>Budget: </span><span id = "budget"></span><div id="budgetGrowth"> </div>
                 </div>
                 <div id="wrapper">
-                    <dialog id="gameOver">
+                    <div id="gameOver" hidden="hidden">
                         <p id="gameOverMessage"></p>
                         <button id="restart" onclick="location.reload()">Neustarten</button>
-                    </dialog>
-                    <dialog id="event">
+                    </div>
+                    <div id="event" hidden="hidden">
                         <p id="eventMessage"></p>
                         <button id="reaction1" onclick="reaction(0)"></button><br>
                         <button id="reaction2" onclick="reaction(1)"></button><br>
                         <button id="reaction3" onclick="reaction(2)"></button>
-                    </dialog>
-                    <dialog id="info">
+                    </div>
+                    <div id="info" hidden="hidden">
                         <ul id="stats"></ul>
-                        <button id="closeInfo" onclick="document.getElementById('info').close(); makeQuiz()">Okay</button>
-                    </dialog>
+                        <button id="closeInfo" onclick="document.getElementById('info').style.display = 'none'; makeQuiz()">Okay</button>
+                    </div>
                     <div id="questionDisplay" class="quiz" hidden="hidden">
                         <p id="quizQuestion"> </p>
                         <button id="answer0" onclick="evaluateAnswer(0)"> </button><br>
@@ -77,19 +77,16 @@
                     </div>
                     <div id="emptyQuiz" hidden="hidden">
                         <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
-                        <button id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; timeIncrement()">Schließen</button>
+                        <button id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; main()">Schließen</button>
                     </div>
                     <div id ="barwrap">
                         <div id="barwrap_left">
-                            <span id = "co2e"></span><br>
                             <span id = "afforestation"></span><br>
                             <span id = "waterLevel"></span>
                         </div>
                         <div id="barwrap_right">
                             <span id = "population"></span><br>
                             <span id = "temperature"></span><br>
-                            <span style="display:none;" id = "animalSpecies"></span>
-                            <span id = "ozoneLayer"></span>
                         </div>
                     </div>
                 </div>

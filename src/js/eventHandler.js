@@ -17,8 +17,8 @@ let currentEvent = undefined
 let worldWar1 = {eventName: "worldWar1", eventStartingMessage: "Der erste Weltkrieg beginnt", eventEndingMessage: "Der erste Weltkrieg ist vorbei", reactions: worldWar1Reactions, startingYear: 1914, endingYear: 1918}
 let worldWar2 = {eventName: "worldWar2", eventStartingMessage: "Der zweite Weltkrieg beginnt", eventEndingMessage: "Der zweite Weltkrieg ist vorbei", reactions: worldWar2Reactions, startingYear: 1939, endingYear: 1945}
 
-let timedEvent = [worldWar1, worldWar2];
-let eventInterval = 5;
+let timedEvent = [worldWar1, worldWar2]
+let eventInterval = 5
 
 function getRandomRegion(region){
     switch (region){
@@ -38,11 +38,12 @@ function getRandomRegion(region){
 }
 
 function newEvent() {
+    beginOfGame = false
     let commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
     let rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
     let eventListPossiblilityPicker = [commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, rareEvents]
     let pickedEventList = eventListPossiblilityPicker[Math.floor(Math.random() * eventListPossiblilityPicker.length)]
-    currentEvent = pickedEventList[Math.floor(Math.random() * pickedEventList.length)];
+    currentEvent = pickedEventList[Math.floor(Math.random() * pickedEventList.length)]
 
     switch (currentEvent.eventName) {
         case "hurricane":
@@ -103,57 +104,46 @@ function newEvent() {
     document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost, 0) + " €)"
     document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost, 0) + " €)"
     document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost, 0) + " €)"
-    attributeCheck()
-    document.getElementById("event").show()
+    yearElem.innerHTML = year
+    document.getElementById("event").style.display ="block"
 }
 
 function timedEvents() {
-    let currentTimedEvent = timedEvent[0];
-    if (!currentTimedEvent) newEvent() 
-    else {
-        if (year >= currentTimedEvent.startingYear) {
-            document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventStartingMessage
-            document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 0) + " €)"
-            document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 0) + " €)"
-            document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 0) + " €)"
-            yearElem.innerHTML = currentTimedEvent.startingYear
-            document.getElementById("event").show()
-            timedEvent.splice(0, 1)
-        } 
-        //TBD create info pop on the side for timedEvents with a period
-            /*/else if (year >= currentTimedEvent.endingYear) {
-            document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventEndingMessage
-            yearElem.innerHTML = currentTimedEvent.endingYear
-            document.getElementById("event").show()
-            currentTimedEvent.splice(0)
-        } /*/else newEvent()
-    }
+    let currentTimedEvent = timedEvent[0]
+    if (!currentTimedEvent) newEvent()
+    if (year >= currentTimedEvent.startingYear && year != currentTimedEvent.startingYear) {
+        newEvent()
+        /*/yearElem.innerHTML = currentTimedEvent.startingYear
+        document.getElementById("timedPopupMessage").innerHTML = currentTimedEvent.eventStartingMessage
+        document.getElementById("timedPopup").style.display ="block"
+        setTimeout(() => {document.getElementById("timedPopup").style.display = 'none'}, 5000)
+        
+        timedEvent.splice(0, 1) //TBD
+        newEvent() //TBD
+    if (year >= currentTimedEvent.endingYear) {
+        yearElem.innerHTML = currentTimedEvent.endingYear
+        document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventEndingMessage
+        document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 0) + " €)"
+        document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 0) + " €)"
+        document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 0) + " €)"
+        document.getElementById("event").style.display ="block"
+        timedEvent.splice(0, 1) 
+    } /*/
+    } else newEvent()
 }
 
 function reaction(r) {
     let reaction = currentEvent.reactions[r]
     let infoPopUp = document.getElementById("stats")
     infoPopUp.innerHTML = ""
-    document.getElementById("event").close()
+    document.getElementById("event").style.display = 'none'
     costText = "-" + convertNum(reaction.cost, 1) + " €"
     budget -= reaction.cost
     rewardElem.innerHTML = "<span id='budgetChange' style='color: #fc4903;'>" + costText + "</span>"
     
     reaction.impacts.forEach(impact => {
         let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
-        let randomValueCo2e = Math.random() * (impact.maxValue - impact.minValue) + impact.minValue
         switch (impact.param) {
-            case "co2e":
-                if (randomValueCo2e > 0) {
-                    co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<li>Der CO2e-Gehalt in der Luft ist um " + randomValueCo2e.toFixed(3) + " % gestiegen.</li>"
-                    break
-                }
-                if (randomValueCo2e <= 0) {
-                    co2e += randomValueCo2e
-                    infoPopUp.innerHTML += "<li>Der CO2e-Gehalt in der Luft ist um " + Math.abs(randomValueCo2e.toFixed(3)) + " % gesunken.</li>"
-                }
-                break
             case "afforestation":
                 if (randomValue > 0) {
                     afforestation -= randomValue
@@ -182,10 +172,6 @@ function reaction(r) {
                 population -= randomValue
                 infoPopUp.innerHTML += "<li>Es sind " + convertNum(randomValue) + " Menschen gestorben</li>"
                 break
-            case "animalSpecies":
-                animalSpecies -= randomValue
-                infoPopUp.innerHTML += "<li>Es sind " + convertNum(randomValue) + " Tierarten ausgestorben </li>"
-                break
             case "temperature":
                 if (randomValue > 0) {
                     temperature += randomValue
@@ -198,15 +184,13 @@ function reaction(r) {
                     break
                 }
                 break
-            case "ozoneLayer":
-                ozoneLayer -= randomValue
-                infoPopUp.innerHTML += "<li>Die Qualität der Ozonschicht hat sich um " + randomValue + " % verschlechtert.</li>"
-                break
             case "nothing":
                 infoPopUp.innerHTML = "<li>Nichts ist passiert.</li>"
             default:
-                break;
+                break
         }
-    });
-    document.getElementById("info").show()
+    })
+    updateAttributes()
+    document.getElementById("info").style.display ="block"
+    gameOver()
 }
