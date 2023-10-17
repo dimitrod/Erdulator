@@ -24,3 +24,5 @@ hs_err_pid*
 replay_pid*
 /.idea/vcs.xml
 /.idea/workspace.xml
+
+/node_modules
