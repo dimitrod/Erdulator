@@ -6,8 +6,8 @@ function updateGrowthRate(growthRate, amount) {
 
 function updateAfforestationGrowthRate(amount){
     if(amount == "low") afforestationGrowthRate += (maxAfforestationGrowthRate - afforestationGrowthRate) * 0.1
-    else if(amount == "low") afforestationGrowthRate += (maxAfforestationGrowthRate - afforestationGrowthRate) * 0.2
-    else if(amount == "low") afforestationGrowthRate += (maxAfforestationGrowthRate - afforestationGrowthRate) * 0.3
+    else if(amount == "mid") afforestationGrowthRate += (maxAfforestationGrowthRate - afforestationGrowthRate) * 0.2
+    else if(amount == "high") afforestationGrowthRate += (maxAfforestationGrowthRate - afforestationGrowthRate) * 0.3
 }
 
 function updateTemperatureGrowthRate(amount) {

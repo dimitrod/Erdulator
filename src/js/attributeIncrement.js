@@ -1,4 +1,5 @@
 function populationIncrement() {
+    console.log("pinc")
     populationGrowthRate = 1.015
     population *= Math.pow(populationGrowthRate, eventInterval)
 }

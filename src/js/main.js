@@ -37,9 +37,6 @@ function updateAttributes() {
 }
 
 function main() {
-    timedEvents() // check for timed Events, if not then newEvent()
-    gameOver()
-    populationIncrement() // increment population, later attribute Increment
     if (beginOfGame) newEvent() // Check ob es das erste Event ist Mithilfe von beginOfGame flag
     timedEvents() // gibt es ein timedEvent? Wenn nicht newEvent()
     attributeCheck() // Attribute erreichen keine illegalen Bereiche

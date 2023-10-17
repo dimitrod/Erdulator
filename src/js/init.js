@@ -30,7 +30,7 @@ let temperatureGrowthRate = 0.08
 
 let waterLevel = 0
 let waterLevelGameOver = 10
-let minWaterLevelGrowthRate = -0.16
+let minWaterLevelGrowthRate = 0
 let maxWaterLevelGrowthRate = 0.32
 let waterLevelGrowthRate = 0.16
 

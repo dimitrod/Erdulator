@@ -3,12 +3,12 @@ maxLevel = 5
 upgrades = [
     {
         id:"renewableEnergies",
-        name: "ErneuerbareEnergien",
+        name: "Erneuerbare Energien",
         cost: 2*10**6,
         costFactor: 2,
         impacts:[
             {
-                name: "co2e",
+                name: "waterlevel",
                 influence: "low"
             },
             {
@@ -30,7 +30,7 @@ upgrades = [
                 influence: "high",
             },
             {
-                name: "co2e",
+                name: "waterlevel",
                 influence: "mid"
             },
         ],
@@ -40,8 +40,8 @@ upgrades = [
 ]
 function checkBudgetForUpgrade(){
     upgrades.forEach(upgrade =>{
-        button = document.getElementById(upgrade.id).getElementsByTagName("button")
-        button.disabled = upgrade.cost <= budget;
+        button = document.getElementById(upgrade.id).getElementsByTagName("button")[0]
+        button.disabled = upgrade.cost > budget || upgrade.currentLevel >= maxLevel
     })
 }
 function loadUpgrades(){
