@@ -59,7 +59,7 @@
 .upgradeWrapper button:enabled:hover{
     background-color: #fde997;
 }
-.upgradeWrapper button:disabled{
+.upgradeWrapper button:disabled, #upgradeWindow nav button:disabled{
     color: grey;
 }
 .levelWrapper{
@@ -96,4 +96,14 @@
     /*cursor: pointer;*/
     position: absolute;
     z-index: 10;
+}
+
+.investments{
+
+}
+
+#upgradeWindow nav button{
+    width: auto;
+    background-color: #ffdf6c;
+    border: 2px solid #af8f2c;
 }

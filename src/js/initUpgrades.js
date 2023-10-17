@@ -45,9 +45,9 @@ function checkBudgetForUpgrade(){
     })
 }
 function loadUpgrades(){
-    upgradeWindow = document.getElementById("upgradeWindow")
+    upgradesWrapper = document.getElementById("upgrades")
     upgrades.forEach((upgrade, index)=>{
-        upgradeWindow.innerHTML += "<div id='" + upgrade.id + "' class='upgradeWrapper'></div>"
+        upgradesWrapper.innerHTML += "<div id='" + upgrade.id + "' class='upgradeWrapper'></div>"
         upgradeWrapper = document.getElementById(upgrade.id)
         upgradeWrapper.innerHTML+= "<span>" + upgrade.name + "</span>"
         upgradeWrapper.innerHTML+= "<div class='infoContainer'>&#x1F6C8<div class=' + upgradeInfo'>" + upgrade.info + "</div></div>"
@@ -55,6 +55,7 @@ function loadUpgrades(){
         loadLevels(upgrade)
     })
     checkBudgetForUpgrade()
+    document.getElementById("upgradeButton").disabled = true
 }
 
 function loadLevels(upgrade){

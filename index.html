@@ -32,9 +32,13 @@
                 <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
             </div>
             <button id="closeUW" onclick="closeUpgradeWindow()">&#x2716</button>
-            <div id="Upgrades"></div>
-            <div id="Technologien"></div>
-            <div id="InstantHeal"></div>
+            <nav>
+                <button onclick="upgradeWindowCategory('upgrades', this.id)" id="upgradeButton">Upgrades</button>
+                <button onclick="upgradeWindowCategory('investments', this.id)" id="investmentButton">Investitionen</button>
+            </nav>
+            <div id="upgrades" class="category"></div>
+            <!-- <div id="Technologien"></div> -->
+            <div id="investments" class="category"></div>
         </div>
 
         <div id="gamePage" hidden="hidden">
@@ -124,6 +128,7 @@
     <script src="src/js/events.js"></script>
     <script src="src/js/quizInit.js"></script>
     <script src="src/js/initUpgrades.js"></script>
+    <script src="src/js/initInvestments.js"></script>
     <script src="src/js/eventHandler.js"></script>
     <script src="src/js/quizHandler.js"></script>
     <script src="src/js/gameConfig.js"></script>

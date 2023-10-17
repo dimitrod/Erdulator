@@ -46,6 +46,7 @@ function main() {
 
 
 loadUpgrades()
+loadInvestments()
 let budgetElems = Array.from(document.getElementsByClassName("budget"))
 // Erste Darstellung der Budgets
 budgetElems.forEach(budgetElem => {
