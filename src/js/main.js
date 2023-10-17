@@ -30,10 +30,18 @@ function updateAttributes() {
     yearElem.style.left = ((year - 1900) / 120) * 100 + "%"
     yearElemPercent.style.width = ((year - 1900) / 120) * 100 + "%"
     
-    afforestationElem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
-    waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
-    populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 2)
-    temperatureElem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
+    afforestationElems.forEach(elem => {
+        elem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
+    })
+    waterLevelElems.forEach(elem => {
+        elem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
+    })
+    populationElems.forEach(elem => {
+        elem.innerHTML = "Bevölkerung: " + convertNum(population, 2)
+    })
+    temperatureElems.forEach(elem => {
+        elem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
+    })
 }
 
 function main() {

@@ -36,9 +36,21 @@
                 <button onclick="upgradeWindowCategory('upgrades', this.id)" id="upgradeButton">Upgrades</button>
                 <button onclick="upgradeWindowCategory('investments', this.id)" id="investmentButton">Investitionen</button>
             </nav>
-            <div id="upgrades" class="category"></div>
-            <!-- <div id="Technologien"></div> -->
-            <div id="investments" class="category"></div>
+            <div id="upgradeContentWrapper">
+                <div id="upgradeLeftWrapper">
+                    <div id="upgrades" class="category"></div>
+                    <!-- <div id="Technologien"></div> -->
+                    <div id="investments" class="category"></div>
+                </div>
+                <div id="upgradeRightWrapper">
+                    <ul>
+                        <li class="afforestation"></li>
+                        <li class="population"></li>
+                        <li class="temperature"></li>
+                        <li class="waterLevel"></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div id="gamePage" hidden="hidden">
@@ -96,12 +108,12 @@
                     </div>
                     <div id ="barwrap">
                         <div id="barwrap_left">
-                            <span id = "afforestation"></span><br>
-                            <span id = "waterLevel"></span>
+                            <span class = "afforestation"></span><br>
+                            <span class = "waterLevel"></span>
                         </div>
                         <div id="barwrap_right">
-                            <span id = "population"></span><br>
-                            <span id = "temperature"></span><br>
+                            <span class = "population"></span><br>
+                            <span class = "temperature"></span><br>
                         </div>
                     </div>
                 </div>
