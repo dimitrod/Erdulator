@@ -41,7 +41,6 @@ function updateAttributes() {
     temperatureGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + temperatureGrowthRate.toFixed(3)
 }
 
-
 function main() {
     if (beginOfGame) newEvent() // Check ob es das erste Event ist Mithilfe von beginOfGame flag
     timedEvents() // gibt es ein timedEvent? Wenn nicht newEvent()
@@ -49,7 +48,6 @@ function main() {
     attributeIncrement() // Attribute werden mit Wachstumsrate verändert
     if (!currentEvent) makeQuiz() // Wenn kein Event an ist, mach ein Quiz
 }
-
 
 loadUpgrades()
 let budgetElems = Array.from(document.getElementsByClassName("budget"))
