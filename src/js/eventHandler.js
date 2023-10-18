@@ -20,7 +20,7 @@ let worldWar2 = {eventName: "worldWar2", eventStartingMessage: "Der zweite Weltk
 let timedEvent = [worldWar1, worldWar2]
 let eventInterval = 5
 
-function getRandomRegion(region){
+function getRandomRegion(region) {
     switch (region){
         case "country":
             let randomCountryNumber = Math.floor(Math.random() * countrys.length)
@@ -104,7 +104,7 @@ function newEvent() {
     document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost, 0) + " €)"
     document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost, 0) + " €)"
     document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost, 0) + " €)"
-    document.getElementById("event").style.display ="block"
+    document.getElementById("event").style.display = "block"
 }
 
 function timedEvents() {
@@ -112,23 +112,22 @@ function timedEvents() {
     if (!currentTimedEvent) newEvent()
     if (year >= currentTimedEvent.endingYear && year >= currentTimedEvent.endingYear) {
         yearElem.innerHTML = currentTimedEvent.endingYear
-        document.getElementById("timedEventPopup").style.display ="none"
+        document.getElementById("timedEventPopup").style.display = "none"
         document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventEndingMessage
         document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 0) + " €)"
         document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 0) + " €)"
         document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 0) + " €)"
-        document.getElementById("event").style.display ="block"
+        document.getElementById("event").style.display = "block"
         timedEvent.splice(0, 1) 
     } else if (year >= currentTimedEvent.startingYear && year != currentTimedEvent.startingYear) {
         yearElem.innerHTML = currentTimedEvent.startingYear
-        document.getElementById("timedEventPopup").style.width ="15%"
-        document.getElementById("timedEventPopup").style.marginTop ="35%"
-        document.getElementById("timedEventMessage").style.textAlign ="center"
+        document.getElementById("timedEventPopup").style.width = "15%"
+        document.getElementById("timedEventPopup").style.marginTop = "35%"
+        document.getElementById("timedEventMessage").style.textAlign = "center"
         document.getElementById("timedEventMessage").innerHTML = currentTimedEvent.eventStartingMessage
-        document.getElementById("timedEventPopup").style.display ="block"
+        document.getElementById("timedEventPopup").style.display = "block"
         setTimeout(() => {document.getElementById("timedEventPopup").style.display = 'none'}, 5000)
-        
-        newEvent() //TBD
+        newEvent()
     } else newEvent()
 }
 
