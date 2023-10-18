@@ -38,9 +38,9 @@ function updateAttributes() {
 
 function main() {
     if (beginOfGame) newEvent() // Check ob es das erste Event ist Mithilfe von beginOfGame flag
-    timedEvents() // gibt es ein timedEvent? Wenn nicht newEvent()
     attributeCheck() // Attribute erreichen keine illegalen Bereiche
     attributeIncrement() // Attribute werden mit Wachstumsrate verändert
+    timedEvents() // gibt es ein timedEvent? Wenn nicht newEvent()
     if (!currentEvent) makeQuiz() // Wenn kein Event an ist, mach ein Quiz
 }
 

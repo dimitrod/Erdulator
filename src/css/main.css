@@ -34,7 +34,7 @@ html {
     right: 0;
   }
 
-  #event, #info, #questionDisplay, #information, #emptyQuiz{
+  #event, #info, #questionDisplay, #information, #emptyQuiz, #timedEventPopup{
     position: relative;
     width:100%;
     color: #FFF;
