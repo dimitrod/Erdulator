@@ -34,6 +34,10 @@ let minWaterLevelGrowthRate = 0
 let maxWaterLevelGrowthRate = 0.32
 let waterLevelGrowthRate = 0.16
 
+afforestationGrowthRateElem = document.getElementById("afforestationGrowthRate")
+waterLevelGrowthRateElem = document.getElementById("waterLevelGrowthRate")
+temperatureGrowthRateElem = document.getElementById("temperatureGrowthRate")
+populationGrowthRateElem = document.getElementById("populationGrowthRate")
 
 
 
