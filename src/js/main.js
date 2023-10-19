@@ -1,6 +1,5 @@
 let budgetElems = Array.from(document.getElementsByClassName("budget"))
 let beginOfGame = true
-
 function createGameOverMessage(message) {
     document.getElementById("gameOverMessage").innerHTML = message
     document.getElementById("restart").innerHTML = "Neustart"
@@ -8,6 +7,7 @@ function createGameOverMessage(message) {
     document.getElementById("info").style.display = 'none'
     document.getElementById("event").style.display = 'none'
     document.getElementById("gameOver").style.display ="block"
+    document.getElementById("gameOverStatistic").innerHTML = "Du hast Insgesamt " + correctQuizzes + " von " + totalQuizzes + " Quizzes richtig beantwortet."
 }
 
 function gameOver() {
