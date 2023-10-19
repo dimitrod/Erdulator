@@ -74,7 +74,7 @@
     height: 100%;
 }
 
-/* div mouse needs to hover about to show upgradeInfo*/
+/* div mouse needs to hover above to show upgradeInfo*/
 .infoContainer {
     display: inline;
     margin-left: 10px;

@@ -34,6 +34,11 @@ function updateAttributes() {
     waterLevelElem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
     populationElem.innerHTML = "Bevölkerung: " + convertNum(population, 2)
     temperatureElem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
+
+    afforestationGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + afforestationGrowthRate.toFixed(3)
+    waterLevelGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + waterLevelGrowthRate.toFixed(3)
+    populationGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + populationGrowthRate.toFixed(3)
+    temperatureGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + temperatureGrowthRate.toFixed(3)
 }
 
 function main() {
@@ -43,7 +48,6 @@ function main() {
     attributeIncrement() // Attribute werden mit Wachstumsrate verändert
     if (!currentEvent) makeQuiz() // Wenn kein Event an ist, mach ein Quiz
 }
-
 
 loadUpgrades()
 let budgetElems = Array.from(document.getElementsByClassName("budget"))
