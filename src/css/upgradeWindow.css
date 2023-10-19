@@ -126,8 +126,6 @@
     width: 30%;
     overflow: scroll;
     height: 100%;
-    align-items: center;
-    vertical-align: middle;
 }
 
 #upgradeRightWrapper ul{
@@ -135,8 +133,6 @@
     padding: 0;
     list-style: none;
     color: white;
-    position: relative;
-    top: -25%;
 }
 
 #upgradeRightWrapper ul li{
