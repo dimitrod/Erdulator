@@ -65,30 +65,30 @@
                         <p id="gameOverMessage"></p>
                         <button id="restart" onclick="location.reload()">Neustarten</button>
                     </div>
-                    <div class="nes-container is-dark with-title is-centered" id="event" style="display:none;">
-                        <p class="title">Event</p>
+                    <div class="nes-container is-dark with-title" id="event" style="display:none;">
+                        <p class="title">EVENT</p>
                         <p id="eventMessage"></p>
                         <button class="nes-btn is-success" id="reaction1" onclick="reaction(0)"></button><br>
                         <button class="nes-btn is-success" id="reaction2" onclick="reaction(1)"></button><br>
                         <button class="nes-btn is-success" id="reaction3" onclick="reaction(2)"></button>
                     </div>
-                    <div id="info" style="display:none;">
+                    <div class="nes-container is-dark with-title" id="info" style="display:none;">
                         <ul id="stats"></ul>
                         <button class="nes-btn is-warning" id="closeInfo" onclick="document.getElementById('info').style.display = 'none'; makeQuiz()">Okay</button>
                     </div>
-                    <div class="nes-container is-dark with-title is-centered" id="questionDisplay" class="quiz" style="display:none;">
-                        <p class="title">Quiz</p>
+                    <div class="nes-container is-dark with-title" id="questionDisplay" class="quiz" style="display:none;">
+                        <p class="title">QUIZ</p>
                         <p id="quizQuestion"> </p>
                         <button class="nes-btn is-success" id="answer0" onclick="evaluateAnswer(0)"> </button><br>
                         <button class="nes-btn is-success" id="answer1" onclick="evaluateAnswer(1)"> </button><br>
                         <button class="nes-btn is-success" id="answer2" onclick="evaluateAnswer(2)"> </button>
                     </div>
-                    <div id="information" class="information" style="display:none;">
+                    <div class="nes-container is-dark with-title" id="information" class="information" style="display:none;">
                         <p id ="answer"></p>
                         <p id ="background"></p>
                         <button class="nes-btn is-warning" id="NextClose" onclick="nextCloseDecider()">Weiter</button>
                     </div>
-                    <div id="emptyQuiz" style="display:none;">
+                    <div class="nes-container is-dark with-title" id="emptyQuiz" style="display:none;">
                         <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
                         <button class="nes-btn is-warning" id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; main()">Schließen</button>
                     </div>

@@ -13,10 +13,6 @@
   src:url("/resource/font/dogicapixel.ttf");
 }
 
-@font-face {
-  font-family: Vermin;
-  src:url("/resource/font/VerminVibes1989.ttf");
-}
 
 html {  
     height: 100%;
@@ -54,6 +50,17 @@ html {
     right: 0;
   }
 
+  
+
+  .nes-container.is-dark.with-title>.title  {
+
+    width:auto;
+    background:#222;
+  }
+
+
+
+
   #event, #info, #questionDisplay, #information, #emptyQuiz{
     position: relative;
     width:100%;
@@ -76,7 +83,7 @@ html {
 }
 
 #event::after, #info::after, #questionDisplay::after, #information::after, #emptyQuiz::after {
-  background-color:rgba(50,50,50,0.5)
+  background-color:#222;
 }
 
 #event button, #info button, #questionDisplay button, #information button, #emptyQuiz button {
@@ -130,13 +137,20 @@ html {
 
 #yearpercentwrap {
   text-align:center;
-  border-radius: 25px;
+  border-radius: 0px;
+  height:35px;
+  margin-top:10px;
+  margin-bottom:25px;
   width:100%;
   background-color: rgba(211,211,211,0.5);
+  box-shadow:   -5px 0 0 0 #fff,
+                5px 0 0 0 #fff,
+                0 -5px 0 0 #fff,
+                0 5px 0 0 #fff;
 }
 
 #yearpercent {
-  border-radius: 25px;
+  border-radius: 0px;
   width:0%;
   background-color:#D4AF37;
 }
@@ -235,36 +249,13 @@ button:hover {
   width:100%;
 }
 
-/*
-  .btn {
-    background: #29f297;
-    background-image: -webkit-linear-gradient(top, #29f297, #089c7e);
-    background-image: -moz-linear-gradient(top, #29f297, #089c7e);
-    background-image: -ms-linear-gradient(top, #29f297, #089c7e);
-    background-image: -o-linear-gradient(top, #29f297, #089c7e);
-    background-image: linear-gradient(to bottom, #29f297, #089c7e);
-    -webkit-border-radius: 9;
-    -moz-border-radius: 9;
-    border-radius: 9px;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-  }
-  
-  .btn:hover {
-    background: #0da64f;
-    text-decoration: none;
-  }
 
-*/
   .title {
     position: relative;
     width:100%;
     color: #FFF;
     text-align: left;
-    font-family: "Dogica", sans-serif;
+    font-family: "Minecraft", sans-serif;
     font-weight: 700;
     font-size: 50px;
     letter-spacing: 10px;
