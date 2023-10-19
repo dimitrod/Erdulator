@@ -12,7 +12,7 @@
     <main>
         <div id="startPage">
             <div class="planetwrap">
-                <img id="planet2" src="resource/0001.png" alt="Earth" class="center">
+                <img id="planet2" src="resource/pixel_earth.gif" alt="Earth" class="center">
             </div>
             <div class ="rightwrap" >
                 <div class='title'>
@@ -23,11 +23,11 @@
                     <input type="range" id="quizAmountSlider" min="1" max="3" step="1" value="1" oninput="sliderInput(this.value)">
                     <output id="sliderValue">1</output>
                 </div>
-                <button id="startGame" onclick="configure()"> Starte das Spiel </button>
+                <button class="nes-btn is-success" id="startGame-" onclick="configure()"> Starte das Spiel </button>
             </div>
         </div>
 
-        <div id="upgradeWindow" hidden="hidden">
+        <div id="upgradeWindow" style="display:none;">
             <div class="budgetwrap">
                 <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
             </div>
@@ -37,7 +37,7 @@
             <div id="InstantHeal"></div>
         </div>
 
-        <div id="gamePage" hidden="hidden">
+        <div id="gamePage" style="display:none;">
             <div class="planetwrap">
                 <div id="yearwrap">
                     <div id="year" class="" style=""></div>
@@ -48,7 +48,7 @@
                         <p>Zeitleiste</p>
                     </div>
                 </div>
-                <img id="planet" src="resource/0001.png" alt="Earth" class="center">
+                <img id="planet" src="resource/pixel_earth.gif" alt="Earth" class="center">
             </div>
 
 
@@ -61,34 +61,36 @@
                     <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
                 </div>
                 <div id="wrapper">
-                    <div id="gameOver" hidden="hidden">
+                    <div id="gameOver" style="display:none;">
                         <p id="gameOverMessage"></p>
                         <button id="restart" onclick="location.reload()">Neustarten</button>
                     </div>
-                    <div id="event" hidden="hidden">
+                    <div class="nes-container is-dark with-title is-centered" id="event" style="display:none;">
+                        <p class="title">Event</p>
                         <p id="eventMessage"></p>
-                        <button id="reaction1" onclick="reaction(0)"></button><br>
-                        <button id="reaction2" onclick="reaction(1)"></button><br>
-                        <button id="reaction3" onclick="reaction(2)"></button>
+                        <button class="nes-btn is-success" id="reaction1" onclick="reaction(0)"></button><br>
+                        <button class="nes-btn is-success" id="reaction2" onclick="reaction(1)"></button><br>
+                        <button class="nes-btn is-success" id="reaction3" onclick="reaction(2)"></button>
                     </div>
-                    <div id="info" hidden="hidden">
+                    <div id="info" style="display:none;">
                         <ul id="stats"></ul>
-                        <button id="closeInfo" onclick="document.getElementById('info').style.display = 'none'; makeQuiz()">Okay</button>
+                        <button class="nes-btn is-warning" id="closeInfo" onclick="document.getElementById('info').style.display = 'none'; makeQuiz()">Okay</button>
                     </div>
-                    <div id="questionDisplay" class="quiz" hidden="hidden">
+                    <div class="nes-container is-dark with-title is-centered" id="questionDisplay" class="quiz" style="display:none;">
+                        <p class="title">Quiz</p>
                         <p id="quizQuestion"> </p>
-                        <button id="answer0" onclick="evaluateAnswer(0)"> </button><br>
-                        <button id="answer1" onclick="evaluateAnswer(1)"> </button><br>
-                        <button id="answer2" onclick="evaluateAnswer(2)"> </button>
+                        <button class="nes-btn is-success" id="answer0" onclick="evaluateAnswer(0)"> </button><br>
+                        <button class="nes-btn is-success" id="answer1" onclick="evaluateAnswer(1)"> </button><br>
+                        <button class="nes-btn is-success" id="answer2" onclick="evaluateAnswer(2)"> </button>
                     </div>
-                    <div id="information" class="information" hidden="hidden">
+                    <div id="information" class="information" style="display:none;">
                         <p id ="answer"></p>
                         <p id ="background"></p>
-                        <button id="NextClose" onclick="nextCloseDecider()">Weiter</button>
+                        <button class="nes-btn is-warning" id="NextClose" onclick="nextCloseDecider()">Weiter</button>
                     </div>
-                    <div id="emptyQuiz" hidden="hidden">
+                    <div id="emptyQuiz" style="display:none;">
                         <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
-                        <button id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; main()">Schließen</button>
+                        <button class="nes-btn is-warning" id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; main()">Schließen</button>
                     </div>
                     <div id ="barwrap">
                         <div id="barwrap_left">
@@ -116,6 +118,7 @@
             <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"> </source>
         </audio>
     </footer>
+    <link rel="stylesheet" href="https://unpkg.com/nes.css@latest/css/nes.min.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/upgradeWindow.css">
     <script src="src/js/init.js"></script>
