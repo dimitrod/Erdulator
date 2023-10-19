@@ -8,13 +8,13 @@ function sliderInput(value) {
     sliderValue.innerHTML=value
     switch(value) {
         case "1":
-            slider.style.accentColor = "red"
+            slider.style.background = "red"
             break
         case "2":
-            slider.style.accentColor = "orange"
+            slider.style.background = "orange"
             break
         case "3":
-            slider.style.accentColor = "green"
+            slider.style.background = "green"
             break
     }
 }

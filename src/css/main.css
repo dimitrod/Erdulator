@@ -14,6 +14,86 @@
 }
 
 
+
+#musicPlayer {
+  color:white;
+  position: absolute; 
+  bottom: 5%; left: 5%;
+}
+
+#musicPlayer img  {
+  height:50px;
+  width: auto;
+
+  margin-right:30px;
+
+
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
+}
+
+
+
+#volume-slider {
+  -webkit-appearance: none;
+  height: 10px;
+  background: #e59400;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-top:20px;
+  margin-bottom:30px;
+  box-shadow:   -4px 0 0 0 #fff,
+  4px 0 0 0 #fff,
+  0 -4px 0 0 #fff,
+  0 4px 0 0 #fff;
+}
+
+#volume-slider:hover {
+  opacity: 1;
+}
+
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #f7d51d;
+  box-shadow:   -5px 0 0 0 #fff,
+  5px 0 0 0 #fff,
+  0 -5px 0 0 #fff,
+  0 5px 0 0 #fff;
+  cursor: pointer;
+}
+
+#volume-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #000;
+  box-shadow:   -5px 0 0 0 #fff,
+  5px 0 0 0 #fff,
+  0 -5px 0 0 #fff,
+  0 5px 0 0 #fff;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 html {  
     height: 100%;
     background: radial-gradient(ellipse at bottom, #1b2735 100%, #090a0f 100%);
@@ -36,9 +116,55 @@ html {
     font-size: 20px;
   }
 
+
+
   #quizAmountSlider {
-    accent-color: grey;
+    -webkit-appearance: none;
+    width: 50%;
+    height: 20px;
+    background: red;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-top:20px;
+    margin-bottom:30px;
   }
+  
+  #quizAmountSlider:hover {
+    opacity: 1;
+  }
+  
+  #quizAmountSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #000;
+    box-shadow:   -5px 0 0 0 #fff,
+    5px 0 0 0 #fff,
+    0 -5px 0 0 #fff,
+    0 5px 0 0 #fff;
+    cursor: pointer;
+  }
+  
+  #quizAmountSlider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #000;
+    box-shadow:   -5px 0 0 0 #fff,
+    5px 0 0 0 #fff,
+    0 -5px 0 0 #fff,
+    0 5px 0 0 #fff;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
 
   .rightwrap {
     position: absolute;
@@ -289,6 +415,15 @@ button:hover {
     height: auto;
     min-width:70%;
     max-width: 100%;
+
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;                 /* Universal support since 2021   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
 }
   
 #starWrapper {

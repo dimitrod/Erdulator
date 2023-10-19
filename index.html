@@ -114,9 +114,13 @@
     </main>
     
     <footer>
-        <audio controls loop style="position: fixed; bottom: 0; left: 0;">
+        <audio id="music" loop>
             <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"> </source>
         </audio>
+        <div id="musicPlayer">
+            <img id="playpause" src="resource/play.png" onclick="togglePlay()">
+            <input type="range" id="volume-slider">
+        </div>
     </footer>
     <link rel="stylesheet" href="https://unpkg.com/nes.css@latest/css/nes.min.css">
     <link rel="stylesheet" href="src/css/main.css">
@@ -133,6 +137,7 @@
     <script src="src/js/attributeCheck.js"></script>
     <script src="src/js/attributeIncrement.js"></script>
     <script src="src/js/upgradeWindow.js"></script>
+    <script src="src/js/musicPlayer.js"></script>
     <script src="src/js/main.js"></script>
 
 </body>
