@@ -1,16 +1,26 @@
 #upgradeWindowButton {
-    background-image: url("../../resource/upgrade.png");
+    background-image: url("../../resource/upgrade_new.png");
     background-size: cover;
-    background-color: #D4AF37;
-    border: 2px solid #af8f2c;
+    background-color: transparent;
+    border: none;
     width: 50px;
-    aspect-ratio: 1;
+    aspect-ratio: 0.95;
     position: absolute;
     right: 0;
+
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;                 /* Universal support since 2021   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
+
 }
 
 #upgradeWindowButton:hover {
-    background-color: #ffdf6c;
+    background-color: #f7d51d;
 }
 #upgradeWindow .budgetwrap{
     display: inline;
