@@ -69,4 +69,165 @@ const quiz = [
         reward: 1.8,
         information: "Obwohl Moore weltweit lediglich drei Prozent der globalen Landfläche einnehmen, binden sie ein Drittel des terrestrischen Kohlenstoffes – doppelt so viel wie alle Wälder dieser Erde zusammen. Außerdem speichern Moore viel Wasser und sind Heimat für eine Vielzahl an Tier -und Pflanzenarten.Im weltweiten Vergleich verursacht die Europäische Union die zweithöchsten Treibhausgasemissionen aus der Zerstörung von Moorgebieten."
     },
+    {
+        question:"Welches der folgenden Abkommen zielt auf den Klimaschutz ab?",
+        choices: ["WHO-Abkommen", "Pariser Abkommen ", "NATO-Abkommen"],
+        answer: 1,
+        reward: 1.5,
+        information: "Das Pariser Abkommen, das im November 2016 in Kraft getreten ist, ist ein Abkommen mit dem Ziel des Klimaschutzes."
+    },
+    {
+        question:"Welche Art von Verkehrsmittel verursacht die meisten CO2-Emissionen?",
+        choices: ["Auto", "Bus", "Fahrrad"],
+        answer: 0,
+        reward: 0.8,
+        information: "Autos verursachen die meisten CO2-Emissionen im Verkehr."
+    },
+    {
+        question:"Welches Land emittiert die meisten Treibhausgase?",
+        choices: ["USA", "Indien", "China"],
+        answer: 2,
+        reward: 1.5,
+        information: "China emittiert mit 30,9 % die meisten Treibhausgase im weltweiten vergleich."
+    },
+    {
+        question:"Welche Maßnahme trägt zur Reduzierung der Abfallproduktion bei?",
+        choices: ["Verwenden von Einwegplastik", "Recycling", "Müllverbrennung"],
+        answer: 1,
+        reward: 1.5,
+        information: "Recycling hilft, die Abfallproduktion zu reduzieren."
+    },
+    {
+        question:"Welches Symbol kennzeichnet Klimafreundliche Produkte?",
+        choices: ["Grünes Blatt", "Recycling-Symbol", "Akazien Baum"],
+        answer: 0,
+        reward: 1.6,
+        information: "Klimafreundliche Produkte werden durch das grüne Blatt gekennzeichnet."
+    },
+    {
+        question:"Welche Art von Verkehrsmittel verursacht die meisten CO2-Emissionen?",
+        choices: ["Auto", "Bus", "Fahrrad"],
+        answer: 0,
+        reward: 0.8,
+        information: "Autos verursachen die meisten CO2-Emissionen im Verkehr."
+    },
+    {
+        question:"Welche Art von Treibhausgasen entsteht hauptsächlich bei der Tierhaltung?",
+        choices: ["Kohlenstoffdioxid", "Stickstoff", "Methan"],
+        answer: 2,
+        reward: 1.2,
+        information: "Bei der Tierhaltung entsteht hauptsächlich Methan."
+    },
+    {
+        question:"Welches Kühlmittel in Klimaanlagen trägt zur Zerstörung der Ozonschicht bei?",
+        choices: ["Kohlenstoffdioxid", "FCKW", "Stickstoffdioxid"],
+        answer: 1,
+        reward: 1.8,
+        information: "Fluorchlorkohlenwasserstoffe, kurz FCKW, tragen zur Zerstörung der Ozonschicht bei."
+    },
+    {
+        question:"Welche Pflanze wird häufig zur Herstellung von Biodiesel verwendet?",
+        choices: ["Raps", "Weizen", "Kartoffel"],
+        answer: 0,
+        reward: 1.4,
+        information: "Zur Herstellung von Biodiesel wird Raps verwendet."
+    },
+    {
+        question:"Welcher Faktor begünstigt sauren Regen?",
+        choices: ["Übermäßige Sonneneinstrahlung", "Luftverschmutzung durch Schwefel- und Stickstoffverbindungen", "Starke Vulkanausbrüche"],
+        answer: 1,
+        reward: 1.4,
+        information: "Saurer Regen ist Regen mit einem niedrigen pH-Wert. Begünstigt wird dieser durch Luftverschmutzungen durch Schwefel- und Stickstoffverbindungen."
+    },
+    {
+        question:"Welche internationale Umweltschutzorganisation setzt sich für den Schutz der Tierwelt ein?",
+        choices: ["UNICEF", "WWF", "Greenpeace"],
+        answer: 1,
+        reward: 1.5,
+        information: "Der WWF (World Wide Fund for Nature) setzt sich für den Schutz der Tierwelt ein."
+    },
+    {
+        question:"Welches Kühlmittel in Klimaanlagen trägt zur Zerstörung der Ozonschicht bei?",
+        choices: ["Kohlenstoffdioxid", "FCKW", "Stickstoffdioxid"],
+        answer: 1,
+        reward: 1.8,
+        information: "Fluorchlorkohlenwasserstoffe, kurz FCKW, tragen zur Zerstörung der Ozonschicht bei."
+    },
+    {
+        question:"Welches Verfahren wandelt organische Abfälle in nährstoffreichen Dünger um?",
+        choices: ["Kompostierung", "Mülldeponierung", "Verbrennung"],
+        answer: 0,
+        reward: 0.8,
+        information: "Die Kompostierung ist ein umweltfreundliches Verfahren, welches organische Abfälle in nährstoffreichen Dünger umwandelt."
+    },
+    {
+        question:"Welcher Begriff beschreibt die Erwärmung der Erdoberfläche aufgrund von menschlichen Aktivitäten?",
+        choices: ["Anthropogener Klimawandel", "Homogener Klimawandel", "Bedingter Klimawandel"],
+        answer: 0,
+        reward: 1.8,
+        information: "Der Begriff anthropogener Klimawandel beschreibt die Erwärmung der Erdoberfläche aufgrund menschlicher Aktivitäten."
+    },
+    {
+        question:"Welcher natürliche Prozess ist entscheidend für den Klimaschutz?",
+        choices: ["Zellatmung", "Verwesung", "Photosynthese"],
+        answer: 2,
+        reward: 1.6,
+        information: "Die Photosynthese, bei der Pflanzen Kohlenstoff aufnehmen, ist für den Klimaschutz entscheidend."
+    },
+    {
+        question:"Welche Art von Treibhausgasen entsteht vor allem bei der Verbrennung von fossilen Brennstoffen?",
+        choices: ["Methan", "Kohlenstoffdioxid", "Wasserstoff"],
+        answer: 1,
+        reward: 1.3,
+        information: "Bei der Verbrennung von fossilen Brennstoffen entsteht vor allem Kohlenstoffdioxid."
+    },
+    {
+        question:"Welche Tierart ist sehr stark von der der Entwaldung und Lebensraumzerstörung betroffen?",
+        choices: ["Tiger", "Grauwolf", "Elefant"],
+        answer: 0,
+        reward: 1.3,
+        information: "Der Tiger ist besonders von der Entwaldung und Lebensraumzerstörung betroffen. Viele Arten sind vom aussterben bedroht."
+    },
+    {
+        question:"Welches Kühlmittel in Klimaanlagen trägt zur Zerstörung der Ozonschicht bei?",
+        choices: ["Kohlenstoffdioxid", "FCKW", "Stickstoffdioxid"],
+        answer: 1,
+        reward: 1.8,
+        information: "Fluorchlorkohlenwasserstoffe, kurz FCKW, tragen zur Zerstörung der Ozonschicht bei."
+    },
+    {
+        question:"Welche internationale Organisation setzt sich für den Schutz von dedrohten Tier- und Pflanzenarten ein?",
+        choices: ["UNESCO", "UNHCR", "IUCN"],
+        answer: 2,
+        reward: 1.9,
+        information: "Die Internationale Union zur Bewahrung der Natur, kurz IUCN, setzt sich für den Schutz von bedrohten Tier- und Pflanzenarten ein."
+    },
+    {
+        question:"Welche Maßnahme kann zur Reduzierung  des Wasserverbrauchs in Haushalten beitragen?",
+        choices: ["Verwenden von Regenwasser", "Schließen des Wasserhahns während dem Zähneputzen", "Tägliches Duschen"],
+        answer: 1,
+        reward: 0.7,
+        information: "Während man die Zähne putzt, kann man den Wasserhahn schließen, um den Wasserverbrauch zu reduzieren."
+    },
+    {
+        question:"Welche Maßnahme kann zur Reduzierung von der Bodenerosion und zur Erhaltung der Bodenfruchtbarkeit beitragen?",
+        choices: ["Monokulturen", "Agroforstwirtschaft", "Pestizideinsatz"],
+        answer: 1,
+        reward: 1.8,
+        information: "Agroforstwitschaft, die Bäume und Nutzpflanzen kombiniert, kann zur Reduzierung der Bodenerosion und Erhaltung der Bodenfruchtbarkeit beitragen."
+    },
+    {
+        question:"Welche Maßnahme kann zur Verringerung von Platikmüll im Meer beitragen?",
+        choices: ["Verwendung von Einwegplatik-Produkten", "Müll direkt ins Meer werfen", "Mülltrennung und Recycling"],
+        answer: 2,
+        reward: 0.5,
+        information: "Zur Verringerung von Platikmüll im Meer sollte Müll getrennt und recycled werden."
+    },
+    {
+        question:"Welche internationale Konferenz im Jahr 1992 legte den Grundstein für viele Umweltabkommen und das Bewusstsein für den Klimaschutz?",
+        choices: ["Erdgipfel Rio de Janeiro", "Tokio-Konferenz", "Erdrettung Kopenhagen"],
+        answer: 0,
+        reward: 1.8,
+        information: "Der Erdgipfel in Rio de Janeiro im Jahr 1992 legte den Grundstein für viele Umweltabkommen und das Bewusstsein für den Klimaschutz."
+    },
 ]
