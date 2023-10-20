@@ -1,3 +1,5 @@
+let totalQuizzes = 0
+let correctQuizzes = 0
 let currentQuestions = []
 let amount
 const answers = [document.getElementById("answer0"), document.getElementById("answer1"), document.getElementById("answer2")]
@@ -15,6 +17,7 @@ function makeQuiz(){
             let question = quiz.splice(randomNumber, 1)
             currentQuestions.push(question[0]) // slice removed die Frage und gibt ein array mit den removeten Fragen zurück
             --amountOfQuestions
+            totalQuizzes++
         }
         displayQuestionFromQueue()
     }
@@ -48,6 +51,7 @@ function evaluateAnswer(i){
         document.getElementById("answer").innerHTML= "Richtig!"
         reward = currentQuestions[0].reward * Math.pow(10, 6)
         updateBudget(reward)
+        correctQuizzes++
     } else {
         document.getElementById("answer").innerHTML= "Falsch!"
     }

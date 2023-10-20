@@ -14,6 +14,7 @@ function updateBudget(amount){
 	budgetChangeWrapper = Array.from(document.getElementsByClassName("budgetChangeWrapper")) // erst hier, weil
 	budget += amount
 	checkBudgetForUpgrade()
+	checkBudgetForInvestment()
 	budgetText = convertNum(Math.abs(amount), 1) + "€"
 	if (amount < 0){
 		budgetChangeWrapper.forEach((bcw, index) =>{

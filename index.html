@@ -33,9 +33,25 @@
                 <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
             </div>
             <button class="nes-btn is-warning" id="closeUW" onclick="closeUpgradeWindow()">Schließen</button>
-            <div id="Upgrades"></div>
-            <div id="Technologien"></div>
-            <div id="InstantHeal"></div>
+            <nav>
+                <button onclick="upgradeWindowCategory('upgrades', this.id)" id="upgradeButton">Upgrades</button>
+                <button onclick="upgradeWindowCategory('investments', this.id)" id="investmentButton">Investitionen</button>
+            </nav>
+            <div id="upgradeContentWrapper">
+                <div id="upgradeLeftWrapper">
+                    <div id="upgrades" class="category"></div>
+                    <!-- <div id="Technologien"></div> -->
+                    <div id="investments" class="category"></div>
+                </div>
+                <div id="upgradeRightWrapper">
+                    <ul>
+                        <li class="afforestation"></li>
+                        <li class="population"></li>
+                        <li class="temperature"></li>
+                        <li class="waterLevel"></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div id="gamePage" style="display:none;">
@@ -65,6 +81,7 @@
                     <div class="nes-container is-dark with-title" id="gameOver" style="display:none;">
                         <p class="title">GAME OVER</p>
                         <p id="gameOverMessage"></p>
+                        <span id="gameOverStatistic"></span>
                         <button class="nes-btn is-error" id="restart" onclick="location.reload()">Neustarten</button>
                     </div>
                     <div class="nes-container is-dark with-title" id="event" style="display:none;">
@@ -96,22 +113,22 @@
                     </div>
                     <div id ="barwrap">
                         <div id="barwrap_left">
-                            <span id = "afforestation"></span>
-                            <div class = "infoContainer">&#x1F6C8
+                            <span class = "afforestation"></span>
+                            <div class = "infoContainer" style="margin: 0px">&#x1F6C8
                                 <div id="afforestationGrowthRate" class = "upgradeInfo"></div>
                             </div><br>
-                            <span id = "waterLevel"></span>
-                            <div class = "infoContainer">&#x1F6C8
+                            <span class = "waterLevel"></span>
+                            <div class = "infoContainer" style="margin: 0px">&#x1F6C8
                                 <div id="waterLevelGrowthRate" class = "upgradeInfo"></div>
                             </div>
                         </div>
                         <div id="barwrap_right">
-                            <span id = "population"></span>
-                            <div class = "infoContainer">&#x1F6C8
+                            <span class = "population"></span>
+                            <div class = "infoContainer" style="margin: 0px">&#x1F6C8
                                 <div id="populationGrowthRate" class = "upgradeInfo"></div>
                             </div><br>
-                            <span id = "temperature"></span>
-                            <div class = "infoContainer">&#x1F6C8
+                            <span class = "temperature"></span>
+                            <div class = "infoContainer" style="margin: 0px">&#x1F6C8
                                 <div id="temperatureGrowthRate" class = "upgradeInfo"></div>
                             </div>
                         </div>
@@ -149,6 +166,7 @@
     <script src="src/js/events.js"></script>
     <script src="src/js/quizInit.js"></script>
     <script src="src/js/initUpgrades.js"></script>
+    <script src="src/js/initInvestments.js"></script>
     <script src="src/js/eventHandler.js"></script>
     <script src="src/js/quizHandler.js"></script>
     <script src="src/js/gameConfig.js"></script>

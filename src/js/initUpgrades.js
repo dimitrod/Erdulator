@@ -36,6 +36,60 @@ upgrades = [
         ],
         currentLevel: 0,
         info: "weniger Tierhaltung = weniger Abholzung"
+    },
+    {
+        id:"test",
+        name: "Vegane Produkte entwickeln",
+        cost: 10**6,
+        costFactor: 1,
+        impacts:[
+            {
+                name: "afforestation",
+                influence: "high",
+            },
+            {
+                name: "waterlevel",
+                influence: "mid"
+            },
+        ],
+        currentLevel: 0,
+        info: "weniger Tierhaltung = weniger Abholzung"
+    },
+    {
+        id:"test2",
+        name: "Vegane Produkte entwickeln",
+        cost: 10**6,
+        costFactor: 1,
+        impacts:[
+            {
+                name: "afforestation",
+                influence: "high",
+            },
+            {
+                name: "waterlevel",
+                influence: "mid"
+            },
+        ],
+        currentLevel: 0,
+        info: "weniger Tierhaltung = weniger Abholzung"
+    },
+    {
+        id:"test3",
+        name: "Vegane Produkte entwickeln",
+        cost: 10**6,
+        costFactor: 1,
+        impacts:[
+            {
+                name: "afforestation",
+                influence: "high",
+            },
+            {
+                name: "waterlevel",
+                influence: "mid"
+            },
+        ],
+        currentLevel: 0,
+        info: "weniger Tierhaltung = weniger Abholzung"
     }
 ]
 function checkBudgetForUpgrade(){
@@ -45,16 +99,18 @@ function checkBudgetForUpgrade(){
     })
 }
 function loadUpgrades(){
-    upgradeWindow = document.getElementById("upgradeWindow")
+    upgradesWrapper = document.getElementById("upgrades")
     upgrades.forEach((upgrade, index)=>{
-        upgradeWindow.innerHTML += "<div id='" + upgrade.id + "' class='upgradeWrapper'></div>"
+        upgradesWrapper.innerHTML += "<div id='" + upgrade.id + "' class='upgradeWrapper'></div>"
         upgradeWrapper = document.getElementById(upgrade.id)
         upgradeWrapper.innerHTML+= "<span>" + upgrade.name + "</span>"
-        upgradeWrapper.innerHTML+= "<div class='infoContainer'>&#x1F6C8<div class=' + upgradeInfo'>" + upgrade.info + "</div></div>"
+        upgradeWrapper.innerHTML+= "<div class='infoContainer'>&#x1F6C8<div class='upgradeInfo'>" + upgrade.info + "</div></div>"
         upgradeWrapper.innerHTML+= "<button class='nes-btn is-warning' onclick='buyUpgrade(" + index + ")'>" + convertNum(upgrade.cost,1) + "</button>"
         loadLevels(upgrade)
+        console.log(upgrade.name)
     })
     checkBudgetForUpgrade()
+    document.getElementById("upgradeButton").disabled = true
 }
 
 function loadLevels(upgrade){
