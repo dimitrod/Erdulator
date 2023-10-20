@@ -1,6 +1,8 @@
 let totalQuizzes = 0
 let correctQuizzes = 0
 let currentQuestions = []
+let quizStreak = 0
+let quizAnswer = false
 let amount
 const answers = [document.getElementById("answer0"), document.getElementById("answer1"), document.getElementById("answer2")]
 const rewardElem = document.getElementsByClassName("budgetGrowthWrapper")
@@ -50,11 +52,23 @@ function evaluateAnswer(i){
     if (i == currentQuestions[0].answer){
         document.getElementById("answer").innerHTML= "Richtig!"
         reward = currentQuestions[0].reward * Math.pow(10, 6)
-        updateBudget(reward)
         correctQuizzes++
+        quizAnswer = true
+        quizStreakBonus()
+        updateBudget(reward)
     } else {
         document.getElementById("answer").innerHTML= "Falsch!"
+        quizAnswer = false
+        quizStreak = 0
     }
     document.getElementById("background").innerHTML = currentQuestions[0].information
     currentQuestions.splice(0,1)
+}
+
+function quizStreakBonus() {
+    if (quizAnswer) {
+        quizStreak++
+        if (quizStreak >= 3) reward += 2 * 10 ** 6
+            if (quizStreak >= 5) reward += 2 * 10 ** 6
+    }
 }
