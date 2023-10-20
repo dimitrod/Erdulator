@@ -3,10 +3,10 @@
     background-size: cover;
     background-color: transparent;
     border: none;
-    width: 50px;
+    width: 40px;
     aspect-ratio: 0.95;
-    position: absolute;
-    right: 0;
+    position: relative;
+    float:right;   
 
     image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
     image-rendering: -moz-crisp-edges;          /* Firefox                        */
@@ -97,11 +97,11 @@
 /* Styling of infotext*/
 .infoContainer .upgradeInfo {
     visibility: hidden;
-    width: 120px;
+    width: auto;
     background-color: white;
     color: black;
     text-align: center;
-    padding: 5px 0;
+    padding: 5px;
     border-radius: 6px;
     /*cursor: pointer;*/
     position: absolute;
