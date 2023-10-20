@@ -124,9 +124,6 @@ function timedEvents() {
         timedEvent.splice(0, 1) 
     } else if (year >= currentTimedEvent.startingYear && year != currentTimedEvent.startingYear) {
         yearElem.innerHTML = currentTimedEvent.startingYear
-        document.getElementById("timedEventPopup").style.width = "15%"
-        document.getElementById("timedEventPopup").style.marginTop = "35%"
-        document.getElementById("timedEventMessage").style.textAlign = "center"
         document.getElementById("timedEventMessage").innerHTML = currentTimedEvent.eventStartingMessage
         document.getElementById("timedEventPopup").style.display = "block"
         setTimeout(() => {document.getElementById("timedEventPopup").style.display = 'none'}, 5000)
