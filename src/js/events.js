@@ -372,63 +372,6 @@ let natureConservationDayReactions = [
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "nothing", minValue: 0, maxValue: 0}]}
 ]
 
-let worldWar1Reactions = [
-    {
-        reaction: "Städte wieder aufbauen",
-        cost: 15 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 16000000, maxValue: 18000000}, {
-            param: "afforestation",
-            minValue: 2,
-            maxValue: 3
-        }]
-    },
-    {
-        reaction: "Ärztliche Hilfe bereitstellen",
-        cost: 10 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 15000000, maxValue: 17500000}, {
-            param: "afforestation",
-            minValue: 3,
-            maxValue: 4
-        }]
-    },
-    {
-        reaction: "Nichts machen",
-        cost: 0,
-        impacts: [{param: "population", minValue: 16000000, maxValue: 18000000}, {
-            param: "afforestation",
-            minValue: 3,
-            maxValue: 4
-        }]
-    }
-]
-
-let worldWar2Reactions = [
-    {
-        reaction: "Städte wieder aufbauen",
-        cost: 15 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 57000000, maxValue: 70000000}, {
-            param: "afforestation",
-            minValue: 4,
-            maxValue: 5
-        }]},
-    {
-        reaction: "Ärztliche Hilfe bereitstellen",
-        cost: 10 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 55000000, maxValue: 68000000}, {
-            param: "afforestation",
-            minValue: 5,
-            maxValue: 6
-        }]},
-    {
-        reaction: "Nichts machen",
-        cost: 0,
-        impacts: [{param: "population", minValue: 57000000, maxValue: 70000000}, {
-            param: "afforestation",
-            minValue: 5,
-            maxValue: 6
-        }]}
-]
-
 let deforestationReactions = [
     {
         reaction: "Naturschutzgebiete einrichten",
