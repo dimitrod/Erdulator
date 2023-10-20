@@ -105,7 +105,7 @@ let bushFireReactions = [
             param: "temperature",
             minValue: 1,
             maxValue: 1
-        }, {param: "animalSpecies", minValue: 100, maxValue: 1000}, {
+        }, {
             param: "afforestation",
             minValue: 1,
             maxValue: 2
@@ -119,7 +119,7 @@ let bushFireReactions = [
             param: "temperature",
             minValue: 1,
             maxValue: 1
-        }, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {
+        }, {
             param: "afforestation",
             minValue: 4,
             maxValue: 5
@@ -133,7 +133,7 @@ let bushFireReactions = [
             param: "temperature",
             minValue: 1,
             maxValue: 1
-        }, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {
+        }, {
             param: "afforestation",
             minValue: 4,
             maxValue: 5
@@ -288,20 +288,17 @@ let warReactions = [
     {
         reaction: "Waffenstillstand aushandeln",
         cost: 8 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 10000, maxValue: 1000000},
-        {param: "animalSpecies", minValue: 100, maxValue: 1000}]
+        impacts: [{param: "population", minValue: 10000, maxValue: 1000000}]
     },
     {
         reaction: "Wehrpflicht einführen",
         cost: 10 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 20000, maxValue: 2000000}, 
-        {param: "animalSpecies", minValue: 200, maxValue: 2000}]
+        impacts: [{param: "population", minValue: 20000, maxValue: 2000000}]
     },
     {
         reaction: "Nichts machen",
         cost: 0 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 50000, maxValue: 5000000},
-        {param: "animalSpecies", minValue: 200, maxValue: 2000}]
+        impacts: [{param: "population", minValue: 50000, maxValue: 5000000}]
     }
 ]
 
@@ -309,14 +306,12 @@ let pestInfestationReactions = [
     {
         reaction: "Großflächig mit Pestiziden bekämpfen",
         cost: 10 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, 
-        {param: "animalSpecies", minValue: 500, maxValue: 5000}]
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}]
     },
     {
         reaction: "nötige Waren importieren",
         cost: 8 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, 
-        {param: "animalSpecies", minValue: 100, maxValue: 1000}]
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}]
     },
     {
         reaction: "Nichts machen",
@@ -349,7 +344,7 @@ let meltingPolesReactions = [
     {
         reaction: "Nichts machen",
         cost: 0 * Math.pow(10,6),
-        impacts: [{param: "animalSpecies", minValue: 100, maxValue: 1000}, {
+        impacts: [{
             param: "waterLevel",
             minValue: 1,
             maxValue: 5
