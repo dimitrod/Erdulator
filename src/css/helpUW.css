@@ -1,14 +1,4 @@
-#helpButton {
-    width: auto;
-    position: relative;
-    float:right;
-}
-
-#helpButton:hover {
-    background-color: #f7d51d;
-}
-
-#helpWindow {
+#helpWindowUW {
     z-index: 3;
     position: absolute;
     box-sizing: border-box;
@@ -20,17 +10,17 @@
     border-color: #cccccc;
     font-family: "Dogica", sans-serif;
 }
-#helpWindow span, #helpWindow p {
+#helpWindowUW span, #helpWindowUW p {
     padding: 10px;
     box-sizing: border-box;
 }
-#helpWindow.nes-container.is-dark {
+#helpWindowUW.nes-container.is-dark {
     background: rgba(0,0,0,0.8);
 }
-#helpWindow::after {
+#helpWindowUW::after {
     background-color: transparent;
 }
-#helpWindow button{
+#helpWindowUW button{
     position: absolute;
     right: 10px;
     top: 10px;
