@@ -18,6 +18,7 @@ let worldWar1 = {eventName: "worldWar1", eventStartingMessage: "Der erste Weltkr
 let worldWar2 = {eventName: "worldWar2", eventStartingMessage: "Der zweite Weltkrieg beginnt", eventEndingMessage: "Der zweite Weltkrieg ist vorbei", reactions: worldWar2Reactions, startingYear: 1939, endingYear: 1945}
 
 let timedEvent = [worldWar1, worldWar2]
+let currentTimedEvent
 let eventInterval = 5
 
 function getRandomRegion(region) {
@@ -108,15 +109,15 @@ function newEvent() {
 }
 
 function timedEvents() {
-    let currentTimedEvent = timedEvent[0]
+    currentTimedEvent = timedEvent[0]
     if (!currentTimedEvent) newEvent()
-    if (year >= currentTimedEvent.endingYear && year >= currentTimedEvent.endingYear) {
+    else if (year >= currentTimedEvent.endingYear && year >= currentTimedEvent.endingYear) {
         yearElem.innerHTML = currentTimedEvent.endingYear
         document.getElementById("timedEventPopup").style.display = "none"
         document.getElementById("eventMessage").innerHTML = currentTimedEvent.eventEndingMessage
-        document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 0) + " €)"
-        document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 0) + " €)"
-        document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 0) + " €)"
+        document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 1) + " €)"
+        document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 1) + " €)"
+        document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 1) + " €)"
         document.getElementById("event").style.display = "block"
         timedEvent.splice(0, 1) 
     } else if (year >= currentTimedEvent.startingYear && year != currentTimedEvent.startingYear) {
@@ -133,6 +134,7 @@ function timedEvents() {
 
 function reaction(r) {
     let reaction = currentEvent.reactions[r]
+    if (currentTimedEvent && year >= currentTimedEvent.endingYear && year >= currentTimedEvent.endingYear) reaction = currentTimedEvent.reactions[r]
     let infoPopUp = document.getElementById("stats")
     infoPopUp.innerHTML = ""
 
