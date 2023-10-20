@@ -183,6 +183,9 @@ html {
     height: 100%;
     background: radial-gradient(ellipse at bottom, #1b2735 100%, #090a0f 100%);
     overflow: auto;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
   }
 /* Damit beim Öffnen des UpgradeWindows sich die gamePage nicht nach oben verschiebt. Liegt am Blur-Effekt*/
 #gamePage {
@@ -312,9 +315,33 @@ html {
     background:#222;
   }
 
+  #timedEventPopup {
+    position: relative;
+    top: 50px;
+}
+  
 
+  #timedEventMessageWrap {
+    position:absolute;
+    height:auto;
+    width:70%;
+    left:15%;
+    font-family: "Dogica", sans-serif;
+    font-size: 16px;
+    border-color: red;
+    
 
-  #event, #info, #questionDisplay, #information, #emptyQuiz, #timedEventPopup{
+  }
+
+  #timedEventMessageWrap p {
+    color:red;
+  }
+
+  #timedEventMessage {
+    padding:15px;
+  }
+
+  #event, #info, #questionDisplay, #information, #emptyQuiz {
 
     position: relative;
     width:100%;
