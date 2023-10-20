@@ -127,14 +127,14 @@
 #upgradeLeftWrapper {
     display: inline-block;
     width: 65%;
-    overflow: scroll;
+    overflow: auto;
     height: 100%;
 }
 
 #upgradeRightWrapper {
     display: inline-block;
     width: 30%;
-    overflow: scroll;
+    overflow: auto;
     height: 100%;
 }
 
