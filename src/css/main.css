@@ -112,6 +112,34 @@
 }
 
 
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f7d51d;
+  box-shadow: inset -3px -3px rgba(0,0,0,0.3);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e59400;
+}
+
+
+
+
+
+
 #volume-slider::-moz-range-thumb {
   width: 32px;
   height: 32px;
