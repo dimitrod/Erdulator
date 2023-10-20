@@ -107,7 +107,6 @@ function loadUpgrades(){
         upgradeWrapper.innerHTML+= "<div class='infoContainer'>&#x1F6C8<div class='upgradeInfo'>" + upgrade.info + "</div></div>"
         upgradeWrapper.innerHTML+= "<button class='nes-btn is-warning' onclick='buyUpgrade(" + index + ")'>" + convertNum(upgrade.cost,1) + "</button>"
         loadLevels(upgrade)
-        console.log(upgrade.name)
     })
     checkBudgetForUpgrade()
     document.getElementById("upgradeButton").disabled = true
