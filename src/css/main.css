@@ -269,8 +269,8 @@ html {
     right: 0;
   }
 
-  
 
+  
   .nes-container.is-dark.with-title>.title  {
 
     width:auto;
@@ -279,8 +279,8 @@ html {
 
 
 
+  #event, #info, #questionDisplay, #information, #emptyQuiz, #timedEventPopup{
 
-  #event, #info, #questionDisplay, #information, #emptyQuiz{
     position: relative;
     width:100%;
     color: #FFF;
