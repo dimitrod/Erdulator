@@ -28,6 +28,19 @@ function closeUpgradeWindow(){
     gamePageBudgetWrapper.style.display = "inline"
 }
 
+function upgradeWindowCategory(category, btnid) {
+    Array.from(upgradeWindow.getElementsByClassName("category")).forEach(wrapper => {
+        	wrapper.style.display = "none"
+            let nav = upgradeWindow.getElementsByTagName("nav")[0]
+            Array.from(nav.getElementsByTagName("button")).forEach(button => {
+                button.disabled = false
+            })
+    })
+    document.getElementById(category).style.display = "block"
+    document.getElementById(btnid).disabled = true
+}
+
+
 function buyUpgrade(index){
     upgrade = upgrades[index]
     cost = upgrade.cost

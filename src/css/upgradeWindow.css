@@ -32,10 +32,10 @@
     position: absolute;
     box-sizing: border-box;
     padding: 10px;
-    left: 10%;
+    left: 25%;
     top: 10%;
     background-color: rgba(255, 223, 108, 0.50);
-    width: 80%;
+    width: 50%;
     height: 80%;
     border: 4px solid #af8f2c;
     border-radius: 10px;
@@ -54,10 +54,16 @@
 }
 
 .upgradeWrapper {
-    width: 50%;
+    width: 100%;
     color: #fff;
     text-align: left;
     font-family: "lato", sans-serif;
+    margin: 10px 0;
+}
+
+.upgradeWrapper span{
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .upgradeWrapper button{
@@ -69,12 +75,12 @@
 .upgradeWrapper button:enabled:hover{
     background-color: #fde997;
 }
-.upgradeWrapper button:disabled{
+.upgradeWrapper button:disabled, #upgradeWindow nav button:disabled{
     color: grey;
 }
 .levelWrapper{
     display: flex;
-    width: 30%;
+    width: 100%;
     height: 10px;
 }
 .levelWrapper div{
@@ -106,4 +112,45 @@
     /*cursor: pointer;*/
     position: absolute;
     z-index: 10;
+}
+
+.investments{
+
+}
+
+#upgradeWindow nav button{
+    width: auto;
+    background-color: #ffdf6c;
+    border: 2px solid #af8f2c;
+}
+
+#upgradeLeftWrapper {
+    display: inline-block;
+    width: 65%;
+    overflow: auto;
+    height: 100%;
+}
+
+#upgradeRightWrapper {
+    display: inline-block;
+    width: 30%;
+    overflow: auto;
+    height: 100%;
+}
+
+#upgradeRightWrapper ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+}
+
+#upgradeRightWrapper ul li{
+    padding-bottom: 10px;
+}
+
+#upgradeContentWrapper{
+    top: 20%;
+    position: absolute;
+    height: 80%;
 }

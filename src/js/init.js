@@ -3,10 +3,10 @@ let budget = 100  * Math.pow(10, 6)
 
 let yearElem = document.getElementById("year")
 let yearElemPercent = document.getElementById("yearpercent")
-let afforestationElem = document.getElementById("afforestation")
-let waterLevelElem = document.getElementById("waterLevel")
-let populationElem = document.getElementById("population")
-let temperatureElem = document.getElementById("temperature")
+let afforestationElems = Array.from(document.getElementsByClassName("afforestation"))
+let waterLevelElems = Array.from(document.getElementsByClassName("waterLevel"))
+let populationElems = Array.from(document.getElementsByClassName("population"))
+let temperatureElems = Array.from(document.getElementsByClassName("temperature"))
 
 
 let population = 1650000000
