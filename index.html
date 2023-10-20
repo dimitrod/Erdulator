@@ -27,11 +27,12 @@
             </div>
         </div>
 
-        <div id="upgradeWindow" style="display:none;">
+        <div class="nes-container is-dark with-title" id="upgradeWindow" style="display:none;">
+            <p class="title">UPGRADES</p>
             <div class="budgetwrap">
                 <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
             </div>
-            <button id="closeUW" onclick="closeUpgradeWindow()">&#x2716</button>
+            <button class="nes-btn is-warning" id="closeUW" onclick="closeUpgradeWindow()">Schließen</button>
             <nav>
                 <button onclick="upgradeWindowCategory('upgrades', this.id)" id="upgradeButton">Upgrades</button>
                 <button onclick="upgradeWindowCategory('investments', this.id)" id="investmentButton">Investitionen</button>
@@ -56,7 +57,7 @@
         <div id="gamePage" style="display:none;">
             <div class="planetwrap">
                 <div id="yearwrap">
-                    <div id="year" class="" style=""></div>
+                    <div id="year" class=""></div>
                     <div id="yearpercentwrap">
                         <div id="yearpercent">&nbsp;</div>
                     </div>
@@ -150,7 +151,8 @@
         <audio id="music" loop>
             <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"> </source>
         </audio>
-        <div id="musicPlayer">
+        <div class="nes-container is-dark with-title" id="musicPlayer">
+            <p class="title">MUSIC</p>
             <img id="playpause" src="resource/play.png" onclick="togglePlay()">
             <input type="range" id="volume-slider">
         </div>

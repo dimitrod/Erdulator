@@ -105,6 +105,7 @@ function newEvent() {
     document.getElementById("reaction1").innerHTML = currentEvent.reactions[0].reaction + " (" + convertNum(currentEvent.reactions[0].cost, 0) + " €)"
     document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost, 0) + " €)"
     document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost, 0) + " €)"
+    budgetCheck()
     document.getElementById("event").style.display = "block"
 }
 
@@ -118,6 +119,7 @@ function timedEvents() {
         document.getElementById("reaction1").innerHTML = currentTimedEvent.reactions[0].reaction + " (" + convertNum(currentTimedEvent.reactions[0].cost, 1) + " €)"
         document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 1) + " €)"
         document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 1) + " €)"
+        budgetCheck()
         document.getElementById("event").style.display = "block"
         timedEvent.splice(0, 1) 
     } else if (year >= currentTimedEvent.startingYear && year != currentTimedEvent.startingYear) {

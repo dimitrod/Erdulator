@@ -3,10 +3,10 @@
     background-size: cover;
     background-color: transparent;
     border: none;
-    width: 50px;
+    width: 40px;
     aspect-ratio: 0.95;
-    position: absolute;
-    right: 0;
+    position: relative;
+    float:right;   
 
     image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
     image-rendering: -moz-crisp-edges;          /* Firefox                        */
@@ -24,29 +24,33 @@
 }
 #upgradeWindow .budgetwrap{
     display: inline;
+    margin-bottom:20px;
 }
 
+#upgradeWindow p {
+    color: #f7d51d;
+}
 
 #upgradeWindow {
     z-index: 2;
     position: absolute;
     box-sizing: border-box;
-    padding: 10px;
     left: 25%;
     top: 10%;
-    background-color: rgba(255, 223, 108, 0.50);
     width: 50%;
     height: 80%;
-    border: 4px solid #af8f2c;
-    border-radius: 10px;
+    border-color: #f7d51d;
+    
+}
+
+#upgradeWindow::after {
+    background-color: transparent;
 }
 
 #closeUW {
     display: inline;
     width: auto;
     position: absolute;
-    background-color: #ffdf6c;
-    border: 0px solid #af8f2c; /* or 2px */
     right: 10px;
 
 }#closeUW:hover {
@@ -57,7 +61,7 @@
     width: 100%;
     color: #fff;
     text-align: left;
-    font-family: "lato", sans-serif;
+    font-family: "Dogica", sans-serif;
     margin: 10px 0;
 }
 
@@ -67,10 +71,8 @@
 }
 
 .upgradeWrapper button{
-    position: relative;
-    background-size: cover;
-    background-color: #ffdf6c;
-    border: 2px solid #af8f2c;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .upgradeWrapper button:enabled:hover{
     background-color: #fde997;
@@ -82,6 +84,7 @@
     display: flex;
     width: 100%;
     height: 10px;
+    margin-bottom:20px;
 }
 .levelWrapper div{
     display: block;
@@ -103,11 +106,11 @@
 /* Styling of infotext*/
 .infoContainer .upgradeInfo {
     visibility: hidden;
-    width: 120px;
+    width: auto;
     background-color: white;
     color: black;
     text-align: center;
-    padding: 5px 0;
+    padding: 5px;
     border-radius: 6px;
     /*cursor: pointer;*/
     position: absolute;
