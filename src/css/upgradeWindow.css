@@ -35,12 +35,16 @@
     z-index: 2;
     position: absolute;
     box-sizing: border-box;
-    left: 25%;
+    left: 17%;
     top: 10%;
-    width: 50%;
+    width: 66%;
     height: 80%;
     border-color: #f7d51d;
     
+}
+
+#upgradeWindow.nes-container.is-dark {
+    background: rgba(0,0,0,0.8);
 }
 
 #upgradeWindow::after {
@@ -117,8 +121,12 @@
     z-index: 10;
 }
 
-.investments{
+#investments{
+    width:90%;
+}
 
+#upgrades {
+    width:90%;
 }
 
 #upgradeWindow nav button{
@@ -129,14 +137,16 @@
 
 #upgradeLeftWrapper {
     display: inline-block;
-    width: 65%;
+    width: 60%;
     overflow: auto;
     height: 100%;
 }
 
 #upgradeRightWrapper {
     display: inline-block;
+    font-family: "Dogica", sans-serif;
     width: 30%;
+    padding-left:25px;
     overflow: auto;
     height: 100%;
 }
@@ -156,4 +166,5 @@
     top: 20%;
     position: absolute;
     height: 80%;
+    width: 100%;
 }
