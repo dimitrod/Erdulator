@@ -18,7 +18,6 @@ function loadInvestments(){
         let investmentWrapper = document.getElementById("investment" + index)
         investmentWrapper.innerHTML+= "<span>" + investment.name + "</span>"
         investmentWrapper.innerHTML += "<div class='infoContainer'>&#x1F6C8<div class='upgradeInfo'>" + investment.info + "</div></div>"
-        // investmentWrapper.innerHTML+= "<div class='infoContainer'>&#x1F6C8<div class=' + upgradeInfo'>" + investment.info + "</div></div>"
         investmentWrapper.innerHTML+= "<button onclick='buyInvestment(" + index + ")'>" + convertNum(investmentCost,1) + "</button>"
     })
     checkBudgetForInvestment()
