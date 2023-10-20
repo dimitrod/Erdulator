@@ -104,7 +104,7 @@ function loadUpgrades(){
         upgradesWrapper.innerHTML += "<div id='" + upgrade.id + "' class='upgradeWrapper'></div>"
         upgradeWrapper = document.getElementById(upgrade.id)
         upgradeWrapper.innerHTML+= "<span>" + upgrade.name + "</span>"
-        upgradeWrapper.innerHTML+= "<div class='infoContainer'>&#x1F6C8<div class=' + upgradeInfo'>" + upgrade.info + "</div></div>"
+        upgradeWrapper.innerHTML+= "<div class='infoContainer'>&#x1F6C8<div class='upgradeInfo'>" + upgrade.info + "</div></div>"
         upgradeWrapper.innerHTML+= "<button onclick='buyUpgrade(" + index + ")'>" + convertNum(upgrade.cost,1) + "</button>"
         loadLevels(upgrade)
     })
