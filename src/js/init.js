@@ -1,7 +1,6 @@
 let year = 1900
 let budget = 100  * Math.pow(10, 6)
 
-
 let yearElem = document.getElementById("year")
 let yearElemPercent = document.getElementById("yearpercent")
 let afforestationElem = document.getElementById("afforestation")

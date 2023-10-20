@@ -1,6 +1,5 @@
 let budgetElems = Array.from(document.getElementsByClassName("budget"))
 let beginOfGame = true
-
 function createGameOverMessage(message) {
     document.getElementById("gameOverMessage").innerHTML = message
     document.getElementById("restart").innerHTML = "Neustart"
@@ -8,6 +7,7 @@ function createGameOverMessage(message) {
     document.getElementById("info").style.display = 'none'
     document.getElementById("event").style.display = 'none'
     document.getElementById("gameOver").style.display ="block"
+    document.getElementById("gameOverStatistic").innerHTML = "Du hast Insgesamt " + correctQuizzes + " von " + totalQuizzes + " Quizzes richtig beantwortet."
 }
 
 function gameOver() {
@@ -16,7 +16,10 @@ function gameOver() {
     else if (temperature >= temperatureGameOver) createGameOverMessage("Die Temperatur ist um 5°C gestiegen. Das Spiel endet.") 
     else if (waterLevel <= -waterLevelGameOver) createGameOverMessage("Der Meeresspiegel ist um 10m gesunken. Das Spiel endet.")
     else if (waterLevel >= waterLevelGameOver) createGameOverMessage("Der Meeresspiegel ist um 10m gestiegen. Das Spiel endet.") 
-    else if (year >= 2023) createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.")
+    else if (year >= 2023) {
+        document.getElementById("gameOver").style.borderColor = "gold"
+        createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.")
+    }
 }
 
 function updateAttributes() {
