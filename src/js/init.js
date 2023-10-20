@@ -1,7 +1,6 @@
 let year = 1900
 let budget = 100  * Math.pow(10, 6)
 
-
 let yearElem = document.getElementById("year")
 let yearElemPercent = document.getElementById("yearpercent")
 let afforestationElems = Array.from(document.getElementsByClassName("afforestation"))
@@ -34,6 +33,10 @@ let minWaterLevelGrowthRate = 0
 let maxWaterLevelGrowthRate = 0.32
 let waterLevelGrowthRate = 0.16
 
+afforestationGrowthRateElem = document.getElementById("afforestationGrowthRate")
+waterLevelGrowthRateElem = document.getElementById("waterLevelGrowthRate")
+temperatureGrowthRateElem = document.getElementById("temperatureGrowthRate")
+populationGrowthRateElem = document.getElementById("populationGrowthRate")
 
 
 
