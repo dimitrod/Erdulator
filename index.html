@@ -27,12 +27,29 @@
             </div>
         </div>
 
+        <div class="nes-container is-dark with-title" id="helpWindowUW" style="display:none;">
+            <span class="title">HILFE</span>
+            <span >Das Upgrade-Fenster</span>
+            <p>Das Upgrade-Fenster ist mega stark und du greifst das Problem an der Wurzel.</p>
+            <button class="nes-btn is-warning" class="closeUW" onclick="closeHelpWindowUW()">Schließen</button>
+        </div>
+
+        <div class="nes-container is-dark with-title" id="helpWindow" style="display:none;">
+            <span class="title">HILFE</span>
+            <span >Erdulator</span>
+            <p>Erdulator ist ein Spiel, dass die Zusammenhänge zwischen Klimawandel und .....</p>
+            <button class="nes-btn is-warning" class="closeUW" onclick="closeHelpWindow()">Schließen</button>
+        </div>
+
         <div class="nes-container is-dark with-title" id="upgradeWindow" style="display:none;">
-            <p class="title">UPGRADES</p>
+            <span class="title">UPGRADES</span>
+            <div id="help-closeWrapper">
+                <button class="nes-btn is-warning" class="closeUW" onclick="openHelpWindowUW()">Hilfe</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="closeUpgradeWindow()">Schließen</button>
+            </div>
             <div class="budgetwrap">
                 <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
             </div>
-            <button class="nes-btn is-warning" id="closeUW" onclick="closeUpgradeWindow()">Schließen</button>
             <nav>
                 <button onclick="upgradeWindowCategory('upgrades', this.id)" id="upgradeButton">Upgrades</button>
                 <button onclick="upgradeWindowCategory('investments', this.id)" id="investmentButton">Investitionen</button>
@@ -82,6 +99,7 @@
                     <span> ERDULATOR </span>
                 </div>
                 <div class="budgetwrap">
+                    <button class="nes-btn is-warning" class="closeUW" id="helpButton" onclick="openHelpWindow()">Hilfe</button>
                     <button id="upgradeWindowButton" onclick="openUpgradeWindow()"></button>
                     <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
                 </div>
@@ -166,6 +184,8 @@
     <link rel="stylesheet" href="https://unpkg.com/nes.css@latest/css/nes.min.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/upgradeWindow.css">
+    <link rel="stylesheet" href="src/css/helpUW.css">
+    <link rel="stylesheet" href="src/css/help.css">
     <script src="src/js/init.js"></script>
     <script src="src/js/updateGrowthRates.js"></script>
 	<script src="src/js/basicFunctions.js"></script>
@@ -179,6 +199,7 @@
     <script src="src/js/attributeCheck.js"></script>
     <script src="src/js/attributeIncrement.js"></script>
     <script src="src/js/upgradeWindow.js"></script>
+    <script src="src/js/help.js"></script>
     <script src="src/js/musicPlayer.js"></script>
     <script src="src/js/main.js"></script>
 

@@ -1,0 +1,28 @@
+#helpWindowUW {
+    z-index: 3;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    left: 17%;
+    top: 10%;
+    width: 66%;
+    height: 80%;
+    border-color: #cccccc;
+    font-family: "Dogica", sans-serif;
+}
+#helpWindowUW span, #helpWindowUW p {
+    padding: 10px;
+    box-sizing: border-box;
+}
+#helpWindowUW.nes-container.is-dark {
+    background: rgba(0,0,0,0.8);
+}
+#helpWindowUW::after {
+    background-color: transparent;
+}
+#helpWindowUW button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: auto
+}
