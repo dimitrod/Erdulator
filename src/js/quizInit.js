@@ -64,7 +64,7 @@ const quiz = [
     },
     {
         question:"Warum sind Moore so wichtig für das Klima?",
-        choices: ["Moore spiele keine wichtige Rolle für das Klima.", "Moore sind große Feuchtgebiete und speichern viel Wasser. ", "Moore sind die effektivsten Kohlenstoffspeicher aller Landlebensräume!"],
+        choices: ["Moore spiele keine wichtige Rolle für das Klima.", "Moore sind kühlen das Klima ab. ", "Moore sind die effektivsten Kohlenstoffspeicher aller Landlebensräume!"],
         answer: 2,
         reward: 1.8,
         information: "Obwohl Moore weltweit lediglich drei Prozent der globalen Landfläche einnehmen, binden sie ein Drittel des terrestrischen Kohlenstoffes – doppelt so viel wie alle Wälder dieser Erde zusammen. Außerdem speichern Moore viel Wasser und sind Heimat für eine Vielzahl an Tier -und Pflanzenarten.Im weltweiten Vergleich verursacht die Europäische Union die zweithöchsten Treibhausgasemissionen aus der Zerstörung von Moorgebieten."
@@ -119,13 +119,6 @@ const quiz = [
         information: "Bei der Tierhaltung entsteht hauptsächlich Methan."
     },
     {
-        question:"Welches Kühlmittel in Klimaanlagen trägt zur Zerstörung der Ozonschicht bei?",
-        choices: ["Kohlenstoffdioxid", "FCKW", "Stickstoffdioxid"],
-        answer: 1,
-        reward: 1.8,
-        information: "Fluorchlorkohlenwasserstoffe, kurz FCKW, tragen zur Zerstörung der Ozonschicht bei."
-    },
-    {
         question:"Welche Pflanze wird häufig zur Herstellung von Biodiesel verwendet?",
         choices: ["Raps", "Weizen", "Kartoffel"],
         answer: 0,
@@ -145,13 +138,6 @@ const quiz = [
         answer: 1,
         reward: 1.5,
         information: "Der WWF (World Wide Fund for Nature) setzt sich für den Schutz der Tierwelt ein."
-    },
-    {
-        question:"Welches Kühlmittel in Klimaanlagen trägt zur Zerstörung der Ozonschicht bei?",
-        choices: ["Kohlenstoffdioxid", "FCKW", "Stickstoffdioxid"],
-        answer: 1,
-        reward: 1.8,
-        information: "Fluorchlorkohlenwasserstoffe, kurz FCKW, tragen zur Zerstörung der Ozonschicht bei."
     },
     {
         question:"Welches Verfahren wandelt organische Abfälle in nährstoffreichen Dünger um?",
@@ -204,7 +190,7 @@ const quiz = [
     },
     {
         question:"Welche Maßnahme kann zur Reduzierung  des Wasserverbrauchs in Haushalten beitragen?",
-        choices: ["Verwenden von Regenwasser", "Schließen des Wasserhahns während dem Zähneputzen", "Tägliches Duschen"],
+        choices: ["Trinken von Regenwasser", "Schließen des Wasserhahns während dem Zähneputzen", "Tägliches Duschen"],
         answer: 1,
         reward: 0.7,
         information: "Während man die Zähne putzt, kann man den Wasserhahn schließen, um den Wasserverbrauch zu reduzieren."
@@ -221,7 +207,7 @@ const quiz = [
         choices: ["Verwendung von Einwegplatik-Produkten", "Müll direkt ins Meer werfen", "Mülltrennung und Recycling"],
         answer: 2,
         reward: 0.5,
-        information: "Zur Verringerung von Platikmüll im Meer sollte Müll getrennt und recycled werden."
+        information: "Zur Verringerung von Platikmüll im Meer sollte Müll getrennt und recycelt werden."
     },
     {
         question:"Welche internationale Konferenz im Jahr 1992 legte den Grundstein für viele Umweltabkommen und das Bewusstsein für den Klimaschutz?",
@@ -229,5 +215,152 @@ const quiz = [
         answer: 0,
         reward: 1.8,
         information: "Der Erdgipfel in Rio de Janeiro im Jahr 1992 legte den Grundstein für viele Umweltabkommen und das Bewusstsein für den Klimaschutz."
+    },
+    {
+        question:"Welcher Begriff beschreibt die Veränderungen in den Ozeanen aufgrund der steigenden CO2-Konzentration in der Atmosphäre?",
+        choices: ["El Niño", "Meeresversauerung", "Meererwärmung"],
+        answer: 1,
+        reward: 1.8,
+        information: "Meeresversauerung beschreibt die Veränderungen in den Ozeanen aufgrund der steigenden CO2-Konzentration in der Atmosphäre."
+    },
+    {
+        question:"Welcher Begriff beschreibt das Auftreten ungewöhnlicher, nicht zyklischer, veränderter Meeresströmungen im äquatorial Pazifik?",
+        choices: ["El Niño", "Meeresversauerung", "Meeressturm"],
+        answer: 0,
+        reward: 1.8,
+        information: "Dieses Phänomen nennt man El Niño. Es tritt in unregelmäßigen Abständen von durchschnittlich vier Jahren auf und beeinflusst die Wettermuster auf drei Vierteln der Erde. "
+    },
+    {
+        question:"Welches internationale Abkommen zielt auf den Schutz der Ozonschicht ab?",
+        choices: ["Pariser Abkommen", "Kyoto-Protokoll", "Montreal-Protokoll"],
+        answer: 2,
+        reward: 1.4,
+        information: "Das Montreal-Protokoll ist ein verbindlicher Vertrag des Umweltrechts, das auf den SChutz der Ozonschicht abzielt."
+    },
+    {
+        question:"Welcher Prozess entfernt Schadstoffe aus Abgasen, um die Luftqualität zu verbessern?",
+        choices: ["Schadstoffemission", "Rauchzerberstung", "Rauchgasreinigung"],
+        answer: 2,
+        reward: 1.5,
+        information: "Die Rauchgasreinigung ist ein Prozess, der Schadstoffe aus Abgasen entfernt, um die Luftqualität zu verbessern."
+    },
+    {
+        question:"Welcher Begriff beschreibt den natürlichen Prozess, bei dem Wasser in die Atmosphäre verdunstet und wieder zu Boden fällt?",
+        choices: ["Bodenerosion", "Wasserzyklus", "Klimawandel"],
+        answer: 1,
+        reward: 1,
+        information: "Diesen natürlichen Prozess nennt man Wasserzyklus oder Wasserkreislauf."
+    },
+    {
+        question:"Welches globale Problem führt zu einer Erwärmung der Erdatmosphäre und verändert das Klima?",
+        choices: ["Ozonabbau", "Meeresverschmutzung", "Treibhausgasemission"],
+        answer: 2,
+        reward: 1.3,
+        information: "Treibhausgasemissionen führen zu einer Erwärmung der Erdatmosphäre und verändern somit das Klima."
+    },
+    {
+        question:"Welche Maßnahme kann zur Reduzierung der Umweltauswirkungen durch die Lebensmittelproduktion beitragen?",
+        choices: ["Monokulturen", "Nachhaltige Landwirtschaft", "Massentierhaltung"],
+        answer: 1,
+        reward: 1.3,
+        information: "Eine nachhaltige Landwirtschaft kann zu Reduzierung der Umweltauswirkungen führen."
+    },
+    {
+        question:"Welches internationale Umweltabkommen zielt darauf ab, gefährliche Chemikalien zu kontrollieren und zu reduzieren?",
+        choices: ["Genfer Konvention", "Basler Übereinkommen", "Stockholmer Übereinkommen"],
+        answer: 2,
+        reward: 1.9,
+        information: "Das Stockholmer Übereinkommen ist eine völkerrechtlich bindende Verbots- und Beschränkungsmaßnahme für gefährliche Chemikalien und organische Schadstoffe."
+    },
+    {
+        question:"Welcher natürliche Prozess recycelt Nährstoffe in Ökosystemen und trägt zur Bodenfruchtbarkeit bei?",
+        choices: ["Biodiversität", "Photosynthese", "Nährstoffkreislauf"],
+        answer: 2,
+        reward: 1,
+        information: "Dieser Prozess ist der Nährstoffkreislauf. Er ist eine periodische Bewegung bei der sich abgestorbene Pflanzenteile zersetzen und Nährstoffe freigeben, die im Boden gespeichert und anschließend wieder durch Wurzeln aufgenommen werden."
+    },
+    {
+        question:"Welcher Begriff beschreibt die Ablagerung von Schadstoffen aus der Atmosphäre auf Oberflächen?",
+        choices: ["Ozonloch", "Versauerung", "Luftverschmutzung"],
+        answer: 2,
+        reward: 0.8,
+        information: "Luftverschmutzung beschreibt diese Ablagerung."
+    },
+    {
+        question:"Aus was entseht Kohle unter Wärme, Druck und Luftabschluss?",
+        choices: ["Biomasse", "Platik", "Aluminium"],
+        answer: 0,
+        reward: 1.1,
+        information: "Durch Wärme, Druck und Luftabschluss entsteht Kohle aus Biomasse. Dieser Prozess dauert Millionen von Jahren."
+    },
+    {
+        question:"Welcher Begriff beschreibt den Prozess, bei dem Wasser von der Blattunterseite von Pflanzen verdunstet?",
+        choices: ["Verdunstung", "Niederschlag", "Transpiration"],
+        answer: 2,
+        reward: 1.5,
+        information: "Diesen Prozess nennt man Transpiration. Er wird durch Umweltfaktoren wie Luftfeuchtigkeit, Temperatur und Lichtintensität beeinflusst."
+    },
+    {
+        question:"Welcher Begriff beschreibt die Wiederherstellung von Lebensräumen, um einen  möglichst natürlichen Zustand zu erreichen?",
+        choices: ["Renaturierung", "Ökostromerzeugung", "Postökotisierung"],
+        answer: 0,
+        reward: 1.3,
+        information: "Die möglichst naturnahe Wiederherstellung von Lebensräumen nennt man Renaturierung."
+    },
+    {
+        question:"Welche Maßnahme kann zur Reduzierung des Wasserverbrauchs in landwirtschaftlichen Betrieben beitragen?",
+        choices: ["Tropensturzfluten", "intensive Bewässerung", "Tröpfchenbewässerung"],
+        answer: 2,
+        reward: 1,
+        information: "Tröpfchenbewässerung wird verwendet, um den Wasserverbrauch zu reduzieren. Dabei werden aus kleinen Öffnungen in Schläuchen nur geringe, exakte Wassermengen abgegeben."
+    },
+    {
+        question:"Welche internationale Organisation fördert den Schutz von Umwelt und Biodiversität durch die Ausweisung von Schutzgebieten?",
+        choices: ["WWF", "IUCN", "UNESCO"],
+        answer: 2,
+        reward: 1.3,
+        information: "Die UNESCO (United Nations Educational, Scientific and Cultural Organization) förder den Umweltschutz durch die Ausweisung von Schutzgebieten."
+    },
+    {
+        question:"Welcher Begriff beschreibt den Verlust von Bodenfruchtbarkeit aufgrund von Übernutzung und Umweltverschmutzung?",
+        choices: ["Erddokantamination", "Bodendegradation", "Bodenerosion"],
+        answer: 1,
+        reward: 1.8,
+        information: "Bodendegradation beschreibt die Verschlechterung der Bodenfruchtbarkeit bis hin zum Verlust."
+    },
+    {
+        question:"Was versteht man unter einer Monokultur?",
+        choices: ["Den Anbau einer einzigen Pflanzenart über mehrere Jahre auf derselben Anbaufläche.", "Die Verwendung von einem einzigen Pestizid zur Schädlingsbekämpfung auf einer Anbaufläche.", "Das halten von einer einzigen Tierart über mehrere Jahre auf derselben Weide."],
+        answer: 0,
+        reward: 1.3,
+        information: "Bei einer Monokulture wird über mehrere Jahre eine einzige Pflanzenart auf derselben Fläche angebaut."
+    },
+    {
+        question:"Wie wird Geothermie auch genannt?",
+        choices: ["Pyrolyse", "Erdwärme", "Bodentherme"],
+        answer: 1,
+        reward: 1.2,
+        information: "Geothermie wird auch Erdwärme genannt."
+    },
+    {
+        question:"Was ist eine Voraussetzung für einen tropischen Wirbelsturm?",
+        choices: ["Maximal 500 km Entfernung zum Äquator", "Meeresoberflächentemperatur von mindestens 26 °C", "Wolkenloser Himmel"],
+        answer: 1,
+        reward: 2,
+        information: "Damit ein topischer Wirbelsturm entstehen kann, muss die Temperatur der Meeresoberfläche mindestens 26 °C betragen. Außerdem ist eine Mindestentfernung von circa 500 km vom Äquator nötig."
+    },
+    {
+        question:"Was versteht man unter einem Ozonloch?",
+        choices: ["Eine starke Ausdünnung der Ozonschicht.", "Ein für mehrere Minuten anhaltendendes Loch, nachdem eine Rakete die Ozonschicht durchdringt.", "Ein Loch im Hals einer Wasserflasche."],
+        answer: 0,
+        reward: 1.7,
+        information: "Ein Ozonloch ist eine starke Ausdünnung der Ozonschicht. Durch diese Ausdünnung kann mehr UV-Strahlung auf die Erdoberfläche gelangen."
+    },
+    {
+        question:"Was versteht man unter dem Treibhauseffekt?",
+        choices: ["Erkaltung der Erdoberfläche aufgrund von Treibhausgasen in der Atmosphäre.", "Ein Prozess, bei dem Treibhausgase die Wärme in der Atmosphäre einschließen.", "Ein Prozess, bei dem die Sauerstoffkonzentration in der Atmosphäre erhöht wird."],
+        answer: 1,
+        reward: 1.3,
+        information: "Der Treibhauseffekt ist ein natürlicher Prozess, bei dem Treibhausgase die Wärme in der Erdatmosphäre einschließen."
     },
 ]
