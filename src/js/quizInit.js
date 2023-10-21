@@ -99,17 +99,10 @@ const quiz = [
     },
     {
         question:"Welches Symbol kennzeichnet Klimafreundliche Produkte?",
-        choices: ["Grünes Blatt", "Recycling-Symbol", "Akazien Baum"],
+        choices: ["Grünes Blatt", "Recycling-Symbol", "Akazienbaum"],
         answer: 0,
         reward: 1.6,
         information: "Klimafreundliche Produkte werden durch das grüne Blatt gekennzeichnet."
-    },
-    {
-        question:"Welche Art von Verkehrsmittel verursacht die meisten CO2-Emissionen?",
-        choices: ["Auto", "Bus", "Fahrrad"],
-        answer: 0,
-        reward: 0.8,
-        information: "Autos verursachen die meisten CO2-Emissionen im Verkehr."
     },
     {
         question:"Welche Art von Treibhausgasen entsteht hauptsächlich bei der Tierhaltung?",
@@ -182,7 +175,7 @@ const quiz = [
         information: "Fluorchlorkohlenwasserstoffe, kurz FCKW, tragen zur Zerstörung der Ozonschicht bei."
     },
     {
-        question:"Welche internationale Organisation setzt sich für den Schutz von dedrohten Tier- und Pflanzenarten ein?",
+        question:"Welche internationale Organisation setzt sich für den Schutz von bedrohten Tier- und Pflanzenarten ein?",
         choices: ["UNESCO", "UNHCR", "IUCN"],
         answer: 2,
         reward: 1.9,
@@ -196,7 +189,7 @@ const quiz = [
         information: "Während man die Zähne putzt, kann man den Wasserhahn schließen, um den Wasserverbrauch zu reduzieren."
     },
     {
-        question:"Welche Maßnahme kann zur Reduzierung von der Bodenerosion und zur Erhaltung der Bodenfruchtbarkeit beitragen?",
+        question:"Welche Maßnahme kann zur Reduzierung der Bodenerosion und zur Erhaltung der Bodenfruchtbarkeit beitragen?",
         choices: ["Monokulturen", "Agroforstwirtschaft", "Pestizideinsatz"],
         answer: 1,
         reward: 1.8,
@@ -210,11 +203,11 @@ const quiz = [
         information: "Zur Verringerung von Plastikmüll im Meer sollte Müll getrennt und recycelt werden."
     },
     {
-        question:"Welche internationale Konferenz im Jahr 1992 legte den Grundstein für viele Umweltabkommen und das Bewusstsein für den Klimaschutz?",
+        question:"Welche internationale Konferenz im Jahr 1992 legte den Grundstein für viele Umweltabkommen und steigerte das Bewusstsein für den Klimaschutz?",
         choices: ["Erdgipfel Rio de Janeiro", "Tokio-Konferenz", "Erdrettung Kopenhagen"],
         answer: 0,
         reward: 1.8,
-        information: "Der Erdgipfel in Rio de Janeiro im Jahr 1992 legte den Grundstein für viele Umweltabkommen und das Bewusstsein für den Klimaschutz."
+        information: "Der Erdgipfel in Rio de Janeiro im Jahr 1992 legte den Grundstein für viele Umweltabkommen und steigerte das Bewusstsein für den Klimaschutz."
     },
     {
         question:"Welcher Begriff beschreibt das Auftreten ungewöhnlicher, nicht zyklischer, veränderter Meeresströmungen im äquatorial Pazifik?",
@@ -228,7 +221,7 @@ const quiz = [
         choices: ["Pariser Abkommen", "Kyoto-Protokoll", "Montreal-Protokoll"],
         answer: 2,
         reward: 1.4,
-        information: "Das Montreal-Protokoll ist ein verbindlicher Vertrag des Umweltrechts, das auf den SChutz der Ozonschicht abzielt."
+        information: "Das Montreal-Protokoll ist ein verbindlicher Vertrag des Umweltrechts, das auf den Schutz der Ozonschicht abzielt."
     },
     {
         question:"Welcher Prozess entfernt Schadstoffe aus Abgasen, um die Luftqualität zu verbessern?",
