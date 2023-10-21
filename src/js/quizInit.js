@@ -7,7 +7,7 @@ const quiz = [
         information: "Der hat so hart geraided, dass alle down gegangen sind und die Natur back war."
     },
     {
-        question:"Wie viel Tonnen C02-Äquivalente emmitierte Deutschland im Jahr 2022?",
+        question:"Wie viel Tonnen C02-Äquivalente emittierte Deutschland im Jahr 2022?",
         choices: ["746 Millionen", "1.045 Millionen", "67 Millionen"],
         answer: 0,
         reward: 1.4,
@@ -29,7 +29,7 @@ const quiz = [
     },
     {
         question:"Wie kann ich die Inselstaaten unterstützen und einen Beitrag gegen den Meeresspiegelanstieg leisten?",
-        choices: ["Urlaub am Meer vermeiden", "Energie-und Ressourcenverbrauch reduzieren", "Nutzung des Rebound-Effektes"],
+        choices: ["Urlaub am Meer vermeiden", "Energie-und Ressourcenverbrauch reduzieren", "Nutzung des Rebound-Effekts"],
         answer: 1,
         reward: 0.9,
         information: "Wir alle können einen großen Teil tun, es hilft schon, wenn wir den eigenen Energieverbrauch selbst reduzieren. Dennoch ist die Industrie der größte Energieverbraucher"
@@ -203,11 +203,11 @@ const quiz = [
         information: "Agroforstwitschaft, die Bäume und Nutzpflanzen kombiniert, kann zur Reduzierung der Bodenerosion und Erhaltung der Bodenfruchtbarkeit beitragen."
     },
     {
-        question:"Welche Maßnahme kann zur Verringerung von Platikmüll im Meer beitragen?",
-        choices: ["Verwendung von Einwegplatik-Produkten", "Müll direkt ins Meer werfen", "Mülltrennung und Recycling"],
+        question:"Welche Maßnahme kann zur Verringerung von Plastikmüll im Meer beitragen?",
+        choices: ["Verwendung von Einwegplastik-Produkten", "Müll direkt ins Meer werfen", "Mülltrennung und Recycling"],
         answer: 2,
         reward: 0.5,
-        information: "Zur Verringerung von Platikmüll im Meer sollte Müll getrennt und recycelt werden."
+        information: "Zur Verringerung von Plastikmüll im Meer sollte Müll getrennt und recycelt werden."
     },
     {
         question:"Welche internationale Konferenz im Jahr 1992 legte den Grundstein für viele Umweltabkommen und das Bewusstsein für den Klimaschutz?",
@@ -215,13 +215,6 @@ const quiz = [
         answer: 0,
         reward: 1.8,
         information: "Der Erdgipfel in Rio de Janeiro im Jahr 1992 legte den Grundstein für viele Umweltabkommen und das Bewusstsein für den Klimaschutz."
-    },
-    {
-        question:"Welcher Begriff beschreibt die Veränderungen in den Ozeanen aufgrund der steigenden CO2-Konzentration in der Atmosphäre?",
-        choices: ["El Niño", "Meeresversauerung", "Meererwärmung"],
-        answer: 1,
-        reward: 1.8,
-        information: "Meeresversauerung beschreibt die Veränderungen in den Ozeanen aufgrund der steigenden CO2-Konzentration in der Atmosphäre."
     },
     {
         question:"Welcher Begriff beschreibt das Auftreten ungewöhnlicher, nicht zyklischer, veränderter Meeresströmungen im äquatorial Pazifik?",
@@ -288,7 +281,7 @@ const quiz = [
     },
     {
         question:"Aus was entseht Kohle unter Wärme, Druck und Luftabschluss?",
-        choices: ["Biomasse", "Platik", "Aluminium"],
+        choices: ["Biomasse", "Plastik", "Aluminium"],
         answer: 0,
         reward: 1.1,
         information: "Durch Wärme, Druck und Luftabschluss entsteht Kohle aus Biomasse. Dieser Prozess dauert Millionen von Jahren."
@@ -301,7 +294,7 @@ const quiz = [
         information: "Diesen Prozess nennt man Transpiration. Er wird durch Umweltfaktoren wie Luftfeuchtigkeit, Temperatur und Lichtintensität beeinflusst."
     },
     {
-        question:"Welcher Begriff beschreibt die Wiederherstellung von Lebensräumen, um einen  möglichst natürlichen Zustand zu erreichen?",
+        question:"Welcher Begriff beschreibt die Wiederherstellung von Lebensräumen, um einen möglichst natürlichen Zustand zu erreichen?",
         choices: ["Renaturierung", "Ökostromerzeugung", "Postökotisierung"],
         answer: 0,
         reward: 1.3,
@@ -319,11 +312,11 @@ const quiz = [
         choices: ["WWF", "IUCN", "UNESCO"],
         answer: 2,
         reward: 1.3,
-        information: "Die UNESCO (United Nations Educational, Scientific and Cultural Organization) förder den Umweltschutz durch die Ausweisung von Schutzgebieten."
+        information: "Die UNESCO (United Nations Educational, Scientific and Cultural Organization) fördert den Umweltschutz durch die Ausweisung von Schutzgebieten."
     },
     {
         question:"Welcher Begriff beschreibt den Verlust von Bodenfruchtbarkeit aufgrund von Übernutzung und Umweltverschmutzung?",
-        choices: ["Erddokantamination", "Bodendegradation", "Bodenerosion"],
+        choices: ["Erddekontamination", "Bodendegradation", "Bodenerosion"],
         answer: 1,
         reward: 1.8,
         information: "Bodendegradation beschreibt die Verschlechterung der Bodenfruchtbarkeit bis hin zum Verlust."
@@ -333,7 +326,7 @@ const quiz = [
         choices: ["Den Anbau einer einzigen Pflanzenart über mehrere Jahre auf derselben Anbaufläche.", "Die Verwendung von einem einzigen Pestizid zur Schädlingsbekämpfung auf einer Anbaufläche.", "Das halten von einer einzigen Tierart über mehrere Jahre auf derselben Weide."],
         answer: 0,
         reward: 1.3,
-        information: "Bei einer Monokulture wird über mehrere Jahre eine einzige Pflanzenart auf derselben Fläche angebaut."
+        information: "Bei einer Monokultur wird über mehrere Jahre eine einzige Pflanzenart auf derselben Fläche angebaut."
     },
     {
         question:"Wie wird Geothermie auch genannt?",
@@ -347,7 +340,7 @@ const quiz = [
         choices: ["Maximal 500 km Entfernung zum Äquator", "Meeresoberflächentemperatur von mindestens 26 °C", "Wolkenloser Himmel"],
         answer: 1,
         reward: 2,
-        information: "Damit ein topischer Wirbelsturm entstehen kann, muss die Temperatur der Meeresoberfläche mindestens 26 °C betragen. Außerdem ist eine Mindestentfernung von circa 500 km vom Äquator nötig."
+        information: "Damit ein tropischer Wirbelsturm entstehen kann, muss die Temperatur der Meeresoberfläche mindestens 26 °C betragen. Außerdem ist eine Mindestentfernung von circa 500 km vom Äquator nötig."
     },
     {
         question:"Was versteht man unter einem Ozonloch?",
