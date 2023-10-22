@@ -313,11 +313,28 @@ html {
   }
 
 
-  
+  .nes-container.with-title>.title {
+    background-color: #191919 ;
+  }
+
+  #musicPlayer p.title {
+    background-color: #222 !important;
+  }
+
+  #musicPlayer.nes-container.is-dark {
+    background-color: #222 !important;
+  }
+
+
+
+
+
+
+
   .nes-container.is-dark.with-title>.title  {
 
     width:auto;
-    background:#222;
+    background:#212529;
   }
 
   #timedEventPopup {
@@ -359,17 +376,13 @@ html {
     margin-top: -60px;
     padding-left: 10px;
     background-color: transparent;
-
-
-   /* border: 3px solid rgba(41,242,151,0.5);
-    border-radius: 9px;*/
     padding: 20px;
     margin-top: 25px; 
     margin-bottom: 25px; 
 }
 
 #event::after, #info::after, #questionDisplay::after, #information::after, #emptyQuiz::after {
-  background-color:#222;
+  background-color:#212529;
 }
 
 #event button, #info button, #questionDisplay button, #information button, #emptyQuiz button {

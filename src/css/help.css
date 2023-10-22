@@ -12,7 +12,6 @@
     z-index: 3;
     position: absolute;
     box-sizing: border-box;
-    padding: 10px;
     left: 17%;
     top: 10%;
     width: 66%;
@@ -24,6 +23,12 @@
     padding: 10px;
     box-sizing: border-box;
 }
+
+#helpWindow > .title {
+    padding: 0 .5rem;
+    background-color: #191919;
+}
+
 #helpWindow.nes-container.is-dark {
     background: rgba(0,0,0,0.8);
 }

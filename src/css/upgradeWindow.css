@@ -33,7 +33,6 @@
     z-index: 2;
     position: absolute;
     box-sizing: border-box;
-    padding: 10px;
     left: 17%;
     top: 10%;
     width: 66%;
@@ -169,4 +168,9 @@
     position: absolute;
     height: 80%;
     width: 100%;
+}
+
+
+#upgradeWindow > .title {
+    background-color: #191919;
 }
