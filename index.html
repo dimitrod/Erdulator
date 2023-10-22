@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png" />
     <title>Erdulator</title>
 </head>
 <body>
     <header>
+        
     </header>
     <main>
         <div id="startPage">
-            <div class="planetwrap">
-                <img id="planet2" src="resource/pixel_earth.gif" alt="Earth" class="center">
+            <div class='title'>
+                <span> ERDULATOR </span>
             </div>
-            <div class ="rightwrap" >
-                <div class='title'>
-                    <span> ERDULATOR </span>
-                </div>
+            <div class="planetwrap start">
+                <img id="planet2" src="resource/good.gif" alt="Earth" class="center start">
+            </div>
+            <div class ="rightstart nes-container is-dark with-title" >
+                <div class='title'>STARTMENÜ</div>
                 <div id="quizConfig">
                     <p>Quizfragen pro Runde:</p>
                     <input type="range" id="quizAmountSlider" min="1" max="3" step="1" value="1" oninput="sliderInput(this.value)">
                     <output id="sliderValue">1</output>
                 </div>
-                <button class="nes-btn is-success" id="startGame-" onclick="configure()"> Starte das Spiel </button>
+                <button class="nes-btn is-success" id="startGame-" onclick="configure()"> SPIEL STARTEN </button>
             </div>
         </div>
 
@@ -83,14 +86,15 @@
                         <p>Zeitleiste</p>
                     </div>
                 </div>
-                <div><div id="timedEventPopup" style="display: none;">
-                    <div class="nes-container is-dark with-title" id="timedEventMessageWrap">
-                        <p class="title">WELT EVENT</p>
-                        <div id="timedEventMessage"></div>
+              
+                    <div id="timedEventPopup" style="display: none;">
+                        <div class="nes-container is-dark with-title" id="timedEventMessageWrap">
+                            <p class="title">WELT EREIGNIS</p>
+                            <div id="timedEventMessage"></div>
+                        </div>
                     </div>
-                </div>
-                <img id="planet" src="resource/pixel_earth.gif" alt="Earth" class="center">
-            </div>
+                    <img id="planet" src="resource/good.gif" alt="Earth" class="center">
+                
             </div>
 
 
@@ -111,7 +115,7 @@
                         <button class="nes-btn is-error" id="restart" onclick="location.reload()">Neustarten</button>
                     </div>
                     <div class="nes-container is-dark with-title" id="event" style="display:none;">
-                        <p class="title">EVENT</p>
+                        <p class="title">EREIGNIS</p>
                         <p id="eventMessage"></p>
                         <button class="nes-btn is-success" id="reaction1" onclick="reaction(0)"></button><br>
                         <button class="nes-btn is-success" id="reaction2" onclick="reaction(1)"></button><br>
@@ -176,7 +180,7 @@
             <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"> </source>
         </audio>
         <div class="nes-container is-dark with-title" id="musicPlayer">
-            <p class="title">MUSIC</p>
+            <p class="title">MUSIK</p>
             <img id="playpause" src="resource/play.png" onclick="togglePlay()">
             <input type="range" id="volume-slider">
         </div>
