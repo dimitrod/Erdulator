@@ -179,7 +179,10 @@
         <audio id="music" loop>
             <source src="resource/Gymnopedie No 1 – Satie (No Copyright Music).mp3"> </source>
         </audio>
-        <div class="nes-container is-dark with-title" id="musicPlayer">
+        <div id="musicNoteWrapper">
+            <img id="musicNote" src="resource/music_note.png">
+        </div>
+        <div class="nes-container is-dark with-title display-none" id="musicPlayer">
             <p class="title">MUSIK</p>
             <img id="playpause" src="resource/play.png" onclick="togglePlay()">
             <input type="range" id="volume-slider">
