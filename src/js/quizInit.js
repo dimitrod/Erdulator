@@ -349,4 +349,193 @@ const quiz = [
         reward: 1.3,
         information: "Der Treibhauseffekt ist ein natürlicher Prozess, bei dem Treibhausgase die Wärme in der Erdatmosphäre einschließen."
     },
+    {
+        question:"Was ist ein effektiver Weg, um Energie in einem Haushalt zu sparen?",
+        choices: ["Dauerhaft alle Elektrogeräte eingeschaltet lassen", "Energieeffiziente Geräte verwenden", "Häufiges Lüften"],
+        answer: 1,
+        reward: 0.7,
+        information: "Der Einsatz von energieeffizienten Geräten kann den Energieverbrauch in einem Haushalt erheblich reduzieren."
+    },
+    {
+        question:"Was ist ein Beispiel für eine erneuerbare Energie?",
+        choices: ["Windkraft", "Kohle", "Erdöl"],
+        answer: 0,
+        reward: 0.7,
+        information: "Erneuerbare Engergien wie Windkraft sind nachhaltige Alternativen zu fossilen Brennstoffen."
+    },
+    {
+        question:"Welche Beleuchtungsoption ist energieeffizienter?",
+        choices: ["Leuchtstoffröhren", "Glühbirnen", "LED-Lampen"],
+        answer: 2,
+        reward: 1.2,
+        information: "LED-Lampen sind deutlich energieeffizienter und langlebiger als herkömmliche Glühbirnen."
+    },
+    {
+        question:"Was ist ein Beispiel für passives Energieeffizienzdesign in einem Gebäude?",
+        choices: ["Installation einer effizienten Heizungsanlage", "Nutzung von Tageslicht als Beleuchtung", "Verwendung von alten, undichten Fenstern"],
+        answer: 1,
+        reward: 1.3,
+        information: "Passives Energieeffizienzdesign nutzt natürliche Ressourcen wie Tageslicht, um den Energieverbrauch zu senken."
+    },
+    {
+        question:"Welche Aussage ist wahr?",
+        choices: ["Elektrogeräte im Standby-Modus verbrauchen keine Energie.", "Elektrogeräte im Standby-Modus verbrauchen genauso viel Energie wie im Betrieb.", "Der Energieverbrauch von Elektrogeräten im Standby-Modus kann vernachlässigt werden."],
+        answer: 1,
+        reward: 1.2,
+        information: "Elektrogeräte im Standby-Modus verbrauchen weiterhin Energie, auch wenn sie nicht aktiv genutzt werden."
+    },
+    {
+        question:"Welches Element wird oft zur Speicherung von Energie in erneuerbaren Energiesystemen verwendet.",
+        choices: ["Wasserstoff", "Erdgas", "Blei"],
+        answer: 0,
+        reward: 1.4,
+        information: "Wasserstoff wird häufig als Energiespeicher in erneuerbaren Energiesystemen eingesetzt, um Energie bei Bedarf verfügbar zu machen."
+    },
+    {
+        question:"Was ist die Hauptursache des Klimawandels?",
+        choices: ["Natürliche Klimaschwankungen", "Der Einfluss von Vulkanen", "Die Freisetzung von Treibhausgasen durch menschliche Aktivitäten"],
+        answer: 2,
+        reward: 1,
+        information: "Der menschliche Einfluss auf den Klimawandel ist hauptsächlich auf die Freisetzung von Treibhausgasen wie CO2 zurückzuführen."
+    },
+    {
+        question:"Was ist ein Effekt des Klimawandels?",
+        choices: ["Abkühlung der Erdatmosphäre", "Anstieg des Meeresspiegels", "Erhöhung der Wüstenbildung"],
+        answer: 1,
+        reward: 1.2,
+        information: "Der Klimawandel führt zum Anstieg des Meeresspiegels aufgrund der Erwärmung und Ausdehnung der Ozeane und das Schmelzen der Pole."
+    },
+    {
+        question:"Welcher Bereich ist besonders vom Klimawandel betroffen?",
+        choices: ["Polargebiete", "Wüstenregionen", "Gemäßigte Klimazonen"],
+        answer: 0,
+        reward: 0.9,
+        information: "Die Polargebiete erwärmen sich schneller als der globale Durchschnitt und sind daher besonders vom Klimawandel betroffen."
+    },
+    {
+        question:"Welche Region ist besonders anfällig für zunehmende Hitzewellen aufgrund des Klimawandels?",
+        choices: ["Antarktis", "Saharawüste", "Südeuropa"],
+        answer: 2,
+        reward: 1.5,
+        information: "Südeuropa ist besonders anfällig für steigende Temperaturen und häufige Hitzewellen."
+    },
+    {
+        question:"Welche Art von Solaranlagen wandelt Sonnenlicht direkt in elektrische Energie um?",
+        choices: ["Photovoltaik", "Solarthermie", "Sonnenkraftanlage"],
+        answer: 0,
+        reward: 1.4,
+        information: "Photovoltaik-Anlagen wandeln Sonnenlicht direkt in elektrische Energie um."
+    },
+    {
+        question:"Welcher Kontinent beherbergt den größten Teil der weltweiten Regenwälder?",
+        choices: ["Afrika", "Nordamerika", "Südamerika"],
+        answer: 2,
+        reward: 1.2,
+        information: "Der größte Teil der weltweiten Regenwälder befindet sich in Südamerika, insbesondere im Amazonasgebiet."
+    },
+    {
+        question:"Wie viel Prozent der bekannten Tier- und Pflanzenarten der Welt sind in Regenwäldern zu finden?",
+        choices: ["5 %", "25 %", "50 %"],
+        answer: 1,
+        reward: 1.5,
+        information: "Etwa 25 % der bekannten Tier- und Pflanzenarten der Welt sind in Regenwäldern beheimatet. Und das obwohl nur circa 13 % der Erde mit Regenwäldern bedeckt sind."
+    },
+    {
+        question:"Welche Funktion haben Regenwälder im globalen Klimasystem?",
+        choices: ["Sie tragen zur Erwärmung der Erde bei", "Sie haben keinen Einfluss auf das Klima", "Sie absorbieren Kohlendioxid"],
+        answer: 2,
+        reward: 1.1,
+        information: "Regenwälder sind wichtige Kohlenstoffsenken und tragen zur Reduzierung von Treibhausgasen bei. Sie tragen zur Stabilisierung des Klimas bei."
+    },
+    {
+        question:"Was ist der Boden in Regenwäldern oft?",
+        choices: ["Stark versauert", "Reich an Nährstoffen", "Trocken und sandig"],
+        answer: 0,
+        reward: 1.7,
+        information: "Der Boden in Regenwäldern ist oft stark versauert, da die Niederschläge die Nährstoffe aufspühlen."
+    },
+    {
+        question:"Welche gefährdete Menschenaffenart ist in den Regenwäldern Südostasiens beheimatet?",
+        choices: ["Gorillas", "Orang-Utans", "Kapuzineraffen"],
+        answer: 1,
+        reward: 1.6,
+        information: "Orang-Utans sind in den Regenwäldern von Borneo und Sumatra in Südostasien beheimatet und stark gefährdet."
+    },
+    {
+        question:"Wie werden die Bewohner von Regenwäldern oft genannt, die in traditionellen Lebensweisen in diesen Gebieten leben?",
+        choices: ["Regenwäldler", "Ureinwohner", "Dschungelbewohner"],
+        answer: 1,
+        reward: 0.8,
+        information: "Die Menschen, die in traditionellen Lebensweisen in Regenwäldern leben, werden oft als Ureinwohner bezeichnet."
+    },
+    {
+        question:"Welches Tier, das im australischen Regenwald lebt, wird auch Honigbär genannt?",
+        choices: ["Panda", "Koala", "Braunbär"],
+        answer: 1,
+        reward: 1.2,
+        information: "Der Honigbär, der im australischen Regenwald beheimatet ist, ist besser bekannt als Koala."
+    },
+    {
+        question:"Welche der folgenden Holzarten wird oft illegal aus Regenwäldern entnommen?",
+        choices: ["Kiefernholz", "Teakholz", "Ahornholz"],
+        answer: 1,
+        reward: 1.3,
+        information: "Teakholz ist eine Holzart, die oft illegal aus den Regenwäldern entnommen wird und aufgrund ihrer Qualität sehr begehrt ist."
+    },
+    {
+        question:"Welche der folgenden Naturkatastrophen wir durch die Bewegung der Erdplatten verursacht?",
+        choices: ["Vulkanausbruch", "Hitzewelle", "Tornade"],
+        answer: 1,
+        reward: 0.8,
+        information: "Vulkanausbrüche werden oft durch die Bewegung der Erdplatten und den Ausstoß von Magma verursacht."
+    },
+    {
+        question:"Welche internationale Vereinbarung hat das Ziel, den illegalen Handel mit gefährdeten Tierarten zu bekämpfen?",
+        choices: ["Artenschutzabkommen (CITES)", "Handelsabkommen von Brüssel", "UNESCO-Welterbekonvention"],
+        answer: 0,
+        reward: 1.2,
+        information: "Das Washingtoner Artenschutzabkommen (CITES) soll den illegalen Handel mit gefährdeten Arten verhindern."
+    },
+    {
+        question:"Welcher Kontinent ist besonders von der Entwaldung betroffen?",
+        choices: ["Europa", "Afrika", "Antarktika"],
+        answer: 1,
+        reward: 0.7,
+        information: "Die Entwaldung ist in vielen Teilen Afrikas ein ernstet Umweltproblem."
+    },
+    {
+        question:"Welche Branche ist oft für großflächige Entwaldung verantwortlich?",
+        choices: ["Textilindustrie", "Lebensmittelindustrie", "Stahlindustrie"],
+        answer: 1,
+        reward: 1.2,
+        information: "Die Lebensmittelindustrie trägt durch den Anbau von Monokulturen wie Soja und Palmöl stark zu Entwaldung bei."
+    },
+    {
+        question:"Was sind die sozialen Auswirkungen der Abholzung auf indigene Völker?",
+        choices: ["Steigender Lebensstandard und Wohlstand", "Vertreibung und Verlust von Lebensgrundlagen und Kultur", "Die Abholzung wirkt sich nicht auf indigene Völker aus"],
+        answer: 1,
+        reward: 0.9,
+        information: "Abholzung hat oft negative Auswirkungen auf indigene Gemeinschaften, die von den Wäldern abhängig sind. Somit verlieren sie ihre Lebensgrundlagen und Kultur und werden vertrieben."
+    },
+    {
+        question:"Welches internationale Abkommen zielt auf die Bekämpfung der Abholzung und Waldzerstörung ab?",
+        choices: ["Pariser Klimaabkommen", "Kyoto-Protokoll", "REDD+"],
+        answer: 2,
+        reward: 1.4,
+        information: "REDD+ steht für 'Reduktion der Emissionen aus Entwaldung und Walddegradierung' und zielt auf die Erhaltung der Wälder ab."
+    },
+    {
+        question:"Welche Tiere sind von der Abholzung der Wälder am stärksten betroffen?",
+        choices: ["Wale", "Bienen", "Ameisen"],
+        answer: 1,
+        reward: 0.8,
+        information: "Bienen und andere Bestäuber sind von der Zerstörung ihrer Lebensräume in Wäldern durch Abholzung stark betroffen."
+    },
+    {
+        question:"Welche langfristigen Auswirkungen hat Abholzung auf die Artenvielfalt?",
+        choices: ["Sie erhöht die Artenvielfalt", "Sie führt zur Ausrottung einiger Arten", "Sie hat keinen Einfluss auf die Artenvielfalt"],
+        answer: 1,
+        reward: 0.8,
+        information: "Abholzung kann dazu führen, dass Tier- und Pflanzenarten ihre Lebensräume verlieren und aussterben."
+    },
 ]
