@@ -170,15 +170,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
 html {  
     height: 100%;
     background: radial-gradient(ellipse at bottom, #1b2735 100%, #090a0f 100%);
@@ -188,6 +179,7 @@ html {
     user-select: none; /* Standard syntax */
   }
 /* Damit beim Öffnen des UpgradeWindows sich die gamePage nicht nach oben verschiebt. Liegt am Blur-Effekt*/
+
 #gamePage {
   position:absolute;
   width: 100%;
