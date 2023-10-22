@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png" />
     <title>Erdulator</title>
 </head>
 <body>
     <header>
+        
     </header>
     <main>
         <div id="startPage">
+            <div class='title'>
+                <span> ERDULATOR </span>
+            </div>
             <div class="planetwrap start">
-                <img id="planet2" src="resource/pixel_earth.gif" alt="Earth" class="center start">
+                <img id="planet2" src="resource/good.gif" alt="Earth" class="center start">
             </div>
             <div class ="rightstart nes-container is-dark with-title" >
-                <div class='title'>
-                    <span> ERDULATOR </span>
-                </div>
+                <div class='title'>STARTMENÜ</div>
                 <div id="quizConfig">
                     <p>Quizfragen pro Runde:</p>
                     <input type="range" id="quizAmountSlider" min="1" max="3" step="1" value="1" oninput="sliderInput(this.value)">
@@ -66,14 +69,15 @@
                         <p>Zeitleiste</p>
                     </div>
                 </div>
-                <div><div id="timedEventPopup" style="display: none;">
-                    <div class="nes-container is-dark with-title" id="timedEventMessageWrap">
-                        <p class="title">WELT EVENT</p>
-                        <div id="timedEventMessage"></div>
+              
+                    <div id="timedEventPopup" style="display: none;">
+                        <div class="nes-container is-dark with-title" id="timedEventMessageWrap">
+                            <p class="title">WELT EVENT</p>
+                            <div id="timedEventMessage"></div>
+                        </div>
                     </div>
-                </div>
-                <img id="planet" src="resource/pixel_earth.gif" alt="Earth" class="center">
-            </div>
+                    <img id="planet" src="resource/good.gif" alt="Earth" class="center">
+                
             </div>
 
 
