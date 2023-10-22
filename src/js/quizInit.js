@@ -193,7 +193,7 @@ const quiz = [
         choices: ["Monokulturen", "Agroforstwirtschaft", "Pestizideinsatz"],
         answer: 1,
         reward: 1.8,
-        information: "Agroforstwitschaft, die Bäume und Nutzpflanzen kombiniert, kann zur Reduzierung der Bodenerosion und Erhaltung der Bodenfruchtbarkeit beitragen."
+        information: "Agroforstwirtschaft, die Bäume und Nutzpflanzen kombiniert, kann zur Reduzierung der Bodenerosion und Erhaltung der Bodenfruchtbarkeit beitragen."
     },
     {
         question:"Welche Maßnahme kann zur Verringerung von Plastikmüll im Meer beitragen?",
