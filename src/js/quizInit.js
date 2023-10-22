@@ -538,4 +538,40 @@ const quiz = [
         reward: 0.8,
         information: "Abholzung kann dazu führen, dass Tier- und Pflanzenarten ihre Lebensräume verlieren und aussterben."
     },
+    {
+        question:"Wann fand der Earth Overshoot Day im Jahr 2021 statt?",
+        choices: ["Am 15. Juli", "Am 29. Juli", "Am 22. August"],
+        answer: 1,
+        reward: 0.8,
+        information: "Der Earth Overshoot Day, auch als Erdüberlastungstag bekannt, ist das Datum im Jahr, an dem die Menschheit mehr Ressourcen und ökologische Dienstleistungen verbraucht hat, als die Erde in diesem Jahr regenerieren kann.Im Jahr 2021 fiel dieser Tag auf den 29. Juli, was bedeutet, dass die Menschheit in den ersten sieben Monaten des Jahres mehr Ressourcen verbraucht hat, als die Erde in einem gesamten Jahr erneuern kann. Dies verdeutlicht die Dringlichkeit der globalen Nachhaltigkeitsbemühungen, um die ökologische Überlastung zu verringern.\n"
+    },
+    {
+        question:"Welche der folgenden Aktivitäten hat den größten Einfluss auf den individuellen CO2-Fußabdruck?",
+        choices: ["Fleischkonsum", "Autofahren", "Energieverbrauch im Haushalt"],
+        answer: 0,
+        reward: 1.3,
+        information: "Der individuelle CO2-Fußabdruck kann durch verschiedene Aktivitäten beeinflusst werden, aber der Fleischkonsum hat oft den größten Einfluss. Die Produktion von Fleisch, insbesondere Rindfleisch, erfordert erhebliche Ressourcen wie Land, Wasser und Futtermittel. Dies geht mit einem hohen Ausstoß von Treibhausgasen einher, insbesondere Methan, das bei der Verdauung von Wiederkäuern entsteht. Daher kann die Reduzierung des Fleischkonsums einen signifikanten Beitrag zur Verringerung des individuellen CO2-Fußabdrucks leisten."
+    },
+    {
+        question:"Welche der folgenden Sektoren ist der Hauptverursacher des CO2e-Fußabdrucks auf globaler Ebene?",
+        choices: ["Industrie", "Landwirtschaft", "Elektrizität-und Wärmeerzeugung"],
+        answer: 2,
+        reward: 1.1,
+        information: "Obwohl verschiedene Sektoren zur globalen CO2-Emission beitragen, ist die Elektrizität-und Wärmeerzeugung der Hauptverursacher des CO2-Fußabdrucks auf globaler Ebene. Auf Platz 2 ist der Transport, Platz 3: Bau und Platz 4: Landwirtschaft. Quelle:https://ourworldindata.org/emissions-by-sector"
+    },
+    {
+        question:"Wer gilt als der Begründer des Konzepts des CO2-Fußabdrucks?",
+        choices: ["Greta Thunberg", "Beyond Petroleum", "William Rees"],
+        answer: 2,
+        reward: 1.7,
+        information: "Die Idee des CO2-Fußabdrucks geht auf Dr. William Rees im Jahr 1990 zurück, einen kanadischen Wissenschaftler und Professor für Umweltmanagement.BP gab 250 Millionen Dollar aus, um den Begriff des 'CO2-Fußabdrucks' populär zu machen. Damit wollte BP dieAufmerksamkeit auf den individuellen Verbrauch lenken. Große Fossilunternehmen beeinflussen durch ihr Angebot viel stärker, was getankt und womit geheizt wird. "
+    },
+    {
+        question:"Um welchen Faktor haben sich die CO2-Emissionen seit 1900 vervielfacht?",
+        choices: ["5", "30", "18"],
+        answer: 2,
+        reward: 1.7,
+        information: "Die globalen Kohlendioxid (CO2)-Emissionen im Jahr 1900 betrugen schätzungsweise etwa 1,9 Milliarden Tonnen pro Jahr. Im Jahr 2019 betrugen die weltweiten CO2-Emissionen rund 37 Milliarden Tonnen pro Jahr"
+    },
 ]
+
