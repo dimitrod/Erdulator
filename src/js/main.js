@@ -24,8 +24,8 @@ function gameOver() {
 
 function updateAttributes() {
     yearElem.innerHTML = year
-    yearElem.style.left = ((year - 1900) / 120) * 100 + "%"
-    yearElemPercent.style.width = ((year - 1900) / 120) * 100 + "%"
+    yearElem.style.left = ((year - 1900) / 125) * 100 + "%"
+    yearElemPercent.style.width = ((year - 1900) / 125) * 100 + "%"
     
     afforestationElems.forEach(elem => {
         elem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
