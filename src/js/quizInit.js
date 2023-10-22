@@ -11,7 +11,7 @@ const quiz = [
         choices: ["746 Millionen", "1.045 Millionen", "67 Millionen"],
         answer: 0,
         reward: 1.4,
-        information: "Im Jahr 2022 verursachte Deutschland rund 746 Millionen Tonnen CO2-Äquivalente, wovon 786 Millionen Tonnen reines CO2 waren."
+        information: "Im Jahr 2022 verursachte Deutschland rund 746 Millionen Tonnen CO2-Äquivalente, wovon 666 Millionen Tonnen reines CO2 waren."
     },
     {
         question:"Welche Alternativen gibt es zu torfhaltiger Blumenerde?",
@@ -193,7 +193,7 @@ const quiz = [
         choices: ["Monokulturen", "Agroforstwirtschaft", "Pestizideinsatz"],
         answer: 1,
         reward: 1.8,
-        information: "Agroforstwitschaft, die Bäume und Nutzpflanzen kombiniert, kann zur Reduzierung der Bodenerosion und Erhaltung der Bodenfruchtbarkeit beitragen."
+        information: "Agroforstwirtschaft, die Bäume und Nutzpflanzen kombiniert, kann zur Reduzierung der Bodenerosion und Erhaltung der Bodenfruchtbarkeit beitragen."
     },
     {
         question:"Welche Maßnahme kann zur Verringerung von Plastikmüll im Meer beitragen?",
@@ -445,7 +445,7 @@ const quiz = [
         choices: ["Sie tragen zur Erwärmung der Erde bei", "Sie haben keinen Einfluss auf das Klima", "Sie absorbieren Kohlendioxid"],
         answer: 2,
         reward: 1.1,
-        information: "Regenwälder sind wichtige Kohlenstoffsenken und tragen zur Reduzierung von Treibhausgasen bei. Sie tragen zur Stabilisierung des Klimas bei."
+        information: "Regenwälder sind wichtige Kohlenstoffsenken und tragen zur Reduzierung von Treibhausgasen, sowie der Stabilisierung des Klimas bei."
     },
     {
         question:"Was ist der Boden in Regenwäldern oft?",
@@ -483,7 +483,7 @@ const quiz = [
         information: "Teakholz ist eine Holzart, die oft illegal aus den Regenwäldern entnommen wird und aufgrund ihrer Qualität sehr begehrt ist."
     },
     {
-        question:"Welche der folgenden Naturkatastrophen wir durch die Bewegung der Erdplatten verursacht?",
+        question:"Welche der folgenden Naturkatastrophen wird durch die Bewegung der Erdplatten verursacht?",
         choices: ["Vulkanausbruch", "Hitzewelle", "Tornade"],
         answer: 1,
         reward: 0.8,
