@@ -33,6 +33,8 @@
 
 }
 
+
+
 .display-none {
   display: none;
 }
@@ -379,6 +381,18 @@ html {
     padding:15px;
   }
 
+
+
+
+
+
+
+.nes-container button, .nes-container div, .nes-container p, .nes-container span {
+  text-shadow: 1px 1px #333 !important;
+}
+
+
+
   #event, #info, #questionDisplay, #information, #emptyQuiz {
 
     position: relative;
@@ -722,4 +736,14 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+body{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
