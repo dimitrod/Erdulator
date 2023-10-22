@@ -20,6 +20,16 @@
     border-color: #cccccc;
     font-family: "Dogica", sans-serif;
 }
+
+#helpWindow nav button{
+    width: auto;
+    background-color: #ffdf6c;
+    border: 2px solid #af8f2c;
+}
+#helpWindow nav button:disabled{
+    color: grey;
+}
+
 #helpWindow span, #helpWindow p {
     padding: 10px;
     box-sizing: border-box;
@@ -30,7 +40,7 @@
 #helpWindow::after {
     background-color: transparent;
 }
-#helpWindow button{
+#closeHelpWindow{
     position: absolute;
     right: 10px;
     top: 10px;

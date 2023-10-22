@@ -30,24 +30,23 @@
             </div>
         </div>
 
-        <div class="nes-container is-dark with-title" id="helpWindowUW" style="display:none;">
-            <span class="title">HILFE</span>
-            <span >Das Upgrade-Fenster</span>
-            <p>Das Upgrade-Fenster ist mega stark und du greifst das Problem an der Wurzel.</p>
-            <button class="nes-btn is-warning" class="closeUW" onclick="closeHelpWindowUW()">Schließen</button>
-        </div>
-
         <div class="nes-container is-dark with-title" id="helpWindow" style="display:none;">
             <span class="title">HILFE</span>
-            <span >Erdulator</span>
-            <p>Erdulator ist ein Spiel, dass die Zusammenhänge zwischen Klimawandel und .....</p>
-            <button class="nes-btn is-warning" class="closeUW" onclick="closeHelpWindow()">Schließen</button>
+            <button class="nes-btn is-warning" class="closeUW" id="closeHelpWindow" onclick="closeHelpWindow()">Schließen</button>
+            <nav>
+                <button onclick="helpWindowCategory('gameHelp', this.id)" id="gameNavButton" disabled="true">Spielerklärung</button>
+                <button onclick="helpWindowCategory('upgradeWindowHelp', this.id)" id="upgradeWindowNavButton">Upgradefenster</button>
+            </nav>
+            <div id="helpWindowInformation">
+                <div id="gameHelp" class="category">Erdulator ist ein Spiel, dass die Zusammenhänge zwischen Klimawandel und .....</div>
+                <div id="upgradeWindowHelp" class="category" style="display:none;">Das Upgrade-Fenster ist mega stark und du greifst das Problem an der Wurzel.</div>
+            </div>
         </div>
 
         <div class="nes-container is-dark with-title" id="upgradeWindow" style="display:none;">
             <span class="title">UPGRADES</span>
             <div id="help-closeWrapper">
-                <button class="nes-btn is-warning" class="closeUW" onclick="openHelpWindowUW()">Hilfe</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="openHelpWindow()">Hilfe</button>
                 <button class="nes-btn is-warning" class="closeUW" onclick="closeUpgradeWindow()">Schließen</button>
             </div>
             <div class="budgetwrap">
