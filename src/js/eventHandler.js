@@ -15,7 +15,12 @@ let natureConservationDay = {eventName: "natureConservationDay",eventMessage: "E
 let deforestation = {eventName: "deforestation", eventMessage: "Im "+ getRandomRegion("rainforest") + " kommt es zu starker Abholzung", reactions: deforestationReactions}
 let currentEvent = undefined
 
-let timedEvent = [worldWar1, worldWar2]
+let worldWar1 = {eventName: "worldWar1", eventStartingMessage: "Der erste Weltkrieg beginnt", eventEndingMessage: "Der erste Weltkrieg ist vorbei", reactions: worldWar1Reactions, startingYear: 1914, endingYear: 1918}
+let worldWar2 = {eventName: "worldWar2", eventStartingMessage: "Der zweite Weltkrieg beginnt", eventEndingMessage: "Der zweite Weltkrieg ist vorbei", reactions: worldWar2Reactions, startingYear: 1939, endingYear: 1945}
+let cleanAirAct = {eventName: "cleanAirAct", eventStartingMessage: "Der Clean Air Act wird verabschiedet", eventEndingMessage: "Der Clean Air Act ist verabschiedet", reactions: cleanAirActReactions, startingYear: 1963, endingYear: 1964}
+let montrealProtocol = {eventName: "MontrealProtocol", eventStartingMessage: "Das Montreal-Protokoll wird verabschiedet", eventEndingMessage: "Das Montreal-Protokoll ist verabschiedet", reactions: fckwReactions, startingYear: 1987, endingYear: 1989}
+
+let timedEvent = [worldWar1, worldWar2, cleanAirAct, montrealProtocol]
 let currentTimedEvent
 let eventInterval = 5
 
@@ -178,6 +183,18 @@ function reaction(r) {
                 if (randomValue <= 0) {
                     temperature += randomValue
                     infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + Math.abs(randomValue) + " °C verringert.</p>"
+                    break
+                }
+                break
+            case "populationGrowthRate":
+                if (randomValue > 0) {
+                    populationGrowthRate += randomValue
+                    infoPopUp.innerHTML += "<li>Die Wachstumsrate der Weltbevölkerung hat sich um " + randomValue.toFixed(3) + " % erhöht.</li>"
+                    break
+                }
+                if (randomValue < 0) {
+                    populationGrowthRate += randomValue
+                    infoPopUp.innerHTML += "<li>Die Wachstumsrate der Weltbevölkerung hat sich um " + Math.abs(randomValue.toFixed(3)) + " % verringert.</li>"
                     break
                 }
                 break
