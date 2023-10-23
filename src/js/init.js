@@ -15,6 +15,7 @@ let temperatureSlider = document.getElementById("temperatureSlider")
 
 let population = 1650000000
 let populationGameOver = 0
+let populationGameOverMax = 12650000000
 let minPopulationGrowthRate = 1.015
 let maxPopulationGrowthRate = 1.015
 let populationGrowthRate = 1.015

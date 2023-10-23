@@ -63,7 +63,7 @@ function checkDanger(){
             afforestationSlider.style.backgroundColor = "#02c23f"
       }
 
-    if (waterLevel > 8 || waterLevel < -8) {
+    if (waterLevel > 7 || waterLevel < -7) {
         waterLevelSlider.style.backgroundColor = "#de0037"
     } else if (waterLevel > 4 || waterLevel < -4) {
         waterLevelSlider.style.backgroundColor = "#ffcc14"

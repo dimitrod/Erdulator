@@ -494,9 +494,10 @@ html {
 }
 
 #barwrap {
-  position: relative;
+  display: block;
+  float:left;
+  height: auto;
   width:100%;
-  height: 20%;
   color: #FFF;
   text-align: left;
   font-family: "Dogica", sans-serif;
@@ -520,6 +521,8 @@ html {
   position: relative;
   float:right;
   width:50%;
+  padding-left:5%;
+  margin-right:-5%;
 }
 
 
@@ -559,18 +562,25 @@ html {
   background-color:#D4AF37;
 }
 
+#wrapper {
+  display: block;
+    float: left;
+    width: 100%;
+}
+
 
 .budgetwrap {
-  position: relative;
+  display: block;
+  float:left;
+  height: auto;
   width:100%;
-  height:5%;
   color: #fff;
   text-align: left;
   font-family: "Dogica", sans-serif;
   font-weight: 700;
   font-size: 20px;
-  margin-top:0;
-  margin-bottom:25px;
+  margin-top:25px;
+  margin-bottom:0px;
 }
 
 .budget {
@@ -635,8 +645,7 @@ button:hover {
 }
 
 #gameOver {
-	/* position: absolute; */
-	/* margin-top: 25%; */
+	margin-top: 25px;
 	color: #FFF;
   text-align: center;
   font-family: "Dogica", sans-serif;
@@ -648,6 +657,10 @@ button:hover {
   padding: 20px;
   position: relative;
   width:100%;
+}
+
+#restart {
+  margin-top: 25px;
 }
 
 
@@ -861,12 +874,14 @@ body{
 
 
 .attributeSlider {
+  position:relative;
   text-align:center;
   border-radius: 0px;
   height:25px;
   margin-top:10px;
   margin-bottom:15px;
   width:90%;
+  z-index:250;
   background-color: rgba(211,211,211,0.5);
   box-shadow:   -3px 0 0 0 #fff,
                 3px 0 0 0 #fff,
@@ -874,23 +889,40 @@ body{
                 0 3px 0 0 #fff;
 }
 
+.attributeSlider::after {
+  position: absolute;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  right: -4px;
+  bottom: -4px;
+  left: 0px;
+  content: "";
+  box-shadow: inset -4px -4px rgba(0,0,0,0.2);
+}
+
 
 #afforestationSlider {
   border-radius: 0px;
+  max-width: 100%;
   background-color:#D4AF37;
 }
 
 #waterLevelSlider {
   border-radius: 0px;
+  max-width: 100%;
   background-color:#D4AF37;
 }
 
 #populationSlider {
   border-radius: 0px;
+  max-width: 100%;
   background-color:#D4AF37;
 }
 
 #temperatureSlider {
   border-radius: 0px;
+  max-width: 100%;
   background-color:#D4AF37;
 }
