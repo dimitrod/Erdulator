@@ -4,7 +4,7 @@
     background-color: transparent;
     border: none;
     width: 40px;
-    aspect-ratio: 0.95;
+    aspect-ratio: 0.92;
     position: relative;
     float:right;
 
@@ -17,9 +17,14 @@
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 }
 
-#upgradeWindowButton:hover {
-    background-color: #f7d51d;
+#upgradeWindowButton:focus {
+    outline:none;
 }
+
+#upgradeWindowButton:hover {
+    filter:contrast(2);
+}
+
 #upgradeWindow .budgetwrap{
     display: inline;
     margin-bottom:10px;

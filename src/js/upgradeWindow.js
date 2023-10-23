@@ -1,4 +1,5 @@
 upgradeWindow = document.getElementById("upgradeWindow")
+upgradeWindowButton = document.getElementById("upgradeWindowButton")
 gamePage = document.getElementById("gamePage")
 theMusicPlayer = document.getElementById("musicPlayer")
 starWrapper = document.getElementById("starWrapper")
@@ -58,4 +59,16 @@ function buyUpgrade(index){
     Array.from(upgradeWrapper.getElementsByClassName("level" + upgrade.currentLevel))[0].style.backgroundColor = "green"
     /*if (upgrade.currentLevel == maxLevel)document.getElementById(upgrade.id).getElementsByTagName("button")[0].disabled=true*/
 }
+
+upgradeWindowButton.addEventListener("mousedown", function() {
+    upgradeWindowButton.style.backgroundImage = "url(resource/upgrade_new_pressed.png)";
+  });
+  
+  upgradeWindowButton.addEventListener("mouseup", function() {
+    upgradeWindowButton.style.backgroundImage = "url(resource/upgrade_new.png)";
+  });
+
+
+  
+  
 

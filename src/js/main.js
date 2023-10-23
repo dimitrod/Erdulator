@@ -1,5 +1,7 @@
 let budgetElems = Array.from(document.getElementsByClassName("budget"))
 let beginOfGame = true
+var helpimg = document.getElementById("helpimg")
+
 function createGameOverMessage(message) {
     document.getElementById("gameOverMessage").innerHTML = message
     document.getElementById("restart").innerHTML = "Neustart"
@@ -45,6 +47,22 @@ function updateAttributes() {
     populationGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + populationGrowthRate.toFixed(3)
     temperatureGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + temperatureGrowthRate.toFixed(3)
 }
+
+
+helpimg.addEventListener("mousedown", function() {
+    helpimg.src = "resource/help_pressed.png";
+  });
+  
+  helpimg.addEventListener("mouseup", function() {
+    helpimg.src = "resource/help.png";
+  });
+  
+
+
+
+
+
+
 
 function main() {
     if (beginOfGame) newEvent() // Check ob es das erste Event ist Mithilfe von beginOfGame flag
