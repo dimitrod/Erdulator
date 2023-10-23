@@ -56,35 +56,35 @@ function checkDanger(){
     }
 
     if (afforestation < 20) {
-            afforestationSlider.style.backgroundColor = "red"
+            afforestationSlider.style.backgroundColor = "#de0037"
         } else if (afforestation < 40) {
-            afforestationSlider.style.backgroundColor = "yellow"
+            afforestationSlider.style.backgroundColor = "#ffcc14"
         } else { 
-            afforestationSlider.style.backgroundColor = "green"
+            afforestationSlider.style.backgroundColor = "#02c23f"
       }
 
     if (waterLevel > 8 || waterLevel < -8) {
-        waterLevelSlider.style.backgroundColor = "red"
+        waterLevelSlider.style.backgroundColor = "#de0037"
     } else if (waterLevel > 4 || waterLevel < -4) {
-        waterLevelSlider.style.backgroundColor = "yellow"
+        waterLevelSlider.style.backgroundColor = "#ffcc14"
     } else { 
-        waterLevelSlider.style.backgroundColor = "green"
+        waterLevelSlider.style.backgroundColor = "#02c23f"
     }
 
     if (population > 10000000000 || population < 300000000) {
-        populationSlider.style.backgroundColor = "red"
+        populationSlider.style.backgroundColor = "#de0037"
     } else if (population > 8000000000 || population < 1000000000) {
-        populationSlider.style.backgroundColor = "yellow"
+        populationSlider.style.backgroundColor = "#ffcc14"
     } else { 
-        populationSlider.style.backgroundColor = "green"
+        populationSlider.style.backgroundColor = "#02c23f"
     }
 
     if (temperature > 4 || temperature < -4) {
-        temperatureSlider.style.backgroundColor = "red"
+        temperatureSlider.style.backgroundColor = "#de0037"
     } else if (temperature > 2 || temperature < -2) {
-        temperatureSlider.style.backgroundColor = "yellow"
+        temperatureSlider.style.backgroundColor = "#ffcc14"
     } else { 
-        temperatureSlider.style.backgroundColor = "green"
+        temperatureSlider.style.backgroundColor = "#02c23f"
     }
 
 

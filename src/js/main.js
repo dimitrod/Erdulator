@@ -36,7 +36,7 @@ function updateAttributes() {
         elem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
     })
     populationElems.forEach(elem => {
-        elem.innerHTML = "Bevölkerung: " + convertNum(population, 2)
+        elem.innerHTML = "Bevölk.: " + convertNum(population, 2)
     })
     temperatureElems.forEach(elem => {
         elem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
