@@ -13,15 +13,31 @@
   src:url("/resource/font/dogicapixel.ttf");
 }
 
+.nes-btn.is-success {
+  background-color: #3b9e29;
+}
+
+.nes-btn.is-success:hover {
+  background-color: #92cc41;
+}
+
+.nes-btn.is-success::after  {
+  box-shadow: inset -4px -4px rgba(0,0,0,0.2);
+}
+
+.nes-btn.is-success:hover::after {
+  box-shadow: inset -6px -6px rgba(0,0,0,0.3);
+}
+
 #musicNote {
   position: absolute; 
   bottom: 5%; left: 5%;
   height:70px;
   width: auto;
-
+  transition:300ms;
   cursor: pointer;
-  transition: opacity 200ms;
   opacity: 1;
+
 
   image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
   image-rendering: -moz-crisp-edges;          /* Firefox                        */
@@ -33,6 +49,10 @@
 
 }
 
+#musicNote:hover {
+
+  filter:contrast(2);
+}
 
 
 .display-none {
@@ -75,6 +95,31 @@
   -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 
 }
+
+#playpause {
+
+  transition: 300ms !important;
+
+}
+
+#playpause:hover {
+
+  filter:contrast(1.3);
+
+}
+
+
+#volume-slider {
+
+  transition: 300ms !important;
+
+}
+
+#volume-slider:hover {
+
+  filter:contrast(1.3);
+}
+
 
 #volume-slider {
   -webkit-appearance: none;
@@ -246,6 +291,10 @@ html {
 
   }
 
+  #quizAmountSlider::-webkit-slider-thumb:hover {
+    filter:brightness(2);
+  }
+
   .rightstart.nes-container.is-dark::after {
     background-color: transparent;
   }
@@ -270,6 +319,7 @@ html {
     height: 48px;
     position: relative;
     z-index:300;
+    transition:  .2s;
     background-image: url('../../resource/thumb_quiz.png');
     background-size: contain;
     background-position: center center;
@@ -544,16 +594,13 @@ html {
 button {
     transition: all .5s ease;
     color: #fff;
-    border: 2px solid #089c7e;
     font-family:'Minecraft', sans-serif;
     text-transform: uppercase;
     text-align: center;
     line-height: 1;
     font-size: 17px;
-    background-color : rgba(41,242,151,0.5);
     padding: 10px;
     outline: none;
-    border-radius: 4px;
     width: 100%;
 }
 button:hover {
