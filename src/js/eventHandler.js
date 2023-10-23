@@ -141,7 +141,9 @@ function reaction(r) {
     updateBudget(-reaction.cost)
     
     reaction.impacts.forEach(impact => {
-        let randomValue = Math.floor(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
+        let randomValue = Math.round(Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
+        let randomValueTemperature = (Math.random() * (impact.maxValue - impact.minValue) + impact.minValue)
+        randomValueTemperature = Math.round((randomValueTemperature + Number.EPSILON) * 100) /100
         switch (impact.param) {
             case "afforestation":
                 if (randomValue > 0) {
@@ -172,14 +174,14 @@ function reaction(r) {
                 infoPopUp.innerHTML += "<li>Es sind " + convertNum(randomValue) + " Menschen gestorben</li>"
                 break
             case "temperature":
-                if (randomValue > 0) {
-                    temperature += randomValue
-                    infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + randomValue + " °C erhöht.</li>"
+                if (randomValueTemperature > 0) {
+                    temperature += randomValueTemperature
+                    infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + randomValueTemperature + " °C erhöht.</li>"
                     break
                 }
-                if (randomValue <= 0) {
-                    temperature += randomValue
-                    infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + Math.abs(randomValue) + " °C verringert.</p>"
+                if (randomValueTemperature <= 0) {
+                    temperature += randomValueTemperature
+                    infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + Math.abs(randomValueTemperature) + " °C verringert.</p>"
                     break
                 }
                 break
