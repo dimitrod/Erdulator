@@ -29,3 +29,9 @@ function helpWindowCategory(category, btnid) {
     document.getElementById(category).style.display = "block"
     document.getElementById(btnid).disabled = true
 }
+
+function loadHelp(){
+    helpText.forEach(part => {
+        document.getElementById(part.name).innerHTML+=part.text
+    })
+}

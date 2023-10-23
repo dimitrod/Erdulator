@@ -34,11 +34,29 @@
             <span class="title">HILFE</span>
             <button class="nes-btn is-warning" class="closeUW" id="closeHelpWindow" onclick="closeHelpWindow()">Schließen</button>
             <nav>
-                <button onclick="helpWindowCategory('gameHelp', this.id)" id="gameNavButton" disabled="true">Spielerklärung</button>
-                <button onclick="helpWindowCategory('upgradeWindowHelp', this.id)" id="upgradeWindowNavButton">Upgradefenster</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('gameHelp', this.id)" id="gameNavButton" disabled="true">Spielerklärung</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('upgradeWindowHelp', this.id)" id="upgradeWindowNavButton">Upgradefenster</button>
             </nav>
             <div id="helpWindowInformation">
-                <div id="gameHelp" class="category">Erdulator ist ein Spiel, dass die Zusammenhänge zwischen Klimawandel und .....</div>
+                <div id="gameHelp" class="category">
+                    Erdulator ist ein Spiel, dass die Zusammenhänge zwischen Klimawandel und unseren Handlungen spielerisch näher bringen soll.
+                    Oben links befindet sich die Zeitleiste. Diese zeigt das aktuelle Spieljahr und den Fortschritt bis zum Spielende (Jahr 2025) an.
+                    <div id="help_eventQuiz">
+                        <br><p class="nes-container is-dark with-title" >Event- und Quizfenster</p>
+                    </div>
+                    <div id="help_budget">
+                        <br><p class="nes-container is-dark with-title" >Budget</p>
+                    </div>
+                    <div id="help_attribute">
+                        <br><p class="nes-container is-dark with-title" >Attribute</p>
+                    </div>
+                    <div id="help_music">
+                        <br><p class="nes-container is-dark with-title" >Musik</p>
+                    </div>
+                    <div id="help_Spielablauf">
+                        <br><p class="nes-container is-dark with-title" >Spielablauf</p>
+                    </div>
+                </div>
                 <div id="upgradeWindowHelp" class="category" style="display:none;">Das Upgrade-Fenster ist mega stark und du greifst das Problem an der Wurzel.</div>
             </div>
         </div>
@@ -53,8 +71,8 @@
                 <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
             </div>
             <nav>
-                <button onclick="upgradeWindowCategory('upgrades', this.id)" id="upgradeButton">Upgrades</button>
-                <button onclick="upgradeWindowCategory('investments', this.id)" id="investmentButton">Investitionen</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="upgradeWindowCategory('upgrades', this.id)" id="upgradeButton">Upgrades</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="upgradeWindowCategory('investments', this.id)" id="investmentButton">Investitionen</button>
             </nav>
             <div id="upgradeContentWrapper">
                 <div id="upgradeLeftWrapper">
@@ -187,13 +205,13 @@
     <link rel="stylesheet" href="https://unpkg.com/nes.css@latest/css/nes.min.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/upgradeWindow.css">
-    <link rel="stylesheet" href="src/css/helpUW.css">
     <link rel="stylesheet" href="src/css/help.css">
     <script src="src/js/init.js"></script>
     <script src="src/js/updateGrowthRates.js"></script>
 	<script src="src/js/basicFunctions.js"></script>
     <script src="src/js/events.js"></script>
     <script src="src/js/quizInit.js"></script>
+    <script src="src/js/helpInit.js"></script>
     <script src="src/js/initUpgrades.js"></script>
     <script src="src/js/initInvestments.js"></script>
     <script src="src/js/eventHandler.js"></script>

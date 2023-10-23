@@ -23,8 +23,6 @@
 
 #helpWindow nav button{
     width: auto;
-    background-color: #ffdf6c;
-    border: 2px solid #af8f2c;
 }
 #helpWindow nav button:disabled{
     color: grey;
@@ -45,4 +43,12 @@
     right: 10px;
     top: 10px;
     width: auto
+}
+#helpWindowInformation {
+    overflow: scroll;
+    width: 90%;
+    height: 90%;
+}
+#gameHelp p {
+    width: fit-content;
 }
