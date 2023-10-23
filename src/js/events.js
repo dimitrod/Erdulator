@@ -5,7 +5,7 @@ let earthquakeReactions = [
         impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
             param: "afforestation",
             minValue: 1,
-            maxValue: 3
+            maxValue: 2
         }],
         triggers: []
     },
@@ -15,7 +15,7 @@ let earthquakeReactions = [
         impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {
             param: "afforestation",
             minValue: 1,
-            maxValue: 3
+            maxValue: 2
         }],
         triggers: []
     },
@@ -25,7 +25,7 @@ let earthquakeReactions = [
         impacts: [{param: "population", minValue: 9000, maxValue: 90000}, {
             param: "afforestation",
             minValue: 1,
-            maxValue: 3
+            maxValue: 2
         }],
         triggers: []
     }
@@ -38,17 +38,17 @@ let tsunamiReactions = [
         impacts: [{param: "population", minValue: 10000, maxValue: 20000}, {
             param: "afforestation",
             minValue: 1,
-            maxValue: 3
+            maxValue: 2
         }],
         triggers: []
     },
     {
-        reaction: "Frühwarnsystem errichten",
-        cost: 5 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
+        reaction: "Rettungsteams schicken",
+        cost: 3 * Math.pow(10,6),
+        impacts: [{param: "population", minValue: 15000, maxValue: 50000}, {
             param: "afforestation",
             minValue: 1,
-            maxValue: 3
+            maxValue: 2
         }],
         triggers: []
     },
@@ -58,7 +58,7 @@ let tsunamiReactions = [
         impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
             param: "afforestation",
             minValue: 1,
-            maxValue: 3
+            maxValue: 2
         }],
         triggers: []
     }
@@ -68,11 +68,7 @@ let droughtReactions = [
     {
         reaction: "Aufforsten",
         cost: 3 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 2000, maxValue: 10000}, {
-            param: "afforestation",
-            minValue: 1,
-            maxValue: 2
-        }, {param: "waterLevel", minValue: -1, maxValue: -2}],
+        impacts: [{param: "population", minValue: 2000, maxValue: 10000}, {param: "waterLevel", minValue: -1, maxValue: -2}],
         triggers: []
     },
     {
@@ -80,8 +76,8 @@ let droughtReactions = [
         cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
             param: "afforestation",
-            minValue: 3,
-            maxValue: 4
+            minValue: 1,
+            maxValue: 2
         }, {param: "waterLevel", minValue: -1, maxValue: -2}],
         triggers: []
     },
@@ -90,8 +86,8 @@ let droughtReactions = [
         cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 2000, maxValue: 20000}, {
             param: "afforestation",
-            minValue: 3,
-            maxValue: 4
+            minValue: 1,
+            maxValue: 2
         }, {param: "waterLevel", minValue: -1, maxValue: -2}],
         triggers: []
     }
@@ -103,8 +99,8 @@ let bushFireReactions = [
         cost: 3 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1500, maxValue: 15000}, {
             param: "temperature",
-            minValue: 1,
-            maxValue: 1
+            minValue: 0.2,
+            maxValue: 0.2
         }, {param: "animalSpecies", minValue: 100, maxValue: 1000}, {
             param: "afforestation",
             minValue: 1,
@@ -117,12 +113,12 @@ let bushFireReactions = [
         cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
             param: "temperature",
-            minValue: 1,
-            maxValue: 1
+            minValue: 0.2,
+            maxValue: 0.2
         }, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {
             param: "afforestation",
-            minValue: 4,
-            maxValue: 5
+            minValue: 2,
+            maxValue: 3
         }],
         triggers: []
     },
@@ -131,12 +127,12 @@ let bushFireReactions = [
         cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
             param: "temperature",
-            minValue: 1,
-            maxValue: 1
+            minValue: 0.2,
+            maxValue: 0.2
         }, {param: "animalSpecies", minValue: 500, maxValue: 5000}, {
             param: "afforestation",
-            minValue: 4,
-            maxValue: 5
+            minValue: 2,
+            maxValue: 3
         }],
         triggers: []
     }
@@ -158,8 +154,8 @@ let floodReactions = [
         cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
             param: "afforestation",
-            minValue: 2,
-            maxValue: 3
+            minValue: 1,
+            maxValue: 2
         }],
         triggers: []
     },
@@ -168,8 +164,8 @@ let floodReactions = [
         cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
             param: "afforestation",
-            minValue: 2,
-            maxValue: 3
+            minValue: 1,
+            maxValue: 2
         }],
         triggers: []
     }
@@ -181,9 +177,9 @@ let vulcanicEruptionReactions = [
         cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
             param: "temperature",
-            minValue: 1,
-            maxValue: 1
-        }, {param: "afforestation", minValue: 4, maxValue: 8}],
+            minValue: 0.2,
+            maxValue: 0.2
+        }, {param: "afforestation", minValue: 3, maxValue: 5}],
         triggers: []
     },
     {
@@ -191,9 +187,9 @@ let vulcanicEruptionReactions = [
         cost: 3 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 2000, maxValue: 20000}, {
             param: "temperature",
-            minValue: 1,
-            maxValue: 1
-        }, {param: "afforestation", minValue: 4, maxValue: 8}],
+            minValue: 0.2,
+            maxValue: 0.2
+        }, {param: "afforestation", minValue: 3, maxValue: 5}],
         triggers: []
     },
     {
@@ -201,9 +197,9 @@ let vulcanicEruptionReactions = [
         cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 6000, maxValue: 60000}, {
             param: "temperature",
-            minValue: 1,
-            maxValue: 1
-        }, {param: "afforestation", minValue: 4, maxValue: 8}],
+            minValue: 0.2,
+            maxValue: 0.2
+        }, {param: "afforestation", minValue: 3, maxValue: 5}],
         triggers: []
     }
 ]
@@ -227,30 +223,18 @@ let pandemicReactions = [
 let oilTankerExplosionReactions = [
     {
         reaction: "Öl abfischen",
-        cost: 10 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: 1, maxValue: 2}, {
-            param: "animalSpecies",
-            minValue: 100,
-            maxValue: 1000
-        }]
+        cost: 4 * Math.pow(10,6),
+        impacts: [{param: "afforestation", minValue: 0, maxValue: 1}]
     },
     {
         reaction: "Tanker bergen",
-        cost: 7 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: 1, maxValue: 2}, {
-            param: "animalSpecies",
-            minValue: 200,
-            maxValue: 2000
-        }]
+        cost: 2 * Math.pow(10,6),
+        impacts: [{param: "afforestation", minValue: 1, maxValue: 2}]
     },
     {
         reaction: "Nichts machen",
         cost: 0 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: 1, maxValue: 2}, {
-            param: "animalSpecies",
-            minValue: 1000,
-            maxValue: 10000
-        }]
+        impacts: [{param: "afforestation", minValue: 1, maxValue: 2}]
     }
 ]
 
@@ -260,8 +244,8 @@ let tornadoReactions = [
         cost: 4 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 1000, maxValue: 10000}, {
             param: "afforestation",
-            minValue: 2,
-            maxValue: 4
+            minValue: 1,
+            maxValue: 2
         },]
     },
     {
@@ -269,8 +253,8 @@ let tornadoReactions = [
         cost: 3 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 3000, maxValue: 30000}, {
             param: "afforestation",
-            minValue: 2,
-            maxValue: 4
+            minValue: 1,
+            maxValue: 2
         },]
     },
     {
@@ -278,8 +262,8 @@ let tornadoReactions = [
         cost: 0 * Math.pow(10,6),
         impacts: [{param: "population", minValue: 8000, maxValue: 80000}, {
             param: "afforestation",
-            minValue: 2,
-            maxValue: 4
+            minValue: 1,
+            maxValue: 2
         },]
     },
 ]
@@ -308,15 +292,13 @@ let warReactions = [
 let pestInfestationReactions = [
     {
         reaction: "Großflächig mit Pestiziden bekämpfen",
-        cost: 10 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, 
-        {param: "animalSpecies", minValue: 500, maxValue: 5000}]
+        cost: 8 * Math.pow(10,6),
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}]
     },
     {
         reaction: "nötige Waren importieren",
-        cost: 8 * Math.pow(10,6),
-        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, 
-        {param: "animalSpecies", minValue: 100, maxValue: 1000}]
+        cost: 6 * Math.pow(10,6),
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}]
     },
     {
         reaction: "Nichts machen",
@@ -333,7 +315,7 @@ let meltingPolesReactions = [
             param: "animalSpecies",
             minValue: 100,
             maxValue: 1000
-        }, {param: "waterLevel", minValue: 1, maxValue: 5}, {param: "temperature", minValue: -1, maxValue: -2}],
+        }, {param: "waterLevel", minValue: 1, maxValue: 3}, {param: "temperature", minValue: -0.3, maxValue: -0.5}],
         triggers: []
     },
     {
@@ -343,7 +325,7 @@ let meltingPolesReactions = [
             param: "animalSpecies",
             minValue: 100,
             maxValue: 1000
-        }, {param: "waterLevel", minValue: 1, maxValue: 5}, {param: "temperature", minValue: -1, maxValue: -2}],
+        }, {param: "waterLevel", minValue: 1, maxValue: 3}, {param: "temperature", minValue: -0.2, maxValue: -0.4}],
         triggers: []
     },
     {
@@ -351,9 +333,9 @@ let meltingPolesReactions = [
         cost: 0 * Math.pow(10,6),
         impacts: [{param: "animalSpecies", minValue: 100, maxValue: 1000}, {
             param: "waterLevel",
-            minValue: 1,
-            maxValue: 5
-        }, {param: "temperature", minValue: -1, maxValue: -2}],
+            minValue: 2,
+            maxValue: 3
+        }, {param: "temperature", minValue: -0.1, maxValue: -0.2}],
         triggers: []
     },
 ]
@@ -362,12 +344,12 @@ let natureConservationDayReactions = [
     {
         reaction: "Stark unterstützen",
         cost: 14 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: -4, maxValue: -10}]
+        impacts: [{param: "afforestation", minValue: -7, maxValue: -14}, {param: "temperature", minValue: -0.3, maxValue: -0.6}, {param: "waterlevel", minValue: -3, maxValue: -5}]
     },
     {
         reaction: "Etwas unterstützen",
         cost: 7 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: -2, maxValue: -7}]
+        impacts: [{param: "afforestation", minValue: -5, maxValue: -10}, {param: "temperature", minValue: -0.2, maxValue: -0.3}, {param: "waterlevel", minValue: -1, maxValue: -3}]
     },
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "nothing", minValue: 0, maxValue: 0}]}
 ]
@@ -433,12 +415,12 @@ let deforestationReactions = [
     {
         reaction: "Naturschutzgebiete einrichten",
         cost: 8 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: -2, maxValue: -4}]
+        impacts: [{param: "afforestation", minValue: -2, maxValue: -4}, {param: "temperature", minValue: -0.2, maxValue: -0.4}]
     },
     {
         reaction: "Abholzung regulieren",
         cost: 4 * Math.pow(10,6),
-        impacts: [{param: "afforestation", minValue: 1, maxValue: 3}]
+        impacts: [{param: "afforestation", minValue: 1, maxValue: 3}, {param: "temperature", minValue: -0.1, maxValue: -0.3}]
     },
     {reaction: "Nichts machen", cost: 0, impacts: [{param: "afforestation", minValue: 2, maxValue: 5}]},
 ]
