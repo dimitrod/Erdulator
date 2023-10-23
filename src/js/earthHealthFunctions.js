@@ -41,14 +41,16 @@ function checkDanger(){
 
     if (population >= 9000000000) {
 
+        citiesImage.style.filter = "sepia(100%) hue-rotate(320deg) brightness(90%) saturate(600%)";
         citiesImage.src = "resource/planet/cities_03.gif";
 
     } else if (population >= 6000000000) {
 
+        citiesImage.style.filter = "sepia(100%) hue-rotate(320deg) brightness(100%) saturate(300%)";
         citiesImage.src = "resource/planet/cities_02.gif";
 
     } else {
-
+        citiesImage.style.filter = "sepia(100%) hue-rotate(320deg) brightness(100%) saturate(150%)";
         citiesImage.src = "resource/planet/cities_01.gif";
 
     }
