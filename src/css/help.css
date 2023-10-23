@@ -76,6 +76,7 @@
 }
 #helpWindowInformation {
     overflow: scroll;
+    overflow-x: hidden;
     width: 90%;
     height: 90%;
 }

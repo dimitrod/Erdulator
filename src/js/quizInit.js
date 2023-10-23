@@ -11,7 +11,7 @@ const quiz = [
         choices: ["746 Millionen", "1.045 Millionen", "67 Millionen"],
         answer: 0,
         reward: 1.4,
-        information: "Im Jahr 2022 verursachte Deutschland rund 746 Millionen Tonnen CO2-Äquivalente, wovon 786 Millionen Tonnen reines CO2 waren."
+        information: "Im Jahr 2022 verursachte Deutschland rund 746 Millionen Tonnen CO2-Äquivalente, wovon 666 Millionen Tonnen reines CO2 waren."
     },
     {
         question:"Welche Alternativen gibt es zu torfhaltiger Blumenerde?",
@@ -193,7 +193,7 @@ const quiz = [
         choices: ["Monokulturen", "Agroforstwirtschaft", "Pestizideinsatz"],
         answer: 1,
         reward: 1.8,
-        information: "Agroforstwitschaft, die Bäume und Nutzpflanzen kombiniert, kann zur Reduzierung der Bodenerosion und Erhaltung der Bodenfruchtbarkeit beitragen."
+        information: "Agroforstwirtschaft, die Bäume und Nutzpflanzen kombiniert, kann zur Reduzierung der Bodenerosion und Erhaltung der Bodenfruchtbarkeit beitragen."
     },
     {
         question:"Welche Maßnahme kann zur Verringerung von Plastikmüll im Meer beitragen?",
@@ -379,7 +379,7 @@ const quiz = [
     },
     {
         question:"Welche Aussage ist wahr?",
-        choices: ["Elektrogeräte im Standby-Modus verbrauchen keine Energie.", "Elektrogeräte im Standby-Modus verbrauchen genauso viel Energie wie im Betrieb.", "Der Energieverbrauch von Elektrogeräten im Standby-Modus kann vernachlässigt werden."],
+        choices: ["Elektrogeräte im Standby-Modus verbrauchen keine Energie.", "Elektrogeräte im Standby-Modus verbrauchen weiterhin viel Energie.", "Der Energieverbrauch von Elektrogeräten im Standby-Modus kann vernachlässigt werden."],
         answer: 1,
         reward: 1.2,
         information: "Elektrogeräte im Standby-Modus verbrauchen weiterhin Energie, auch wenn sie nicht aktiv genutzt werden."
@@ -445,7 +445,7 @@ const quiz = [
         choices: ["Sie tragen zur Erwärmung der Erde bei", "Sie haben keinen Einfluss auf das Klima", "Sie absorbieren Kohlendioxid"],
         answer: 2,
         reward: 1.1,
-        information: "Regenwälder sind wichtige Kohlenstoffsenken und tragen zur Reduzierung von Treibhausgasen bei. Sie tragen zur Stabilisierung des Klimas bei."
+        information: "Regenwälder sind wichtige Kohlenstoffsenken und tragen zur Reduzierung von Treibhausgasen, sowie der Stabilisierung des Klimas bei."
     },
     {
         question:"Was ist der Boden in Regenwäldern oft?",
@@ -483,9 +483,9 @@ const quiz = [
         information: "Teakholz ist eine Holzart, die oft illegal aus den Regenwäldern entnommen wird und aufgrund ihrer Qualität sehr begehrt ist."
     },
     {
-        question:"Welche der folgenden Naturkatastrophen wir durch die Bewegung der Erdplatten verursacht?",
-        choices: ["Vulkanausbruch", "Hitzewelle", "Tornade"],
-        answer: 0,
+        question:"Welche der folgenden Naturkatastrophen wird durch die Bewegung der Erdplatten verursacht?",
+        choices: ["Vulkanausbruch", "Hitzewelle", "Tornado"],
+        answer: 1,
         reward: 0.8,
         information: "Vulkanausbrüche werden oft durch die Bewegung der Erdplatten und den Ausstoß von Magma verursacht."
     },
@@ -538,4 +538,40 @@ const quiz = [
         reward: 0.8,
         information: "Abholzung kann dazu führen, dass Tier- und Pflanzenarten ihre Lebensräume verlieren und aussterben."
     },
+    {
+        question:"Wann fand der Earth Overshoot Day im Jahr 2021 statt?",
+        choices: ["Am 15. Juli", "Am 29. Juli", "Am 22. August"],
+        answer: 1,
+        reward: 0.8,
+        information: "Der Earth Overshoot Day, auch als Erdüberlastungstag bekannt, ist das Datum im Jahr, an dem die Menschheit mehr Ressourcen und ökologische Dienstleistungen verbraucht hat, als die Erde in diesem Jahr regenerieren kann.Im Jahr 2021 fiel dieser Tag auf den 29. Juli, was bedeutet, dass die Menschheit in den ersten sieben Monaten des Jahres mehr Ressourcen verbraucht hat, als die Erde in einem gesamten Jahr erneuern kann. Dies verdeutlicht die Dringlichkeit der globalen Nachhaltigkeitsbemühungen, um die ökologische Überlastung zu verringern.\n"
+    },
+    {
+        question:"Welche der folgenden Aktivitäten hat den größten Einfluss auf den individuellen CO2-Fußabdruck?",
+        choices: ["Fleischkonsum", "Autofahren", "Energieverbrauch im Haushalt"],
+        answer: 0,
+        reward: 1.3,
+        information: "Der individuelle CO2-Fußabdruck kann durch verschiedene Aktivitäten beeinflusst werden, aber der Fleischkonsum hat oft den größten Einfluss. Die Produktion von Fleisch, insbesondere Rindfleisch, erfordert erhebliche Ressourcen wie Land, Wasser und Futtermittel. Dies geht mit einem hohen Ausstoß von Treibhausgasen einher, insbesondere Methan, das bei der Verdauung von Wiederkäuern entsteht. Daher kann die Reduzierung des Fleischkonsums einen signifikanten Beitrag zur Verringerung des individuellen CO2-Fußabdrucks leisten."
+    },
+    {
+        question:"Welche der folgenden Sektoren ist der Hauptverursacher des CO2e-Fußabdrucks auf globaler Ebene?",
+        choices: ["Industrie", "Landwirtschaft", "Elektrizität-und Wärmeerzeugung"],
+        answer: 2,
+        reward: 1.1,
+        information: "Obwohl verschiedene Sektoren zur globalen CO2-Emission beitragen, ist die Elektrizität-und Wärmeerzeugung der Hauptverursacher des CO2-Fußabdrucks auf globaler Ebene. Auf Platz 2 ist der Transport, Platz 3: Bau und Platz 4: Landwirtschaft. Quelle:https://ourworldindata.org/emissions-by-sector"
+    },
+    {
+        question:"Wer gilt als der Begründer des Konzepts des CO2-Fußabdrucks?",
+        choices: ["Greta Thunberg", "Beyond Petroleum", "William Rees"],
+        answer: 2,
+        reward: 1.7,
+        information: "Die Idee des CO2-Fußabdrucks geht auf Dr. William Rees im Jahr 1990 zurück, einen kanadischen Wissenschaftler und Professor für Umweltmanagement.BP gab 250 Millionen Dollar aus, um den Begriff des 'CO2-Fußabdrucks' populär zu machen. Damit wollte BP dieAufmerksamkeit auf den individuellen Verbrauch lenken. Große Fossilunternehmen beeinflussen durch ihr Angebot viel stärker, was getankt und womit geheizt wird. "
+    },
+    {
+        question:"Um welchen Faktor haben sich die CO2-Emissionen seit 1900 vervielfacht?",
+        choices: ["5", "30", "18"],
+        answer: 2,
+        reward: 1.7,
+        information: "Die globalen Kohlendioxid (CO2)-Emissionen im Jahr 1900 betrugen schätzungsweise etwa 1,9 Milliarden Tonnen pro Jahr. Im Jahr 2019 betrugen die weltweiten CO2-Emissionen rund 37 Milliarden Tonnen pro Jahr. Sie haben sich also verachtzehnfacht."
+    },
 ]
+
