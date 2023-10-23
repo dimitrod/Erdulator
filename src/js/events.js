@@ -2,7 +2,7 @@ let earthquakeReactions = [
     {
         reaction: "Bergungsteam schicken",
         cost: 2 * Math.pow(10,6),
-        impacts: [{param: "population", amount: "mid"}, {
+        impacts: [{param: "population", minValue: 5000, maxValue: 50000}, {
             param: "afforestation",
             minValue: 1,
             maxValue: 3
