@@ -856,3 +856,39 @@ body{
   -ms-user-select: none;
   user-select: none;
 }
+
+
+.attributeSlider {
+  text-align:center;
+  border-radius: 0px;
+  height:25px;
+  margin-top:10px;
+  margin-bottom:15px;
+  width:80%;
+  background-color: rgba(211,211,211,0.5);
+  box-shadow:   -3px 0 0 0 #fff,
+                3px 0 0 0 #fff,
+                0 -3px 0 0 #fff,
+                0 3px 0 0 #fff;
+}
+
+
+#afforestationSlider {
+  border-radius: 0px;
+  background-color:#D4AF37;
+}
+
+#waterLevelSlider {
+  border-radius: 0px;
+  background-color:#D4AF37;
+}
+
+#populationSlider {
+  border-radius: 0px;
+  background-color:#D4AF37;
+}
+
+#temperatureSlider {
+  border-radius: 0px;
+  background-color:#D4AF37;
+}

@@ -42,6 +42,13 @@ function updateAttributes() {
         elem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
     })
 
+
+    afforestationSlider.style.width = parseInt(afforestation)+"%";
+    waterLevelSlider.style.width = parseInt(((waterLevel+10)/20)*100)+"%";
+    populationSlider.style.width = parseInt(population/116500000)+"%";
+    temperatureSlider.style.width = parseInt(((temperature+5)/10)*100)+"%";
+
+
     afforestationGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + afforestationGrowthRate.toFixed(3)
     waterLevelGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + waterLevelGrowthRate.toFixed(3)
     populationGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + populationGrowthRate.toFixed(3)

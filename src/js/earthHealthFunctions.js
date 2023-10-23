@@ -55,8 +55,50 @@ function checkDanger(){
 
     }
 
+    if (afforestation < 20) {
+            afforestationSlider.style.backgroundColor = "red"
+        } else if (afforestation < 40) {
+            afforestationSlider.style.backgroundColor = "yellow"
+        } else { 
+            afforestationSlider.style.backgroundColor = "green"
+      }
 
-    
+    if (waterLevel > 8 || waterLevel < -8) {
+        waterLevelSlider.style.backgroundColor = "red"
+    } else if (waterLevel > 4 || waterLevel < -4) {
+        waterLevelSlider.style.backgroundColor = "yellow"
+    } else { 
+        waterLevelSlider.style.backgroundColor = "green"
+    }
+
+    if (population > 10000000000 || population < 300000000) {
+        populationSlider.style.backgroundColor = "red"
+    } else if (population > 8000000000 || population < 1000000000) {
+        populationSlider.style.backgroundColor = "yellow"
+    } else { 
+        populationSlider.style.backgroundColor = "green"
+    }
+
+    if (temperature > 4 || temperature < -4) {
+        temperatureSlider.style.backgroundColor = "red"
+    } else if (temperature > 2 || temperature < -2) {
+        temperatureSlider.style.backgroundColor = "yellow"
+    } else { 
+        temperatureSlider.style.backgroundColor = "green"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -8,6 +8,10 @@ let waterLevelElems = Array.from(document.getElementsByClassName("waterLevel"))
 let populationElems = Array.from(document.getElementsByClassName("population"))
 let temperatureElems = Array.from(document.getElementsByClassName("temperature"))
 
+let afforestationSlider = document.getElementById("afforestationSlider")
+let waterLevelSlider = document.getElementById("waterLevelSlider")
+let populationSlider = document.getElementById("populationSlider")
+let temperatureSlider = document.getElementById("temperatureSlider")
 
 let population = 1650000000
 let populationGameOver = 0
