@@ -272,7 +272,7 @@ html {
 #gamePage {
   position:absolute;
   width: 100%;
-  top: 5%;
+  height:100%;
   }
 
   #quizConfig {
@@ -425,10 +425,9 @@ html {
 
   #timedEventPopup {
     position: absolute;
+    width:100%;
+    height:100%;
     z-index: 500;
-    width:70%;
-    left: 50%;
-    transform: translate(-50%, 0%);
 
     
 }
@@ -437,12 +436,19 @@ html {
   #timedEventMessageWrap {
     position:absolute;
     height:auto;
-    top:100px;
     font-family: "Dogica", sans-serif;
     font-size: 16px;
     border-color: red;
+
+    left: 25%;
+    top:50%;
+    transform: translate(-50%, -50%);
     
 
+  }
+
+  #timedEventMessageWrap::after {
+    background-color: transparent;
   }
 
   #timedEventMessageWrap p {
