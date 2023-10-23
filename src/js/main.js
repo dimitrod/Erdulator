@@ -72,6 +72,7 @@ function main() {
     if (!currentEvent) makeQuiz() // Wenn kein Event an ist, mach ein Quiz
 }
 
+loadHelp()
 loadUpgrades()
 loadInvestments()
 budgetElems = Array.from(document.getElementsByClassName("budget"))
