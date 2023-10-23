@@ -485,7 +485,7 @@ const quiz = [
     {
         question:"Welche der folgenden Naturkatastrophen wir durch die Bewegung der Erdplatten verursacht?",
         choices: ["Vulkanausbruch", "Hitzewelle", "Tornade"],
-        answer: 1,
+        answer: 0,
         reward: 0.8,
         information: "Vulkanausbrüche werden oft durch die Bewegung der Erdplatten und den Ausstoß von Magma verursacht."
     },
