@@ -46,6 +46,8 @@ function updateAttributes() {
     waterLevelGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + waterLevelGrowthRate.toFixed(3)
     populationGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + populationGrowthRate.toFixed(3)
     temperatureGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + temperatureGrowthRate.toFixed(3)
+
+    checkDanger()
 }
 
 
