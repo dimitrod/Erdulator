@@ -161,7 +161,7 @@ const quiz = [
         information: "Bei der Verbrennung von fossilen Brennstoffen entsteht vor allem Kohlenstoffdioxid."
     },
     {
-        question:"Welche Tierart ist sehr stark von der der Entwaldung und Lebensraumzerstörung betroffen?",
+        question:"Welche Tierart ist sehr stark von der Entwaldung und Lebensraumzerstörung betroffen?",
         choices: ["Tiger", "Grauwolf", "Elefant"],
         answer: 0,
         reward: 1.3,
@@ -485,7 +485,7 @@ const quiz = [
     {
         question:"Welche der folgenden Naturkatastrophen wird durch die Bewegung der Erdplatten verursacht?",
         choices: ["Vulkanausbruch", "Hitzewelle", "Tornado"],
-        answer: 1,
+        answer: 0,
         reward: 0.8,
         information: "Vulkanausbrüche werden oft durch die Bewegung der Erdplatten und den Ausstoß von Magma verursacht."
     },
