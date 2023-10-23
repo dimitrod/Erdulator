@@ -92,6 +92,14 @@
         </div>
 
         <div id="gamePage" style="display:none;">
+
+            <div id="timedEventPopup" style="display: none;">
+                <div class="nes-container is-dark with-title" id="timedEventMessageWrap">
+                    <p class="title">WELT EREIGNIS</p>
+                    <div id="timedEventMessage"></div>
+                </div>
+            </div>
+
             <div class="planetwrap">
                 
                 <div id="yearwrap">
@@ -103,14 +111,7 @@
                         <p>Zeitleiste</p>
                     </div>
                 </div>
-              
-                    <div id="timedEventPopup" style="display: none;">
-                        <div class="nes-container is-dark with-title" id="timedEventMessageWrap">
-                            <p class="title">WELT EREIGNIS</p>
-                            <div id="timedEventMessage"></div>
-                        </div>
-                    </div>
-                    
+
                     <div id="planetImageWrap">
                         <img id="cities" src="resource/planet/cities_01.gif" alt="Cities" class="center">
                         <img id="continents" src="resource/planet/good_new.gif" alt="Continents" class="center">
@@ -122,6 +123,42 @@
             <div class="rightwrap">
                 <div class='title'>
                     <span> ERDULATOR </span>
+                </div>
+                <div id ="barwrap">
+                    <div id="barwrap_left">
+                        <span class = "afforestation"></span>
+                        <div class = "infoContainer" style="margin: 0px">&#x1F6C8
+                            <div id="afforestationGrowthRate" class = "upgradeInfo"></div>
+                        </div>
+                        <div class="attributeSlider" id="afforestationSliderWrap">
+                            <div id="afforestationSlider">&nbsp;</div>
+                        </div>
+                       
+                        <span class = "waterLevel"></span>
+                        <div class = "infoContainer" style="margin: 0px">&#x1F6C8
+                            <div id="waterLevelGrowthRate" class = "upgradeInfo"></div>
+                        </div>
+                        <div class="attributeSlider" id="waterLevelSliderWrap">
+                            <div id="waterLevelSlider">&nbsp;</div>
+                        </div>
+                        
+                    </div>
+                    <div id="barwrap_right">
+                        <span class = "population"></span>
+                        <div class = "infoContainer" style="margin: 0px">&#x1F6C8
+                            <div id="populationGrowthRate" class = "upgradeInfo"></div>
+                        </div>
+                        <div class="attributeSlider" id="populationSliderWrap">
+                            <div id="populationSlider">&nbsp;</div>
+                        </div>
+                        <span class ="temperature"></span><div class = "infoContainer" style="margin: 0px"> &#x1F6C8
+                            <div id="temperatureGrowthRate" class = "upgradeInfo"></div>
+                        </div>
+                        <div class="attributeSlider" id="temperatureSliderWrap">
+                            <div id="temperatureSlider">&nbsp;</div>
+                        </div>
+                        
+                    </div>
                 </div>
                 <div class="budgetwrap">
                     <img id="helpimg" src="resource/help.png" alt="Hilfe" class="closeUW" id="helpButton" onclick="openHelpWindow()">
@@ -162,28 +199,7 @@
                         <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
                         <button class="nes-btn is-warning" id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; main()">Schließen</button>
                     </div>
-                    <div id ="barwrap">
-                        <div id="barwrap_left">
-                            <span class = "afforestation"></span>
-                            <div class = "infoContainer" style="margin: 0px">&#x1F6C8
-                                <div id="afforestationGrowthRate" class = "upgradeInfo"></div>
-                            </div><br>
-                            <span class = "waterLevel"></span>
-                            <div class = "infoContainer" style="margin: 0px">&#x1F6C8
-                                <div id="waterLevelGrowthRate" class = "upgradeInfo"></div>
-                            </div>
-                        </div>
-                        <div id="barwrap_right">
-                            <span class = "population"></span>
-                            <div class = "infoContainer" style="margin: 0px">&#x1F6C8
-                                <div id="populationGrowthRate" class = "upgradeInfo"></div>
-                            </div><br>
-                            <span class = "temperature"></span>
-                            <div class = "infoContainer" style="margin: 0px">&#x1F6C8
-                                <div id="temperatureGrowthRate" class = "upgradeInfo"></div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
