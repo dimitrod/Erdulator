@@ -379,7 +379,7 @@ const quiz = [
     },
     {
         question:"Welche Aussage ist wahr?",
-        choices: ["Elektrogeräte im Standby-Modus verbrauchen keine Energie.", "Elektrogeräte im Standby-Modus verbrauchen genauso viel Energie wie im Betrieb.", "Der Energieverbrauch von Elektrogeräten im Standby-Modus kann vernachlässigt werden."],
+        choices: ["Elektrogeräte im Standby-Modus verbrauchen keine Energie.", "Elektrogeräte im Standby-Modus verbrauchen weiterhin viel Energie.", "Der Energieverbrauch von Elektrogeräten im Standby-Modus kann vernachlässigt werden."],
         answer: 1,
         reward: 1.2,
         information: "Elektrogeräte im Standby-Modus verbrauchen weiterhin Energie, auch wenn sie nicht aktiv genutzt werden."
@@ -484,7 +484,7 @@ const quiz = [
     },
     {
         question:"Welche der folgenden Naturkatastrophen wird durch die Bewegung der Erdplatten verursacht?",
-        choices: ["Vulkanausbruch", "Hitzewelle", "Tornade"],
+        choices: ["Vulkanausbruch", "Hitzewelle", "Tornada"],
         answer: 1,
         reward: 0.8,
         information: "Vulkanausbrüche werden oft durch die Bewegung der Erdplatten und den Ausstoß von Magma verursacht."
@@ -571,7 +571,7 @@ const quiz = [
         choices: ["5", "30", "18"],
         answer: 2,
         reward: 1.7,
-        information: "Die globalen Kohlendioxid (CO2)-Emissionen im Jahr 1900 betrugen schätzungsweise etwa 1,9 Milliarden Tonnen pro Jahr. Im Jahr 2019 betrugen die weltweiten CO2-Emissionen rund 37 Milliarden Tonnen pro Jahr"
+        information: "Die globalen Kohlendioxid (CO2)-Emissionen im Jahr 1900 betrugen schätzungsweise etwa 1,9 Milliarden Tonnen pro Jahr. Im Jahr 2019 betrugen die weltweiten CO2-Emissionen rund 37 Milliarden Tonnen pro Jahr. Sie haben sich also verachtzehnfacht."
     },
 ]
 
