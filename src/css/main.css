@@ -990,7 +990,8 @@ body{
 
   #startPage > .title {
     top: 15%;
-    margin-left:1%;
+    padding-left: 1%;
+    
   } 
 
   #startPage > .title > span {
@@ -1098,6 +1099,7 @@ body{
     font-size: 8px;
     margin-left: 5px;
     z-index: 999;
+    text-shadow: 1px 1px #333 !important;
   }
 
   #barwrap span:first-child {
@@ -1119,24 +1121,42 @@ body{
     z-index: 999;
   }
 
-  .topInfo{
+  .topInfo {
     margin-top: 9px;
   }
 
   .budgetwrap {
 
-    width:90vw;
-    margin-left:5vw;
+    width:98vw;
+    margin-left:1vw;
     margin-top: 10px;
+    padding:5px;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: -3px 0 0 0 #fff, 3px 0 0 0 #fff, 0 -3px 0 0 #fff, 0 3px 0 0 #fff;
+    margin-bottom: 10px;
   }
 
   .budgetwrap span {
     font-size:14px;
+    
+    text-shadow: 1px 1px #333;
   }
 
-  .budgetChangeWrapper {
+  .budgetChange {
+    position:absolute;
+    padding:10px;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: -3px 0 0 0 #f7d51d, 3px 0 0 0 #f7d51d, 0 -3px 0 0 #f7d51d, 0 3px 0 0 #f7d51d;
+    margin-top:10%;
+    left: 50%;
+    z-index: 800;
+    transform: translate(-50%, 0);
+    text-shadow: 2px 2px #333 !important;
     
-    
+  }
+
+  .infoContainer .upgradeInfo {
+    margin-left: -25vw;
   }
 
   #upgradeWindowButton {
@@ -1157,29 +1177,45 @@ body{
   #gameOverMessage, #eventMessage, #quizQuestion, #answer, #background, #eQMessage {
     padding-left: 5px;
     font-size: 10px;
-}
+  }
+  #quizAmountSlider {
+    width: 70%;
+  }
+  
 
-  #stats {
-    margin-left: 0;
-    padding-left: 20px;
-    font-size: 10px;
+    #stats {
+      margin-left: 0;
+      padding-left: 20px;
+      font-size: 10px;
+    }
+
+    #timedEventPopup {
+      opacity:0;
+    }
+
+    #gameOverStatistic {
+      font-size:10px;
   }
 
-  #timedEventPopup {
-    opacity:0;
+  #planet, #continents, #cities {
+  width:90vw;
+
   }
 
-  #gameOverStatistic {
-    font-size:10px;
-}
+  #gameOver {
+    width:auto;
+  }
 
-#planet, #continents, #cities {
-width:90vw;
+  .nes-btn {
+    padding: 10px 4px;
+  }
 
-}
+  .thetitle {
+    margin-right: -15px !important;
+  }
 
-#gameOver {
-  width:auto;
-}
+  .nes-container.is-dark {
+    margin:0px;
+  }
 
 }
