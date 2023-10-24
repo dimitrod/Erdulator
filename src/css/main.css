@@ -659,7 +659,7 @@ button {
   }
 }
 
-@media screen and (min-width: 2200px) {
+@media screen and (max-width: 1300px) {
   .nes-btn {
     padding: 2px 4px;
   }
