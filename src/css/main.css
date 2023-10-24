@@ -1093,8 +1093,34 @@ body{
   }
 
   #barwrap span {
-    margin-top: 5px;
-    font-size: 9px;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 8px;
+    margin-left: 5px;
+    z-index: 999;
+  }
+
+  #barwrap span:first-child {
+    margin-top:10px;
+
+  }
+
+  .infoContainer span {
+
+    margin-top:-5px;
+
+  }
+
+
+  .infoContainer {
+    position: absolute;
+    font-size: 8px;
+    right:8vw;
+    z-index: 999;
+  }
+
+  .topInfo{
+    margin-top: 9px;
   }
 
   .budgetwrap {
