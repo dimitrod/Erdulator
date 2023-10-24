@@ -182,12 +182,12 @@ function reaction(r) {
             case "temperature":
                 if (randomValueTemperature > 0) {
                     temperature += randomValueTemperature
-                    infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + randomValueTemperature + " °C erhöht.</li>"
+                    infoPopUp.innerHTML += "<li>Die Weltdurchschnittstemperatur hat sich um " + randomValueTemperature + " °C erhöht.</li>"
                     break
                 }
                 if (randomValueTemperature <= 0) {
                     temperature += randomValueTemperature
-                    infoPopUp.innerHTML += "<li>Die Welt-Durchschnittstemperatur hat sich um " + Math.abs(randomValueTemperature) + " °C verringert.</p>"
+                    infoPopUp.innerHTML += "<li>Die Weltdurchschnittstemperatur hat sich um " + Math.abs(randomValueTemperature) + " °C verringert.</p>"
                     break
                 }
                 break
@@ -209,6 +209,16 @@ function reaction(r) {
                 break
         }
     })
+
+    let beforeAff = afforestation
+    let beforeTemp = temperature
+    let beforeWL = waterLevel
+    attributeIncrement()
+    let statgr = document.getElementById("statsgr")
+    statgr.innerHTML = ""
+    statgr.innerHTML += "<li>Bewaldung: " + (afforestation-beforeAff).toFixed(1) + " %</li>"
+    statgr.innerHTML += "<li>Wasserspiegel: " + ((waterLevel-beforeWL)>0?"+":"") + (waterLevel-beforeWL).toFixed(1) + " m</li>"
+    statgr.innerHTML += "<li>Weltdurchschnittstemperatur: " + ((temperature-beforeTemp)>0?"+":"") + (temperature-beforeTemp).toFixed(1) + " °C</li>"
     updateAttributes()
     document.getElementById("info").style.display ="block"
     gameOver()

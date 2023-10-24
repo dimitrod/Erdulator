@@ -35,6 +35,7 @@ function displayQuestionFromQueue(){
 
 function nextCloseDecider(){
     if (currentQuestions.length == 0) {
+        document.getElementById("information").style.display="none"
         main()
     }
     else {
