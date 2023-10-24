@@ -14,7 +14,7 @@
     <main>
         <div id="startPage">
             <div class='title'>
-                <span> ERDULATOR </span>
+                <span class="thetitle">ERDULATOR</span>
             </div>
             <div class="planetwrap start">
                 <img id="planet2" src="resource/good.gif" alt="Earth" class="center start">
@@ -32,7 +32,7 @@
 
         <div class="nes-container is-dark with-title" id="helpWindow" style="display:none;">
             <span class="title">HILFE</span>
-            <button class="nes-btn is-warning" class="closeUW" id="closeHelpWindow" onclick="closeHelpWindow()">Schließen</button>
+            <button class="nes-btn is-warning" class="closeUW" id="closeHelpWindow" onclick="closeHelpWindow()">X</button>
             <nav>
                 <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('gameHelp', this.id)" id="gameNavButton" disabled="true">Spielerklärung</button>
                 <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('upgradeWindowHelp', this.id)" id="upgradeWindowNavButton">Upgradefenster</button>
@@ -64,13 +64,13 @@
         <div class="nes-container is-dark with-title" id="upgradeWindow" style="display:none;">
             <span class="title">UPGRADES</span>
             <div id="help-closeWrapper">
-                <button class="nes-btn is-warning" class="closeUW" onclick="openHelpWindow()">Hilfe</button>
-                <button class="nes-btn is-warning" class="closeUW" onclick="closeUpgradeWindow()">Schließen</button>
+                <!--<button class="nes-btn is-warning" class="closeUW" onclick="openHelpWindow()">Hilfe</button>-->
+                <button class="nes-btn is-warning" class="closeUW" onclick="closeUpgradeWindow()">X</button>
             </div>
             <div class="budgetwrap">
                 <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
             </div>
-            <nav>
+            <nav class="upgradeNav">
                 <button class="nes-btn is-warning" class="closeUW" onclick="upgradeWindowCategory('upgrades', this.id)" id="upgradeButton">Upgrades</button>
                 <button class="nes-btn is-warning" class="closeUW" onclick="upgradeWindowCategory('investments', this.id)" id="investmentButton">Investitionen</button>
             </nav>
@@ -122,12 +122,12 @@
 
             <div class="rightwrap">
                 <div class='title'>
-                    <span> ERDULATOR </span>
+                    <span class="thetitle">ERDULATOR</span>
                 </div>
                 <div id ="barwrap">
                     <div id="barwrap_left">
                         <span class = "afforestation"></span>
-                        <div class = "infoContainer" style="margin: 0px">&#x1F6C8
+                        <div class = "infoContainer" style="margin: 0px"><div class="topInfo">&#x1F6C8</div>
                             <div id="afforestationGrowthRate" class = "upgradeInfo"></div>
                         </div>
                         <div class="attributeSlider" id="afforestationSliderWrap">
@@ -135,7 +135,7 @@
                         </div>
                        
                         <span class = "waterLevel"></span>
-                        <div class = "infoContainer" style="margin: 0px">&#x1F6C8
+                        <div class = "infoContainer" style="margin: 0px"><div>&#x1F6C8</div>
                             <div id="waterLevelGrowthRate" class = "upgradeInfo"></div>
                         </div>
                         <div class="attributeSlider" id="waterLevelSliderWrap">
@@ -145,13 +145,13 @@
                     </div>
                     <div id="barwrap_right">
                         <span class = "population"></span>
-                        <div class = "infoContainer" style="margin: 0px">&#x1F6C8
+                        <div class = "infoContainer" style="margin: 0px"><div class="topInfo">&#x1F6C8</div>
                             <div id="populationGrowthRate" class = "upgradeInfo"></div>
                         </div>
                         <div class="attributeSlider" id="populationSliderWrap">
                             <div id="populationSlider">&nbsp;</div>
                         </div>
-                        <span class ="temperature"></span><div class = "infoContainer" style="margin: 0px"> &#x1F6C8
+                        <span class ="temperature"></span><div class = "infoContainer" style="margin: 0px"><div>&#x1F6C8</div>
                             <div id="temperatureGrowthRate" class = "upgradeInfo"></div>
                         </div>
                         <div class="attributeSlider" id="temperatureSliderWrap">
@@ -197,7 +197,7 @@
                     </div>
                     <div class="nes-container is-dark with-title" id="emptyQuiz" style="display:none;">
                         <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
-                        <button class="nes-btn is-warning" id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; main()">Schließen</button>
+                        <button class="nes-btn is-warning" id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; main()">X</button>
                     </div>
                     
                 </div>
@@ -225,10 +225,10 @@
             <input type="range" id="volume-slider">
         </div>
     </footer>
-    <link rel="stylesheet" href="src/css/nes.css">
-    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/nes.css"> 
     <link rel="stylesheet" href="src/css/upgradeWindow.css">
     <link rel="stylesheet" href="src/css/help.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <script src="src/js/init.js"></script>
     <script src="src/js/updateGrowthRates.js"></script>
     <script src="src/js/earthHealthFunctions.js"></script>
