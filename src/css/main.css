@@ -1096,7 +1096,7 @@ body{
   #barwrap span {
     position: absolute;
     margin-top: 0px;
-    font-size: 8px;
+    font-size: 7px;
     margin-left: 5px;
     z-index: 999;
     text-shadow: 1px 1px #333 !important;
@@ -1113,6 +1113,9 @@ body{
 
   }
 
+  #barwrap_right {
+    padding-left:0;
+  }
 
   .infoContainer {
     position: absolute;
