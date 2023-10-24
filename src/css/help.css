@@ -1,0 +1,85 @@
+#helpimg {
+    position: relative;
+    height: 46px;
+    width: auto;
+    float:right;
+    margin-left:15px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;                 /* Universal support since 2021   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+#helpimg:hover {
+    background: none;
+    filter:contrast(2);
+}
+
+
+
+#helpButton {
+    width: auto;
+    position: relative;
+    float:right;
+}
+
+#helpButton:hover {
+    background-color: #f7d51d;
+}
+
+#helpWindow {
+    z-index: 3;
+    position: absolute;
+    box-sizing: border-box;
+    left: 17%;
+    top: 10%;
+    width: 66%;
+    height: 80%;
+    border-color: #cccccc;
+    font-family: "Dogica", sans-serif;
+}
+
+#helpWindow nav button{
+    width: auto;
+}
+#helpWindow nav button:disabled{
+    color: grey;
+}
+
+#helpWindow span, #helpWindow p {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#helpWindow > .title {
+    padding: 0 .5rem;
+    background-color: #191919;
+}
+
+#helpWindow.nes-container.is-dark {
+    background: rgba(0,0,0,0.8);
+}
+#helpWindow::after {
+    background-color: transparent;
+}
+#closeHelpWindow{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: auto
+}
+#helpWindowInformation {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 90%;
+    height: 90%;
+}
+#gameHelp p {
+    width: fit-content;
+}

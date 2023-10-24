@@ -4,9 +4,9 @@
     background-color: transparent;
     border: none;
     width: 40px;
-    aspect-ratio: 0.95;
+    aspect-ratio: 0.92;
     position: relative;
-    float:right;   
+    float:right;
 
     image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
     image-rendering: -moz-crisp-edges;          /* Firefox                        */
@@ -15,16 +15,19 @@
     image-rendering: pixelated;                 /* Universal support since 2021   */
     image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
 
-
+#upgradeWindowButton:focus {
+    outline:none;
 }
 
 #upgradeWindowButton:hover {
-    background-color: #f7d51d;
+    filter:contrast(2);
 }
+
 #upgradeWindow .budgetwrap{
     display: inline;
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
 #upgradeWindow p {
@@ -40,7 +43,6 @@
     width: 66%;
     height: 80%;
     border-color: #f7d51d;
-    
 }
 
 #upgradeWindow.nes-container.is-dark {
@@ -51,13 +53,17 @@
     background-color: transparent;
 }
 
-#closeUW {
-    display: inline;
-    width: auto;
+#help-closeWrapper{
+    display: flex;
     position: absolute;
+    top: 10px;
     right: 10px;
+}
 
-}#closeUW:hover {
+.closeUW {
+    width: auto;
+
+}.closeUW:hover {
      background-color: #fde997;
 }
 
@@ -131,8 +137,6 @@
 
 #upgradeWindow nav button{
     width: auto;
-    background-color: #ffdf6c;
-    border: 2px solid #af8f2c;
 }
 
 #upgradeLeftWrapper {
@@ -167,4 +171,9 @@
     position: absolute;
     height: 80%;
     width: 100%;
+}
+
+
+#upgradeWindow > .title {
+    background-color: #191919;
 }
