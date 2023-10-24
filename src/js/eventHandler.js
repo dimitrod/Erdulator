@@ -18,9 +18,12 @@ let currentEvent = undefined
 let worldWar1 = {eventName: "worldWar1", eventStartingMessage: "Der erste Weltkrieg beginnt", eventEndingMessage: "Der erste Weltkrieg ist vorbei", reactions: worldWar1Reactions, startingYear: 1914, endingYear: 1918}
 let worldWar2 = {eventName: "worldWar2", eventStartingMessage: "Der zweite Weltkrieg beginnt", eventEndingMessage: "Der zweite Weltkrieg ist vorbei", reactions: worldWar2Reactions, startingYear: 1939, endingYear: 1945}
 let cleanAirAct = {eventName: "cleanAirAct", eventStartingMessage: "Der Clean Air Act wird verabschiedet", eventEndingMessage: "Der Clean Air Act ist verabschiedet", reactions: cleanAirActReactions, startingYear: 1963, endingYear: 1964}
-let montrealProtocol = {eventName: "MontrealProtocol", eventStartingMessage: "Das Montreal-Protokoll wird verabschiedet", eventEndingMessage: "Das Montreal-Protokoll ist verabschiedet", reactions: fckwReactions, startingYear: 1987, endingYear: 1989}
+let montrealProtocol = {eventName: "montrealProtocol", eventStartingMessage: "Das Montreal-Protokoll wird verabschiedet", eventEndingMessage: "Das Montreal-Protokoll ist verabschiedet", reactions: montrealProtocolReactions, startingYear: 1987, endingYear: 1989}
+let kyotoProtocol = {eventName: "kyotoProtocol", eventStartingMessage: "Das Kyoto-Protokoll wird verabschiedet", eventEndingMessage: "Das Kyoto-Protokoll tritt in Kraft", reactions: kyotoProtocolReactions, startingYear: 1997, endingYear: 2005}
+let paris = {eventName: "paris", eventStartingMessage: "Das pariser Klimaabkommen wird verabschiedet", eventEndingMessage: "Das pariser Klimaabkommen tritt in Kraft", reactions: parisReactions, startingYear: 2015, endingYear: 2015}
 
-let timedEvent = [worldWar1, worldWar2, cleanAirAct, montrealProtocol]
+
+let timedEvent = [worldWar1, worldWar2, cleanAirAct, montrealProtocol, kyotoProtocol, paris]
 let currentTimedEvent
 let eventInterval = 5
 

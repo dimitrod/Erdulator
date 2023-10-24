@@ -97,3 +97,55 @@ let montrealProtocolReactions = [
             param: "populationGrowthRate", minValue: -0.002, maxValue: -0.005
         }]}
 ]
+
+let kyotoProtocolReactions = [
+    {
+        reaction: "Kyoto-Protkoll vollständig umsetzen",
+        cost: 10 * Math.pow(10,6),
+        impacts: [{
+            param: "temperature", minValue: 1, maxValue: 1}, {
+            param: "populationGrowthRate", minValue: 0.002, maxValue: 0.004
+            }]},
+    {
+        reaction: "Kyoto-Protkoll teilweise umsetzen",
+        cost: 6 * Math.pow(10,6),
+        impacts: [{
+            param: "population", minValue: 6000, maxValue: 10000}, {
+            param: "afforestation", minValue: 2, maxValue: 2}, {
+            param: "populationGrowthRate", minValue: 0.001, maxValue: 0.003
+            }]},
+    {
+        reaction: "Kyoto-Protkoll nicht umsetzen",
+        cost: 0,
+        impacts: [{
+            param: "population", minValue: 10000, maxValue: 12000}, {
+            param: "afforestation", minValue: 3, maxValue: 4}, {
+            param: "populationGrowthRate", minValue: -0.002, maxValue: -0.005
+        }]}
+]
+
+let parisReactions = [
+    {
+        reaction: "Pariser Klimaabkommen vollständig umsetzen",
+        cost: 10 * Math.pow(10,6),
+        impacts: [{
+            param: "temperature", minValue: 1, maxValue: 1}, {
+            param: "populationGrowthRate", minValue: 0.002, maxValue: 0.004
+            }]},
+    {
+        reaction: "Pariser Klimaabkommen teilweise umsetzen",
+        cost: 6 * Math.pow(10,6),
+        impacts: [{
+            param: "population", minValue: 6000, maxValue: 10000}, {
+            param: "afforestation", minValue: 2, maxValue: 2}, {
+            param: "populationGrowthRate", minValue: 0.001, maxValue: 0.003
+            }]},
+    {
+        reaction: "Pariser Klimaabkommen nicht umsetzen",
+        cost: 0,
+        impacts: [{
+            param: "population", minValue: 10000, maxValue: 12000}, {
+            param: "afforestation", minValue: 3, maxValue: 4}, {
+            param: "populationGrowthRate", minValue: -0.002, maxValue: -0.005
+        }]}
+]
