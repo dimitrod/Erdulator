@@ -491,7 +491,7 @@ html {
     background-color: transparent;
     padding: 20px;
     margin-top: 25px; 
-    margin-bottom: 25px; 
+    max-height:45vh;
 }
 
 #event::after, #info::after, #questionDisplay::after, #information::after, #emptyQuiz::after {
@@ -518,8 +518,14 @@ html {
 #barwrap span{
   display: inline-block;
   margin-top:25px;
-  font-size:1vw;
+  font-size:0.8vw;
 }
+
+
+.infoContainer > div {
+  display:none;
+}
+
 
 #barwrap_left {
   position: relative;
