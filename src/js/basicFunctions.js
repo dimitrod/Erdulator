@@ -16,6 +16,7 @@ function updateBudget(amount){
 	checkBudgetForUpgrade()
 	checkInvestments()
 	budgetText = convertNum(Math.abs(amount), 1) + "€"
+	budgetCheck()
 	if (amount < 0){
 		budgetChangeWrapper.forEach((bcw, index) =>{
 			bcw.innerHTML = "<span class='budgetChange' style='color: #fc4903;'>" + "-" + budgetText + "</span>"
