@@ -273,6 +273,7 @@ html {
   position:absolute;
   width: 100%;
   height:100%;
+  z-index: -500;
 
   -webkit-touch-callout: none !important;
   -webkit-user-select: none !important;
@@ -290,7 +291,7 @@ html {
     text-align: left;
     font-family: "Dogica", sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1vw;
   }
 
 
@@ -963,4 +964,196 @@ body{
   border-radius: 0px;
   max-width: 100%;
   background-color:#D4AF37;
+}
+
+
+
+@media screen and (max-width: 1300px) {
+  .nes-btn {
+    padding: 2px 4px;
+  }
+}
+
+
+
+@media (orientation: portrait) {
+
+  #startPage {
+    overflow: hidden;
+
+  }
+
+  #gamePage {
+    overflow: hidden;
+
+  }
+
+  #startPage > .title {
+    top: 15%;
+    margin-left:1%;
+  } 
+
+  #startPage > .title > span {
+    top: 15%;
+    font-size:10vw;
+    width:100vw;
+  }
+
+  #quizConfig {
+    font-size:15px;
+  }
+
+  .nes-btn {
+    font-size:14px;
+  }
+  
+  #musicNote {
+    height: 54px;
+  }
+
+  #musicPlayer {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #musicPlayer:after {
+    background-color: transparent;
+  }
+
+
+  .planetwrap.start {
+    overflow: hidden;
+    top: 70%;
+    width: 100%;
+  }
+
+  #planet2 {
+    width: 200vw;
+    height: auto;
+    transform: translate(-25%, 0%);
+  }
+
+  .planetwrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #yearwrap {
+    margin-top:25px;
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  #yearwrap p {
+    font-size:12px;
+    text-align: center;
+  }
+
+  #yearpercentwrap {
+    height: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 80vw;
+    box-shadow: -3px 0 0 0 #fff, 3px 0 0 0 #fff, 0 -3px 0 0 #fff, 0 3px 0 0 #fff;
+  }
+
+  #yearpercent {
+    height:12px;
+  }
+
+  #year {
+    font-size:10px;
+  }
+
+
+  .rightwrap {
+
+    width: 100%;
+    top:0;
+    left:0;
+  }
+
+  .rightwrap > .title {
+    font-size:10vw;
+    width:100%;
+    text-align: center;
+    margin-top:5px;
+
+
+  }
+
+  #barwrap {
+    margin-top: 10vh;
+    padding: 10px;
+  }
+
+  .attributeSlider, .attributeSlider > div  {
+    height:12px;
+  }
+
+  #barwrap span {
+    margin-top: 5px;
+    font-size: 9px;
+  }
+
+  .budgetwrap {
+
+    width:90vw;
+    margin-left:5vw;
+    margin-top: 10px;
+  }
+
+  .budgetwrap span {
+    font-size:14px;
+  }
+
+  .budgetChangeWrapper {
+    
+    
+  }
+
+  #upgradeWindowButton {
+    width:30px !important;
+
+  }
+
+  #helpimg {
+    height:35px !important;
+  }
+
+
+  #event, #info, #questionDisplay, #information, #emptyQuiz { 
+    margin-top:10px;
+    width:auto;
+  }
+
+  #gameOverMessage, #eventMessage, #quizQuestion, #answer, #background, #eQMessage {
+    padding-left: 5px;
+    font-size: 10px;
+}
+
+  #stats {
+    margin-left: 0;
+    padding-left: 20px;
+    font-size: 10px;
+  }
+
+  #timedEventPopup {
+    opacity:0;
+  }
+
+  #gameOverStatistic {
+    font-size:10px;
+}
+
+#planet, #continents, #cities {
+width:90vw;
+
+}
+
+#gameOver {
+  width:auto;
+}
+
 }
