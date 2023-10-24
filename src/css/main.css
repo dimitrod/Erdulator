@@ -1227,4 +1227,76 @@ body{
     margin:0px;
   }
 
+
+  #upgradeWindow, #helpWindow {
+    left:0;
+    width:100%;
+  }
+
+  #upgradeRightWrapper {
+    display:none;
+    width:0;
+  }
+
+  #upgradeLeftWrapper {
+    width: 92%;
+    margin-top: 5vh;
+    height:55vh;
+  }
+
+  #helpWindowInformation {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 3vh;
+    height:auto;
+    max-height:80%;
+  }
+
+  #helpWindow nav {
+    margin-top:50px;
+  }
+
+  #upgradeWindow > .budgetwrap {
+    background-color: transparent;
+    box-shadow: none;
+    position: absolute;
+    top: 15%;
+    padding: 0px;
+
+  }
+
+
+  #help-closeWrapper {
+    top: 25px;
+  }
+
+  .upgradeNav {
+    margin-top: -10px;
+  }
+  
+  #upgrades, #investments {
+    width: 95%;
+    
+ }
+
+ #upgradeContentWrapper {
+  width: 98%;
+ }
+ 
+
+ #upgradeContentWrapper .infoContainer {
+
+  position: relative;
+  font-size: 14px;
+  right: 0;
+ }
+
+
+ #upgradeContentWrapper .infoContainer .upgradeInfo {
+
+  margin-left: 0;
+ }
+
+
+ 
 }
