@@ -1098,7 +1098,7 @@ body{
     margin-top: 0px;
     font-size: 7px;
     margin-left: 5px;
-    z-index: 999;
+    z-index: 300;
     text-shadow: 1px 1px #333 !important;
   }
 
@@ -1110,6 +1110,12 @@ body{
   .infoContainer span {
 
     margin-top:-5px;
+
+  }
+
+  .infoContainer > div {
+
+    margin-top:-1px;
 
   }
 
@@ -1125,7 +1131,7 @@ body{
   }
 
   .topInfo {
-    margin-top: 9px;
+    margin-top: 8px !important;
   }
 
   .budgetwrap {
