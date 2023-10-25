@@ -629,10 +629,15 @@ html {
   font-size: 1vw;
 }
 
-#stats {
+#info ul {
   margin-left: 0;
   padding-left: 20px;
   font-size: 1vw;
+}
+
+#info p{
+  font-size: 1vw;
+  margin-bottom: 0;
 }
 
 #gameOverStatistic {

@@ -4,7 +4,7 @@ upgrades = [
     {
         id:"renewableEnergies",
         name: "Erneuerbare Energien",
-        cost: 2*10**6,
+        cost: 5*10**6,
         costFactor: 2,
         impacts:[
             {
@@ -22,61 +22,7 @@ upgrades = [
     {
         id:"veganProducts",
         name: "Vegane Produkte entwickeln",
-        cost: 10**6,
-        costFactor: 1,
-        impacts:[
-            {
-                name: "afforestation",
-                influence: "high",
-            },
-            {
-                name: "waterlevel",
-                influence: "mid"
-            },
-        ],
-        currentLevel: 0,
-        info: "weniger Tierhaltung = weniger Abholzung"
-    },
-    {
-        id:"test",
-        name: "Vegane Produkte entwickeln",
-        cost: 10**6,
-        costFactor: 1,
-        impacts:[
-            {
-                name: "afforestation",
-                influence: "high",
-            },
-            {
-                name: "waterlevel",
-                influence: "mid"
-            },
-        ],
-        currentLevel: 0,
-        info: "weniger Tierhaltung = weniger Abholzung"
-    },
-    {
-        id:"test2",
-        name: "Vegane Produkte entwickeln",
-        cost: 10**6,
-        costFactor: 1,
-        impacts:[
-            {
-                name: "afforestation",
-                influence: "high",
-            },
-            {
-                name: "waterlevel",
-                influence: "mid"
-            },
-        ],
-        currentLevel: 0,
-        info: "weniger Tierhaltung = weniger Abholzung"
-    },
-    {
-        id:"test3",
-        name: "Vegane Produkte entwickeln",
-        cost: 10**6,
+        cost: 5*10**6,
         costFactor: 1,
         impacts:[
             {
