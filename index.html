@@ -34,27 +34,97 @@
             <span class="title">HILFE</span>
             <button class="nes-btn is-warning" class="closeUW" id="closeHelpWindow" onclick="closeHelpWindow()">X</button>
             <nav>
-                <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('gameHelp', this.id)" id="gameNavButton" disabled="true">Spielerklärung</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('imprint', this.id)" id="imprintButton" disabled="true">Impressum</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('dataProtection', this.id)" id="dataProtectionButton">Datenschutzerklärung</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('gameHelp', this.id)" id="gameNavButton">Spielerklärung</button>
                 <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('upgradeWindowHelp', this.id)" id="upgradeWindowNavButton">Upgradefenster</button>
             </nav>
             <div id="helpWindowInformation">
-                <div id="gameHelp" class="category">
+                <div id="imprint" class="category">
+                    Dimitar Dimitrov<br>
+                    Ansbacher Str. 13<br>
+                    10787 Berlin<br>
+                    Deutschland<br>
+                    <br>
+                    Kontakt:<br>
+                    +4915121631599<br>
+                    &#100;&#101;&#114;&#95;&#98;&#108;&#105;&#110;&#100;&#101;&#95;&#106;&#111;&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#100;&#101;
+                </div>
+                <div id="dataProtection" class="category" style="display:none;">
+                    <br><p class="nes-container is-dark" >Datenschutzerklärung</p><br>
+                    Im Folgenden möchten wir Sie aufklären, wie Ihre Daten von uns verarbeitet werden.<br>
+                    <br>
+                    Verantwortlich im Sinne der DSGVO ist:<br>
+                    Dimitar Dimitrov<br>
+                    Ansbacher Str. 13<br>
+                    10787 Berlin<br>
+                    Deutschland<br><br>
+                    &#100;&#101;&#114;&#95;&#98;&#108;&#105;&#110;&#100;&#101;&#95;&#106;&#111;&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#100;&#101;
+                    <br>
+                    <br><br>
+                    Sollten Sie per E-Mail mit uns Kontakt aufnehmen, werden die mitgeteilten Daten von uns gespeichert, um Ihr Anliegen zu bearbeiten.
+                    <br><br>
+                    Zu den verarbeiteten Daten zählen:<br>
+                    [Ihr Name]<br>
+                    [Ihre E-Mail-Adresse]<br>
+                    <br>
+                    Wir werden die Daten löschen, sobald die Speicherung nicht mehr erforderlich ist oder die Verarbeitung einschränken, falls gesetzliche Aufbewahrungspflichten bestehen.
+                    <br><br>
+                    <br><p class="nes-container is-dark" >Betroffenenrechte</p><br>
+                    Sie haben als betroffene Person, das Recht auf Auskunft, das Recht auf Berichtigung oder Löschung, das Recht auf Einschränkung der Verarbeitung und das Recht auf Widerspruch gegen die Verarbeitung Ihrer Daten. Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.
+                    <br><br>
+                    Bitte richten Sie Ihren Widerspruch formlos an die E-Mail Adresse oben.
+                    <br><br>
+                    Darüber hinaus haben Sie das Recht auf Datenübertragbarkeit. Sie haben weiter das Recht, sich bei einer Aufsichtsbehörde über die Verarbeitung zu beschweren. Eine Liste der entsprechenden Behörden finden Sie unter: https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html.
+                    <br><br>
+                    <br><p class="nes-container is-dark" >Cookies</p><br>
+                    Wir speichern keine Cookies!
+                    <br>
+                    <br><br><p class="nes-container is-dark" >Hosting</p><br>
+                    Unser Hoster erhebt in sog. Logfiles folgende Daten, die Ihr Browser übermittelt:
+                    <br><br>
+                    IP-Adresse, die Adresse der vorher besuchten Website (Referer Anfrage-Header), Datum und Uhrzeit der Anfrage, Zeitzonendifferenz zur Greenwich Mean Time, Inhalt der Anforderung, HTTP-Statuscode, übertragene Datenmenge, Website, von der die Anforderung kommt und Informationen zu Browser und Betriebssystem.
+                    <br><br>
+                    Das ist erforderlich, um unsere Website anzuzeigen und die Stabilität und Sicherheit zu gewährleisten. Dies entspricht unserem berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit. f DSGVO.
+                    <br><br>
+                    Es erfolgt kein Tracking und wir haben auf diese Daten keinen direkten Zugriff, sondern erhalten lediglich eine anonymisierte, statistische Zusammenfassung. Diese beinhaltet die Adresse der vorher besuchten Seite, die Häufigkeit der jeweils aufgerufenen Seiten und die Anzahl eindeutiger Besucher. Diese Daten führen wir nicht mit anderen Daten zusammen.
+                    <br><br>
+                    Wir setzen für die Zurverfügungstellung unserer Website folgenden Hoster ein:
+                    <br><br>
+                    GitHub Inc.<br>
+                    88 Colin P Kelly Jr St<br>
+                    San Francisco, CA 94107<br>
+                    United States<br>
+                    <br>
+                    Dieser ist Empfänger Ihrer personenbezogenen Daten. Dies entspricht unserem berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit. f DSGVO, selbst keinen Server in unseren Räumlichkeiten vorhalten zu müssen. Serverstandort ist USA.
+                    <br><br>
+                    Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber GitHub finden Sie unter: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages
+                    <br><br>
+                    Sie haben das Recht der Verarbeitung zu widersprechen. Ob der Widerspruch erfolgreich ist, ist im Rahmen einer Interessenabwägung zu ermitteln.
+                    <br><br>
+                    Die Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt.
+                    <br><br>
+                    Die Verarbeitung der unter diesem Abschnitt angegebenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Die Funktionsfähigkeit der Website ist ohne die Verarbeitung nicht gewährleistet.
+                    <br><br>
+                    GitHub hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt. Diese gelten für alle weltweiten Aktivitäten, bei denen GitHub personenbezogene Daten von natürlichen Personen in der EU verarbeitet. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie unter: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors
+                </div>
+                <div id="gameHelp" class="category" style="display:none;">
                     Erdulator ist ein Spiel, dass die Zusammenhänge zwischen Klimawandel und unseren Handlungen spielerisch näher bringen soll.
                     Oben links befindet sich die Zeitleiste. Diese zeigt das aktuelle Spieljahr und den Fortschritt bis zum Spielende (Jahr 2025) an.
                     <div id="help_eventQuiz">
-                        <br><p class="nes-container is-dark with-title" >Event- und Quizfenster</p>
+                        <br><p class="nes-container is-dark with-title" >Event- und Quizfenster</p><br>
                     </div>
                     <div id="help_budget">
-                        <br><p class="nes-container is-dark with-title" >Budget</p>
+                        <br><p class="nes-container is-dark with-title" >Budget</p><br>
                     </div>
                     <div id="help_attribute">
-                        <br><p class="nes-container is-dark with-title" >Attribute</p>
+                        <br><p class="nes-container is-dark with-title" >Attribute</p><br>
                     </div>
                     <div id="help_music">
-                        <br><p class="nes-container is-dark with-title" >Musik</p>
+                        <br><p class="nes-container is-dark with-title" >Musik</p><br>
                     </div>
                     <div id="help_Spielablauf">
-                        <br><p class="nes-container is-dark with-title" >Spielablauf</p>
+                        <br><p class="nes-container is-dark with-title" >Spielablauf</p><br>
                     </div>
                 </div>
                 <div id="upgradeWindowHelp" class="category" style="display:none;">Das Upgrade-Fenster ist mega stark und du greifst das Problem an der Wurzel.</div>
@@ -64,7 +134,6 @@
         <div class="nes-container is-dark with-title" id="upgradeWindow" style="display:none;">
             <span class="title">UPGRADES</span>
             <div id="help-closeWrapper">
-                <!--<button class="nes-btn is-warning" class="closeUW" onclick="openHelpWindow()">Hilfe</button>-->
                 <button class="nes-btn is-warning" class="closeUW" onclick="closeUpgradeWindow()">X</button>
             </div>
             <div class="budgetwrap">
