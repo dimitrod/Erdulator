@@ -66,7 +66,7 @@ function updateGrowthRateDisplay(growthRate, elem) {
     else if (growthRate == afforestationGrowthRate) unit = "%"
     else if (growthRate == waterLevelGrowthRate) unit = "m"
     else if (growthRate == temperatureGrowthRate) unit = "°C"
-    value = `(<span class="${isPositive ? 'green-text' : 'red-text'}">${isPositive ? sign : '-'} ${Math.abs(growthRate.toFixed(3))}${unit}</span>/Jahr)`
+    value = `(<span class="${isPositive ? 'green-text' : 'red-text'}">${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</span>/Jahr)`
     growthRateElem.innerHTML = value
     elem.appendChild(growthRateElem)
 }
