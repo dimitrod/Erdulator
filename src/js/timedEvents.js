@@ -62,7 +62,7 @@ let cleanAirActReactions = [
         impacts: [{
             param: "population", minValue: 6000, maxValue: 10000}, {
             param: "afforestation", minValue: -2, maxValue: -3
-        }, {param: "temperature", minValue: -0.1, maxq: -0.1}]},
+        }, {param: "temperature", minValue: -0.1, maxValue: -0.1}]},
     {
         reaction: "Vertragsbedingungen nicht erfüllen",
         cost: 0,
