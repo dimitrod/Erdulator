@@ -32,53 +32,20 @@ function updateAttributes() {
     
     afforestationElems.forEach(elem => {
         elem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
-        /*/if (afforestationGrowthRate > 0) {
-            afforestationGrowthRateElem.classList.add("green-text")
-            afforestationGrowthRateElem.innerHTML = "+" + Math.abs(afforestationGrowthRate.toFixed(3)) + "%"
-        }
-        else {
-            afforestationGrowthRateElem.classList.add("red-text")
-            afforestationGrowthRateElem.innerHTML = "-" + Math.abs(afforestationGrowthRate.toFixed(3)) + "%"
-        }/*/
         updateGrowthRateDisplay(afforestationGrowthRate, elem)
     })
     waterLevelElems.forEach(elem => {
         elem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
-        /*/if (waterLevelGrowthRate > 0) {
-            waterLevelGrowthRateElem.classList.add("green-text")
-            waterLevelGrowthRateElem.innerHTML = "+" + Math.abs(waterLevelGrowthRate.toFixed(3)) + "m"
-        }
-        else {
-            waterLevelGrowthRateElem.classList.add("red-text")
-            waterLevelGrowthRateElem.innerHTML = "-" + Math.abs(waterLevelGrowthRate.toFixed(3)) + "m"
-        }/*/
         updateGrowthRateDisplay(waterLevelGrowthRate, elem)
     })
     populationElems.forEach(elem => {
         elem.innerHTML = "Bevölk.: " + convertNum(population, 2)
-        /*/if (populationGrowthRate > 1) {
-            populationGrowthRateElem.classList.add("green-text")
-            populationGrowthRateElem.innerHTML = "x" + Math.abs(populationGrowthRate.toFixed(3))
-        }
-        else {
-            populationGrowthRateElem.classList.add("red-text")
-            populationGrowthRateElem.innerHTML = "x" + Math.abs(populationGrowthRate.toFixed(3))
-        }/*/
         updateGrowthRateDisplay(populationGrowthRate, elem)
     })
     temperatureElems.forEach(elem => {
         elem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
-        /*/if (temperatureGrowthRate > 0) {
-            temperatureGrowthRateElem.classList.add("green-text")
-            temperatureGrowthRateElem.innerHTML = "+" + Math.abs(temperatureGrowthRate.toFixed(3)) + "°C"
-        }
-        else {
-            temperatureGrowthRateElem.classList.add("red-text")
-            temperatureGrowthRateElem.innerHTML = "-" + Math.abs(temperatureGrowthRate.toFixed(3)) + "°C"
-        }/*/
         updateGrowthRateDisplay(temperatureGrowthRate, elem)
     })
-
 
     afforestationSlider.style.width = parseInt(afforestation)+"%";
     waterLevelSlider.style.width = parseInt(((waterLevel+10)/20)*100)+"%";
@@ -99,10 +66,8 @@ function updateGrowthRateDisplay(growthRate, elem) {
     else if (growthRate == afforestationGrowthRate) unit = "%"
     else if (growthRate == waterLevelGrowthRate) unit = "m"
     else if (growthRate == temperatureGrowthRate) unit = "°C"
-    //value = "(" + isPositive ? sign + Math.abs(growthRate.toFixed(3)) : sign + Math.abs(growthRate.toFixed(3)) + "/Jahr)"
     value = `(<span class="${isPositive ? 'green-text' : 'red-text'}">${isPositive ? sign : '-'} ${Math.abs(growthRate.toFixed(3))}${unit}</span>/Jahr)`
     growthRateElem.innerHTML = value
-    //growthRateElem.classList.add(isPositive ? "green-text" : "red-text")
     elem.appendChild(growthRateElem)
 }
 
