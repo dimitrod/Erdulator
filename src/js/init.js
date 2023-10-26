@@ -43,5 +43,3 @@ waterLevelGrowthRateElem = document.getElementById("waterLevelGrowthRate")
 temperatureGrowthRateElem = document.getElementById("temperatureGrowthRate")
 populationGrowthRateElem = document.getElementById("populationGrowthRate")
 
-
-

@@ -32,15 +32,51 @@ function updateAttributes() {
     
     afforestationElems.forEach(elem => {
         elem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
+        /*/if (afforestationGrowthRate > 0) {
+            afforestationGrowthRateElem.classList.add("green-text")
+            afforestationGrowthRateElem.innerHTML = "+" + Math.abs(afforestationGrowthRate.toFixed(3)) + "%"
+        }
+        else {
+            afforestationGrowthRateElem.classList.add("red-text")
+            afforestationGrowthRateElem.innerHTML = "-" + Math.abs(afforestationGrowthRate.toFixed(3)) + "%"
+        }/*/
+        updateGrowthRateDisplay(afforestationGrowthRate, elem)
     })
     waterLevelElems.forEach(elem => {
         elem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
+        /*/if (waterLevelGrowthRate > 0) {
+            waterLevelGrowthRateElem.classList.add("green-text")
+            waterLevelGrowthRateElem.innerHTML = "+" + Math.abs(waterLevelGrowthRate.toFixed(3)) + "m"
+        }
+        else {
+            waterLevelGrowthRateElem.classList.add("red-text")
+            waterLevelGrowthRateElem.innerHTML = "-" + Math.abs(waterLevelGrowthRate.toFixed(3)) + "m"
+        }/*/
+        updateGrowthRateDisplay(waterLevelGrowthRate, elem)
     })
     populationElems.forEach(elem => {
         elem.innerHTML = "Bevölk.: " + convertNum(population, 2)
+        /*/if (populationGrowthRate > 1) {
+            populationGrowthRateElem.classList.add("green-text")
+            populationGrowthRateElem.innerHTML = "x" + Math.abs(populationGrowthRate.toFixed(3))
+        }
+        else {
+            populationGrowthRateElem.classList.add("red-text")
+            populationGrowthRateElem.innerHTML = "x" + Math.abs(populationGrowthRate.toFixed(3))
+        }/*/
+        updateGrowthRateDisplay(populationGrowthRate, elem)
     })
     temperatureElems.forEach(elem => {
         elem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
+        /*/if (temperatureGrowthRate > 0) {
+            temperatureGrowthRateElem.classList.add("green-text")
+            temperatureGrowthRateElem.innerHTML = "+" + Math.abs(temperatureGrowthRate.toFixed(3)) + "°C"
+        }
+        else {
+            temperatureGrowthRateElem.classList.add("red-text")
+            temperatureGrowthRateElem.innerHTML = "-" + Math.abs(temperatureGrowthRate.toFixed(3)) + "°C"
+        }/*/
+        updateGrowthRateDisplay(temperatureGrowthRate, elem)
     })
 
 
@@ -49,13 +85,25 @@ function updateAttributes() {
     populationSlider.style.width = parseInt(population/116500000)+"%";
     temperatureSlider.style.width = parseInt(((temperature+5)/10)*100)+"%";
 
-
-    afforestationGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + afforestationGrowthRate.toFixed(3)
-    waterLevelGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + waterLevelGrowthRate.toFixed(3)
-    populationGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + populationGrowthRate.toFixed(3)
-    temperatureGrowthRateElem.innerHTML = "Wachstumsrate beträgt: " + temperatureGrowthRate.toFixed(3)
-
     checkDanger()
+}
+
+function updateGrowthRateDisplay(growthRate, elem) {
+    growthRateElem = document.createElement("span")
+    isPositive = growthRate > 0
+    sign = isPositive ? "+" : "-"
+    if (growthRate == populationGrowthRate) {
+        sign = "x"
+        unit = ""
+    }
+    else if (growthRate == afforestationGrowthRate) unit = "%"
+    else if (growthRate == waterLevelGrowthRate) unit = "m"
+    else if (growthRate == temperatureGrowthRate) unit = "°C"
+    //value = "(" + isPositive ? sign + Math.abs(growthRate.toFixed(3)) : sign + Math.abs(growthRate.toFixed(3)) + "/Jahr)"
+    value = `(<span class="${isPositive ? 'green-text' : 'red-text'}">${isPositive ? sign : '-'} ${Math.abs(growthRate.toFixed(3))}${unit}</span>/Jahr)`
+    growthRateElem.innerHTML = value
+    //growthRateElem.classList.add(isPositive ? "green-text" : "red-text")
+    elem.appendChild(growthRateElem)
 }
 
 
@@ -76,8 +124,8 @@ helpimg.addEventListener("mousedown", function() {
 
 function main() {
     if (beginOfGame) newEvent() // Check ob es das erste Event ist Mithilfe von beginOfGame flag
-    attributeCheck() // Attribute erreichen keine illegalen Bereiche
     timedEvents() // gibt es ein timedEvent? Wenn nicht newEvent()
+    attributeCheck() // Attribute erreichen keine illegalen Bereiche
     if (!currentEvent) makeQuiz() // Wenn kein Event an ist, mach ein Quiz
 }
 
@@ -92,3 +140,8 @@ budgetElems.forEach(budgetElem => {
 
 updateAttributes() // update attributes
 main()
+
+document.getElementById("afforestationInfo").innerHTML = "Fläche die von der Erde mit Wald bedeckt ist. Das Spiel endet, sobald die Waldfläche unter 10% sinkt."
+document.getElementById("waterLevelInfo").innerHTML = "Der Meeresspiegel. Das Spiel endet, sobald der Meeresspiegel über 10m steigt."
+document.getElementById("temperatureInfo").innerHTML = "Die Durchschnittstemperatur auf der Erde. Das Spiel endet, sobald die Temperatur über 5°C steigt."
+document.getElementById("populationInfo").innerHTML = "Die Weltbevölkerung. Das Spiel endet, sobald die Weltbevölkerung über " + convertNum(populationGameOverMax, 2) + " steigt."
