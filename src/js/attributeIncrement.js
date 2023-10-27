@@ -17,7 +17,8 @@ function waterLevelIncrement() {
 
 function timeIncrement() {
     document.getElementById('information').style.display = "none"
-    year += eventInterval
+    year += eventInterval 
+    updateYear()
 }
 
 function attributeIncrement() {
@@ -25,5 +26,5 @@ function attributeIncrement() {
     afforestationIncrement()
     temperatureIncrement()
     waterLevelIncrement()
-    timeIncrement()
+    updateAttributes()
 }

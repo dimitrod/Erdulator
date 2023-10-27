@@ -2,6 +2,7 @@ function updateGrowthRate(growthRate, amount) {
     if(growthRate == "afforestation") updateAfforestationGrowthRate(amount)
     else if(growthRate == "temperature") updateTemperatureGrowthRate(amount)
     else if(growthRate == "waterlevel") updateWaterlevelGrowthRate(amount)
+    updateAttributes()
 }
 
 function updateAfforestationGrowthRate(amount){
