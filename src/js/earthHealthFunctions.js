@@ -55,37 +55,42 @@ function checkDanger(){
 
     }
 
-    if (afforestation < 20) {
-            afforestationSlider.style.backgroundColor = "#de0037"
-        } else if (afforestation < 40) {
-            afforestationSlider.style.backgroundColor = "#ffcc14"
-        } else { 
-            afforestationSlider.style.backgroundColor = "#02c23f"
-      }
+    afforestationSlider.style.backgroundColor = calculateColor(afforestation, 50, afforestationGameOver)
+    waterLevelSlider.style.backgroundColor = calculateColor(waterLevel, 0, waterLevelGameOver)
+    populationSlider.style.backgroundColor = calculateColor(population, populationGameOver, populationGameOverMax)
+    temperatureSlider.style.backgroundColor = calculateColor(temperature, 0, temperatureGameOver)
 
-    if (waterLevel > 7 || waterLevel < -7) {
-        waterLevelSlider.style.backgroundColor = "#de0037"
-    } else if (waterLevel > 4 || waterLevel < -4) {
-        waterLevelSlider.style.backgroundColor = "#ffcc14"
-    } else { 
-        waterLevelSlider.style.backgroundColor = "#02c23f"
-    }
+    // if (afforestation < 20) {
+    //         afforestationSlider.style.backgroundColor = "#de0037"
+    //     } else if (afforestation < 40) {
+    //         afforestationSlider.style.backgroundColor = "#ffcc14"
+    //     } else { 
+    //         afforestationSlider.style.backgroundColor = "#02c23f"
+    //   }
 
-    if (population > 10000000000 || population < 300000000) {
-        populationSlider.style.backgroundColor = "#de0037"
-    } else if (population > 8000000000 || population < 1000000000) {
-        populationSlider.style.backgroundColor = "#ffcc14"
-    } else { 
-        populationSlider.style.backgroundColor = "#02c23f"
-    }
+    // if (waterLevel > 7 || waterLevel < -7) {
+    //     waterLevelSlider.style.backgroundColor = "#de0037"
+    // } else if (waterLevel > 4 || waterLevel < -4) {
+    //     waterLevelSlider.style.backgroundColor = "#ffcc14"
+    // } else { 
+    //     waterLevelSlider.style.backgroundColor = "#02c23f"
+    // }
 
-    if (temperature > 4 || temperature < -4) {
-        temperatureSlider.style.backgroundColor = "#de0037"
-    } else if (temperature > 2 || temperature < -2) {
-        temperatureSlider.style.backgroundColor = "#ffcc14"
-    } else { 
-        temperatureSlider.style.backgroundColor = "#02c23f"
-    }
+    // if (population > 10000000000 || population < 300000000) {
+    //     populationSlider.style.backgroundColor = "#de0037"
+    // } else if (population > 8000000000 || population < 1000000000) {
+    //     populationSlider.style.backgroundColor = "#ffcc14"
+    // } else { 
+    //     populationSlider.style.backgroundColor = "#02c23f"
+    // }
+
+    // if (temperature > 4 || temperature < -4) {
+    //     temperatureSlider.style.backgroundColor = "#de0037"
+    // } else if (temperature > 2 || temperature < -2) {
+    //     temperatureSlider.style.backgroundColor = "#ffcc14"
+    // } else { 
+    //     temperatureSlider.style.backgroundColor = "#02c23f"
+    // }
 
 
 
