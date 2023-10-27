@@ -1,5 +1,5 @@
 let budgetElems = Array.from(document.getElementsByClassName("budget"))
-let beginOfGame = true
+
 var helpimg = document.getElementById("helpimg")
 
 function createGameOverMessage(message) {
@@ -26,10 +26,6 @@ function gameOver() {
 }
 
 function updateAttributes() {
-    yearElem.innerHTML = year
-    yearElem.style.left = ((year - 1900) / 125) * 100 + "%"
-    yearElemPercent.style.width = ((year - 1900) / 125) * 100 + "%"
-    
     afforestationElems.forEach(elem => {
         elem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
         updateGrowthRateDisplay(afforestationGrowthRate, elem)
@@ -53,6 +49,12 @@ function updateAttributes() {
     temperatureSlider.style.width = parseInt(((temperature+5)/10)*100)+"%";
 
     checkDanger()
+}
+
+function updateYear() {
+    yearElem.innerHTML = year
+    yearElem.style.left = ((year - 1900) / 125) * 100 + "%"
+    yearElemPercent.style.width = ((year - 1900) / 125) * 100 + "%"
 }
 
 function updateGrowthRateDisplay(growthRate, elem) {
@@ -90,6 +92,7 @@ helpimg.addEventListener("mousedown", function() {
 
 function main() {
     if (beginOfGame) newEvent() // Check ob es das erste Event ist Mithilfe von beginOfGame flag
+    else timeIncrement()
     timedEvents() // gibt es ein timedEvent? Wenn nicht newEvent()
     attributeCheck() // Attribute erreichen keine illegalen Bereiche
     if (!currentEvent) makeQuiz() // Wenn kein Event an ist, mach ein Quiz
@@ -105,6 +108,7 @@ budgetElems.forEach(budgetElem => {
 })
 
 updateAttributes() // update attributes
+updateYear()
 main()
 
 document.getElementById("afforestationInfo").innerHTML = "Fläche die von der Erde mit Wald bedeckt ist. Das Spiel endet, sobald die Waldfläche unter 10% sinkt."

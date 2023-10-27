@@ -22,7 +22,7 @@ let montrealProtocol = {eventName: "montrealProtocol", eventStartingMessage: "Da
 let kyotoProtocol = {eventName: "kyotoProtocol", eventStartingMessage: "Das Kyoto-Protokoll wird verabschiedet", eventEndingMessage: "Das Kyoto-Protokoll tritt in Kraft", reactions: kyotoProtocolReactions, startingYear: 1997, endingYear: 2005}
 let paris = {eventName: "paris", eventStartingMessage: "Das pariser Klimaabkommen wird verabschiedet", eventEndingMessage: "Das pariser Klimaabkommen tritt in Kraft", reactions: parisReactions, startingYear: 2015, endingYear: 2015}
 
-
+var beginOfGame = true
 let timedEvent = [worldWar1, worldWar2, cleanAirAct, montrealProtocol, kyotoProtocol, paris]
 let currentTimedEvent
 let eventInterval = 5
@@ -116,6 +116,7 @@ function newEvent() {
 }
 
 function timedEvents() {
+    console.log("timedEvents called")
     currentTimedEvent = timedEvent[0]
     if (!currentTimedEvent) newEvent()
     else if (year >= currentTimedEvent.endingYear && year >= currentTimedEvent.endingYear) {
