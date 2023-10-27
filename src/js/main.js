@@ -52,8 +52,6 @@ function updateAttributes() {
 }
 
 function updateYear() {
-    console.log(year)
-    console.log(year - timedEvent[0].startingYear)
     if((year - timedEvent[0].endingYear) > 0 && (year - timedEvent[0].endingYear) < 5) yearElem.innerHTML = timedEvent[0].endingYear
     else if((year - timedEvent[0].startingYear) > 0 && (year - timedEvent[0].startingYear) < 5) yearElem.innerHTML = timedEvent[0].startingYear
     else yearElem.innerHTML = year

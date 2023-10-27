@@ -16,7 +16,6 @@ function waterLevelIncrement() {
 }
 
 function timeIncrement() {
-    console.log("time increment")
     document.getElementById('information').style.display = "none"
     year += eventInterval 
     updateYear()
