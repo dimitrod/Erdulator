@@ -46,6 +46,7 @@ function getRandomRegion(region) {
 
 function newEvent() {
     beginOfGame = false
+    upgradeBought = false
     let commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
     let rareEvents = [vulcanicEruption, pandemic, war, pestInfestation, meltingPoles]
     let eventListPossiblilityPicker = [commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, commonEvents, rareEvents]

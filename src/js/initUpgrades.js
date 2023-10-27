@@ -1,4 +1,5 @@
 maxLevel = 5
+let upgradeBought = false
 
 upgrades = [
     {
@@ -38,10 +39,10 @@ upgrades = [
         info: "weniger Tierhaltung = weniger Abholzung"
     }
 ]
-function checkBudgetForUpgrade(){
+function checkUpgrades(){
     upgrades.forEach(upgrade =>{
         button = document.getElementById(upgrade.id).getElementsByTagName("button")[0]
-        button.disabled = upgrade.cost > budget || upgrade.currentLevel >= maxLevel
+        button.disabled = upgrade.cost > budget || upgrade.currentLevel >= maxLevel || upgradeBought
     })
 }
 function loadUpgrades(){
@@ -54,7 +55,7 @@ function loadUpgrades(){
         upgradeWrapper.innerHTML+= "<button class='nes-btn is-warning' onclick='buyUpgrade(" + index + ")'>" + convertNum(upgrade.cost,1) + "</button>"
         loadLevels(upgrade)
     })
-    checkBudgetForUpgrade()
+    checkUpgrades()
     document.getElementById("upgradeButton").disabled = true
 }
 
