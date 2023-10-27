@@ -28,19 +28,19 @@ function gameOver() {
 function updateAttributes() {
     afforestationElems.forEach(elem => {
         elem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
-        updateGrowthRateDisplay(afforestationGrowthRate, elem)
+        updateGrowthRateDisplay(afforestationGrowthRate, maxAfforestationGrowthRate, minAfforestationGrowthRate, elem)
     })
     waterLevelElems.forEach(elem => {
         elem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
-        updateGrowthRateDisplay(waterLevelGrowthRate, elem)
+        updateGrowthRateDisplay(waterLevelGrowthRate, minWaterLevelGrowthRate, maxWaterLevelGrowthRate, elem)
     })
     populationElems.forEach(elem => {
         elem.innerHTML = "Bevölk.: " + convertNum(population, 2)
-        updateGrowthRateDisplay(populationGrowthRate, elem)
+        updateGrowthRateDisplay(populationGrowthRate, minPopulationGrowthRate, maxTemperatureGrowthRate, elem)
     })
     temperatureElems.forEach(elem => {
         elem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
-        updateGrowthRateDisplay(temperatureGrowthRate, elem)
+        updateGrowthRateDisplay(temperatureGrowthRate, minTemperatureGrowthRate, maxTemperatureGrowthRate, elem)
     })
 
     afforestationSlider.style.width = parseInt(afforestation)+"%";
@@ -59,7 +59,7 @@ function updateYear() {
     yearElemPercent.style.width = ((year - 1900) / 125) * 100 + "%"
 }
 
-function updateGrowthRateDisplay(growthRate, elem) {
+function updateGrowthRateDisplay(growthRate, minGrowthRate, maxGrowthRate, elem) {
     growthRateElem = document.createElement("span")
     isPositive = growthRate > 0
     sign = isPositive ? "+" : "-"
@@ -71,8 +71,11 @@ function updateGrowthRateDisplay(growthRate, elem) {
     else if (growthRate == afforestationGrowthRate) unit = "%"
     else if (growthRate == waterLevelGrowthRate) unit = "m"
     else if (growthRate == temperatureGrowthRate) unit = "°C"
-    value = `(<span class="${isPositive ? 'green-text' : 'red-text'}">${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</span>/Jahr)`
+    value = `(<span>${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</span>/Jahr)`
     growthRateElem.innerHTML = value
+    Array.from(growthRateElem.getElementsByTagName("span")).forEach(elem => {
+        elem.style.color = calculateColor(growthRate, minGrowthRate, maxGrowthRate)
+    })
     elem.appendChild(growthRateElem)
 }
 
