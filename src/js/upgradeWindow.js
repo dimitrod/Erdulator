@@ -18,6 +18,7 @@ function openUpgradeWindow(){
     })
    gamePageBudgetWrapper.style.display = "none"
    checkUpgrades()
+   document.getElementById("upgradesLeft").innerHTML = upgradesLeft
 }
 function closeUpgradeWindow(){
     budgetChangeWrapper = Array.from(document.getElementsByClassName("budgetChangeWrapper"))
@@ -47,7 +48,7 @@ function upgradeWindowCategory(category, btnid) {
 
 
 function buyUpgrade(index){
-    upgradeBought = true
+    upgradesLeft--
     upgrade = upgrades[index]
     cost = upgrade.cost
     upgrade.currentLevel++

@@ -1,5 +1,5 @@
 maxLevel = 5
-let upgradeBought = false
+let upgradesLeft = 0
 
 upgrades = [
     {
@@ -37,16 +37,88 @@ upgrades = [
         ],
         currentLevel: 0,
         info: "weniger Tierhaltung = weniger Abholzung"
+    },
+    {
+        id:"veganProducts1",
+        name: "Vegane Produkte entwickeln",
+        cost: 5*10**6,
+        costFactor: 1,
+        impacts:[
+            {
+                name: "afforestation",
+                influence: "high",
+            },
+            {
+                name: "waterlevel",
+                influence: "mid"
+            },
+        ],
+        currentLevel: 0,
+        info: "weniger Tierhaltung = weniger Abholzung"
+    },
+    {
+        id:"veganProducts2",
+        name: "Vegane Produkte entwickeln",
+        cost: 5*10**6,
+        costFactor: 1,
+        impacts:[
+            {
+                name: "afforestation",
+                influence: "high",
+            },
+            {
+                name: "waterlevel",
+                influence: "mid"
+            },
+        ],
+        currentLevel: 0,
+        info: "weniger Tierhaltung = weniger Abholzung"
+    },
+    {
+        id:"veganProducts3",
+        name: "Vegane Produkte entwickeln",
+        cost: 5*10**6,
+        costFactor: 1,
+        impacts:[
+            {
+                name: "afforestation",
+                influence: "high",
+            },
+            {
+                name: "waterlevel",
+                influence: "mid"
+            },
+        ],
+        currentLevel: 0,
+        info: "weniger Tierhaltung = weniger Abholzung"
+    },
+    {
+        id:"veganProducts4",
+        name: "Vegane Produkte entwickeln",
+        cost: 5*10**6,
+        costFactor: 1,
+        impacts:[
+            {
+                name: "afforestation",
+                influence: "high",
+            },
+            {
+                name: "waterlevel",
+                influence: "mid"
+            },
+        ],
+        currentLevel: 0,
+        info: "weniger Tierhaltung = weniger Abholzung"
     }
 ]
 function checkUpgrades(){
     upgrades.forEach(upgrade =>{
         button = document.getElementById(upgrade.id).getElementsByTagName("button")[0]
-        button.disabled = upgrade.cost > budget || upgrade.currentLevel >= maxLevel || upgradeBought
+        button.disabled = upgrade.cost > budget || upgrade.currentLevel >= maxLevel || upgradesLeft == 0
     })
 }
 function loadUpgrades(){
-    upgradesWrapper = document.getElementById("upgrades")
+    upgradesWrapper = document.getElementById("upgradesWrapper")
     upgrades.forEach((upgrade, index)=>{
         upgradesWrapper.innerHTML += "<div id='" + upgrade.id + "' class='upgradeWrapper'></div>"
         upgradeWrapper = document.getElementById(upgrade.id)
@@ -57,6 +129,7 @@ function loadUpgrades(){
     })
     checkUpgrades()
     document.getElementById("upgradeButton").disabled = true
+    document.getElementById("upgradesLeft").innerHTML = upgradesLeft
 }
 
 function loadLevels(upgrade){
