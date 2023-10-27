@@ -1,5 +1,5 @@
 let budgetElems = Array.from(document.getElementsByClassName("budget"))
-let beginOfGame = true
+
 var helpimg = document.getElementById("helpimg")
 
 function createGameOverMessage(message) {
@@ -26,25 +26,21 @@ function gameOver() {
 }
 
 function updateAttributes() {
-    yearElem.innerHTML = year
-    yearElem.style.left = ((year - 1900) / 125) * 100 + "%"
-    yearElemPercent.style.width = ((year - 1900) / 125) * 100 + "%"
-    
     afforestationElems.forEach(elem => {
         elem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
-        updateGrowthRateDisplay(afforestationGrowthRate, elem)
+        updateGrowthRateDisplay(afforestationGrowthRate, maxAfforestationGrowthRate, minAfforestationGrowthRate, elem)
     })
     waterLevelElems.forEach(elem => {
         elem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
-        updateGrowthRateDisplay(waterLevelGrowthRate, elem)
+        updateGrowthRateDisplay(waterLevelGrowthRate, minWaterLevelGrowthRate, maxWaterLevelGrowthRate, elem)
     })
     populationElems.forEach(elem => {
         elem.innerHTML = "Bevölk.: " + convertNum(population, 2)
-        updateGrowthRateDisplay(populationGrowthRate, elem)
+        updateGrowthRateDisplay(populationGrowthRate, minPopulationGrowthRate, maxTemperatureGrowthRate, elem)
     })
     temperatureElems.forEach(elem => {
         elem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
-        updateGrowthRateDisplay(temperatureGrowthRate, elem)
+        updateGrowthRateDisplay(temperatureGrowthRate, minTemperatureGrowthRate, maxTemperatureGrowthRate, elem)
     })
 
     afforestationSlider.style.width = parseInt(afforestation)+"%";
@@ -55,19 +51,31 @@ function updateAttributes() {
     checkDanger()
 }
 
-function updateGrowthRateDisplay(growthRate, elem) {
+function updateYear() {
+    if(timedEvent[0] && (year - timedEvent[0].endingYear) > 0 && (year - timedEvent[0].endingYear) < 5) yearElem.innerHTML = timedEvent[0].endingYear
+    else if(timedEvent[0] && (year - timedEvent[0].startingYear) > 0 && (year - timedEvent[0].startingYear) < 5) yearElem.innerHTML = timedEvent[0].startingYear
+    else yearElem.innerHTML = year
+    yearElem.style.left = ((year - 1900) / 125) * 100 + "%"
+    yearElemPercent.style.width = ((year - 1900) / 125) * 100 + "%"
+}
+
+function updateGrowthRateDisplay(growthRate, minGrowthRate, maxGrowthRate, elem) {
     growthRateElem = document.createElement("span")
     isPositive = growthRate > 0
     sign = isPositive ? "+" : "-"
     if (growthRate == populationGrowthRate) {
         sign = "x"
         unit = ""
+        isPositive = growthRate > 1
     }
     else if (growthRate == afforestationGrowthRate) unit = "%"
     else if (growthRate == waterLevelGrowthRate) unit = "m"
     else if (growthRate == temperatureGrowthRate) unit = "°C"
-    value = `(<span class="${isPositive ? 'green-text' : 'red-text'}">${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</span>/Jahr)`
+    value = `(<span>${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</span>/Jahr)`
     growthRateElem.innerHTML = value
+    Array.from(growthRateElem.getElementsByTagName("span")).forEach(elem => {
+        elem.style.color = calculateColor(growthRate, minGrowthRate, maxGrowthRate)
+    })
     elem.appendChild(growthRateElem)
 }
 
@@ -80,12 +88,6 @@ helpimg.addEventListener("mousedown", function() {
     helpimg.src = "resource/help.png";
   });
   
-
-
-
-
-
-
 
 function main() {
     if (beginOfGame) newEvent() // Check ob es das erste Event ist Mithilfe von beginOfGame flag
@@ -104,6 +106,7 @@ budgetElems.forEach(budgetElem => {
 })
 
 updateAttributes() // update attributes
+updateYear()
 main()
 
 document.getElementById("afforestationInfo").innerHTML = "Fläche die von der Erde mit Wald bedeckt ist. Das Spiel endet, sobald die Waldfläche unter 10% sinkt."
