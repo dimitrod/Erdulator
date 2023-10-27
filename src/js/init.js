@@ -22,18 +22,21 @@ let populationGrowthRate = 1.015
 
 let afforestation = 50
 let afforestationGameOver = 10.0
+let maxAfforestation = 100
 let minAfforestationGrowthRate = -0.6
 let maxAfforestationGrowthRate = 0
 let afforestationGrowthRate = -0.6
 
 let temperature = 0
 let temperatureGameOver = 5
+let minTemperature = -5
 let minTemperatureGrowthRate = 0
 let maxTemperatureGrowthRate = 0.08
 let temperatureGrowthRate = 0.08
 
 let waterLevel = 0
 let waterLevelGameOver = 10
+let minWaterLevel = -10
 let minWaterLevelGrowthRate = 0
 let maxWaterLevelGrowthRate = 0.16
 let waterLevelGrowthRate = 0.16
