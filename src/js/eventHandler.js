@@ -116,7 +116,6 @@ function newEvent() {
 }
 
 function timedEvents() {
-    console.log("timedEvents called")
     currentTimedEvent = timedEvent[0]
     if (!currentTimedEvent) newEvent()
     else if (year >= currentTimedEvent.endingYear && year >= currentTimedEvent.endingYear) {
@@ -222,5 +221,6 @@ function reaction(r) {
     statgr.innerHTML += "<li>Weltdurchschnittstemperatur: " + ((temperature-beforeTemp)>0?"+":"") + (temperature-beforeTemp).toFixed(1) + " °C</li>"
     updateAttributes()
     document.getElementById("info").style.display ="block"
+    timeIncrement()
     gameOver()
 }

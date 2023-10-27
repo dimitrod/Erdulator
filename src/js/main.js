@@ -52,7 +52,11 @@ function updateAttributes() {
 }
 
 function updateYear() {
-    yearElem.innerHTML = year
+    console.log(year)
+    console.log(year - timedEvent[0].startingYear)
+    if((year - timedEvent[0].endingYear) > 0 && (year - timedEvent[0].endingYear) < 5) yearElem.innerHTML = timedEvent[0].endingYear
+    else if((year - timedEvent[0].startingYear) > 0 && (year - timedEvent[0].startingYear) < 5) yearElem.innerHTML = timedEvent[0].startingYear
+    else yearElem.innerHTML = year
     yearElem.style.left = ((year - 1900) / 125) * 100 + "%"
     yearElemPercent.style.width = ((year - 1900) / 125) * 100 + "%"
 }
@@ -84,15 +88,8 @@ helpimg.addEventListener("mousedown", function() {
   });
   
 
-
-
-
-
-
-
 function main() {
     if (beginOfGame) newEvent() // Check ob es das erste Event ist Mithilfe von beginOfGame flag
-    else timeIncrement()
     timedEvents() // gibt es ein timedEvent? Wenn nicht newEvent()
     attributeCheck() // Attribute erreichen keine illegalen Bereiche
     if (!currentEvent) makeQuiz() // Wenn kein Event an ist, mach ein Quiz

@@ -27,4 +27,5 @@ function attributeIncrement() {
     afforestationIncrement()
     temperatureIncrement()
     waterLevelIncrement()
+    updateAttributes()
 }
