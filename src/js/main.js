@@ -62,6 +62,7 @@ function updateGrowthRateDisplay(growthRate, elem) {
     if (growthRate == populationGrowthRate) {
         sign = "x"
         unit = ""
+        isPositive = growthRate > 1
     }
     else if (growthRate == afforestationGrowthRate) unit = "%"
     else if (growthRate == waterLevelGrowthRate) unit = "m"
