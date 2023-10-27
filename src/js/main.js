@@ -52,8 +52,8 @@ function updateAttributes() {
 }
 
 function updateYear() {
-    if((year - timedEvent[0].endingYear) > 0 && (year - timedEvent[0].endingYear) < 5) yearElem.innerHTML = timedEvent[0].endingYear
-    else if((year - timedEvent[0].startingYear) > 0 && (year - timedEvent[0].startingYear) < 5) yearElem.innerHTML = timedEvent[0].startingYear
+    if(timedEvent[0] && (year - timedEvent[0].endingYear) > 0 && (year - timedEvent[0].endingYear) < 5) yearElem.innerHTML = timedEvent[0].endingYear
+    else if(timedEvent[0] && (year - timedEvent[0].startingYear) > 0 && (year - timedEvent[0].startingYear) < 5) yearElem.innerHTML = timedEvent[0].startingYear
     else yearElem.innerHTML = year
     yearElem.style.left = ((year - 1900) / 125) * 100 + "%"
     yearElemPercent.style.width = ((year - 1900) / 125) * 100 + "%"
