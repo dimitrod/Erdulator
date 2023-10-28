@@ -525,7 +525,7 @@ html {
     background-color: transparent;
     padding: 20px;
     margin-top: 25px; 
-    max-height:40vh;
+    max-height:45vh;
 }
 
 #event::after, #info::after, #questionDisplay::after, #information::after, #emptyQuiz::after {
@@ -1227,9 +1227,13 @@ body{
     height:35px !important;
   }
 
+  .overflowWrapper {
+    max-height:35vh;
+  }
 
   #event, #info, #questionDisplay, #information, #emptyQuiz { 
     margin-top:10px;
+    max-height:40vh;
   }
 
   #gameOverMessage, #eventMessage, #quizQuestion, #answer, #background, #eQMessage {
