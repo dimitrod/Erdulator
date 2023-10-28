@@ -1165,8 +1165,11 @@ body{
 
   .infoContainer > div {
 
-    margin-top:-1px;
 
+  }
+
+  .infoContainer:hover .upgradeInfo {
+    font-size: 15px;
   }
 
   #barwrap_right {
@@ -1181,7 +1184,7 @@ body{
   }
 
   .topInfo {
-    margin-top: 8px !important;
+    margin-top: 10px !important;
   }
 
   .budgetwrap {

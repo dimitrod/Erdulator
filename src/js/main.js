@@ -113,6 +113,16 @@ updateAttributes() // update attributes
 updateYear()
 main()
 
+if(window.innerHeight > window.innerWidth){
+    var infoSymbol = document.getElementsByClassName("theInfo")
+
+    console.log(infoSymbol)
+
+	for (const element of infoSymbol) {
+		element.innerHTML = "Info";
+	  }
+}
+
 document.getElementById("afforestationInfo").innerHTML = "Fläche die von der Erde mit Wald bedeckt ist. Das Spiel endet, sobald die Waldfläche unter 10% sinkt."
 document.getElementById("waterLevelInfo").innerHTML = "Der Meeresspiegel. Das Spiel endet, sobald der Meeresspiegel über 10m steigt."
 document.getElementById("temperatureInfo").innerHTML = "Die Durchschnittstemperatur auf der Erde. Das Spiel endet, sobald die Temperatur über 5°C steigt."

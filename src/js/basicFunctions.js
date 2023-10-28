@@ -44,7 +44,6 @@ function resetElementScroll(){
 	var scrollableElement = document.getElementsByClassName("overflowWrapper")
 
 	for (const element of scrollableElement) {
-		console.log(element.scrollTop)
 		element.scrollTop = 0
 	  }
 
