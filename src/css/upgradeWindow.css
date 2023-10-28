@@ -143,8 +143,8 @@
     display: inline-block;
     width: 60%;
     height: 100%;
-    overflow-y: hidden;
-    overflow-x: visible;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #upgradeRightWrapper {
