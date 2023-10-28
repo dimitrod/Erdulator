@@ -32,6 +32,8 @@ function updateBudget(amount){
 }
 
 function calculateColor(value, minValue, maxValue) {
+	if(value > maxValue) value = maxValue
+	if(value < minValue) value = minValue
     const normalizedValue = (value - minValue) / (maxValue - minValue)
     const hue = 120 * (1-normalizedValue)
     return `hsl(${hue}, 100%, ${(50-((1-normalizedValue)*25))}%)`
