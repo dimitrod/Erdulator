@@ -525,7 +525,7 @@ html {
     background-color: transparent;
     padding: 20px;
     margin-top: 25px; 
-    max-height:45vh;
+    max-height:40vh;
 }
 
 #event::after, #info::after, #questionDisplay::after, #information::after, #emptyQuiz::after {
@@ -1301,7 +1301,7 @@ body{
   #upgradeLeftWrapper {
     width: 92%;
     margin-top: 12vh;
-    height:75vh;
+    height: 73vh;
   }
 
   #helpWindowInformation, #imprintWindowInformation {
@@ -1363,6 +1363,13 @@ body{
   display: none !important;
 }
 
+#upgradeWindow, #helpWindow, #imprintWindow {
+  overflow:hidden;
+}
+
+#upgradeWindow > .title, #helpWindow > .title, #imprintWindow > .title {
+  padding-top:10px;
+}
  
 }
 
