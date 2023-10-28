@@ -167,17 +167,19 @@
             <div id="help-closeWrapper">
                 <button class="nes-btn is-warning" class="closeUW" onclick="closeUpgradeWindow()">X</button>
             </div>
-            <div class="budgetwrap">
-                <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
-            </div>
             <nav class="upgradeNav">
                 <button class="nes-btn is-warning" class="closeUW" onclick="upgradeWindowCategory('upgrades', this.id)" id="upgradeButton">Upgrades</button>
                 <button class="nes-btn is-warning" class="closeUW" onclick="upgradeWindowCategory('investments', this.id)" id="investmentButton">Investitionen</button>
             </nav>
+            <div class="budgetwrap">
+                <span>Budget: </span><span class="budget"></span><div class="budgetChangeWrapper"> </div>
+                <div><p id="upgradesLeftWrapper">Upgrades übrig: <span id="upgradesLeft"></span></p></div>
+            </div>
+
             <div id="upgradeContentWrapper">
                 <div id="upgradeLeftWrapper">
                     <div id="upgrades" class="category">
-                        <div><p id="upgradesLeftWrapper">Upgrades übrig: <span id="upgradesLeft"></span></p></div>
+                        
                         <div id="upgradesWrapper"></div>
                     </div>
                     <!-- <div id="Technologien"></div> -->
