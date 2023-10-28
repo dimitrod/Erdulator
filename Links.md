@@ -6,5 +6,6 @@
 [Zwischenvortrag](https://docs.google.com/document/d/16bHBDd5oXL7Z27XnpYW1QRjGDohDtUeTlDXO6iv-yMI/edit)
 [Zwischenprsäsentation](https://docs.google.com/presentation/d/1ZPzjs_kRrRrBwjXcDzNlwgTtCr5j0oRt-P8o6rm28cc/edit?usp=sharing)
 [Overleaf_Paper](https://de.overleaf.com/2455583199pygcmbdwgjmk)
+[Ziele](https://docs.google.com/spreadsheets/d/1uJMa__u37lLJ5sSMOplNwMR4O8eq8jjVe4SKQapGR3A/edit)
 
 https://www.w3schools.com/css/css_tooltip.asp
