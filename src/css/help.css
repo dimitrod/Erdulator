@@ -33,7 +33,7 @@
     background-color: #f7d51d;
 }
 
-#helpWindow {
+#helpWindow, #imprintWindow {
     z-index: 3;
     position: absolute;
     box-sizing: border-box;
@@ -45,37 +45,38 @@
     font-family: "Dogica", sans-serif;
 }
 
-#helpWindow nav button{
+#helpWindow nav button, #imprintWindow nav button {
     width: auto;
 }
-#helpWindow nav button:disabled{
+
+#helpWindow nav button:disabled, #imprintWindow nav button:disabled {
     color: grey;
 }
 
-#helpWindow span, #helpWindow p {
+#helpWindow span, #helpWindow p, #imprintWindow span, #imprintWindow p  {
     padding: 10px;
     box-sizing: border-box;
 }
 
-#helpWindow > .title {
+#helpWindow > .title, #imprintWindow > .title {
     padding: 0 .5rem;
     background-color: #191919;
 }
 
-#helpWindow.nes-container.is-dark {
+#helpWindow.nes-container.is-dark, #imprintWindow.nes-container.is-dark {
     background: rgba(0,0,0,0.8);
 }
-#helpWindow::after {
+#helpWindow::after, #imprintWindow::after {
     background-color: transparent;
 }
-#closeHelpWindow{
+#closeHelpWindow, #closeImprintWindow{
     position: absolute;
     right: 10px;
     top: 10px;
     width: auto
 }
-#helpWindowInformation {
-    overflow: scroll;
+#helpWindowInformation, #imprintWindowInformation {
+    overflow-y: auto;
     overflow-x: hidden;
     width: 90%;
     height: 90%;

@@ -142,7 +142,7 @@
 #upgradeLeftWrapper {
     display: inline-block;
     width: 60%;
-    overflow: auto;
+    overflow-y: auto;
     height: 100%;
 }
 
@@ -151,7 +151,7 @@
     font-family: "Dogica", sans-serif;
     width: 30%;
     padding-left:25px;
-    overflow: auto;
+    overflow-y: auto;
     height: 100%;
 }
 
