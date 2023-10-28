@@ -27,19 +27,19 @@ function gameOver() {
 
 function updateAttributes() {
     afforestationElems.forEach(elem => {
-        elem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " %"
+        elem.innerHTML = "Bewaldung: " + afforestation.toFixed(1) + " % <br>"
         updateGrowthRateDisplay(afforestationGrowthRate, maxAfforestationGrowthRate, minAfforestationGrowthRate, elem)
     })
     waterLevelElems.forEach(elem => {
-        elem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m"
+        elem.innerHTML = "Wasserlevel: " + waterLevel.toFixed(1) + " m <br>"
         updateGrowthRateDisplay(waterLevelGrowthRate, minWaterLevelGrowthRate, maxWaterLevelGrowthRate, elem)
     })
     populationElems.forEach(elem => {
-        elem.innerHTML = "Bevölk.: " + convertNum(population, 2)
+        elem.innerHTML = "Bevölk.: " + convertNum(population, 2) + " <br>"
         updateGrowthRateDisplay(populationGrowthRate, minPopulationGrowthRate, maxTemperatureGrowthRate, elem)
     })
     temperatureElems.forEach(elem => {
-        elem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C"
+        elem.innerHTML = "Temperatur: " + temperature.toFixed(1) + " °C <br>"
         updateGrowthRateDisplay(temperatureGrowthRate, minTemperatureGrowthRate, maxTemperatureGrowthRate, elem)
     })
 
@@ -75,7 +75,7 @@ function updateGrowthRateDisplay(growthRate, minGrowthRate, maxGrowthRate, elem)
     else if (growthRate == afforestationGrowthRate) unit = "%"
     else if (growthRate == waterLevelGrowthRate) unit = "m"
     else if (growthRate == temperatureGrowthRate) unit = "°C"
-    value = `(<div style="display:inline-block;">${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</div>/Jahr)`
+    value = `(<div style="display:inline;">${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</div>/Jahr)`
     growthRateElem.innerHTML = value
     Array.from(growthRateElem.getElementsByTagName("div")).forEach(elem => {
         elem.style.color = calculateColor(growthRate, minGrowthRate, maxGrowthRate)
