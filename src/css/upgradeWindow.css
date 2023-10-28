@@ -26,12 +26,16 @@
 }
 
 #upgradeWindow .budgetwrap{
+    margin-top:10px;
     display: inline;
-    margin-bottom:10px;
 }
 
 #upgradeWindow p {
     color: #f7d51d;
+    margin-top:0;
+    margin-bottom:0;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
 #upgradeWindow {
@@ -168,7 +172,7 @@
 }
 
 #upgradeContentWrapper{
-    min-height: 70%;
+    min-height: 65%;
     height:calc(80vh - 200px);
     max-height: 90%;
     width: 100%;
@@ -187,7 +191,7 @@
     font-size: 20px;
 }
 
-#upgradesWrapper{
-
+#upgrades {
+    padding-top: 10px;
 
 }
