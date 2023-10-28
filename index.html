@@ -34,12 +34,41 @@
             <span class="title">HILFE</span>
             <button class="nes-btn is-warning" class="closeUW" id="closeHelpWindow" onclick="closeHelpWindow()">X</button>
             <nav>
-                <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('imprint', this.id)" id="imprintButton" disabled="true">Impressum</button>
-                <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('dataProtection', this.id)" id="dataProtectionButton">Datenschutzerklärung</button>
-                <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('gameHelp', this.id)" id="gameNavButton">Spielerklärung</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('gameHelp', this.id)" id="gameNavButton" disabled="true">Spielerklärung</button>
                 <button class="nes-btn is-warning" class="closeUW" onclick="helpWindowCategory('upgradeWindowHelp', this.id)" id="upgradeWindowNavButton">Upgradefenster</button>
             </nav>
             <div id="helpWindowInformation">
+                <div id="gameHelp" class="category">
+                    Erdulator ist ein Spiel, dass die Zusammenhänge zwischen Klimawandel und unseren Handlungen spielerisch näher bringen soll.
+                    Oben links befindet sich die Zeitleiste. Diese zeigt das aktuelle Spieljahr und den Fortschritt bis zum Spielende (Jahr 2025) an.
+                    <div id="help_eventQuiz">
+                        <br><p class="nes-container is-dark with-title" >Event- und Quizfenster</p><br>
+                    </div>
+                    <div id="help_budget">
+                        <br><p class="nes-container is-dark with-title" >Budget</p><br>
+                    </div>
+                    <div id="help_attribute">
+                        <br><p class="nes-container is-dark with-title" >Attribute</p><br>
+                    </div>
+                    <div id="help_music">
+                        <br><p class="nes-container is-dark with-title" >Musik</p><br>
+                    </div>
+                    <div id="help_Spielablauf">
+                        <br><p class="nes-container is-dark with-title" >Spielablauf</p><br>
+                    </div>
+                </div>
+                <div id="upgradeWindowHelp" class="category" style="display:none;">Das Upgrade-Fenster ist mega stark und du greifst das Problem an der Wurzel.</div>
+            </div>
+        </div>
+
+        <div class="nes-container is-dark with-title" id="imprintWindow" style="display:none;">
+            <span class="title">IMPRESSUM UND DATENSCHUTZ</span>
+            <button class="nes-btn is-warning" class="closeUW" id="closeImprintWindow" onclick="closeImprintWindow()">X</button>
+            <nav>
+                <button class="nes-btn is-warning" class="closeUW" onclick="imprintWindowCategory('imprint', this.id)" id="imprintButton" disabled="true">Impressum</button>
+                <button class="nes-btn is-warning" class="closeUW" onclick="imprintWindowCategory('dataProtection', this.id)" id="dataProtectionButton">Datenschutzerklärung</button>
+            </nav>
+            <div id="imprintWindowInformation">
                 <div id="imprint" class="category">
                     Dimitar Dimitrov<br>
                     Ansbacher Str. 13<br>
@@ -108,26 +137,6 @@
                     <br><br>
                     GitHub hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt. Diese gelten für alle weltweiten Aktivitäten, bei denen GitHub personenbezogene Daten von natürlichen Personen in der EU verarbeitet. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie unter: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors
                 </div>
-                <div id="gameHelp" class="category" style="display:none;">
-                    Erdulator ist ein Spiel, dass die Zusammenhänge zwischen Klimawandel und unseren Handlungen spielerisch näher bringen soll.
-                    Oben links befindet sich die Zeitleiste. Diese zeigt das aktuelle Spieljahr und den Fortschritt bis zum Spielende (Jahr 2025) an.
-                    <div id="help_eventQuiz">
-                        <br><p class="nes-container is-dark with-title" >Event- und Quizfenster</p><br>
-                    </div>
-                    <div id="help_budget">
-                        <br><p class="nes-container is-dark with-title" >Budget</p><br>
-                    </div>
-                    <div id="help_attribute">
-                        <br><p class="nes-container is-dark with-title" >Attribute</p><br>
-                    </div>
-                    <div id="help_music">
-                        <br><p class="nes-container is-dark with-title" >Musik</p><br>
-                    </div>
-                    <div id="help_Spielablauf">
-                        <br><p class="nes-container is-dark with-title" >Spielablauf</p><br>
-                    </div>
-                </div>
-                <div id="upgradeWindowHelp" class="category" style="display:none;">Das Upgrade-Fenster ist mega stark und du greifst das Problem an der Wurzel.</div>
             </div>
         </div>
 
@@ -297,6 +306,9 @@
         <div id="musicNoteWrapper">
             <img id="musicNote" src="resource/music_note.png">
         </div>
+        <div id="imprintButtonWrapper">
+            <button class="nes-btn is-warning" onclick="openImprintWindow()" id="imprint">Impressum/Datenschutz</span>
+         </div>
         <div class="nes-container is-dark with-title display-none" id="musicPlayer">
             <p class="title">MUSIK</p>
             <img id="playpause" src="resource/play.png" onclick="togglePlay()">
@@ -324,6 +336,7 @@
     <script src="src/js/attributeIncrement.js"></script>
     <script src="src/js/upgradeWindow.js"></script>
     <script src="src/js/help.js"></script>
+    <script src="src/js/imprint.js"></script>
     <script src="src/js/musicPlayer.js"></script>
     <script src="src/js/main.js"></script>
 
