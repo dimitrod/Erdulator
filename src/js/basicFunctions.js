@@ -13,7 +13,7 @@ function convertNum(i, y){
 function updateBudget(amount){
 	budgetChangeWrapper = Array.from(document.getElementsByClassName("budgetChangeWrapper")) // erst hier, weil
 	budget += amount
-	checkBudgetForUpgrade()
+	checkUpgrades()
 	checkInvestments()
 	budgetText = convertNum(Math.abs(amount), 1) + "€"
 	budgetCheck()

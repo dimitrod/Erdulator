@@ -68,7 +68,7 @@
 }
 
 .upgradeWrapper {
-    width: 100%;
+    width: calc(100% - 8px);
     color: #fff;
     text-align: left;
     font-family: "Dogica", sans-serif;
@@ -131,7 +131,7 @@
     width:90%;
 }
 
-#upgrades {
+#upgradeWrapper {
     width:90%;
 }
 
@@ -142,8 +142,9 @@
 #upgradeLeftWrapper {
     display: inline-block;
     width: 60%;
-    overflow: auto;
     height: 100%;
+    overflow-y: hidden;
+    overflow-x: visible;
 }
 
 #upgradeRightWrapper {
@@ -167,8 +168,6 @@
 }
 
 #upgradeContentWrapper{
-    top: 20%;
-    position: absolute;
     height: 80%;
     width: 100%;
 }
@@ -176,4 +175,21 @@
 
 #upgradeWindow > .title {
     background-color: #191919;
+}
+
+#upgradesLeftWrapper{
+    color: #fff;
+    text-align: left;
+    font-family: "Dogica", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#upgradesWrapper{
+    position: absolute;
+    top: calc(20% + 30px);
+    bottom: 0;
+    overflow-y: auto; 
+    overflow-x: visible;
+    width: 58%;
 }

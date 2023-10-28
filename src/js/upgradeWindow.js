@@ -17,6 +17,8 @@ function openUpgradeWindow(){
         bcw.innerHTML=""
     })
    gamePageBudgetWrapper.style.display = "none"
+   checkUpgrades()
+   document.getElementById("upgradesLeft").innerHTML = upgradesLeft
 }
 function closeUpgradeWindow(){
     budgetChangeWrapper = Array.from(document.getElementsByClassName("budgetChangeWrapper"))
@@ -46,6 +48,7 @@ function upgradeWindowCategory(category, btnid) {
 
 
 function buyUpgrade(index){
+    upgradesLeft--
     upgrade = upgrades[index]
     cost = upgrade.cost
     upgrade.currentLevel++
@@ -57,6 +60,7 @@ function buyUpgrade(index){
 
     upgradeWrapper = document.getElementById(upgrade.id)
     Array.from(upgradeWrapper.getElementsByClassName("level" + upgrade.currentLevel))[0].style.backgroundColor = "green"
+    
     /*if (upgrade.currentLevel == maxLevel)document.getElementById(upgrade.id).getElementsByTagName("button")[0].disabled=true*/
 }
 

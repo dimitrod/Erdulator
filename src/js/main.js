@@ -48,6 +48,8 @@ function updateAttributes() {
     populationSlider.style.width = parseInt(population/116500000)+"%";
     temperatureSlider.style.width = parseInt(((temperature+5)/10)*100)+"%";
 
+    document.getElementById("upgradesLeft").innerHTML = upgradesLeft
+
     checkDanger()
 }
 
@@ -57,6 +59,7 @@ function updateYear() {
     else yearElem.innerHTML = year
     yearElem.style.left = ((year - 1900) / 125) * 100 + "%"
     yearElemPercent.style.width = ((year - 1900) / 125) * 100 + "%"
+    upgradesLeft++;
 }
 
 function updateGrowthRateDisplay(growthRate, minGrowthRate, maxGrowthRate, elem) {
