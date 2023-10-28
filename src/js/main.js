@@ -8,7 +8,7 @@ function createGameOverMessage(message) {
     document.getElementById("questionDisplay").style.display = 'none'
     document.getElementById("info").style.display = 'none'
     document.getElementById("event").style.display = 'none'
-    document.getElementById("gameOver").style.display ="block"
+    document.getElementById("gameOver").style.display = "inline-block"
     document.getElementById("gameOverStatistic").innerHTML = "Du hast Insgesamt " + correctQuizzes + " von " + totalQuizzes + " Quizzes richtig beantwortet."
 }
 
@@ -64,6 +64,7 @@ function updateYear() {
 
 function updateGrowthRateDisplay(growthRate, minGrowthRate, maxGrowthRate, elem) {
     growthRateElem = document.createElement("span")
+    growthRateElem.classList.add("growthIndicator");
     isPositive = growthRate > 0
     sign = isPositive ? "+" : "-"
     if (growthRate == populationGrowthRate) {
@@ -74,9 +75,9 @@ function updateGrowthRateDisplay(growthRate, minGrowthRate, maxGrowthRate, elem)
     else if (growthRate == afforestationGrowthRate) unit = "%"
     else if (growthRate == waterLevelGrowthRate) unit = "m"
     else if (growthRate == temperatureGrowthRate) unit = "°C"
-    value = `(<span>${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</span>/Jahr)`
+    value = `(<div style="display:inline-block;">${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</div>/Jahr)`
     growthRateElem.innerHTML = value
-    Array.from(growthRateElem.getElementsByTagName("span")).forEach(elem => {
+    Array.from(growthRateElem.getElementsByTagName("div")).forEach(elem => {
         elem.style.color = calculateColor(growthRate, minGrowthRate, maxGrowthRate)
     })
     elem.appendChild(growthRateElem)

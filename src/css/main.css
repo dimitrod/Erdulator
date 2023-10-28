@@ -31,6 +31,37 @@
   
 }
 
+
+.overflowWrapper {
+max-height: calc(100vh - 450px);
+overflow-y: auto;
+overflow-x:hidden;
+
+}
+
+
+@media screen and (max-height: 650px) {
+  .overflowWrapper {
+    min-height: 20vh;
+    
+    }
+}
+
+
+
+
+.overflowWrapper .nes-btn {
+  width: 95% !important;
+}
+
+
+.growthIndicator {
+  display: block;
+}
+
+
+
+
 .nes-btn.is-success {
   background-color: #3b9e29;
 }
@@ -263,7 +294,6 @@
 html {  
     height: 100%;
     background: radial-gradient(ellipse at bottom, #1b2735 100%, #090a0f 100%);
-    overflow: auto;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
@@ -516,8 +546,7 @@ html {
 }
 
 #barwrap span{
-  display: inline-block;
-  margin-top:25px;
+  display: block;
   font-size:0.8vw;
 }
 
@@ -979,6 +1008,12 @@ body{
 
 
 
+#imprintButtonWrapper {
+  position: absolute;
+  right:0;
+}
+
+
 @media screen and (max-width: 1300px) {
   .nes-btn {
     padding: 2px 4px;
@@ -1239,7 +1274,7 @@ body{
   }
 
 
-  #upgradeWindow, #helpWindow {
+  #upgradeWindow, #helpWindow, #imprintWindow {
     left:0;
     width:100%;
   }
@@ -1255,7 +1290,7 @@ body{
     height:55vh;
   }
 
-  #helpWindowInformation {
+  #helpWindowInformation, #imprintWindowInformation {
     width: 100%;
     font-size: 14px;
     margin-top: 3vh;
@@ -1263,7 +1298,7 @@ body{
     max-height:80%;
   }
 
-  #helpWindow nav {
+  #helpWindow nav, #helpWindow nav {
     margin-top:50px;
   }
 
@@ -1311,6 +1346,11 @@ body{
 
  
 }
+
+.category {
+  padding-top: 15px;
+}
+
 
 .red-text {
   color: red;
