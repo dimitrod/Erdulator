@@ -251,40 +251,52 @@
                 </div>
                 <div id="wrapper">
                     <div class="nes-container is-dark with-title" id="gameOver" style="display:none;">
-                        <p class="title">GAME OVER</p>
-                        <p id="gameOverMessage"></p>
-                        <span id="gameOverStatistic"></span>
-                        <button class="nes-btn is-error" id="restart" onclick="location.reload()">Neustarten</button>
+                         <p class="title">GAME OVER</p>
+                        <div class="overflowWrapper">
+                            <p id="gameOverMessage"></p>
+                            <span id="gameOverStatistic"></span>
+                            <button class="nes-btn is-error" id="restart" onclick="location.reload()">Neustarten</button>
+                        </div>
                     </div>
                     <div class="nes-container is-dark with-title" id="event" style="display:none;">
                         <p class="title">EREIGNIS</p>
-                        <p id="eventMessage"></p>
-                        <button class="nes-btn is-success" id="reaction1" onclick="reaction(0)"></button><br>
-                        <button class="nes-btn is-success" id="reaction2" onclick="reaction(1)"></button><br>
-                        <button class="nes-btn is-success" id="reaction3" onclick="reaction(2)"></button>
+                        <div class="overflowWrapper">
+                            <p id="eventMessage"></p>
+                            <button class="nes-btn is-success" id="reaction1" onclick="reaction(0)"></button><br>
+                            <button class="nes-btn is-success" id="reaction2" onclick="reaction(1)"></button><br>
+                            <button class="nes-btn is-success" id="reaction3" onclick="reaction(2)"></button>
+                        </div>
                     </div>
-                    <div class="nes-container is-dark with-title" id="info" style="display:none;">
+                    <div class="nes-container is-dark" id="info" style="display:none;">
+                        <div class="overflowWrapper">
                         <p>Aufgrund deiner Entscheidung ist in den letzten 5 Jahren folgendes passiert:</p>
                         <ul id="stats"></ul>
                         <p>Außerdem hatte der Klimawandel in den letzten Jahren diese Folgen:</p>
                         <ul id="statsgr"></ul>
                         <button class="nes-btn is-warning" id="closeInfo" onclick="document.getElementById('info').style.display = 'none'; makeQuiz()">Okay</button>
+                        </div>
                     </div>
                     <div class="nes-container is-dark with-title" id="questionDisplay" class="quiz" style="display:none;">
                         <p class="title">QUIZ</p>
+                        <div class="overflowWrapper">
                         <p id="quizQuestion"> </p>
                         <button class="nes-btn is-success" id="answer0" onclick="evaluateAnswer(0)"> </button><br>
                         <button class="nes-btn is-success" id="answer1" onclick="evaluateAnswer(1)"> </button><br>
                         <button class="nes-btn is-success" id="answer2" onclick="evaluateAnswer(2)"> </button>
                     </div>
+                    </div>
                     <div class="nes-container is-dark with-title" id="information" class="information" style="display:none;">
+                        <div class="overflowWrapper">
                         <p id ="answer"></p>
                         <p id ="background"></p>
                         <button class="nes-btn is-warning" id="NextClose" onclick="nextCloseDecider()">Weiter</button>
                     </div>
+                    </div>
                     <div class="nes-container is-dark with-title" id="emptyQuiz" style="display:none;">
+                        <div class="overflowWrapper">
                         <p id="eQMessage">Gibt erstmal keine weiteren Quizfragen!</p>
                         <button class="nes-btn is-warning" id="eQClose" onclick="document.getElementById('emptyQuiz').style.display = 'none'; main()">X</button>
+                    </div>
                     </div>
                     
                 </div>

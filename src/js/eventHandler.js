@@ -45,6 +45,7 @@ function getRandomRegion(region) {
 }
 
 function newEvent() {
+    resetElementScroll()
     beginOfGame = false
     upgradeBought = false
     let commonEvents = [hurricane, earthquake, tsunami, drought, bushFire, flood, oilTankerExplosion, tornado, natureConservationDay, deforestation]
@@ -113,7 +114,7 @@ function newEvent() {
     document.getElementById("reaction2").innerHTML = currentEvent.reactions[1].reaction + " (" + convertNum(currentEvent.reactions[1].cost, 0) + " €)"
     document.getElementById("reaction3").innerHTML = currentEvent.reactions[2].reaction + " (" + convertNum(currentEvent.reactions[2].cost, 0) + " €)"
     budgetCheck()
-    document.getElementById("event").style.display = "block"
+    document.getElementById("event").style.display = "inline-block"
 }
 
 function timedEvents() {
@@ -127,12 +128,12 @@ function timedEvents() {
         document.getElementById("reaction2").innerHTML = currentTimedEvent.reactions[1].reaction + " (" + convertNum(currentTimedEvent.reactions[1].cost, 0) + " €)"
         document.getElementById("reaction3").innerHTML = currentTimedEvent.reactions[2].reaction + " (" + convertNum(currentTimedEvent.reactions[2].cost, 0) + " €)"
         budgetCheck()
-        document.getElementById("event").style.display = "block"
+        document.getElementById("event").style.display = "inline-block"
         timedEvent.splice(0, 1) 
     } else if (year >= currentTimedEvent.startingYear && year != currentTimedEvent.startingYear) {
         yearElem.innerHTML = currentTimedEvent.startingYear
         document.getElementById("timedEventMessage").innerHTML = currentTimedEvent.eventStartingMessage
-        document.getElementById("timedEventPopup").style.display = "block"
+        document.getElementById("timedEventPopup").style.display = "inline-block"
         setTimeout(() => {document.getElementById("timedEventPopup").style.display = 'none'}, 5000)
         newEvent()
     } else newEvent()
@@ -209,6 +210,8 @@ function reaction(r) {
             default:
                 break
         }
+
+
     })
 
     let beforeAff = afforestation
@@ -221,7 +224,8 @@ function reaction(r) {
     statgr.innerHTML += "<li>Wasserspiegel: " + ((waterLevel-beforeWL)>0?"+":"") + (waterLevel-beforeWL).toFixed(1) + " m</li>"
     statgr.innerHTML += "<li>Weltdurchschnittstemperatur: " + ((temperature-beforeTemp)>0?"+":"") + (temperature-beforeTemp).toFixed(1) + " °C</li>"
     updateAttributes()
-    document.getElementById("info").style.display ="block"
+    document.getElementById("info").style.display = "inline-block"
+    resetElementScroll()
     timeIncrement()
     gameOver()
 }

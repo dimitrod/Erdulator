@@ -36,3 +36,14 @@ function calculateColor(value, minValue, maxValue) {
     const hue = 120 * (1-normalizedValue)
     return `hsl(${hue}, 100%, ${(50-((1-normalizedValue)*25))}%)`
 }
+
+
+function resetElementScroll(){
+	var scrollableElement = document.getElementsByClassName("overflowWrapper")
+
+	for (const element of scrollableElement) {
+		console.log(element.scrollTop)
+		element.scrollTop = 0
+	  }
+
+}

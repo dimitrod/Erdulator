@@ -32,6 +32,28 @@
 }
 
 
+.overflowWrapper {
+max-height: calc(100vh - 450px);
+overflow-y: auto;
+overflow-x:hidden;
+
+}
+
+
+@media screen and (max-height: 650px) {
+  .overflowWrapper {
+    min-height: 20vh;
+    
+    }
+}
+
+
+
+
+.overflowWrapper .nes-btn {
+  width: 95% !important;
+}
+
 
 .growthIndicator {
   display: block;

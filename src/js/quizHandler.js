@@ -9,7 +9,7 @@ const rewardElem = document.getElementsByClassName("budgetGrowthWrapper")
 
 function makeQuiz(){
     if (quiz.length == 0) {
-        document.getElementById("emptyQuiz").style.display="block"
+        document.getElementById("emptyQuiz").style.display="inline-block"
     }
     else {
         if (!amount) amountOfQuestions = Math.floor(Math.random() * 3 +1)
@@ -26,7 +26,7 @@ function makeQuiz(){
 }
 
 function displayQuestionFromQueue(){
-    document.getElementById("questionDisplay").style.display = "block"
+    document.getElementById("questionDisplay").style.display = "inline-block"
     document.getElementById("quizQuestion").innerHTML = currentQuestions[0].question
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = currentQuestions[0].choices[i]
@@ -45,11 +45,14 @@ function nextCloseDecider(){
 }
 
 function evaluateAnswer(i){
+
+    resetElementScroll()
+
     if (currentQuestions.length == 1) {
         document.getElementById("NextClose").innerHTML="Schließen"
     }
     document.getElementById("questionDisplay").style.display = "none"
-    document.getElementById("information").style.display ="block"
+    document.getElementById("information").style.display ="inline-block"
     if (i == currentQuestions[0].answer){
         document.getElementById("answer").innerHTML= "Richtig!"
         reward = currentQuestions[0].reward * Math.pow(10, 6)

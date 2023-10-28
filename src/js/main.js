@@ -8,7 +8,7 @@ function createGameOverMessage(message) {
     document.getElementById("questionDisplay").style.display = 'none'
     document.getElementById("info").style.display = 'none'
     document.getElementById("event").style.display = 'none'
-    document.getElementById("gameOver").style.display ="block"
+    document.getElementById("gameOver").style.display = "inline-block"
     document.getElementById("gameOverStatistic").innerHTML = "Du hast Insgesamt " + correctQuizzes + " von " + totalQuizzes + " Quizzes richtig beantwortet."
 }
 

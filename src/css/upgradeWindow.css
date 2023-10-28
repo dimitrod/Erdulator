@@ -168,7 +168,9 @@
 }
 
 #upgradeContentWrapper{
-    height: 80%;
+    min-height: 70%;
+    height:calc(80vh - 200px);
+    max-height: 90%;
     width: 100%;
 }
 
@@ -186,10 +188,6 @@
 }
 
 #upgradesWrapper{
-    position: absolute;
-    top: calc(25% + 30px);
-    bottom: 0;
-    overflow-y: auto; 
-    overflow-x: visible;
-    width: 58%;
+
+
 }
