@@ -111,6 +111,8 @@
 .infoContainer {
     display: inline;
     margin-left: 10px;
+    position: relative;
+
 }
 /* changes visibility of upgradeinfo*/
 .infoContainer:hover .upgradeInfo{
@@ -129,6 +131,14 @@
     border-radius: 6px;
     /*cursor: pointer;*/
     z-index: 10;
+}
+
+.upgradeWindowInfo{
+    visibility: hidden;
+    /*width: auto;
+    background-color: white;
+    color: black;
+    text-align: center;*/
 }
 
 #investments{
