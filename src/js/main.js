@@ -78,7 +78,8 @@ function updateGrowthRateDisplay(growthRate, minGrowthRate, maxGrowthRate, elem)
     value = `(<div style="display:inline;">${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</div>/Jahr)`
     growthRateElem.innerHTML = value
     Array.from(growthRateElem.getElementsByTagName("div")).forEach(elem => {
-        elem.style.color = calculateColor(growthRate, minGrowthRate, maxGrowthRate)
+        if(growthRate == afforestationGrowthRate) elem.style.color = calculateColor(maxGrowthRate-growthRate, minGrowthRate, maxGrowthRate) 
+        else elem.style.color = calculateColor(growthRate, minGrowthRate, maxGrowthRate)
     })
     elem.appendChild(growthRateElem)
 }
