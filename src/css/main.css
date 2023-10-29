@@ -3,9 +3,9 @@
 
   src:
   local("Minecraft"),
-  url("/resource/font/Minecraft.ttf") format('truetype'),
-  url("/resource/font/Minecraft.otf") format("opentype"),
-  url("/resource/font/Minecraft.woff") format("woff");
+  url("../../resource/font/Minecraft.ttf") format('truetype'),
+  url("../../resource/font/Minecraft.otf") format("opentype"),
+  url("../../resource/font/Minecraft.woff") format("woff");
 
 }
 
@@ -14,9 +14,9 @@
 
   src:
   local("ChunkySans"),
-  url("/resource/font/NotJamChunkySans.ttf") format('truetype'),
-  url("/resource/font/NotJamChunkySans.otf") format("opentype"),
-  url("/resource/font/NotJamChunkySans.woff") format("woff");
+  url("../../resource/font/NotJamChunkySans.ttf") format('truetype'),
+  url("../../resource/font/NotJamChunkySans.otf") format("opentype"),
+  url("../../resource/font/NotJamChunkySans.woff") format("woff");
 
 }
 
@@ -25,9 +25,9 @@
 
   src:
   local("Dogica"),
-  url("/resource/font/dogicapixel.ttf") format('truetype'),
-  url("/resource/font/dogicapixel.otf") format("opentype"),
-  url("/resource/font/dogicapixel.woff") format("woff");
+  url("../../resource/font/dogicapixel.ttf") format('truetype'),
+  url("../../resource/font/dogicapixel.otf") format("opentype"),
+  url("../../resource/font/dogicapixel.woff") format("woff");
   
 }
 
