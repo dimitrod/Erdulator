@@ -23,6 +23,7 @@ function gameOver() {
         document.getElementById("gameOver").style.borderColor = "gold"
         createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.")
     }
+    document.getElementById("upgradeWindowButton").disabled = true
 }
 
 function updateAttributes() {
