@@ -102,7 +102,7 @@ let kyotoProtocolReactions = [
         reaction: "Kyoto-Protkoll vollständig umsetzen",
         cost: 10 * Math.pow(10,6),
         impacts: [{
-            param: "temperature", minValue: -0.2, maxValue: 0.4}, {
+            param: "temperature", minValue: -0.2, maxValue: -0.4}, {
             param: "afforestation", minValue: -3, maxValue: -4}, {
             param: "populationGrowthRate", minValue: 0.002, maxValue: 0.004
             }]},
