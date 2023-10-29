@@ -273,7 +273,7 @@ const quiz = [
         information: "Luftverschmutzung beschreibt diese Ablagerung."
     },
     {
-        question:"Aus was entseht Kohle unter Wärme, Druck und Luftabschluss?",
+        question:"Aus was entsteht Kohle unter Wärme, Druck und Luftabschluss?",
         choices: ["Biomasse", "Plastik", "Aluminium"],
         answer: 0,
         reward: 1.1,
@@ -480,7 +480,7 @@ const quiz = [
         choices: ["Kiefernholz", "Teakholz", "Ahornholz"],
         answer: 1,
         reward: 1.3,
-        information: "Teakholz ist eine Holzart, die oft illegal aus den Regenwäldern entnommen wird und aufgrund ihrer Qualität sehr begehrt ist."
+        information: "Teakholz ist eine Holzart, die oft illegal aus den Regenwäldern entnommen wird, da sie aufgrund ihrer Qualität sehr begehrt ist."
     },
     {
         question:"Welche der folgenden Naturkatastrophen wird durch die Bewegung der Erdplatten verursacht?",
@@ -508,7 +508,7 @@ const quiz = [
         choices: ["Textilindustrie", "Lebensmittelindustrie", "Stahlindustrie"],
         answer: 1,
         reward: 1.2,
-        information: "Die Lebensmittelindustrie trägt durch den Anbau von Monokulturen wie Soja und Palmöl stark zu Entwaldung bei."
+        information: "Die Lebensmittelindustrie trägt durch den Anbau von Monokulturen wie Soja und Palmöl stark zur Entwaldung bei."
     },
     {
         question:"Was sind die sozialen Auswirkungen der Abholzung auf indigene Völker?",

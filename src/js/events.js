@@ -311,30 +311,22 @@ let meltingPolesReactions = [
     {
         reaction: "Elektroenergien fördern",
         cost: 7 * Math.pow(10,6),
-        impacts: [{
-            param: "animalSpecies",
-            minValue: 100,
-            maxValue: 1000
-        }, {param: "waterLevel", minValue: 1, maxValue: 3}, {param: "temperature", minValue: -0.3, maxValue: -0.5}],
+        impacts: [{param: "waterLevel", minValue: 1, maxValue: 1}, {param: "temperature", minValue: -0.3, maxValue: -0.5}],
         triggers: []
     },
     {
         reaction: "Flugverkehr limitieren",
         cost: 5 * Math.pow(10,6),
-        impacts: [{
-            param: "animalSpecies",
-            minValue: 100,
-            maxValue: 1000
-        }, {param: "waterLevel", minValue: 1, maxValue: 3}, {param: "temperature", minValue: -0.2, maxValue: -0.4}],
+        impacts: [{param: "waterLevel", minValue: 1, maxValue: 1}, {param: "temperature", minValue: -0.2, maxValue: -0.4}],
         triggers: []
     },
     {
         reaction: "Nichts machen",
         cost: 0 * Math.pow(10,6),
-        impacts: [{param: "animalSpecies", minValue: 100, maxValue: 1000}, {
+        impacts: [{
             param: "waterLevel",
             minValue: 2,
-            maxValue: 3
+            maxValue: 2
         }, {param: "temperature", minValue: -0.1, maxValue: -0.2}],
         triggers: []
     },
