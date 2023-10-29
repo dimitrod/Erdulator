@@ -32,6 +32,10 @@ function updateBudget(amount){
 }
 
 function calculateColor(value, minValue, maxValue) {
+	if(minValue > maxValue){
+		[minValue, maxValue] = [maxValue, minValue]
+		value = maxValue - value
+	} 
 	if(value > maxValue) value = maxValue
 	if(value < minValue) value = minValue
     const normalizedValue = (value - minValue) / (maxValue - minValue)
