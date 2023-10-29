@@ -1387,6 +1387,7 @@ body{
 
 .infoContainer {
   display:inline-block;
+  position: relative;
 }
 
 .category {
