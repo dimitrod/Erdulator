@@ -9,7 +9,7 @@ function createGameOverMessage(message) {
     document.getElementById("info").style.display = 'none'
     document.getElementById("event").style.display = 'none'
     document.getElementById("gameOver").style.display = "inline-block"
-    document.getElementById("gameOverStatistic").innerHTML = "Du hast Insgesamt " + correctQuizzes + " von " + totalQuizzes + " Quizzes richtig beantwortet."
+    document.getElementById("gameOverStatistic").innerHTML = "Du hast Insgesamt " + correctQuizzes + " von " + totalQuizzes + " Quizfragen richtig beantwortet."
 }
 
 function gameOver() {
@@ -78,7 +78,8 @@ function updateGrowthRateDisplay(growthRate, minGrowthRate, maxGrowthRate, elem)
     value = `(<div style="display:inline;">${sign} ${Math.abs(growthRate.toFixed(3))}${unit}</div>/Jahr)`
     growthRateElem.innerHTML = value
     Array.from(growthRateElem.getElementsByTagName("div")).forEach(elem => {
-        elem.style.color = calculateColor(growthRate, minGrowthRate, maxGrowthRate)
+        if(growthRate == afforestationGrowthRate) elem.style.color = calculateColor(maxGrowthRate-growthRate, minGrowthRate, maxGrowthRate) 
+        else elem.style.color = calculateColor(growthRate, minGrowthRate, maxGrowthRate)
     })
     elem.appendChild(growthRateElem)
 }
