@@ -1,9 +1,8 @@
 let investmentCost = 10*10**6
 let investments = [
-    {name: "Bäume pflanzen", impact: "afforestation", amount: 10, info: "Pflanze einmal ganz viel Bäume, um die Bewaldung hoch zu halten", timesLeft: 3},
-    //{name: "Prämie für Geburt von Kindern", impact: "population", amount: 1*10**9, cost: investmentCost, info: "Bevor du keine Menschen mehr auf der Erde hast, locke die Leute mit Geld an, um sich zu vermehren!"},
-    {name: "Wasserlevel senken", impact: "waterlevel", amount: -1.0, info: "Wasserlevel senken. Keine Ahnung wie", timesLeft: 3},
-    {name: "Temperatur senken", impact: "temperature", amount: -0.5, info: "Temperatur senken. Auch keine Ahnung wie", timesLeft: 3}
+    {name: "Bäume pflanzen", impact: "afforestation", amount: 5, info: "Durch diese Investition werden einheimische Bäume und Pflanzen in Regionen gepflanzt. Dadurch erhöhst du deine Bewaldung und sorgst dafür, dass C02 aus der Luft gefiltert wird. Außerdem bilden Wälder ein Ökosystem, das die Bodenqualität erhöht und viel Wasser aufnehmen kann.", timesLeft: 3},
+    {name: "Wasserlevel senken", impact: "waterlevel", amount: -0.8, info: "Durch das Ausbaggern des Meeresboden und Schaffen von Flüssen kann der Meeresspiegel gesenkt werden. Dafür müssen unmengen an Baggern Tag und Nacht baggern.", timesLeft: 3},
+    {name: "Temperatur senken", impact: "temperature", amount: -0.5, info: "Durch Geoengineering können Sonnenstrahlen am Eindringen in die Atmosphäre gehindert werden, wodurch sich die Erde weniger nicht erwärmt.Schwefel-Aerosole sollen in die Stratosphäre geschleudert werden, wo sie sich mit Wasserteilchen verbinden und die Sonnenstrahlen reflektieren.", timesLeft: 3},
 ]
 
 function loadInvestments(){

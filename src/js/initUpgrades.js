@@ -5,110 +5,82 @@ upgrades = [
     {
         id:"renewableEnergies",
         name: "Erneuerbare Energien",
-        cost: 5*10**6,
+        cost: 10*10**6,
         costFactor: 2,
         impacts:[
+            {
+                name: "waterlevel",
+                influence: "mid"
+            },
+            {
+                name: "temperature",
+                influence:"mid"
+            }
+        ],
+        currentLevel: 0,
+        info: "Der Großteil der Treibhausgasemissionen stammt aus der Energieproduktion. Durch den Umstieg auf erneuerbare Energien werden diese Emissionen drastisch gesenkt. Der Meeresspiegel steigt durch die höheren Temperaturen, wodurch sich das Wasser ausdehnt und Gletscher schmelzen. In diesen Küstengebieten leben derzeit 40 % der Weltbevölkerung, die 35 % des weltweiten BIP erwirtschaften, und gefährdet sind vor allem Entwicklungsländer mit ihren stetig wachsenden Megastädten in Flussdeltas"
+    },
+    {
+        id:"veganProducts",
+        name: "Entwicklung von veganen Produkten fördern",
+        cost: 4*10**6,
+        costFactor: 1,
+        impacts:[
+            {
+                name: "afforestation",
+                influence: "high",
+            },
             {
                 name: "waterlevel",
                 influence: "low"
             },
             {
                 name: "temperature",
-                influence:"low"
+                influence: "low"
             }
         ],
         currentLevel: 0,
-        info: "Erneuerbare Energien sind dope.",
+        info: "Die Produktion tierischer Produkte, insbesondere Fleisch und Milch, erzeugt erhebliche Treibhausgasemissionen, hauptsächlich Methan und Lachgas. Außerdem erfordert die Tierhaltung erhebliche Mengen an Land, Wasser und Futtermitteln, um die Tiere zu füttern. Für den Anbau von Futtermitteln wie z.B. Soja wird der Regenwald massiv abgeholzt."
     },
     {
-        id:"veganProducts",
-        name: "Vegane Produkte entwickeln",
+        id:"biologicalFarming",
+        name: "biologische Landwirtschaft fördern",
         cost: 5*10**6,
         costFactor: 1,
         impacts:[
             {
                 name: "afforestation",
-                influence: "high",
+                influence: "low",
             },
             {
                 name: "waterlevel",
-                influence: "mid"
+                influence: "low"
             },
+            {
+                name: "temperature",
+                influence: "low"
+            }
         ],
         currentLevel: 0,
-        info: "weniger Tierhaltung = weniger Abholzung"
+        info: "Die biologische Landwirtschaft erwendet nachhaltige Anbaumethoden, die den Boden und die Wasserressourcen weniger belasten. Der Einsatz von synthetischen Pestiziden und chemischen Düngemitteln ist stark eingeschränkt oder verboten, was die Verschmutzung von Boden und Wasser reduziert und Arten schützt. Da keine Pestzidie und anorganische Düngemittel verwendet werden, wird die energieintensive Produktion dieser Mittel vermieden. Das alles macht diese Form der Landwirtschaft nachhaltig."
     },
     {
-        id:"veganProducts1",
-        name: "Vegane Produkte entwickeln",
-        cost: 5*10**6,
+        id:"alternativePackaging",
+        name: "alternative Verpackungen entwickeln",
+        cost: 4*10**6,
         costFactor: 1,
         impacts:[
             {
                 name: "afforestation",
-                influence: "high",
+                influence: "low",
             },
             {
-                name: "waterlevel",
-                influence: "mid"
+                name: "temperature",
+                influence: "low"
             },
         ],
         currentLevel: 0,
-        info: "weniger Tierhaltung = weniger Abholzung"
-    },
-    {
-        id:"veganProducts2",
-        name: "Vegane Produkte entwickeln",
-        cost: 5*10**6,
-        costFactor: 1,
-        impacts:[
-            {
-                name: "afforestation",
-                influence: "high",
-            },
-            {
-                name: "waterlevel",
-                influence: "mid"
-            },
-        ],
-        currentLevel: 0,
-        info: "weniger Tierhaltung = weniger Abholzung"
-    },
-    {
-        id:"veganProducts3",
-        name: "Vegane Produkte entwickeln",
-        cost: 5*10**6,
-        costFactor: 1,
-        impacts:[
-            {
-                name: "afforestation",
-                influence: "high",
-            },
-            {
-                name: "waterlevel",
-                influence: "mid"
-            },
-        ],
-        currentLevel: 0,
-        info: "weniger Tierhaltung = weniger Abholzung"
-    },
-    {
-        id:"veganProducts4",
-        name: "Vegane Produkte entwickeln",
-        cost: 5*10**6,
-        costFactor: 1,
-        impacts:[
-            {
-                name: "afforestation",
-                influence: "high",
-            },
-            {
-                name: "waterlevel",
-                influence: "mid"
-            },
-        ],
-        currentLevel: 0,
-        info: "weniger Tierhaltung = weniger Abholzung"
+        info: "Der Abfälle verschmutzen die Luft, die Böden und das Wasser. Sie gefährden dadurch die Gesundheit. Das meiste Abfallplastik wird verbrannt, wodurch Schadstoffe und Treibhausgase in die Luft geraten. Alternative Verpackungen sind meist biologisch abbaubar und sind somit Teil des Ökosystems."
     }
 ]
 function checkUpgrades(){
