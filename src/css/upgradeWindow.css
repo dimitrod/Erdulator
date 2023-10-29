@@ -125,9 +125,9 @@
     color: black;
     text-align: center;
     padding: 5px;
+    position: absolute;
     border-radius: 6px;
     /*cursor: pointer;*/
-    position: absolute;
     z-index: 10;
 }
 
