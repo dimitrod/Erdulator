@@ -91,20 +91,21 @@ function checkUpgrades(){
 }
 function loadUpgrades(){
     upgradesWrapper = document.getElementById("upgradesWrapper")
-    upgradesRightWrapper = document.getElementById("upgradeRightWrapper")
+    upgradesInfoWrapper = document.getElementById("upgradeInfoWrapper")
     upgrades.forEach((upgrade, index)=>{
         upgradesWrapper.innerHTML += "<div id='" + upgrade.id + "' class='upgradeWrapper'></div>"
         upgradeWrapper = document.getElementById(upgrade.id)
         upgradeWrapper.innerHTML+= "<span>" + upgrade.name + "</span>"
         upgradeInfo = upgrade.id + "Info"
         upgradeIcon = upgrade.id + "Icon"
-        upgradesRightWrapper.innerHTML+= "<div id='" + upgradeInfo + "' class='upgradeWindowInfo'>" + upgrade.info + "</div" //div führ den Infotext vom Upgrade
-        upgradeWrapper.innerHTML+= "<div id='" + upgradeIcon + "'>&#x1F6C8</div>" //div mit dem InfoIcon
-        infoIcon = document.getElementById(upgradeIcon)
+        upgradesInfoWrapper.innerHTML+= "<div id='" + upgradeInfo + "' class='upgradeWindowInfo'>" + upgrade.info + "</div" //div führ den Infotext vom Upgrade
+        upgradeWrapper.innerHTML+= "<div id='" + upgradeIcon + "' onclick='showInfo(this)' class='infoIcon'>&#x1F6C8</div>" //div mit dem InfoIcon
+        // document.getElementById(upgradeIcon).addEventListener("click", function (){console.log("lalala");})
+        /*infoIcon = document.getElementById(upgradeIcon)
         console.log(infoIcon)
         infoIcon.onclick = function (){
             console.log("lalal")
-        }
+        }*/
         /*infoIcon.onmouseover = function (){
             document.getElementById(upgradeInfo).style.display="block"
         }*/
