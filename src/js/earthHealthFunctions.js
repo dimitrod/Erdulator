@@ -31,7 +31,8 @@ function checkDanger(){
     } else {
 
         var waterhue = (temperature-2)*14;
-        var waterbrightness = 100-((temperature-2)*4);
+        var tempValue = ((temperature-2)*20) < 0 ? 0 : ((temperature-2)*20);
+        var waterbrightness = 100-tempValue;
         var watersaturation = 1-0.8*((temperature-2)/3);
 
     
