@@ -64,6 +64,17 @@ function buyUpgrade(index){
     /*if (upgrade.currentLevel == maxLevel)document.getElementById(upgrade.id).getElementsByTagName("button")[0].disabled=true*/
 }
 
+function showInfo(elem){
+    document.querySelectorAll('.upgradeWindowInfo').forEach(function(el) {
+        el.style.display = 'none';
+    });
+    document.getElementById(elem.id.slice(0, -4) + "Info").style.display="block"
+}
+function hideInfo(elem){
+    document.getElementById(elem.id.slice(0, -4) + "Info").style.display="none"
+}
+
+
 upgradeWindowButton.addEventListener("mousedown", function() {
     upgradeWindowButton.style.backgroundImage = "url(resource/upgrade_new_pressed.png)";
   });

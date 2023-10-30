@@ -91,11 +91,25 @@ function checkUpgrades(){
 }
 function loadUpgrades(){
     upgradesWrapper = document.getElementById("upgradesWrapper")
+    upgradesInfoWrapper = document.getElementById("upgradeInfoWrapper")
     upgrades.forEach((upgrade, index)=>{
         upgradesWrapper.innerHTML += "<div id='" + upgrade.id + "' class='upgradeWrapper'></div>"
         upgradeWrapper = document.getElementById(upgrade.id)
         upgradeWrapper.innerHTML+= "<span>" + upgrade.name + "</span>"
-        upgradeWrapper.innerHTML+= "<div class='infoContainer'>&#x1F6C8<div class='upgradeInfo'>" + upgrade.info + "</div></div>"
+        upgradeInfo = upgrade.id + "Info"
+        upgradeIcon = upgrade.id + "Icon"
+        upgradesInfoWrapper.innerHTML+= "<div id='" + upgradeInfo + "' class='upgradeWindowInfo'>" + upgrade.info + "</div" //div führ den Infotext vom Upgrade
+        upgradeWrapper.innerHTML+= "<div id='" + upgradeIcon + "' onclick='showInfo(this)' class='infoIcon'>&#x1F6C8</div>" //div mit dem InfoIcon
+        // document.getElementById(upgradeIcon).addEventListener("click", function (){console.log("lalala");})
+        /*infoIcon = document.getElementById(upgradeIcon)
+        console.log(infoIcon)
+        infoIcon.onclick = function (){
+            console.log("lalal")
+        }*/
+        /*infoIcon.onmouseover = function (){
+            document.getElementById(upgradeInfo).style.display="block"
+        }*/
+        /*infoIcon.addEventListener("mouseover", function(){console.log("lalla")})*/
         upgradeWrapper.innerHTML+= "<button class='nes-btn is-warning' onclick='buyUpgrade(" + index + ")'>" + convertNum(upgrade.cost,1) + "</button>"
         loadLevels(upgrade)
     })

@@ -111,6 +111,7 @@
 .infoContainer {
     display: inline;
     margin-left: 10px;
+    position: relative;
 }
 /* changes visibility of upgradeinfo*/
 .infoContainer:hover .upgradeInfo{
@@ -129,6 +130,17 @@
     border-radius: 6px;
     /*cursor: pointer;*/
     z-index: 10;
+}
+.infoIcon {
+    display: inline;
+    margin-left: 10px;
+    position: relative;
+}
+.upgradeWindowInfo{
+    display: none;
+    width: auto;
+    background-color: white;
+    color: black;
 }
 
 #investments{
@@ -154,7 +166,7 @@
 #upgradeRightWrapper {
     display: inline-block;
     font-family: "Dogica", sans-serif;
-    width: 30%;
+    width: 39%;
     padding-left:25px;
     overflow-y: auto;
     height: 100%;
