@@ -10,6 +10,7 @@ function createGameOverMessage(message) {
     document.getElementById("event").style.display = 'none'
     document.getElementById("gameOver").style.display = "inline-block"
     document.getElementById("gameOverStatistic").innerHTML = "Du hast Insgesamt " + correctQuizzes + " von " + totalQuizzes + " Quizfragen richtig beantwortet."
+    document.getElementById("upgradeWindowButton").disabled = true
 }
 
 function gameOver() {
@@ -23,7 +24,7 @@ function gameOver() {
         document.getElementById("gameOver").style.borderColor = "gold"
         createGameOverMessage("Glückwunsch! Du hast das Spiel gewonnen.")
     }
-    document.getElementById("upgradeWindowButton").disabled = true
+    
 }
 
 function updateAttributes() {
